@@ -19,6 +19,7 @@ from ditto.models.capacitor import Capacitor
 from ditto.models.phase_capacitor import PhaseCapacitor
 from ditto.models.load import Load
 from ditto.models.phase_load import PhaseLoad
+from ditto.models.power_source import PowerSource
 
 class Reader(AbstractReader):
     """
@@ -88,9 +89,9 @@ class Reader(AbstractReader):
         :rtype: int
         """
 
-        self.geojson_content = get_geojson_data(self.geojson_file)
-        self.equipment_data = get_equipment_data(self.equipment_file)
-        self.load_data = get_load_data(self.load_file)
+        self.geojson_content = self.get_geojson_data(self.geojson_file)
+        self.equipment_data = self.get_equipment_data(self.equipment_file)
+        self.load_data = self.get_load_data(self.load_file)
 
         # Call parse from abstract reader class
         super(Reader, self).parse(model, **kwargs)
@@ -119,7 +120,7 @@ class Reader(AbstractReader):
                             wire.phase = db_wire['phase']
                             wire.ampacity = float(db_wire['ampacity'])
                             wire.x = float(db_wire['x'])
-                            wire.y = float(db_wire['y'])
+                            wire.y = float(db_wire['height'])
                             all_wires.append(wire)
 
 
@@ -137,9 +138,9 @@ class Reader(AbstractReader):
         substation_map = {}
         substations = set()
 
-       for element in self.geojson_content["features"]:
+        for element in self.geojson_content["features"]:
             if 'properties' in element and 'DSId' in element['properties'] and 'id' in element['properties']:
-                if element['properties']p'DSId'] in substation_map:
+                if element['properties']['DSId'] in substation_map:
                     substation_map[element['properties']['DSId']].append(element['properties']['id'])
                 else:
                     substation_map[element['properties']['DSId']] = [element['properties']['id']]
@@ -155,8 +156,14 @@ class Reader(AbstractReader):
                 node = Node(model)
                 node.name = element['properties']['id']
                 if node.name in substations:
+                    node.nominal_voltage = 132000
                     node.is_substation_connection = True
                     node.setpoint = 1.0
+                    power_source = PowerSource(model)
+                    power_source.name = 'source'
+                    power_source.nominal_voltage = 13200
+                    power_source.phases = list( map(lambda x: Unicode(x), ['A','B','C']))
+                    power_source.connecting_element = node.name
                 position = Position(model)
                 position.lat = float(element['geometry']['coordinates'][0])
                 position.long = float(element['geometry']['coordinates'][0])
@@ -175,11 +182,11 @@ class Reader(AbstractReader):
 
         # Assume that each transformer has one from node and one to node.
 
-        connection_map = {'Delta':'D','Wye','Y'}
+        connection_map = {'Delta':'D','Wye':'Y'}
         transformer_panel_map = {}
         for element in self.geojson_content["features"]:
             if 'properties' in element and 'DSId' in element['properties'] and 'id' in element['properties']:
-                if element['properties']p'DSId'] in transformer_panel_map:
+                if element['properties']['DSId'] in transformer_panel_map:
                     transformer_panel_map[element['properties']['DSId']].append(element['properties']['id'])
                 else:
                     transformer_panel_map[element['properties']['DSId']] = [element['properties']['id']]
@@ -188,11 +195,11 @@ class Reader(AbstractReader):
             if 'properties' in element and 'district_system_type' in element['properties'] and element['properties']['district_system_type'] == 'Transformer':
                 transformer_id = element['properties']['id']
                 transformer = PowerTransformer(model)
-                if transformer_panel_map[transformer_id] in transformer_panel_map:
+                if transformer_id in transformer_panel_map:
                     if len(transformer_panel_map[transformer_id]) <2:
                         print("No from and two elements found tor transformer")
                     if len(transformer_panel_map[transformer_id]) >2:
-                        print("Warning - the transformer should have a from and to element - "+str(len(transformer_panel_map[transformer_id]))+" junctions on the transformer")
+                        print("Warning - the transformer "+transformer_id+" should have a from and to element - "+str(len(transformer_panel_map[transformer_id]))+" junctions on the transformer")
                     if len(transformer_panel_map[transformer_id]) >=2:
                         for db_transformer in self.equipment_data['transformer_properties']:
                             if element['properties']['equipment'][0] == db_transformer['nameclass']:
