@@ -117,11 +117,18 @@ class Reader(AbstractReader):
                         if db_wire['nameclass'] == wire_type:
                             wire = Wire(model)
                             wire.nameclass = wire_type
+                            if 'OH' in wire_type:
+                                line.line_type = 'overhead'
+                            else:
+                                line.line_type = 'underground'
                             wire.phase = db_wire['phase']
                             wire.ampacity = float(db_wire['ampacity'])
-                            wire.x = float(db_wire['x'])
-                            wire.y = float(db_wire['height'])
+                            wire.gmr = float(db_wire['gmr'])
+                            wire.diameter = float(db_wire['diameter'])
+                            wire.X = float(db_wire['x'])
+                            wire.Y = float(db_wire['height'])
                             all_wires.append(wire)
+                line.wires = all_wires
 
 
 
@@ -206,7 +213,7 @@ class Reader(AbstractReader):
                                 transformer.from_element = transformer_panel_map[transformer_id][0]
                                 transformer.to_element = transformer_panel_map[transformer_id][1] #NOTE: Need to figure out correct from and to directions here.
                                 transformer.name = transformer_id
-                                transformer.reantances = [float(db_transformer['reactance'])] 
+                                transformer.reactances = [float(db_transformer['reactance'])] 
                                 transformer.is_center_tap = db_transformer['is_center_tap']
                                 windings = [Winding(model),Winding(model)]
                                 connections = db_transformer['connection'].split('-')
@@ -222,7 +229,7 @@ class Reader(AbstractReader):
                                         pw.phase = phase
                                         phase_windings.append(pw)
                                     windings[i].phase_windings = phase_windings
-                                    windings[i].rated_power = float(db_transformer['kva'])
+                                    windings[i].rated_power = float(db_transformer['kva'])*1000
                                     if i<1:
                                         windings[i].nominal_voltage = float(db_transformer['high_voltage'])*1000
                                         windings[i].connection_type = connection_map[connections[0]]
@@ -233,6 +240,7 @@ class Reader(AbstractReader):
                                         windings[i].connection_type = connection_map[connections[1]]
                                         windings[i].voltage_type = 1
                                         windings[i].resistance = float(db_transformer['resistance'])
+                                transformer.windings = windings
 
 
         return 1
