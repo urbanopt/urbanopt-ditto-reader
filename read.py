@@ -20,6 +20,10 @@ from ditto.models.phase_capacitor import PhaseCapacitor
 from ditto.models.load import Load
 from ditto.models.phase_load import PhaseLoad
 from ditto.models.power_source import PowerSource
+from ditto.network.network import Network
+from ditto.models.photovoltaic import Photovoltaic
+from ditto.models.timeseries import Timeseries
+from ditto.models.feeder_metadata import Feeder_metadata
 
 class Reader(AbstractReader):
     """
@@ -40,11 +44,28 @@ class Reader(AbstractReader):
             self.equipment_data = None
         else:
             raise ValueError("No equipment_file parameter provided")
-        if "load_file" in kwargs:
-            self.load_file = kwargs["load_file"]
+        if "load_folder" in kwargs:
+            self.load_folder = kwargs["load_folder"]
             self.load_data = None
         else:
-            raise ValueError("No load_file parameter provided")
+            raise ValueError("No load_folder parameter provided")
+        if "feature_file" in kwargs:
+            self.feature_file = kwargs["feature_file"]
+            self.feature_data = None
+        else:
+            print('Warning - no feature file provided. No PV or Storage will be added')
+
+        self.is_timeseries = False
+        self.timeseries_location = None
+        self.relative_timeseries_location = None
+        if 'is_timeseries' in kwargs:
+            self.is_timeseries = kwargs['is_timeseries']
+            if 'timeseries_location' in kwargs:
+                self.timeseries_location = kwargs['timeseries_location']
+            if 'relative_timeseries_location' in kwargs:
+                self.relative_timeseries_location = kwargs['relative_timeseries_location']
+
+
 
     def get_geojson_data(self, filename):
         """
@@ -70,12 +91,16 @@ class Reader(AbstractReader):
             raise IOError("Problem trying to read json from file "+filename)
         return content
 
-    def get_load_data(self, filename):
+    def get_feature_data(self, filename):
         """
-        Helper method to save all the json data in the load file
+        Helper method to save all the json data in the equipment file
         """
         content = []
-        # Populate this once we know the format
+        try:
+            with open(filename,"r") as f:
+                content = json.load(f)
+        except:
+            raise IOError("Problem trying to read json from file "+filename)
         return content
 
     def parse(self, model, **kwargs):
@@ -91,7 +116,7 @@ class Reader(AbstractReader):
 
         self.geojson_content = self.get_geojson_data(self.geojson_file)
         self.equipment_data = self.get_equipment_data(self.equipment_file)
-        self.load_data = self.get_load_data(self.load_file)
+        self.feature_data = self.get_feature_data(self.feature_file)
 
         # Call parse from abstract reader class
         super(Reader, self).parse(model, **kwargs)
@@ -108,25 +133,37 @@ class Reader(AbstractReader):
             if 'properties' in element and 'type' in element['properties'] and element['properties']['type'] == 'ElectricalConnector':
                 line = Line(model)
                 line.name = element['properties']['id']
-                line.from_element = element['properties']['startJunctionId']
-                line.to_element = element['properties']['endJunctionId']
+                if element['properties']['startJunctionId'] in self.substations:
+                    line.from_element = 'source'
+                else:
+                    line.from_element = element['properties']['startJunctionId']
+                if element['properties']['endJunctionId'] in self.substations:
+                    line.to_element = 'source'
+                else:
+                    line.to_element = element['properties']['endJunctionId']
                 line.length = element['properties']['total_length']*0.3048 #length from feet to meters
                 all_wires = []
                 for wire_type in element['properties']['wires']:
                     for db_wire in self.equipment_data['wires']:
                         if db_wire['nameclass'] == wire_type:
                             wire = Wire(model)
-                            wire.nameclass = wire_type
+                            wire.nameclass = wire_type.replace(' ','_').replace('/','-')
                             if 'OH' in wire_type:
                                 line.line_type = 'overhead'
                             else:
                                 line.line_type = 'underground'
-                            wire.phase = db_wire['phase']
+                            if 'S1' in wire_type:
+                                wire.phase = 'A'
+                            elif 'S2' in wire_type:
+                                wire.phase = 'B'
+                            else:
+                                wire.phase = wire_type.split(' ')[-1] #Currently the convention is that the last element is the phase.
                             wire.ampacity = float(db_wire['ampacity'])
-                            wire.gmr = float(db_wire['gmr'])
-                            wire.diameter = float(db_wire['diameter'])
-                            wire.X = float(db_wire['x'])
-                            wire.Y = float(db_wire['height'])
+                            wire.gmr = float(db_wire['gmr'])*0.3048
+                            wire.resistance = float(db_wire['resistance'])*0.3048
+                            wire.diameter = float(db_wire['diameter'])*0.3048
+                            wire.X = float(db_wire['x'])*0.3048
+                            wire.Y = float(db_wire['height'])*0.3048
                             all_wires.append(wire)
                 line.wires = all_wires
 
@@ -143,7 +180,7 @@ class Reader(AbstractReader):
         """
         # Assume one substation per feeder with a single junction
         substation_map = {}
-        substations = set()
+        self.substations = set()
 
         for element in self.geojson_content["features"]:
             if 'properties' in element and 'DSId' in element['properties'] and 'id' in element['properties']:
@@ -153,24 +190,32 @@ class Reader(AbstractReader):
                     substation_map[element['properties']['DSId']] = [element['properties']['id']]
 
         for element in self.geojson_content["features"]:
-            if 'properties' in element and 'district_system_type' in element['properties'] and element['properties']['district_system_type'] == 'Substation':
+            if 'properties' in element and 'district_system_type' in element['properties'] and element['properties']['district_system_type'] == 'Electrical Substation':
                 if element['properties']['id'] in substation_map:
                     for i in substation_map[element['properties']['id']]:
-                        substations.add(i)
+                        self.substations.add(i)
 
+        if len(self.substations)>1:
+            print('Warning - multiple power sources have been added')
         for element in self.geojson_content["features"]:
             if 'properties' in element and 'type' in element['properties'] and element['properties']['type'] == 'ElectricalJunction':
                 node = Node(model)
                 node.name = element['properties']['id']
-                if node.name in substations:
-                    node.nominal_voltage = 132000
+                if node.name in self.substations:
+                    node.nominal_voltage = 13200
                     node.is_substation_connection = True
                     node.setpoint = 1.0
-                    power_source = PowerSource(model)
-                    power_source.name = 'source'
-                    power_source.nominal_voltage = 13200
-                    power_source.phases = list( map(lambda x: Unicode(x), ['A','B','C']))
-                    power_source.connecting_element = node.name
+                    node.name = 'source'
+                    meta = Feeder_metadata(model)
+                    meta.headnode = 'source'
+                    meta.nominal_voltage = 13200
+                    meta.name = 'urbanopt-feeder'
+                    powersource = PowerSource(model)
+                    powersource.is_sourcebus = True
+                    powersource.name = 'ps_source'
+                    powersource.nominal_voltage = 13200
+                    powersource.connecting_element = 'source'
+                    powersource.per_unit = 1.0
                 position = Position(model)
                 position.lat = float(element['geometry']['coordinates'][0])
                 position.long = float(element['geometry']['coordinates'][0])
@@ -204,7 +249,7 @@ class Reader(AbstractReader):
                 transformer = PowerTransformer(model)
                 if transformer_id in transformer_panel_map:
                     if len(transformer_panel_map[transformer_id]) <2:
-                        print("No from and two elements found tor transformer")
+                        print("No from and to elements found tor transformer")
                     if len(transformer_panel_map[transformer_id]) >2:
                         print("Warning - the transformer "+transformer_id+" should have a from and to element - "+str(len(transformer_panel_map[transformer_id]))+" junctions on the transformer")
                     if len(transformer_panel_map[transformer_id]) >=2:
@@ -262,6 +307,78 @@ class Reader(AbstractReader):
         :returns: 1 for success, -1 for failure
         :rtype: int
         """
+        model.set_names()
+        network = Network()
+        network.build(model,source="source")
+        building_map = {}
+        for element in self.geojson_content["features"]:
+            if 'properties' in element and 'type' in element['properties'] and 'buildingId' in element['properties'] and element['properties']['type'] == 'ElectricalJunction':
+                building_map[element['properties']['buildingId']] = element['properties']['id']
+        for element in self.geojson_content["features"]:
+            if 'properties' in element and 'type' in element['properties'] and element['properties']['type'] == 'Building':
+                id_value = element['properties']['id']
+                connecting_element = building_map[id_value]
+                load = Load(model)
+                load.name = id_value
+                load.connecting_element = connecting_element
+                upstream_transformer = model[network.get_upstream_transformer(model,connecting_element)]
+                is_center_tap = upstream_transformer.is_center_tap
+                load.nominal_voltage = upstream_transformer.windings[1].nominal_voltage
+
+                default_feature_name = None
+                for dirs in os.listdir(os.path.join(self.load_folder,id_value)):
+                    if 'default_feature_reports' in dirs:
+                        default_feature_name = dirs
+                        break
+                if default_feature_name is None:
+                    raise ValueError("Not feature report found for feature "+id_value)
+                load_path = os.path.join(self.load_folder,id_value,default_feature_name)
+                if os.path.exists(load_path): #We've found the load data
+                    #load_data = pd.read_csv(load_path,'default_feature_reports.csv',header=0,skiprows=[1])
+                    load_data = pd.read_csv(os.path.join(load_path,'default_feature_reports.csv'),header=0)
+                    max_load = max(load_data['Electricity:Facility(kWh)'])
+                    phases = []
+                    for ph_wdg in upstream_transformer.windings[1].phase_windings:
+                        phases.append(ph_wdg.phase)
+                    if is_center_tap:
+                        phases = ['A','B']
+
+                    phase_loads = []
+                    for phase in phases:
+                        phase_load = PhaseLoad(model)
+                        phase_load.phase = phase
+                        power_factor = 0.95
+                        phase_load.p = max_load/len(phases)
+                        phase_load.q = phase_load.p * ((1/power_factor-1)**0.5)
+                        phase_loads.append(phase_load)
+                    load.phase_loads = phase_loads
+                    if self.is_timeseries:
+                        data = load_data['Electricity:Facility(kWh)']
+                        timestamps = load_data['Datetime']
+                        data_pu = data/max_load
+                        if not self.timeseries_location is None:
+                            if not os.path.exists(self.timeseries_location):
+                                os.makedirs(self.timeseries_location)
+                            data.to_csv(os.path.join(self.timeseries_location,'load_'+id_value+'.csv'),header=False, index=False)
+                            data_pu.to_csv(os.path.join(self.timeseries_location,'load_'+id_value+'_pu.csv'),header=False, index=False)
+                            timestamps.to_csv(os.path.join(self.timeseries_location,'timestamps.csv'),header=True,index=False)
+                            timeseries = Timeseries(model)
+                            timeseries.feeder_name = load.feeder_name
+                            timeseries.substation_name = load.substation_name
+                            timeseries.interval = 0.25 #assume 15 minute loads
+                            timeseries.data_type = 'float'
+                            timeseries.data_location = os.path.join(self.relative_timeseries_location,'load_'+id_value+'_pu.csv')
+                            timeseries.data_label = 'feature_'+id_value
+                            timeseries.scale_factor = 1
+                            load.timeseries = [timeseries]
+
+
+
+
+
+                else:
+                    print('Load information missing for '+id_value)
+
 
         return 1
 
@@ -273,6 +390,37 @@ class Reader(AbstractReader):
         :returns: 1 for success, -1 for failure
         :rtype: int
         """
+        model.set_names()
+        network = Network()
+        network.build(model,source="source")
+        building_map = {}
+        for element in self.geojson_content["features"]:
+            if 'properties' in element and 'type' in element['properties'] and 'buildingId' in element['properties'] and element['properties']['type'] == 'ElectricalJunction':
+                building_map[element['properties']['buildingId']] = element['properties']['id']
+        for element in self.feature_data["feature_reports"]:
+            id_value = str(element['id'])
+            connecting_element = building_map[id_value]
+            pv_kw = element['distributed_generation']['solar_pv']['size_kw']
+            upstream_transformer = model[network.get_upstream_transformer(model,connecting_element)]
+            is_center_tap = upstream_transformer.is_center_tap
+            if pv_kw >0:
+                pv = Photovoltaic(model)
+                pv.name = 'solar_'+id_value
+                pv.connecting_element = connecting_element
+                pv.nominal_voltage = upstream_transformer.windings[1].nominal_voltage
+                phases = []
+                for ph_wdg in upstream_transformer.windings[1].phase_windings:
+                    phases.append(Unicode(ph_wdg.phase))
+                if is_center_tap:
+                    phases = [Unicode('A'),Unicode('B')]
+                pv.phases = phases
+                pv.rated_power = pv_kw
+                pv.active_rating = 1.1*pv_kw # Should make this a parameter instead
+                pv.connection_type = upstream_transformer.windings[1].connection_type
+                if self.is_timeseries:
+                    pass #TODO: put timeseries logic here
+
+
 
         return 1
 
