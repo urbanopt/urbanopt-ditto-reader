@@ -1,0 +1,1195 @@
+Shadowing Combinations
+..Solar Distribution=FullExterior
+..In the following, only the first 10 reference surfaces will be shown.
+..But all surfaces are used in the calculations.
+==================================
+Surface=SHADING SURFACE 1 is used as Receiving Surface in calculations and is convex.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=Mir-SHADING SURFACE 1 is used as Receiving Surface in calculations and is convex.
+Number of general casting surfaces=5
+..Surface=Mir-SHADING SURFACE 2
+..Surface=Mir-SHADING SURFACE 3
+..Surface=Mir-SHADING SURFACE 4
+..Surface=Mir-SHADING SURFACE 5
+..Surface=Mir-SHADING SURFACE 6
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=SHADING SURFACE 2 is used as Receiving Surface in calculations and is convex.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=Mir-SHADING SURFACE 2 is used as Receiving Surface in calculations and is convex.
+Number of general casting surfaces=4
+..Surface=Mir-SHADING SURFACE 3
+..Surface=Mir-SHADING SURFACE 4
+..Surface=Mir-SHADING SURFACE 5
+..Surface=Mir-SHADING SURFACE 6
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=SHADING SURFACE 3 is used as Receiving Surface in calculations and is convex.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=Mir-SHADING SURFACE 3 is used as Receiving Surface in calculations and is convex.
+Number of general casting surfaces=4
+..Surface=Mir-SHADING SURFACE 2
+..Surface=Mir-SHADING SURFACE 4
+..Surface=Mir-SHADING SURFACE 5
+..Surface=Mir-SHADING SURFACE 6
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=SHADING SURFACE 4 is used as Receiving Surface in calculations and is convex.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=Mir-SHADING SURFACE 4 is used as Receiving Surface in calculations and is convex.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=SHADING SURFACE 5 is used as Receiving Surface in calculations and is convex.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=Mir-SHADING SURFACE 5 is used as Receiving Surface in calculations and is convex.
+Number of general casting surfaces=4
+..Surface=Mir-SHADING SURFACE 2
+..Surface=Mir-SHADING SURFACE 3
+..Surface=Mir-SHADING SURFACE 4
+..Surface=Mir-SHADING SURFACE 6
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=SHADING SURFACE 6 is used as Receiving Surface in calculations and is convex.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=Mir-SHADING SURFACE 6 is used as Receiving Surface in calculations and is convex.
+Number of general casting surfaces=4
+..Surface=Mir-SHADING SURFACE 2
+..Surface=Mir-SHADING SURFACE 3
+..Surface=Mir-SHADING SURFACE 4
+..Surface=Mir-SHADING SURFACE 5
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=SURFACE 2 is used as Receiving Surface in calculations and is convex.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=1
+....Surface=SUB SURFACE 2
+==================================
+Surface=SUB SURFACE 2 is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=SURFACE 3 is used as Receiving Surface in calculations and is convex.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=1
+....Surface=SUB SURFACE 1
+==================================
+Surface=SUB SURFACE 1 is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=SURFACE 4 is used as Receiving Surface in calculations and is convex.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=1
+....Surface=SUB SURFACE 4
+==================================
+Surface=SUB SURFACE 4 is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=SURFACE 5 is used as Receiving Surface in calculations and is convex.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=1
+....Surface=SUB SURFACE 3
+==================================
+Surface=SUB SURFACE 3 is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=SURFACE 1 is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=SURFACE 6 is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 1 SPACE LARGEHOTEL BANQUET A  - STORY GROUND MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 1 SPACE LARGEHOTEL BANQUET B  - STORY GROUND MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 1 SPACE LARGEHOTEL BANQUET C  - STORY GROUND MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 1 SPACE LARGEHOTEL CAFE A  - STORY GROUND MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 1 SPACE LARGEHOTEL CAFE A END_A - STORY GROUND MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 1 SPACE LARGEHOTEL CAFE B  - STORY GROUND MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 1 SPACE LARGEHOTEL CAFE B END_A - STORY GROUND MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 1 SPACE LARGEHOTEL CAFE C  - STORY GROUND MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 1 SPACE LARGEHOTEL CAFE C END_A - STORY GROUND MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 1 SPACE LARGEHOTEL KITCHEN A  - STORY GROUND MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 1 SPACE LARGEHOTEL KITCHEN B  - STORY GROUND MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 1 SPACE LARGEHOTEL KITCHEN C  - STORY GROUND MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 1 SPACE LARGEHOTEL LAUNDRY A  - STORY GROUND MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 1 SPACE LARGEHOTEL LAUNDRY B  - STORY GROUND MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 1 SPACE LARGEHOTEL LAUNDRY C  - STORY GROUND MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 1 SPACE LARGEHOTEL MECHANICAL A  - STORY GROUND MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 1 SPACE LARGEHOTEL MECHANICAL A END_B - STORY GROUND MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 1 SPACE LARGEHOTEL MECHANICAL B  - STORY GROUND MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 1 SPACE LARGEHOTEL MECHANICAL B END_B - STORY GROUND MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 1 SPACE LARGEHOTEL MECHANICAL C  - STORY GROUND MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 1 SPACE LARGEHOTEL MECHANICAL C END_B - STORY GROUND MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 1 SPACE LARGEHOTEL RETAIL A  - STORY GROUND MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 1 SPACE LARGEHOTEL RETAIL B  - STORY GROUND MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 1 SPACE LARGEHOTEL RETAIL C  - STORY GROUND MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 1 SPACE LARGEHOTEL STORAGE A  - STORY GROUND MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 1 SPACE LARGEHOTEL STORAGE B  - STORY GROUND MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 1 SPACE LARGEHOTEL STORAGE C  - STORY GROUND MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=SURFACE 56 is used as Receiving Surface in calculations and is convex.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=1
+....Surface=SUB SURFACE 38
+==================================
+Surface=SUB SURFACE 38 is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=SURFACE 57 is used as Receiving Surface in calculations and is convex.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=1
+....Surface=SUB SURFACE 37
+==================================
+Surface=SUB SURFACE 37 is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=SURFACE 58 is used as Receiving Surface in calculations and is convex.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=1
+....Surface=SUB SURFACE 39
+==================================
+Surface=SUB SURFACE 39 is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=SURFACE 59 is used as Receiving Surface in calculations and is convex.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=1
+....Surface=SUB SURFACE 40
+==================================
+Surface=SUB SURFACE 40 is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=SURFACE 55 is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=SURFACE 60 is used as Receiving Surface in calculations and is convex.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 10 SPACE LARGEHOTEL CORRIDOR B  - STORY TOP MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 10 SPACE LARGEHOTEL CORRIDOR B END_A - STORY TOP MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 10 SPACE LARGEHOTEL CORRIDOR B END_B - STORY TOP MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 10 SPACE LARGEHOTEL GUESTROOM A  - STORY TOP MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 10 SPACE LARGEHOTEL GUESTROOM A END_A - STORY TOP MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 10 SPACE LARGEHOTEL GUESTROOM A END_B - STORY TOP MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 10 SPACE LARGEHOTEL GUESTROOM C  - STORY TOP MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 10 SPACE LARGEHOTEL GUESTROOM C END_A - STORY TOP MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 10 SPACE LARGEHOTEL GUESTROOM C END_B - STORY TOP MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=SURFACE 10 is used as Receiving Surface in calculations and is convex.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=1
+....Surface=SUB SURFACE 7
+==================================
+Surface=SUB SURFACE 7 is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=SURFACE 11 is used as Receiving Surface in calculations and is convex.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=1
+....Surface=SUB SURFACE 8
+==================================
+Surface=SUB SURFACE 8 is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=SURFACE 8 is used as Receiving Surface in calculations and is convex.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=1
+....Surface=SUB SURFACE 5
+==================================
+Surface=SUB SURFACE 5 is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=SURFACE 9 is used as Receiving Surface in calculations and is convex.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=1
+....Surface=SUB SURFACE 6
+==================================
+Surface=SUB SURFACE 6 is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=SURFACE 7 is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=SURFACE 12 is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 2 SPACE LARGEHOTEL CORRIDOR B  - STORY MID2 MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 2 SPACE LARGEHOTEL CORRIDOR B END_B - STORY MID2 MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 2 SPACE LARGEHOTEL GUESTROOM A  - STORY MID2 MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 2 SPACE LARGEHOTEL GUESTROOM A END_B - STORY MID2 MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 2 SPACE LARGEHOTEL GUESTROOM C  - STORY MID2 MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 2 SPACE LARGEHOTEL GUESTROOM C END_B - STORY MID2 MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 2 SPACE LARGEHOTEL LOBBY A  - STORY MID2 MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 2 SPACE LARGEHOTEL LOBBY A END_A - STORY MID2 MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 2 SPACE LARGEHOTEL LOBBY B  - STORY MID2 MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 2 SPACE LARGEHOTEL LOBBY B END_A - STORY MID2 MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 2 SPACE LARGEHOTEL LOBBY C  - STORY MID2 MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 2 SPACE LARGEHOTEL LOBBY C END_A - STORY MID2 MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=SURFACE 14 is used as Receiving Surface in calculations and is convex.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=1
+....Surface=SUB SURFACE 10
+==================================
+Surface=SUB SURFACE 10 is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=SURFACE 15 is used as Receiving Surface in calculations and is convex.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=1
+....Surface=SUB SURFACE 9
+==================================
+Surface=SUB SURFACE 9 is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=SURFACE 16 is used as Receiving Surface in calculations and is convex.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=1
+....Surface=SUB SURFACE 12
+==================================
+Surface=SUB SURFACE 12 is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=SURFACE 17 is used as Receiving Surface in calculations and is convex.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=1
+....Surface=SUB SURFACE 11
+==================================
+Surface=SUB SURFACE 11 is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=SURFACE 13 is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=SURFACE 18 is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 3 SPACE LARGEHOTEL CORRIDOR B  - STORY MID4 MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 3 SPACE LARGEHOTEL CORRIDOR B END_A - STORY MID4 MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 3 SPACE LARGEHOTEL CORRIDOR B END_B - STORY MID4 MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 3 SPACE LARGEHOTEL GUESTROOM A  - STORY MID4 MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 3 SPACE LARGEHOTEL GUESTROOM A END_A - STORY MID4 MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 3 SPACE LARGEHOTEL GUESTROOM A END_B - STORY MID4 MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 3 SPACE LARGEHOTEL GUESTROOM C  - STORY MID4 MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 3 SPACE LARGEHOTEL GUESTROOM C END_A - STORY MID4 MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 3 SPACE LARGEHOTEL GUESTROOM C END_B - STORY MID4 MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=SURFACE 20 is used as Receiving Surface in calculations and is convex.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=1
+....Surface=SUB SURFACE 15
+==================================
+Surface=SUB SURFACE 15 is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=SURFACE 21 is used as Receiving Surface in calculations and is convex.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=1
+....Surface=SUB SURFACE 14
+==================================
+Surface=SUB SURFACE 14 is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=SURFACE 22 is used as Receiving Surface in calculations and is convex.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=1
+....Surface=SUB SURFACE 13
+==================================
+Surface=SUB SURFACE 13 is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=SURFACE 23 is used as Receiving Surface in calculations and is convex.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=1
+....Surface=SUB SURFACE 16
+==================================
+Surface=SUB SURFACE 16 is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=SURFACE 19 is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=SURFACE 24 is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 4 SPACE LARGEHOTEL BANQUET A  - STORY MID MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 4 SPACE LARGEHOTEL BANQUET A END_A - STORY MID MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 4 SPACE LARGEHOTEL BANQUET B  - STORY MID MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 4 SPACE LARGEHOTEL BANQUET B END_A - STORY MID MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 4 SPACE LARGEHOTEL BANQUET C  - STORY MID MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 4 SPACE LARGEHOTEL BANQUET C END_A - STORY MID MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 4 SPACE LARGEHOTEL LOBBY A  - STORY MID MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 4 SPACE LARGEHOTEL LOBBY A END_B - STORY MID MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 4 SPACE LARGEHOTEL LOBBY B  - STORY MID MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 4 SPACE LARGEHOTEL LOBBY B END_B - STORY MID MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 4 SPACE LARGEHOTEL LOBBY C  - STORY MID MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 4 SPACE LARGEHOTEL LOBBY C END_B - STORY MID MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=SURFACE 26 is used as Receiving Surface in calculations and is convex.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=1
+....Surface=SUB SURFACE 17
+==================================
+Surface=SUB SURFACE 17 is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=SURFACE 27 is used as Receiving Surface in calculations and is convex.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=1
+....Surface=SUB SURFACE 18
+==================================
+Surface=SUB SURFACE 18 is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=SURFACE 28 is used as Receiving Surface in calculations and is convex.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=1
+....Surface=SUB SURFACE 19
+==================================
+Surface=SUB SURFACE 19 is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=SURFACE 29 is used as Receiving Surface in calculations and is convex.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=1
+....Surface=SUB SURFACE 20
+==================================
+Surface=SUB SURFACE 20 is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=SURFACE 25 is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=SURFACE 30 is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 5 SPACE LARGEHOTEL CORRIDOR B  - STORY MID5 MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 5 SPACE LARGEHOTEL CORRIDOR B END_A - STORY MID5 MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 5 SPACE LARGEHOTEL CORRIDOR B END_B - STORY MID5 MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 5 SPACE LARGEHOTEL GUESTROOM A  - STORY MID5 MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 5 SPACE LARGEHOTEL GUESTROOM A END_A - STORY MID5 MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 5 SPACE LARGEHOTEL GUESTROOM A END_B - STORY MID5 MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 5 SPACE LARGEHOTEL GUESTROOM C  - STORY MID5 MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 5 SPACE LARGEHOTEL GUESTROOM C END_A - STORY MID5 MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 5 SPACE LARGEHOTEL GUESTROOM C END_B - STORY MID5 MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=SURFACE 32 is used as Receiving Surface in calculations and is convex.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=1
+....Surface=SUB SURFACE 21
+==================================
+Surface=SUB SURFACE 21 is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=SURFACE 33 is used as Receiving Surface in calculations and is convex.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=1
+....Surface=SUB SURFACE 22
+==================================
+Surface=SUB SURFACE 22 is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=SURFACE 34 is used as Receiving Surface in calculations and is convex.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=1
+....Surface=SUB SURFACE 24
+==================================
+Surface=SUB SURFACE 24 is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=SURFACE 35 is used as Receiving Surface in calculations and is convex.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=1
+....Surface=SUB SURFACE 23
+==================================
+Surface=SUB SURFACE 23 is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=SURFACE 31 is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=SURFACE 36 is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 6 SPACE LARGEHOTEL CORRIDOR B  - STORY MID3 MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 6 SPACE LARGEHOTEL CORRIDOR B END_A - STORY MID3 MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 6 SPACE LARGEHOTEL CORRIDOR B END_B - STORY MID3 MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 6 SPACE LARGEHOTEL GUESTROOM A  - STORY MID3 MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 6 SPACE LARGEHOTEL GUESTROOM A END_A - STORY MID3 MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 6 SPACE LARGEHOTEL GUESTROOM A END_B - STORY MID3 MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 6 SPACE LARGEHOTEL GUESTROOM C  - STORY MID3 MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 6 SPACE LARGEHOTEL GUESTROOM C END_A - STORY MID3 MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 6 SPACE LARGEHOTEL GUESTROOM C END_B - STORY MID3 MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=SURFACE 38 is used as Receiving Surface in calculations and is convex.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=1
+....Surface=SUB SURFACE 25
+==================================
+Surface=SUB SURFACE 25 is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=SURFACE 39 is used as Receiving Surface in calculations and is convex.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=1
+....Surface=SUB SURFACE 26
+==================================
+Surface=SUB SURFACE 26 is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=SURFACE 40 is used as Receiving Surface in calculations and is convex.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=1
+....Surface=SUB SURFACE 28
+==================================
+Surface=SUB SURFACE 28 is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=SURFACE 41 is used as Receiving Surface in calculations and is convex.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=1
+....Surface=SUB SURFACE 27
+==================================
+Surface=SUB SURFACE 27 is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=SURFACE 37 is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=SURFACE 42 is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 7 SPACE LARGEHOTEL CORRIDOR B  - STORY MID6 MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 7 SPACE LARGEHOTEL CORRIDOR B END_A - STORY MID6 MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 7 SPACE LARGEHOTEL CORRIDOR B END_B - STORY MID6 MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 7 SPACE LARGEHOTEL GUESTROOM A  - STORY MID6 MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 7 SPACE LARGEHOTEL GUESTROOM A END_A - STORY MID6 MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 7 SPACE LARGEHOTEL GUESTROOM A END_B - STORY MID6 MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 7 SPACE LARGEHOTEL GUESTROOM C  - STORY MID6 MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 7 SPACE LARGEHOTEL GUESTROOM C END_A - STORY MID6 MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 7 SPACE LARGEHOTEL GUESTROOM C END_B - STORY MID6 MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=SURFACE 44 is used as Receiving Surface in calculations and is convex.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=1
+....Surface=SUB SURFACE 32
+==================================
+Surface=SUB SURFACE 32 is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=SURFACE 45 is used as Receiving Surface in calculations and is convex.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=1
+....Surface=SUB SURFACE 31
+==================================
+Surface=SUB SURFACE 31 is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=SURFACE 46 is used as Receiving Surface in calculations and is convex.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=1
+....Surface=SUB SURFACE 30
+==================================
+Surface=SUB SURFACE 30 is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=SURFACE 47 is used as Receiving Surface in calculations and is convex.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=1
+....Surface=SUB SURFACE 29
+==================================
+Surface=SUB SURFACE 29 is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=SURFACE 43 is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=SURFACE 48 is used as Receiving Surface in calculations and is convex.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 8 SPACE LARGEHOTEL CORRIDOR B  - STORY MID7 MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 8 SPACE LARGEHOTEL CORRIDOR B END_A - STORY MID7 MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 8 SPACE LARGEHOTEL CORRIDOR B END_B - STORY MID7 MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 8 SPACE LARGEHOTEL GUESTROOM A  - STORY MID7 MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 8 SPACE LARGEHOTEL GUESTROOM A END_A - STORY MID7 MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 8 SPACE LARGEHOTEL GUESTROOM A END_B - STORY MID7 MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 8 SPACE LARGEHOTEL GUESTROOM C  - STORY MID7 MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 8 SPACE LARGEHOTEL GUESTROOM C END_A - STORY MID7 MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 8 SPACE LARGEHOTEL GUESTROOM C END_B - STORY MID7 MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=SURFACE 50 is used as Receiving Surface in calculations and is convex.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=1
+....Surface=SUB SURFACE 36
+==================================
+Surface=SUB SURFACE 36 is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=SURFACE 51 is used as Receiving Surface in calculations and is convex.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=1
+....Surface=SUB SURFACE 34
+==================================
+Surface=SUB SURFACE 34 is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=SURFACE 52 is used as Receiving Surface in calculations and is convex.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=1
+....Surface=SUB SURFACE 33
+==================================
+Surface=SUB SURFACE 33 is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=SURFACE 53 is used as Receiving Surface in calculations and is convex.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=1
+....Surface=SUB SURFACE 35
+==================================
+Surface=SUB SURFACE 35 is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=SURFACE 49 is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=SURFACE 54 is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 9 SPACE LARGEHOTEL CORRIDOR B  - STORY MID8 MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 9 SPACE LARGEHOTEL CORRIDOR B END_A - STORY MID8 MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 9 SPACE LARGEHOTEL CORRIDOR B END_B - STORY MID8 MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 9 SPACE LARGEHOTEL GUESTROOM A  - STORY MID8 MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 9 SPACE LARGEHOTEL GUESTROOM A END_A - STORY MID8 MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 9 SPACE LARGEHOTEL GUESTROOM A END_B - STORY MID8 MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 9 SPACE LARGEHOTEL GUESTROOM C  - STORY MID8 MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 9 SPACE LARGEHOTEL GUESTROOM C END_A - STORY MID8 MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0
+==================================
+Surface=BUILDING STORY 9 SPACE LARGEHOTEL GUESTROOM C END_B - STORY MID8 MASS is not used as Receiving Surface in calculations.
+Number of general casting surfaces=0
+Number of back surfaces=0
+Number of receiving sub surfaces=0

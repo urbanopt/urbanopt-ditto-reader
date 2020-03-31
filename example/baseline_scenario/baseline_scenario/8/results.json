@@ -1,0 +1,15 @@
+{
+  "SetRunPeriod": {
+    "timesteps_per_hour": 1,
+    "begin_date": "2019-01-01",
+    "end_date": "2019-12-31",
+    "applicable": true
+  },
+  "DefaultFeatureReports": {
+    "feature_id": "8",
+    "feature_name": "Hospital 1",
+    "feature_type": "Building",
+    "reporting_frequency": "Timestep",
+    "applicable": true
+  }
+}
