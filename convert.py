@@ -158,8 +158,9 @@ for i, row in ts.iterrows():
     print(i,flush=True)
     hour = int(i/(1/interval))
     seconds = (i%(1/interval))*3600
+    location = os.path.join(dss_analysis,'dss_files','Master.dss')
     dss.run_command("Clear")
-    dss.run_command("Redirect output/Master.dss")
+    dss.run_command("Redirect "+location)
     dss.run_command("Solve mode=yearly stepsize="+str(stepsize)+"m number=1 hour="+str(hour)+" sec="+str(seconds))
     voltages = get_all_voltages()
     line_overloads = get_line_loading()
