@@ -1,3 +1,4 @@
+import datetime
 import math
 import logging
 import os
@@ -49,11 +50,11 @@ class Reader(AbstractReader):
             self.load_data = None
         else:
             raise ValueError("No load_folder parameter provided")
-        if "feature_file" in kwargs:
-            self.feature_file = kwargs["feature_file"]
-            self.feature_data = None
+        if "use_reopt" in kwargs:
+            self.use_reopt = kwargs["use_reopt"]
         else:
-            print('Warning - no feature file provided. No PV or Storage will be added')
+            self.use_reopt = False
+            print("Warning - using default urbanopt configuration")
 
         self.is_timeseries = False
         self.timeseries_location = None
@@ -116,7 +117,6 @@ class Reader(AbstractReader):
 
         self.geojson_content = self.get_geojson_data(self.geojson_file)
         self.equipment_data = self.get_equipment_data(self.equipment_file)
-        self.feature_data = self.get_feature_data(self.feature_file)
 
         # Call parse from abstract reader class
         super(Reader, self).parse(model, **kwargs)
@@ -325,18 +325,19 @@ class Reader(AbstractReader):
                 is_center_tap = upstream_transformer.is_center_tap
                 load.nominal_voltage = upstream_transformer.windings[1].nominal_voltage
 
-                default_feature_name = None
-                for dirs in os.listdir(os.path.join(self.load_folder,id_value)):
-                    if 'default_feature_reports' in dirs:
-                        default_feature_name = dirs
-                        break
-                if default_feature_name is None:
-                    raise ValueError("Not feature report found for feature "+id_value)
-                load_path = os.path.join(self.load_folder,id_value,default_feature_name)
+                load_path = os.path.join(self.load_folder,id_value,'feature_reports')
                 if os.path.exists(load_path): #We've found the load data
-                    #load_data = pd.read_csv(load_path,'default_feature_reports.csv',header=0,skiprows=[1])
-                    load_data = pd.read_csv(os.path.join(load_path,'default_feature_reports.csv'),header=0)
-                    max_load = max(load_data['Electricity:Facility(kWh)'])
+
+                    load_data = None
+                    load_column = None
+                    if self.use_reopt:
+                        load_data = pd.read_csv(os.path.join(load_path,'feature_report_reopt.csv'),header=0)
+                        load_column = 'REopt:Electricity:Load:Total(kw)'
+                    else:
+                        load_data = pd.read_csv(os.path.join(load_path,'default_feature_report.csv'),header=0)
+                        load_column = 'Net Power(kW)'
+                    max_load = max(load_data[load_column])
+
                     phases = []
                     for ph_wdg in upstream_transformer.windings[1].phase_windings:
                         phases.append(ph_wdg.phase)
@@ -353,8 +354,9 @@ class Reader(AbstractReader):
                         phase_loads.append(phase_load)
                     load.phase_loads = phase_loads
                     if self.is_timeseries:
-                        data = load_data['Electricity:Facility(kWh)']
+                        data = load_data[load_column]
                         timestamps = load_data['Datetime']
+                        delta = datetime.datetime.strptime(timestamps.loc[1],'%Y/%m/%d %H:%M:%S') - datetime.datetime.strptime(timestamps.loc[0],'%Y/%m/%d %H:%M:%S') 
                         data_pu = data/max_load
                         if not self.timeseries_location is None:
                             if not os.path.exists(self.timeseries_location):
@@ -365,7 +367,7 @@ class Reader(AbstractReader):
                             timeseries = Timeseries(model)
                             timeseries.feeder_name = load.feeder_name
                             timeseries.substation_name = load.substation_name
-                            timeseries.interval = 0.25 #assume 15 minute loads
+                            timeseries.interval = delta.seconds/3600.0 #assume 15 minute loads
                             timeseries.data_type = 'float'
                             timeseries.data_location = os.path.join(self.relative_timeseries_location,'load_'+id_value+'_pu.csv')
                             timeseries.data_label = 'feature_'+id_value
@@ -390,6 +392,8 @@ class Reader(AbstractReader):
         :returns: 1 for success, -1 for failure
         :rtype: int
         """
+        if not self.use_reopt:
+            return 1
         model.set_names()
         network = Network()
         network.build(model,source="source")
@@ -397,29 +401,49 @@ class Reader(AbstractReader):
         for element in self.geojson_content["features"]:
             if 'properties' in element and 'type' in element['properties'] and 'buildingId' in element['properties'] and element['properties']['type'] == 'ElectricalJunction':
                 building_map[element['properties']['buildingId']] = element['properties']['id']
-        for element in self.feature_data["feature_reports"]:
-            id_value = str(element['id'])
-            connecting_element = building_map[id_value]
-            pv_kw = element['distributed_generation']['solar_pv']['size_kw']
-            upstream_transformer = model[network.get_upstream_transformer(model,connecting_element)]
-            is_center_tap = upstream_transformer.is_center_tap
-            if pv_kw >0:
-                pv = Photovoltaic(model)
-                pv.name = 'solar_'+id_value
-                pv.connecting_element = connecting_element
-                pv.nominal_voltage = upstream_transformer.windings[1].nominal_voltage
-                phases = []
-                for ph_wdg in upstream_transformer.windings[1].phase_windings:
-                    phases.append(Unicode(ph_wdg.phase))
-                if is_center_tap:
-                    phases = [Unicode('A'),Unicode('B')]
-                pv.phases = phases
-                pv.rated_power = pv_kw
-                pv.active_rating = 1.1*pv_kw # Should make this a parameter instead
-                pv.connection_type = upstream_transformer.windings[1].connection_type
-                if self.is_timeseries:
-                    pass #TODO: put timeseries logic here
-
+        for element in self.geojson_content["features"]:
+            if 'properties' in element and 'type' in element['properties'] and element['properties']['type'] == 'Building':
+                id_value = element['properties']['id']
+                connecting_element = building_map[id_value]
+                feature_data = self.get_feature_data(os.path.join(self.load_folder,id_value,'feature_reports','feature_report_reopt.json'))
+                pv_kw = feature_data['distributed_generation']['total_solar_pv_kw']
+                upstream_transformer = model[network.get_upstream_transformer(model,connecting_element)]
+                is_center_tap = upstream_transformer.is_center_tap
+                if pv_kw >0:
+                    pv = Photovoltaic(model)
+                    pv.name = 'solar_'+id_value
+                    pv.connecting_element = connecting_element
+                    pv.nominal_voltage = upstream_transformer.windings[1].nominal_voltage
+                    phases = []
+                    for ph_wdg in upstream_transformer.windings[1].phase_windings:
+                        phases.append(Unicode(ph_wdg.phase))
+                    if is_center_tap:
+                        phases = [Unicode('A'),Unicode('B')]
+                    pv.phases = phases
+                    pv.rated_power = pv_kw
+                    pv.active_rating = 1.1*pv_kw # Should make this a parameter instead
+                    pv.connection_type = upstream_transformer.windings[1].connection_type
+                    if self.is_timeseries:
+                        load_data = pd.read_csv(os.path.join(self.load_folder,id_value,'feature_reports','feature_report_reopt.csv'),header=0)
+                        data = load_data['REopt:ElectricityProduced:PV:Total(kw)']
+                        timestamps = load_data['Datetime']
+                        delta = datetime.datetime.strptime(timestamps.loc[1],'%Y/%m/%d %H:%M:%S') - datetime.datetime.strptime(timestamps.loc[0],'%Y/%m/%d %H:%M:%S') 
+                        data_pu = data/pv_kw
+                        if not self.timeseries_location is None:
+                            if not os.path.exists(self.timeseries_location): #Should have already been created for the loads
+                                os.makedirs(self.timeseries_location)
+                            data.to_csv(os.path.join(self.timeseries_location,'pv_'+id_value+'.csv'),header=False, index=False)
+                            data_pu.to_csv(os.path.join(self.timeseries_location,'pv_'+id_value+'_pu.csv'),header=False, index=False)
+                            timeseries = Timeseries(model)
+                            timeseries.feeder_name = pv.feeder_name
+                            timeseries.substation_name = pv.substation_name
+                            timeseries.interval = delta.seconds/3600.0 
+                            timeseries.data_type = 'float'
+                            timeseries.data_location = os.path.join(self.relative_timeseries_location,'pv_'+id_value+'_pu.csv')
+                            timeseries.data_label = 'feature_'+id_value
+                            timeseries.scale_factor = 1
+                            pv.timeseries = [timeseries]
+                        
 
 
         return 1
