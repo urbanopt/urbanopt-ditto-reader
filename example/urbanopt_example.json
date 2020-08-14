@@ -7,12 +7,12 @@
     "import_surrounding_buildings_as_shading": null,
     "weather_filename": null,
     "tariff_filename": null,
-    "climate_zone": null,
+    "climate_zone": "6A",
     "cec_climate_zone": null,
     "begin_date": null,
     "end_date": null,
     "timesteps_per_hour": null,
-    "default_template": null,
+    "default_template": "90.1-2013",
     "electricalVisible": true
   },
   "features": [
@@ -27,9 +27,9 @@
         "timesteps_per_hour": null,
         "begin_date": null,
         "end_date": null,
-        "climate_zone": null,
+        "climate_zone": "6A",
         "cec_climate_zone": null,
-        "default_template": null,
+        "default_template": "90.1-2013",
         "weather_filename": null,
         "tariff_filename": null
       },
