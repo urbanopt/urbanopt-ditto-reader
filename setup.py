@@ -11,7 +11,7 @@ with open("LICENSE.md") as f:
 
 setup(
     name="UrbanoptDittoReader",
-    version="0.1.0",
+    version="0.2.0",
     author="Tarek Elgindy",
     author_email="tarek.elgindy@nrel.gov",
     url="https://github.com/urbanopt/urbanopt-ditto-reader",

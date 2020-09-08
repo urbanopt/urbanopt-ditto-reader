@@ -12,8 +12,6 @@ class UrbanoptDittoReader(object):
 
         self.module_path = os.path.dirname(os.path.realpath(__file__))
 
-        # print("CONFIG DATA: {}".format(config_data))
-
         # load default config from config.json
         default_data = self.default_config()
 
