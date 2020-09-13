@@ -4,7 +4,7 @@
 
 Date Range: 4/1/2020 - 9/8/2020
 
-- Updated structure of the URBANopt DiTTo Reader package
+- Updated structure of the URBANopt™ DiTTo Reader package
 - Added name and dependencies to setup.py
 - Updated urbanopt_example.json to match schema and added default values
 
