@@ -179,10 +179,80 @@ class UrbanoptDittoReader(object):
         from ditto.writers.opendss.write import Writer
         from reader.read import Reader
 
+        from ditto.consistency.check_loops import check_loops
+        from ditto.consistency.check_loads_connected import check_loads_connected
+        from ditto.consistency.check_unique_path import check_unique_path
+        from ditto.consistency.check_matched_phases import check_matched_phases
+        from ditto.consistency.check_transformer_phase_path import check_transformer_phase_path
+
         model = Store()
 
         reader = Reader(geojson_file=self.geojson_file, equipment_file=self.equipment_file, load_folder=self.urbanopt_scenario, use_reopt=self.use_reopt, is_timeseries=True, timeseries_location=self.timeseries_location, relative_timeseries_location=os.path.join('..', 'profiles'))
         reader.parse(model)
+
+        OKGREEN='\033[92m'
+        FAIL = '\033[91m'
+        ENDC = '\033[0m'
+
+        final_pass = True
+
+        print('Check no loops:',flush=True)
+        loops_res = check_loops(model,verbose=True)
+        final_pass = final_pass and loops_res
+        result = 'FAIL'
+        color = FAIL
+        if loops_res:
+            result = 'PASS'
+            color = OKGREEN
+        print('Result:', f'{color} {result} {ENDC}')
+        print()
+        
+        print('Check loads connected to source:',flush=True)
+        result = 'FAIL'
+        color = FAIL
+        loads_connected_res = check_loads_connected(model,verbose=True)
+        final_pass = final_pass and loads_connected_res
+        if loads_connected_res:
+            result = 'PASS'
+            color = OKGREEN
+        print('Result:', f'{color} {result} {ENDC}')
+        print()
+        
+        print('Check unique path from each load to source:',flush=True)
+        unique_path_res = check_unique_path(model,show_all=True,verbose=True)
+        final_pass = final_pass and unique_path_res
+        result = 'FAIL'
+        color = FAIL
+        if unique_path_res:
+            result = 'PASS'
+            color = OKGREEN
+        print('Result:', f'{color} {result} {ENDC}')
+        print()
+        
+        print('Check that phases on either side of transformer are correct:',flush=True)
+        matched_phases_res = check_matched_phases(model,verbose=True)
+        final_pass = final_pass and check_matched_phases
+        result = 'FAIL'
+        color = FAIL
+        if matched_phases_res:
+            result = 'PASS'
+            color = OKGREEN
+        print('Result:', f'{color} {result} {ENDC}')
+        print()
+        
+        print('Check that phases from transformer to to load and source are correct:',flush=True)
+        transformer_phase_res = check_transformer_phase_path(model,needs_transformers=True, verbose=True)
+        final_pass = final_pass and transformer_phase_res
+        result = 'FAIL'
+        color = FAIL
+        if transformer_phase_res:
+            result = 'PASS'
+            color = OKGREEN
+        print('Result:', f'{color} {result} {ENDC}')
+        print()
+
+        if not final_pass:
+            raise ValueError("Geojson file input structure incorrect")
 
         if not os.path.exists(os.path.join(self.dss_analysis, 'dss_files')):
             os.makedirs(os.path.join(self.dss_analysis, 'dss_files'), exist_ok=True)
