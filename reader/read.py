@@ -153,6 +153,7 @@ class Reader(AbstractReader):
         :returns: 1 for success, -1 for failure
         :rtype: int
         """
+        bad_lines = []
         for element in self.geojson_content["features"]:
             if 'properties' in element and 'type' in element['properties'] and element['properties']['type'] == 'ElectricalConnector':
                 line = Line(model)
@@ -167,6 +168,10 @@ class Reader(AbstractReader):
                     line.to_element = element['properties']['endJunctionId']
                 line.length = element['properties']['total_length']*0.3048 #length from feet to meters
                 all_wires = []
+                if not 'wires' in element['properties'] or len(element['properties']['wires']) == 0:
+                    bad_lines.append(line.name)
+                    continue
+
                 for wire_type in element['properties']['wires']:
                     for db_wire in self.equipment_data['wires']:
                         if db_wire['nameclass'] == wire_type:
@@ -192,6 +197,12 @@ class Reader(AbstractReader):
                 line.wires = all_wires
 
 
+        if len(bad_lines) > 0:
+            print('Following lines are missing wires:')
+            for line in bad_lines:
+                print(line)
+            print()
+            raise ValueError("Wires missing for some lines")
 
         return 1
 
