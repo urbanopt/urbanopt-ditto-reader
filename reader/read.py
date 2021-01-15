@@ -304,10 +304,16 @@ class Reader(AbstractReader):
                                     transformer.reactances.append(float(db_transformer['reactance'])) #TODO: map reactance values correctly for center-taps
                                 for i in range(len(windings)):
                                     phase_windings = []
-                                    for phase in db_transformer['phases']:
-                                        pw = PhaseWinding(model)
-                                        pw.phase = phase
-                                        phase_windings.append(pw)
+                                    if transformer.is_center_tap and i >0:
+                                        for phase in ['A','B']:
+                                            pw = PhaseWinding(model)
+                                            pw.phase = phase
+                                            phase_windings.append(pw)
+                                    else:
+                                        for phase in db_transformer['phases']:
+                                            pw = PhaseWinding(model)
+                                            pw.phase = phase
+                                            phase_windings.append(pw)
                                     windings[i].phase_windings = phase_windings
                                     windings[i].rated_power = float(db_transformer['kva'])*1000
                                     if i<1:
