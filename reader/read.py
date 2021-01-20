@@ -28,6 +28,7 @@ import logging
 import os
 import pandas as pd
 import json
+import networkx as nx
 
 from ditto.readers.abstract_reader import AbstractReader
 from ditto.store import Store
@@ -49,6 +50,7 @@ from ditto.network.network import Network
 from ditto.models.photovoltaic import Photovoltaic
 from ditto.models.timeseries import Timeseries
 from ditto.models.feeder_metadata import Feeder_metadata
+from ditto.modify.modify import Modifier
 
 class Reader(AbstractReader):
     """
@@ -252,7 +254,7 @@ class Reader(AbstractReader):
                     powersource.connecting_element = 'source'
                     powersource.per_unit = 1.0
                 position = Position(model)
-                position.lat = float(element['geometry']['coordinates'][0])
+                position.lat = float(element['geometry']['coordinates'][1])
                 position.long = float(element['geometry']['coordinates'][0])
                 node.positions = [position]
 
@@ -284,7 +286,7 @@ class Reader(AbstractReader):
                 transformer = PowerTransformer(model)
                 if transformer_id in transformer_panel_map:
                     if len(transformer_panel_map[transformer_id]) <2:
-                        print("No from and to elements found tor transformer")
+                        print(f"No from and to elements found for transformer {transformer_id}")
                     if len(transformer_panel_map[transformer_id]) >2:
                         print("Warning - the transformer "+transformer_id+" should have a from and to element - "+str(len(transformer_panel_map[transformer_id]))+" junctions on the transformer")
                     if len(transformer_panel_map[transformer_id]) >=2:
@@ -351,6 +353,66 @@ class Reader(AbstractReader):
         model.set_names()
         network = Network()
         network.build(model,source="source")
+        number_components = nx.number_connected_components(network.graph)
+        self.deleted_elements = None
+        if not number_components==1:
+            updated_model=model
+            source_component = None
+            c_id = 0
+            print(f"Warning - network is disconnected with {number_components} components")
+            components = []
+            for component in nx.connected_components(network.graph):
+                nodes = {}
+                for node in component:
+                    if node in model.model_names and isinstance(model[node],Node):
+                        nodes[node] = (model[node].positions[0].lat,model[node].positions[0].long)
+                    if node in model.model_names and isinstance(model[node],PowerSource):
+                        source_component = c_id
+                components.append(nodes)
+                c_id+=1
+            if source_component is None:
+                raise ValueError("No substation in geojson_file")
+            seen = set([source_component])
+            self.deleted_elements = {}
+            modifier = Modifier()
+            while len(seen) < len(components): # Incrementally add closest component to the component connected to the substation 
+                closest_dist = 10000000000000000
+                closest_component = None
+                closest_node_pair = None
+                connecting_component = None
+                for c_id in range(len(components)):
+                    if c_id in seen:
+                        continue
+                    for c_id2 in seen:
+                        for node1_name,node1 in components[c_id].items():
+                            for node2_name,node2 in components[c_id2].items():
+                                if not node2_name in self.deleted_elements: #So don't attach to a node that's already been deleted
+                                    distance = math.sqrt((node1[0]-node2[0])**2 + (node1[1]-node2[1])**2)
+                                    if distance < closest_dist:
+                                        closest_dist = distance
+                                        closest_node_pair = (node1_name,node2_name)
+                                        closest_component = c_id
+                                        connecting_component = c_id2
+                
+                node_to_remove = closest_node_pair[0]
+                node_to_use = closest_node_pair[1]
+                for i in model.models:
+                    if hasattr(i,'from_element') and i.from_element == node_to_remove:
+                        i.from_element = node_to_use
+                    if hasattr(i,'to_element') and i.to_element == node_to_remove:
+                        i.to_element = node_to_use
+                    if hasattr(i,'connecting_element') and i.connecting_element == node_to_remove:
+                        i.connecting_element = node_to_use
+                model = modifier.delete_element(model,model[node_to_remove])
+                print(f'Deleting node {node_to_remove}',flush=True)
+                seen.add(closest_component)
+                self.deleted_elements[node_to_remove] = node_to_use
+
+            model.set_names()
+            network = Network()
+            network.build(model,source="source")
+
+
         building_map = {}
         for element in self.geojson_content["features"]:
             if 'properties' in element and 'type' in element['properties'] and 'buildingId' in element['properties'] and element['properties']['type'] == 'ElectricalJunction':
@@ -358,13 +420,23 @@ class Reader(AbstractReader):
         for element in self.geojson_content["features"]:
             if 'properties' in element and 'type' in element['properties'] and element['properties']['type'] == 'Building':
                 id_value = element['properties']['id']
+                if not id_value in building_map:
+                    print(f'Warning - {id_value} missing from building object. Skipping...',flush=True)
+                    continue
                 connecting_element = building_map[id_value]
                 load = Load(model)
                 load.name = id_value
+                if self.deleted_elements is not None:
+                    while connecting_element in self.deleted_elements:
+                        connecting_element = self.deleted_elements[connecting_element]
                 load.connecting_element = connecting_element
-                upstream_transformer = model[network.get_upstream_transformer(model,connecting_element)]
-                is_center_tap = upstream_transformer.is_center_tap
-                load.nominal_voltage = upstream_transformer.windings[1].nominal_voltage
+                upstream_transformer_name = network.get_upstream_transformer(model,connecting_element)
+                if upstream_transformer_name is not None:
+                    upstream_transformer = model[upstream_transformer_name]
+                    is_center_tap = upstream_transformer.is_center_tap
+                    load.nominal_voltage = upstream_transformer.windings[1].nominal_voltage
+                else:
+                    print(f'Warning - Load {load.name} is incorrectly connected',flush=True)
 
                 load_path = os.path.join(self.load_folder,id_value,'feature_reports')
                 if os.path.exists(load_path): #We've found the load data
@@ -380,10 +452,11 @@ class Reader(AbstractReader):
                     max_load = max(load_data[load_column])
 
                     phases = []
-                    for ph_wdg in upstream_transformer.windings[1].phase_windings:
-                        phases.append(ph_wdg.phase)
-                    if is_center_tap:
-                        phases = ['A','B']
+                    if upstream_transformer_name is not None:
+                        for ph_wdg in upstream_transformer.windings[1].phase_windings:
+                            phases.append(ph_wdg.phase)
+                        if is_center_tap:
+                            phases = ['A','B']
 
                     phase_loads = []
                     for phase in phases:
@@ -420,7 +493,7 @@ class Reader(AbstractReader):
 
 
                 else:
-                    print('Load information missing for '+id_value)
+                    print('Load information missing for '+id_value,flush=True)
 
 
         return 1
@@ -445,25 +518,40 @@ class Reader(AbstractReader):
         for element in self.geojson_content["features"]:
             if 'properties' in element and 'type' in element['properties'] and element['properties']['type'] == 'Building':
                 id_value = element['properties']['id']
+                if not id_value in building_map:
+                    print(f'Warning - {id_value} missing from building object. Skipping...',flush=True)
+                    continue
                 connecting_element = building_map[id_value]
-                feature_data = self.get_feature_data(os.path.join(self.load_folder,id_value,'feature_reports','feature_report_reopt.json'))
+                if self.deleted_elements is not None:
+                    while connecting_element in self.deleted_elements:
+                        connecting_element = self.deleted_elements[connecting_element]
+                try:
+                    feature_data = self.get_feature_data(os.path.join(self.load_folder,id_value,'feature_reports','feature_report_reopt.json'))
+                except Exception as e:
+                    print(e)
+                    continue
                 pv_kw = feature_data['distributed_generation']['total_solar_pv_kw']
-                upstream_transformer = model[network.get_upstream_transformer(model,connecting_element)]
-                is_center_tap = upstream_transformer.is_center_tap
+
+                upstream_transformer_name = network.get_upstream_transformer(model,connecting_element)
+                if upstream_transformer_name is not None:
+                    is_center_tap = upstream_transformer.is_center_tap
+                else:
+                    print(f'Warning - DG {pv.name} is incorrectly connected',flush=True)
                 if pv_kw >0:
                     pv = Photovoltaic(model)
                     pv.name = 'solar_'+id_value
                     pv.connecting_element = connecting_element
-                    pv.nominal_voltage = upstream_transformer.windings[1].nominal_voltage
-                    phases = []
-                    for ph_wdg in upstream_transformer.windings[1].phase_windings:
-                        phases.append(Unicode(ph_wdg.phase))
-                    if is_center_tap:
-                        phases = [Unicode('A'),Unicode('B')]
-                    pv.phases = phases
+                    if upstream_transformer_name is not None:
+                        pv.nominal_voltage = upstream_transformer.windings[1].nominal_voltage
+                        pv.connection_type = upstream_transformer.windings[1].connection_type
+                        phases = []
+                        for ph_wdg in upstream_transformer.windings[1].phase_windings:
+                            phases.append(Unicode(ph_wdg.phase))
+                        if is_center_tap:
+                            phases = [Unicode('A'),Unicode('B')]
+                        pv.phases = phases
                     pv.rated_power = pv_kw
                     pv.active_rating = 1.1*pv_kw # Should make this a parameter instead
-                    pv.connection_type = upstream_transformer.windings[1].connection_type
                     if self.is_timeseries:
                         load_data = pd.read_csv(os.path.join(self.load_folder,id_value,'feature_reports','feature_report_reopt.csv'),header=0)
                         data = load_data['REopt:ElectricityProduced:PV:Total(kw)']
