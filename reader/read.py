@@ -534,6 +534,7 @@ class Reader(AbstractReader):
 
                 upstream_transformer_name = network.get_upstream_transformer(model,connecting_element)
                 if upstream_transformer_name is not None:
+                    upstream_transformer = model[upstream_transformer_name]
                     is_center_tap = upstream_transformer.is_center_tap
                 else:
                     print(f'Warning - DG {pv.name} is incorrectly connected',flush=True)
