@@ -320,6 +320,8 @@ class Reader(AbstractReader):
                                     windings[i].rated_power = float(db_transformer['kva'])*1000
                                     if i<1:
                                         windings[i].nominal_voltage = float(db_transformer['high_voltage'])*1000
+                                        if transformer.is_center_tap:
+                                            windings[i].nominal_voltage = windings[i].nominal_voltage/(3**0.5)
                                         windings[i].connection_type = connection_map[connections[0]]
                                         windings[i].voltage_type = 0
                                         windings[i].resistance = float(db_transformer['resistance'])
