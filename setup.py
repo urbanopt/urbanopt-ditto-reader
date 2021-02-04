@@ -3,7 +3,7 @@ from setuptools.command.develop import develop
 import os
 
 # command = 'git clone -b timeseries_updates https://github.com/NREL/ditto.git'
-command = 'git clone https://github.com/NREL/ditto.git'
+command = 'git clone -b master https://github.com/NREL/ditto.git'
 os.system(command)
 
 with open("LICENSE.md") as f:
