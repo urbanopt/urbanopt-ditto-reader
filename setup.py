@@ -44,6 +44,7 @@ setup(
     python_requires='>=3.7',
     py_modules=['uo_cli'],
     install_requires=[
+        # 'ditto@https://github.com/NREL/ditto.git',
         'opendssdirect.py>=0.6',
         'pandas>=1.2',
         'networkx>=2.5',
