@@ -53,6 +53,12 @@ class UrbanoptDittoReader(object):
         self.dss_analysis = os.path.abspath(config['opendss_folder'])
         self.ditto_folder = os.path.abspath(config['ditto_folder'])
         self.use_reopt = config['use_reopt']
+        self.number_of_timepoints = None
+        if 'number_of_timepoints' in config:
+            try:
+                self.number_of_timepoints = int(config['number_of_timepoints'])
+            except:
+                raise IOError("Attribute 'number_of_timeponts' should be an integer")
 
         self.timeseries_location = os.path.join(self.dss_analysis, 'profiles')
 
@@ -71,7 +77,7 @@ class UrbanoptDittoReader(object):
 
         # fix data to be relative path wrt this module
         for k, v in data.items():
-            if k == 'use_reopt':
+            if k == 'use_reopt' or k == 'number_of_timepoints':
                 continue
             elif not os.path.isabs(v):
                 data[k] = os.path.join(self.module_path, v)
@@ -179,10 +185,100 @@ class UrbanoptDittoReader(object):
         from ditto.writers.opendss.write import Writer
         from reader.read import Reader
 
+        from ditto.consistency.check_loops import check_loops
+        from ditto.consistency.check_loads_connected import check_loads_connected
+        from ditto.consistency.check_unique_path import check_unique_path
+        from ditto.consistency.check_matched_phases import check_matched_phases
+        from ditto.consistency.check_transformer_phase_path import check_transformer_phase_path
+
+        from ditto.consistency.fix_transformer_phase_path import fix_transformer_phase_path
+
         model = Store()
 
         reader = Reader(geojson_file=self.geojson_file, equipment_file=self.equipment_file, load_folder=self.urbanopt_scenario, use_reopt=self.use_reopt, is_timeseries=True, timeseries_location=self.timeseries_location, relative_timeseries_location=os.path.join('..', 'profiles'))
         reader.parse(model)
+
+        OKGREEN='\033[92m'
+        FAIL = '\033[91m'
+        ENDC = '\033[0m'
+
+        final_pass = True
+
+        print('Check no loops:',flush=True)
+        loops_res = check_loops(model,verbose=True)
+        final_pass = final_pass and loops_res
+        result = 'FAIL'
+        color = FAIL
+        if loops_res:
+            result = 'PASS'
+            color = OKGREEN
+        print('Result:', f'{color} {result} {ENDC}')
+        print()
+        
+        print('Check loads connected to source:',flush=True)
+        result = 'FAIL'
+        color = FAIL
+        loads_connected_res = check_loads_connected(model,verbose=True)
+        final_pass = final_pass and loads_connected_res
+        if loads_connected_res:
+            result = 'PASS'
+            color = OKGREEN
+        print('Result:', f'{color} {result} {ENDC}')
+        print()
+        
+        print('Check unique path from each load to source:',flush=True)
+        unique_path_res = check_unique_path(model,show_all=True,verbose=True)
+        final_pass = final_pass and unique_path_res
+        result = 'FAIL'
+        color = FAIL
+        if unique_path_res:
+            result = 'PASS'
+            color = OKGREEN
+        print('Result:', f'{color} {result} {ENDC}')
+        print()
+        
+        print('Check that phases on either side of transformer are correct:',flush=True)
+        matched_phases_res = check_matched_phases(model,verbose=True)
+        final_pass = final_pass and check_matched_phases
+        result = 'FAIL'
+        color = FAIL
+        if matched_phases_res:
+            result = 'PASS'
+            color = OKGREEN
+        print('Result:', f'{color} {result} {ENDC}')
+        print()
+        
+        print('Check that phases from transformer to load and source are correct:',flush=True)
+        transformer_phase_res = check_transformer_phase_path(model,needs_transformers=True, verbose=True)
+
+        # don't do check here - see if we can fix it first
+        #final_pass = final_pass and transformer_phase_res
+        result = 'FAIL'
+        color = FAIL
+        if transformer_phase_res:
+            result = 'PASS'
+            color = OKGREEN
+
+        #print('Result:', f'{color} {result} {ENDC}')
+        print()
+
+        print('Attempting to fix phases from transformer to load and source', flush=True)
+        if result == 'FAIL':
+            fix_transformer_phase_path(model,needs_transformers=True, verbose=True)
+            transformer_phase_res = check_transformer_phase_path(model,needs_transformers=True, verbose=True)
+            final_pass = final_pass and transformer_phase_res
+            result = 'FAIL'
+            color = FAIL
+            if transformer_phase_res:
+                result = 'PASS'
+                color = OKGREEN
+            print('Result:', f'{color} {result} {ENDC}')
+            print()
+
+
+
+        if not final_pass:
+            raise ValueError("Geojson file input structure incorrect")
 
         if not os.path.exists(os.path.join(self.dss_analysis, 'dss_files')):
             os.makedirs(os.path.join(self.dss_analysis, 'dss_files'), exist_ok=True)
@@ -219,15 +315,23 @@ class UrbanoptDittoReader(object):
             if 'properties' in element and 'type' in element['properties'] and 'buildingId' in element['properties'] and element['properties']['type'] == 'ElectricalJunction':
                 building_map[element['properties']['id']] = element['properties']['buildingId']
 
+        if self.number_of_timepoints is not None:
+            print(f'Running for {self.number_of_timepoints} timepoints:')
+        else:
+            print('Running for all timepoints:')
+
         for i, row in ts.iterrows():
             time = row['Datetime']
-            print(i, flush=True)
+            if self.number_of_timepoints is not None:
+                if i >= self.number_of_timepoints:
+                    break
+            print('Timepoint',i, flush=True)
             hour = int(i/(1/interval))
             seconds = (i % (1/interval))*3600
             location = os.path.join(self.dss_analysis, 'dss_files', 'Master.dss')
             dss.run_command("Clear")
-            dss.run_command("Redirect "+location)
-            dss.run_command("Solve mode=yearly stepsize="+str(stepsize)+"m number=1 hour="+str(hour)+" sec="+str(seconds))
+            output1 = dss.run_command("Redirect "+location)
+            output2 = dss.run_command("Solve mode=yearly stepsize="+str(stepsize)+"m number=1 hour="+str(hour)+" sec="+str(seconds))
             voltages = self._get_all_voltages()
             line_overloads = self._get_line_loading()
             overloaded_xfmrs = self._get_xfmr_overloads()

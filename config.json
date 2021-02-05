@@ -4,5 +4,6 @@
     "opendss_folder": "example/baseline_scenario/opendss",
     "geojson_file": "example/urbanopt_example.json",
     "ditto_folder":"ditto",
-    "use_reopt": true
+    "use_reopt": true,
+    "number_of_timepoints": 10
 }
