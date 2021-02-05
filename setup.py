@@ -44,11 +44,11 @@ setup(
     python_requires='>=3.7',
     py_modules=['uo_cli'],
     install_requires=[
-        'opendssdirect.py',
-        'pandas',
-        'networkx',
-        'traitlets',
-        'click'
+        'opendssdirect.py>=0.6',
+        'pandas>=1.2',
+        'networkx>=2.5',
+        'traitlets>=5.0',
+        'click>=7.1'
     ],
     entry_points='''
         [console_scripts]
