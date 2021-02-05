@@ -26,10 +26,6 @@ from setuptools import setup, find_packages
 from setuptools.command.develop import develop
 import os
 
-# command = 'git clone -b timeseries_updates https://github.com/NREL/ditto.git'
-command = 'git clone -b master https://github.com/NREL/ditto.git'
-os.system(command)
-
 with open("LICENSE.md") as f:
     license = f.read()
 
@@ -44,7 +40,7 @@ setup(
     python_requires='>=3.7',
     py_modules=['uo_cli'],
     install_requires=[
-        # 'ditto@https://github.com/NREL/ditto.git',
+        'ditto @ git+https://github.com/NREL/ditto.git',
         'opendssdirect.py>=0.6',
         'pandas>=1.2',
         'networkx>=2.5',
