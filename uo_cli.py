@@ -11,15 +11,19 @@ def cli():
     """URBANopt Ditto Reader"""
     pass
 
-@cli.command(short_help="Run OpenDSS")
-@click.argument(
-    'scenario_file',
+@cli.command(short_help="Run OpenDSS on existing urbanopt simulations")
+@click.option(
+    '-s',
+    '--scenario_file',
     type=click.Path(exists=True),
+    help="Path to scenario file",
     required=True
 )
-@click.argument(
-    "feature_file",
+@click.option(
+    '-f',
+    "--feature_file",
     type=click.Path(exists=True),
+    help="Path to feature file",
     required=True
 )
 @click.option(
@@ -36,9 +40,7 @@ def cli():
 )
 def run_opendss(scenario_file, feature_file, equipment, reopt):
     """
-    SCENARIO_FILE: Path to scenario file
-
-    FEATURE_FILE: Path to feature file
+    Run OpenDSS on an existing URBANopt scenario
 
     \f
     :param scenario_file: Path, location and name of scenario csv file
