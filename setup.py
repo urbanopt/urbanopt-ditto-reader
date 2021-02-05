@@ -42,10 +42,16 @@ setup(
     license=license,
     packages=find_packages(exclude=("tests", "docs")),
     python_requires='>=3.7',
+    py_modules=['uo_cli'],
     install_requires=[
         'opendssdirect.py',
         'pandas',
         'networkx',
-        'traitlets'
-    ]
+        'traitlets',
+        'click'
+    ],
+    entry_points='''
+        [console_scripts]
+        uo_cli=uo_cli:cli
+    '''
 )
