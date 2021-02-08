@@ -30,13 +30,13 @@ def cli():
     "-e",
     "--equipment",
     type=click.Path(exists=True),
-    help="Path to custom equipment file"
+    help="Path to optional custom equipment file"
 )
 @click.option(
     '-r',
     '--reopt',
     is_flag=True,
-    help="Signifies this project also has reopt data you want to model"
+    help="Flag to signify this project also has reopt data"
 )
 def run_opendss(scenario_file, feature_file, equipment, reopt):
     """
