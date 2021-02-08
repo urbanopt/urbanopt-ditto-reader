@@ -23,11 +23,13 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 """
 
 from setuptools import setup, find_packages
-from setuptools.command.develop import develop
-import os
+
 
 with open("LICENSE.md") as f:
     license = f.read()
+
+with open('requirements.txt') as f:
+    requirements = f.read().splitlines()
 
 setup(
     name="UrbanoptDittoReader",
@@ -39,16 +41,9 @@ setup(
     packages=find_packages(exclude=("tests", "docs")),
     python_requires='>=3.7',
     py_modules=['uo_cli'],
-    install_requires=[
-        'ditto @ git+https://github.com/NREL/ditto.git',
-        'opendssdirect.py>=0.6',
-        'pandas>=1.2',
-        'networkx>=2.5',
-        'traitlets>=5.0',
-        'click>=7.1'
-    ],
     entry_points='''
         [console_scripts]
         uo_cli=uo_cli:cli
     '''
+    install_requires=requirements
 )
