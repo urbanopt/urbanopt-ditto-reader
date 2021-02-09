@@ -41,9 +41,9 @@ setup(
     packages=find_packages(exclude=("tests", "docs")),
     python_requires='>=3.7',
     py_modules=['uo_cli'],
+    install_requires=requirements,
     entry_points='''
         [console_scripts]
         uo_cli=uo_cli:cli
     '''
-    install_requires=requirements
 )
