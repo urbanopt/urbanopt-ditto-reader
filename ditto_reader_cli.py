@@ -1,4 +1,4 @@
-# uo_cli.py
+# ditto_reader_cli
 
 import click
 from pathlib import Path

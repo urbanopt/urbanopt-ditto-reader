@@ -40,10 +40,10 @@ setup(
     license=license,
     packages=find_packages(exclude=("tests", "docs")),
     python_requires='>=3.7',
-    py_modules=['uo_cli'],
+    py_modules=['ditto_reader_cli'],
     install_requires=requirements,
     entry_points='''
         [console_scripts]
-        uo_cli=uo_cli:cli
+        ditto_reader_cli=ditto_reader_cli:cli
     '''
 )
