@@ -44,6 +44,6 @@ setup(
     install_requires=requirements,
     entry_points='''
         [console_scripts]
-        ditto_reader_cli=ditto_reader_cli:cli
+        ditto_reader_cli=urbanopt_ditto_reader.ditto_reader_cli:cli
     '''
 )

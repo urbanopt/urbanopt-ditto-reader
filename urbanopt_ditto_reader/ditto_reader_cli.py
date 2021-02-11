@@ -2,7 +2,7 @@
 
 import click
 from pathlib import Path
-from urbanopt_ditto_reader import UrbanoptDittoReader
+from urbanopt_ditto_reader.urbanopt_ditto_reader import UrbanoptDittoReader
 
 CONTEXT_SETTINGS = dict(help_option_names=['-h', '--help'])
 

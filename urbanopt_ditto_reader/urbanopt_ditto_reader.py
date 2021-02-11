@@ -183,7 +183,7 @@ class UrbanoptDittoReader(object):
 
         from ditto.store import Store
         from ditto.writers.opendss.write import Writer
-        from reader.read import Reader
+        from urbanopt_ditto_reader.reader.read import Reader
 
         from ditto.consistency.check_loops import check_loops
         from ditto.consistency.check_loads_connected import check_loads_connected
@@ -214,7 +214,7 @@ class UrbanoptDittoReader(object):
             color = OKGREEN
         print('Result:', f'{color} {result} {ENDC}')
         print()
-        
+
         print('Check loads connected to source:',flush=True)
         result = 'FAIL'
         color = FAIL
@@ -225,7 +225,7 @@ class UrbanoptDittoReader(object):
             color = OKGREEN
         print('Result:', f'{color} {result} {ENDC}')
         print()
-        
+
         print('Check unique path from each load to source:',flush=True)
         unique_path_res = check_unique_path(model,show_all=True,verbose=True)
         final_pass = final_pass and unique_path_res
@@ -236,7 +236,7 @@ class UrbanoptDittoReader(object):
             color = OKGREEN
         print('Result:', f'{color} {result} {ENDC}')
         print()
-        
+
         print('Check that phases on either side of transformer are correct:',flush=True)
         matched_phases_res = check_matched_phases(model,verbose=True)
         final_pass = final_pass and check_matched_phases
@@ -247,7 +247,7 @@ class UrbanoptDittoReader(object):
             color = OKGREEN
         print('Result:', f'{color} {result} {ENDC}')
         print()
-        
+
         print('Check that phases from transformer to load and source are correct:',flush=True)
         transformer_phase_res = check_transformer_phase_path(model,needs_transformers=True, verbose=True)
 
