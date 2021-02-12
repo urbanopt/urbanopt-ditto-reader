@@ -1,6 +1,7 @@
 # ditto_reader_cli
 
 import click
+import json
 from pathlib import Path
 from urbanopt_ditto_reader.urbanopt_ditto_reader import UrbanoptDittoReader
 
@@ -16,15 +17,13 @@ def cli():
     '-s',
     '--scenario_file',
     type=click.Path(exists=True),
-    help="Path to scenario file",
-    required=True
+    help="Path to scenario file"
 )
 @click.option(
     '-f',
     "--feature_file",
     type=click.Path(exists=True),
-    help="Path to feature file",
-    required=True
+    help="Path to feature file"
 )
 @click.option(
     "-e",
@@ -38,9 +37,18 @@ def cli():
     is_flag=True,
     help="Flag to signify this project also has reopt data"
 )
-def run_opendss(scenario_file, feature_file, equipment, reopt):
+@click.option(
+    '-c',
+    '--config',
+    type=click.Path(exists=True),
+    help="Path to a json config file for all settings"
+)
+def run_opendss(scenario_file, feature_file, equipment, reopt, config):
     """
-    Run OpenDSS on an existing URBANopt scenario
+    \b
+    Run OpenDSS on an existing URBANopt scenario.
+    If referencing a json config file, all settings must be made in that file.
+    See urbanopt_ditto_reader/config.json for an example.
 
     \f
     :param scenario_file: Path, location and name of scenario csv file
@@ -48,20 +56,24 @@ def run_opendss(scenario_file, feature_file, equipment, reopt):
     :param equipment: Path, Location and name of custom equipment file
     :param reopt: Boolean, flag to specify that reopt data is present and should be included in modeling
     """
-    scenario_name = Path(scenario_file).stem
-    scenario_filepath = Path(scenario_file).resolve()
-    scenario_dir = scenario_filepath.parent / "run" / scenario_name
-    feature_filepath = Path(feature_file).resolve()
 
-    config_dict = {
-        'urbanopt_scenario': scenario_dir,
-        'geojson_file': feature_filepath,
-        'use_reopt': reopt,
-        'opendss_folder': scenario_dir / 'opendss'
-        }
+    if config:
+        with open(config) as f:
+            config_dict = json.load(f)
+    else:
+        scenario_name = Path(scenario_file).stem
+        scenario_filepath = Path(scenario_file).resolve()
+        scenario_dir = scenario_filepath.parent / "run" / scenario_name
+        feature_filepath = Path(feature_file).resolve()
 
-    if equipment:
-        config_dict['equipment_file'] = Path(equipment)
+        config_dict = {
+            'urbanopt_scenario': scenario_dir,
+            'geojson_file': feature_filepath,
+            'use_reopt': reopt,
+            'opendss_folder': scenario_dir / 'opendss'
+            }
+        if equipment:
+            config_dict['equipment_file'] = Path(equipment)
 
     ditto = UrbanoptDittoReader(config_dict)
     ditto.run()
