@@ -21,5 +21,8 @@ Install the respository:
 
 # Running the converter
 
-`python convert.py config.json`
+For help text in the terminal: \
+`ditto_reader_cli -h`
 
+Example command to run the ditto-reader: \
+`ditto_reader_cli run-opendss -s <ScenarioFile> -f <FeatureFile>`
