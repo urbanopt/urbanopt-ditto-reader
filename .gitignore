@@ -134,5 +134,5 @@ dmypy.json
 # DS_Store
 .DS_Store
 
-# ditto repo
-ditto/
+# opendss files
+urbanopt_ditto_reader/example/baseline_scenario/opendss
