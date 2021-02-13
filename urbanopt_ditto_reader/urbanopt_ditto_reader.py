@@ -27,6 +27,7 @@ import datetime
 import json
 import math
 import os
+from pathlib import Path
 import pandas as pd
 import opendssdirect as dss
 
@@ -63,14 +64,11 @@ class UrbanoptDittoReader(object):
         self.timeseries_location = os.path.join(self.dss_analysis, 'profiles')
 
     def default_config(self):
-        dir_path = os.path.dirname(os.path.realpath(__file__))
-        data = open(os.path.join(dir_path, 'config.json'))
-        default_data = json.load(data)
-
-        # fix data to be relative path wrt this module
-        default_data = self.fix_paths(default_data)
-
-        data.close()
+        # FIXME: reader/read.py thinks the config file is in the same dir as this file.
+        # Hacky workaround is that I changed the paths in example/config.json
+        dir_path = Path(__file__).parent.parent.resolve() / 'example'
+        with open(dir_path / 'config.json') as f:
+            default_data = self.fix_paths(json.load(f))
         return default_data
 
     def fix_paths(self, data):
