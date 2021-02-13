@@ -1,0 +1,14 @@
+New PVSystem.solar_1 bus1=e4bcf9d6-e0b7-421c-91d4-554d06c69364.None.None phases=2 kV=0.20784609690826525 kVA=8.397391859999999 Pmpp=7.6339926 conn=wye Model=1 pf=1.0 irradiance=1
+New PVSystem.solar_2 bus1=53c917d8-b04d-4110-bdd9-cbf044e6a1fa.None.None.None phases=3 kV=0.48 kVA=0.41850226000000007 Pmpp=0.3804566 conn=wye Model=1 pf=1.0 irradiance=1
+New PVSystem.solar_3 bus1=67b07fac-6666-4954-98b8-3e08b0896646.None.None phases=2 kV=0.20784609690826525 kVA=2.2778604200000006 Pmpp=2.0707822 conn=wye Model=1 pf=1.0 irradiance=1
+New PVSystem.solar_4 bus1=be6e5e58-e73e-4172-a939-250c6a7a3c2c.None.None phases=2 kV=0.20784609690826525 kVA=0.61082703 Pmpp=0.5552973 conn=wye Model=1 pf=1.0 irradiance=1
+New PVSystem.solar_5 bus1=3d1aa47d-69dd-4200-ab34-9b6244ad82d7.None.None phases=2 kV=0.20784609690826525 kVA=0.16553185 Pmpp=0.1504835 conn=wye Model=1 pf=1.0 irradiance=1
+New PVSystem.solar_6 bus1=db52eea7-f395-4fb1-999d-47c82333a4a7.None.None phases=2 kV=0.20784609690826525 kVA=0.20131254 Pmpp=0.18301140000000002 conn=wye Model=1 pf=1.0 irradiance=1
+New PVSystem.solar_7 bus1=9d037967-7ac1-4296-8f87-2d4a842d7a87.None.None phases=2 kV=0.20784609690826525 kVA=1.52541642 Pmpp=1.3867422 conn=wye Model=1 pf=1.0 irradiance=1
+New PVSystem.solar_8 bus1=18fe5a25-2547-4c32-a225-8bd455e93c9b.None.None.None phases=3 kV=0.48 kVA=3.50503615 Pmpp=3.1863965 conn=wye Model=1 pf=1.0 irradiance=1
+New PVSystem.solar_9 bus1=40867501-5a41-4626-a9d4-be5444a5b575.None.None.None phases=3 kV=0.48 kVA=2.46962826 Pmpp=2.2451166 conn=wye Model=1 pf=1.0 irradiance=1
+New PVSystem.solar_10 bus1=44963046-644a-4c03-b81c-f65d80475015.None.None.None phases=3 kV=0.48 kVA=10.725823790000003 Pmpp=9.750748900000001 conn=wye Model=1 pf=1.0 irradiance=1
+New PVSystem.solar_11 bus1=14072af7-3121-4e3d-b85f-c79868702ec9.None.None phases=2 kV=0.20784609690826525 kVA=0.61073023 Pmpp=0.5552093 conn=wye Model=1 pf=1.0 irradiance=1
+New PVSystem.solar_12 bus1=753b77b9-b88b-443f-9c3b-3cd977bb3558.None.None.None phases=3 kV=0.48 kVA=2.4020551500000002 Pmpp=2.1836865 conn=wye Model=1 pf=1.0 irradiance=1
+New PVSystem.solar_13 bus1=38a42375-ff02-497e-90ef-c5d9eb78850e.None.None.None phases=3 kV=0.48 kVA=1.1163028799999999 Pmpp=1.0148208 conn=wye Model=1 pf=1.0 irradiance=1
+

@@ -1,0 +1,12 @@
+New LineGeometry.Geometry_1 Nconds=4 Nphases=3 Units=m Cond=1 Wire=OH_AL_2-0_A X=0.0 H=4.8768 Normamps=220.0 Cond=2 Wire=OH_AL_2-0_B X=0.3048 H=4.8768 Normamps=220.0 Cond=3 Wire=OH_AL_2-0_C X=0.6096 H=4.8768 Normamps=220.0 Cond=4 Wire=OH_AL_2-0_N X=0.3048 H=5.1816 Normamps=220.0 Reduce=y
+
+New LineGeometry.Geometry_2 Nconds=3 Nphases=2 Units=m Cond=1 Wire=OH_TPLX_2-0_S1 X=0.0 H=4.8768 Normamps=200.0 Cond=2 Wire=OH_TPLX_2-0_S2 X=0.06096000000000001 H=4.8768 Normamps=200.0 Cond=3 Wire=OH_TPLX_2-0_N X=0.030480000000000004 H=4.572 Normamps=200.0 Reduce=y
+
+New LineGeometry.Geometry_3 Nconds=3 Nphases=2 Units=m Cond=1 Wire=OH_TPLX_2-0_S2 X=0.06096000000000001 H=4.8768 Normamps=200.0 Cond=2 Wire=OH_TPLX_2-0_N X=0.030480000000000004 H=4.572 Normamps=200.0 Cond=3 Wire=OH_TPLX_2-0_S1 X=0.0 H=4.8768 Normamps=200.0 Reduce=y
+
+New LineGeometry.Geometry_4 Nconds=3 Nphases=2 Units=m Cond=1 Wire=OH_TPLX_2-0_N X=0.030480000000000004 H=4.572 Normamps=200.0 Cond=2 Wire=OH_TPLX_2-0_S2 X=0.06096000000000001 H=4.8768 Normamps=200.0 Cond=3 Wire=OH_TPLX_2-0_S1 X=0.0 H=4.8768 Normamps=200.0 Reduce=y
+
+New LineGeometry.Geometry_5 Nconds=3 Nphases=2 Units=m Cond=1 Wire=OH_TPLX_2-0_S2 X=0.06096000000000001 H=4.8768 Normamps=200.0 Cond=2 Wire=OH_TPLX_2-0_S1 X=0.0 H=4.8768 Normamps=200.0 Cond=3 Wire=OH_TPLX_2-0_N X=0.030480000000000004 H=4.572 Normamps=200.0 Reduce=y
+
+New LineGeometry.Geometry_6 Nconds=4 Nphases=3 Units=m Cond=1 Wire=OH_AL_1-0_A X=0.0 H=4.8768 Normamps=220.0 Cond=2 Wire=OH_AL_1-0_B X=0.3048 H=4.8768 Normamps=220.0 Cond=3 Wire=OH_AL_1-0_C X=0.6096 H=4.8768 Normamps=220.0 Cond=4 Wire=OH_AL_1-0_N X=0.3048 H=5.1816 Normamps=220.0 Reduce=y
+

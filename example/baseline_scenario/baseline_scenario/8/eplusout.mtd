@@ -1,0 +1,2812 @@
+
+ Meters for 8,BUILDING STORY 2 THERMALZONE OUTPATIENT ANESTHESIA LIGHTS 1:Lights Electric Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=Electricity:Building [J]
+  OnMeter=Electricity:Zone:BUILDING STORY 2 THERMALZONE [J]
+  OnMeter=InteriorLights:Electricity [J]
+  OnMeter=InteriorLights:Electricity:Zone:BUILDING STORY 2 THERMALZONE [J]
+  OnMeter=General:InteriorLights:Electricity [J]
+
+ Meters for 81,BUILDING STORY 2 THERMALZONE OUTPATIENT BIOHAZARD LIGHTS 1:Lights Electric Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=Electricity:Building [J]
+  OnMeter=Electricity:Zone:BUILDING STORY 2 THERMALZONE [J]
+  OnMeter=InteriorLights:Electricity [J]
+  OnMeter=InteriorLights:Electricity:Zone:BUILDING STORY 2 THERMALZONE [J]
+  OnMeter=General:InteriorLights:Electricity [J]
+
+ Meters for 82,BUILDING STORY 2 THERMALZONE OUTPATIENT CAFE LIGHTS 1:Lights Electric Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=Electricity:Building [J]
+  OnMeter=Electricity:Zone:BUILDING STORY 2 THERMALZONE [J]
+  OnMeter=InteriorLights:Electricity [J]
+  OnMeter=InteriorLights:Electricity:Zone:BUILDING STORY 2 THERMALZONE [J]
+  OnMeter=General:InteriorLights:Electricity [J]
+
+ Meters for 83,BUILDING STORY 2 THERMALZONE OUTPATIENT CLEANWORK LIGHTS 1:Lights Electric Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=Electricity:Building [J]
+  OnMeter=Electricity:Zone:BUILDING STORY 2 THERMALZONE [J]
+  OnMeter=InteriorLights:Electricity [J]
+  OnMeter=InteriorLights:Electricity:Zone:BUILDING STORY 2 THERMALZONE [J]
+  OnMeter=General:InteriorLights:Electricity [J]
+
+ Meters for 84,BUILDING STORY 2 THERMALZONE OUTPATIENT CONFERENCE LIGHTS 1:Lights Electric Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=Electricity:Building [J]
+  OnMeter=Electricity:Zone:BUILDING STORY 2 THERMALZONE [J]
+  OnMeter=InteriorLights:Electricity [J]
+  OnMeter=InteriorLights:Electricity:Zone:BUILDING STORY 2 THERMALZONE [J]
+  OnMeter=General:InteriorLights:Electricity [J]
+
+ Meters for 85,BUILDING STORY 2 THERMALZONE OUTPATIENT ELEC/MECHROOM LIGHTS 1:Lights Electric Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=Electricity:Building [J]
+  OnMeter=Electricity:Zone:BUILDING STORY 2 THERMALZONE [J]
+  OnMeter=InteriorLights:Electricity [J]
+  OnMeter=InteriorLights:Electricity:Zone:BUILDING STORY 2 THERMALZONE [J]
+  OnMeter=General:InteriorLights:Electricity [J]
+
+ Meters for 86,BUILDING STORY 2 THERMALZONE OUTPATIENT IT_ROOM LIGHTS 1:Lights Electric Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=Electricity:Building [J]
+  OnMeter=Electricity:Zone:BUILDING STORY 2 THERMALZONE [J]
+  OnMeter=InteriorLights:Electricity [J]
+  OnMeter=InteriorLights:Electricity:Zone:BUILDING STORY 2 THERMALZONE [J]
+  OnMeter=General:InteriorLights:Electricity [J]
+
+ Meters for 87,BUILDING STORY 2 THERMALZONE OUTPATIENT MEDGAS LIGHTS 1:Lights Electric Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=Electricity:Building [J]
+  OnMeter=Electricity:Zone:BUILDING STORY 2 THERMALZONE [J]
+  OnMeter=InteriorLights:Electricity [J]
+  OnMeter=InteriorLights:Electricity:Zone:BUILDING STORY 2 THERMALZONE [J]
+  OnMeter=General:InteriorLights:Electricity [J]
+
+ Meters for 88,BUILDING STORY 2 THERMALZONE OUTPATIENT MRI LIGHTS 1:Lights Electric Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=Electricity:Building [J]
+  OnMeter=Electricity:Zone:BUILDING STORY 2 THERMALZONE [J]
+  OnMeter=InteriorLights:Electricity [J]
+  OnMeter=InteriorLights:Electricity:Zone:BUILDING STORY 2 THERMALZONE [J]
+  OnMeter=General:InteriorLights:Electricity [J]
+
+ Meters for 89,BUILDING STORY 2 THERMALZONE OUTPATIENT MRI_CONTROL LIGHTS 1:Lights Electric Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=Electricity:Building [J]
+  OnMeter=Electricity:Zone:BUILDING STORY 2 THERMALZONE [J]
+  OnMeter=InteriorLights:Electricity [J]
+  OnMeter=InteriorLights:Electricity:Zone:BUILDING STORY 2 THERMALZONE [J]
+  OnMeter=General:InteriorLights:Electricity [J]
+
+ Meters for 90,BUILDING STORY 2 THERMALZONE OUTPATIENT PREOP LIGHTS 1:Lights Electric Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=Electricity:Building [J]
+  OnMeter=Electricity:Zone:BUILDING STORY 2 THERMALZONE [J]
+  OnMeter=InteriorLights:Electricity [J]
+  OnMeter=InteriorLights:Electricity:Zone:BUILDING STORY 2 THERMALZONE [J]
+  OnMeter=General:InteriorLights:Electricity [J]
+
+ Meters for 91,BUILDING STORY 2 THERMALZONE OUTPATIENT PROCEDUREROOM LIGHTS 1:Lights Electric Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=Electricity:Building [J]
+  OnMeter=Electricity:Zone:BUILDING STORY 2 THERMALZONE [J]
+  OnMeter=InteriorLights:Electricity [J]
+  OnMeter=InteriorLights:Electricity:Zone:BUILDING STORY 2 THERMALZONE [J]
+  OnMeter=General:InteriorLights:Electricity [J]
+
+ Meters for 92,BUILDING STORY 2 THERMALZONE OUTPATIENT SOIL WORK LIGHTS 1:Lights Electric Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=Electricity:Building [J]
+  OnMeter=Electricity:Zone:BUILDING STORY 2 THERMALZONE [J]
+  OnMeter=InteriorLights:Electricity [J]
+  OnMeter=InteriorLights:Electricity:Zone:BUILDING STORY 2 THERMALZONE [J]
+  OnMeter=General:InteriorLights:Electricity [J]
+
+ Meters for 93,BUILDING STORY 1 THERMALZONE OUTPATIENT LOBBY LIGHTS 1:Lights Electric Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=Electricity:Building [J]
+  OnMeter=Electricity:Zone:BUILDING STORY 1 THERMALZONE [J]
+  OnMeter=InteriorLights:Electricity [J]
+  OnMeter=InteriorLights:Electricity:Zone:BUILDING STORY 1 THERMALZONE [J]
+  OnMeter=General:InteriorLights:Electricity [J]
+
+ Meters for 118,BUILDING STORY 1 THERMALZONE OUTPATIENT LOCKERROOM LIGHTS 1:Lights Electric Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=Electricity:Building [J]
+  OnMeter=Electricity:Zone:BUILDING STORY 1 THERMALZONE [J]
+  OnMeter=InteriorLights:Electricity [J]
+  OnMeter=InteriorLights:Electricity:Zone:BUILDING STORY 1 THERMALZONE [J]
+  OnMeter=General:InteriorLights:Electricity [J]
+
+ Meters for 119,BUILDING STORY 1 THERMALZONE OUTPATIENT NURSESTATION LIGHTS 1:Lights Electric Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=Electricity:Building [J]
+  OnMeter=Electricity:Zone:BUILDING STORY 1 THERMALZONE [J]
+  OnMeter=InteriorLights:Electricity [J]
+  OnMeter=InteriorLights:Electricity:Zone:BUILDING STORY 1 THERMALZONE [J]
+  OnMeter=General:InteriorLights:Electricity [J]
+
+ Meters for 120,BUILDING STORY 1 THERMALZONE OUTPATIENT PREOP LIGHTS 2:Lights Electric Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=Electricity:Building [J]
+  OnMeter=Electricity:Zone:BUILDING STORY 1 THERMALZONE [J]
+  OnMeter=InteriorLights:Electricity [J]
+  OnMeter=InteriorLights:Electricity:Zone:BUILDING STORY 1 THERMALZONE [J]
+  OnMeter=General:InteriorLights:Electricity [J]
+
+ Meters for 121,BUILDING STORY 1 THERMALZONE OUTPATIENT STAIR LIGHTS 1:Lights Electric Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=Electricity:Building [J]
+  OnMeter=Electricity:Zone:BUILDING STORY 1 THERMALZONE [J]
+  OnMeter=InteriorLights:Electricity [J]
+  OnMeter=InteriorLights:Electricity:Zone:BUILDING STORY 1 THERMALZONE [J]
+  OnMeter=General:InteriorLights:Electricity [J]
+
+ Meters for 122,BUILDING STORY 1 THERMALZONE OUTPATIENT TOILET LIGHTS 1:Lights Electric Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=Electricity:Building [J]
+  OnMeter=Electricity:Zone:BUILDING STORY 1 THERMALZONE [J]
+  OnMeter=InteriorLights:Electricity [J]
+  OnMeter=InteriorLights:Electricity:Zone:BUILDING STORY 1 THERMALZONE [J]
+  OnMeter=General:InteriorLights:Electricity [J]
+
+ Meters for 123,BUILDING STORY 1 THERMALZONE OUTPATIENT XRAY LIGHTS 1:Lights Electric Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=Electricity:Building [J]
+  OnMeter=Electricity:Zone:BUILDING STORY 1 THERMALZONE [J]
+  OnMeter=InteriorLights:Electricity [J]
+  OnMeter=InteriorLights:Electricity:Zone:BUILDING STORY 1 THERMALZONE [J]
+  OnMeter=General:InteriorLights:Electricity [J]
+
+ Meters for 124,BUILDING STORY 4 THERMALZONE OUTPATIENT LOUNGE LIGHTS 1:Lights Electric Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=Electricity:Building [J]
+  OnMeter=Electricity:Zone:BUILDING STORY 4 THERMALZONE [J]
+  OnMeter=InteriorLights:Electricity [J]
+  OnMeter=InteriorLights:Electricity:Zone:BUILDING STORY 4 THERMALZONE [J]
+  OnMeter=General:InteriorLights:Electricity [J]
+
+ Meters for 149,BUILDING STORY 4 THERMALZONE OUTPATIENT OR LIGHTS 1:Lights Electric Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=Electricity:Building [J]
+  OnMeter=Electricity:Zone:BUILDING STORY 4 THERMALZONE [J]
+  OnMeter=InteriorLights:Electricity [J]
+  OnMeter=InteriorLights:Electricity:Zone:BUILDING STORY 4 THERMALZONE [J]
+  OnMeter=General:InteriorLights:Electricity [J]
+
+ Meters for 150,BUILDING STORY 4 THERMALZONE OUTPATIENT PACU LIGHTS 1:Lights Electric Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=Electricity:Building [J]
+  OnMeter=Electricity:Zone:BUILDING STORY 4 THERMALZONE [J]
+  OnMeter=InteriorLights:Electricity [J]
+  OnMeter=InteriorLights:Electricity:Zone:BUILDING STORY 4 THERMALZONE [J]
+  OnMeter=General:InteriorLights:Electricity [J]
+
+ Meters for 151,BUILDING STORY 4 THERMALZONE OUTPATIENT XRAY LIGHTS 2:Lights Electric Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=Electricity:Building [J]
+  OnMeter=Electricity:Zone:BUILDING STORY 4 THERMALZONE [J]
+  OnMeter=InteriorLights:Electricity [J]
+  OnMeter=InteriorLights:Electricity:Zone:BUILDING STORY 4 THERMALZONE [J]
+  OnMeter=General:InteriorLights:Electricity [J]
+
+ Meters for 152,BUILDING STORY 6 THERMALZONE OUTPATIENT OR LIGHTS 2:Lights Electric Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=Electricity:Building [J]
+  OnMeter=Electricity:Zone:BUILDING STORY 6 THERMALZONE [J]
+  OnMeter=InteriorLights:Electricity [J]
+  OnMeter=InteriorLights:Electricity:Zone:BUILDING STORY 6 THERMALZONE [J]
+  OnMeter=General:InteriorLights:Electricity [J]
+
+ Meters for 177,BUILDING STORY 6 THERMALZONE OUTPATIENT PHYSICALTHERAPY LIGHTS 1:Lights Electric Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=Electricity:Building [J]
+  OnMeter=Electricity:Zone:BUILDING STORY 6 THERMALZONE [J]
+  OnMeter=InteriorLights:Electricity [J]
+  OnMeter=InteriorLights:Electricity:Zone:BUILDING STORY 6 THERMALZONE [J]
+  OnMeter=General:InteriorLights:Electricity [J]
+
+ Meters for 178,BUILDING STORY 6 THERMALZONE OUTPATIENT RECEPTION LIGHTS 1:Lights Electric Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=Electricity:Building [J]
+  OnMeter=Electricity:Zone:BUILDING STORY 6 THERMALZONE [J]
+  OnMeter=InteriorLights:Electricity [J]
+  OnMeter=InteriorLights:Electricity:Zone:BUILDING STORY 6 THERMALZONE [J]
+  OnMeter=General:InteriorLights:Electricity [J]
+
+ Meters for 179,BUILDING STORY 3 THERMALZONE OUTPATIENT EXAM LIGHTS 1:Lights Electric Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=Electricity:Building [J]
+  OnMeter=Electricity:Zone:BUILDING STORY 3 THERMALZONE [J]
+  OnMeter=InteriorLights:Electricity [J]
+  OnMeter=InteriorLights:Electricity:Zone:BUILDING STORY 3 THERMALZONE [J]
+  OnMeter=General:InteriorLights:Electricity [J]
+
+ Meters for 204,BUILDING STORY 3 THERMALZONE OUTPATIENT JANITOR LIGHTS 1:Lights Electric Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=Electricity:Building [J]
+  OnMeter=Electricity:Zone:BUILDING STORY 3 THERMALZONE [J]
+  OnMeter=InteriorLights:Electricity [J]
+  OnMeter=InteriorLights:Electricity:Zone:BUILDING STORY 3 THERMALZONE [J]
+  OnMeter=General:InteriorLights:Electricity [J]
+
+ Meters for 205,BUILDING STORY 3 THERMALZONE OUTPATIENT PHYSICALTHERAPY LIGHTS 2:Lights Electric Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=Electricity:Building [J]
+  OnMeter=Electricity:Zone:BUILDING STORY 3 THERMALZONE [J]
+  OnMeter=InteriorLights:Electricity [J]
+  OnMeter=InteriorLights:Electricity:Zone:BUILDING STORY 3 THERMALZONE [J]
+  OnMeter=General:InteriorLights:Electricity [J]
+
+ Meters for 206,BUILDING STORY 8 THERMALZONE OUTPATIENT EXAM LIGHTS 2:Lights Electric Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=Electricity:Building [J]
+  OnMeter=Electricity:Zone:BUILDING STORY 8 THERMALZONE [J]
+  OnMeter=InteriorLights:Electricity [J]
+  OnMeter=InteriorLights:Electricity:Zone:BUILDING STORY 8 THERMALZONE [J]
+  OnMeter=General:InteriorLights:Electricity [J]
+
+ Meters for 231,BUILDING STORY 8 THERMALZONE OUTPATIENT OFFICE LIGHTS 1:Lights Electric Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=Electricity:Building [J]
+  OnMeter=Electricity:Zone:BUILDING STORY 8 THERMALZONE [J]
+  OnMeter=InteriorLights:Electricity [J]
+  OnMeter=InteriorLights:Electricity:Zone:BUILDING STORY 8 THERMALZONE [J]
+  OnMeter=General:InteriorLights:Electricity [J]
+
+ Meters for 232,BUILDING STORY 5 THERMALZONE OUTPATIENT OFFICE LIGHTS 2:Lights Electric Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=Electricity:Building [J]
+  OnMeter=Electricity:Zone:BUILDING STORY 5 THERMALZONE [J]
+  OnMeter=InteriorLights:Electricity [J]
+  OnMeter=InteriorLights:Electricity:Zone:BUILDING STORY 5 THERMALZONE [J]
+  OnMeter=General:InteriorLights:Electricity [J]
+
+ Meters for 257,BUILDING STORY 7 THERMALZONE OUTPATIENT HALL LIGHTS 1:Lights Electric Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=Electricity:Building [J]
+  OnMeter=Electricity:Zone:BUILDING STORY 7 THERMALZONE [J]
+  OnMeter=InteriorLights:Electricity [J]
+  OnMeter=InteriorLights:Electricity:Zone:BUILDING STORY 7 THERMALZONE [J]
+  OnMeter=General:InteriorLights:Electricity [J]
+
+ Meters for 282,BUILDING STORY 7 THERMALZONE OUTPATIENT OFFICE LIGHTS 3:Lights Electric Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=Electricity:Building [J]
+  OnMeter=Electricity:Zone:BUILDING STORY 7 THERMALZONE [J]
+  OnMeter=InteriorLights:Electricity [J]
+  OnMeter=InteriorLights:Electricity:Zone:BUILDING STORY 7 THERMALZONE [J]
+  OnMeter=General:InteriorLights:Electricity [J]
+
+ Meters for 283,BUILDING STORY 9 THERMALZONE OUTPATIENT HALL LIGHTS 2:Lights Electric Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=Electricity:Building [J]
+  OnMeter=Electricity:Zone:BUILDING STORY 9 THERMALZONE [J]
+  OnMeter=InteriorLights:Electricity [J]
+  OnMeter=InteriorLights:Electricity:Zone:BUILDING STORY 9 THERMALZONE [J]
+  OnMeter=General:InteriorLights:Electricity [J]
+
+ Meters for 308,BUILDING STORY 10 THERMALZONE OUTPATIENT HALL LIGHTS 3:Lights Electric Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=Electricity:Building [J]
+  OnMeter=Electricity:Zone:BUILDING STORY 10 THERMALZONE [J]
+  OnMeter=InteriorLights:Electricity [J]
+  OnMeter=InteriorLights:Electricity:Zone:BUILDING STORY 10 THERMALZONE [J]
+  OnMeter=General:InteriorLights:Electricity [J]
+
+ Meters for 333,BUILDING STORY 2 THERMALZONE 27 ELEVATOR FANS:Electric Equipment Electric Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=Electricity:Building [J]
+  OnMeter=Electricity:Zone:BUILDING STORY 2 THERMALZONE [J]
+  OnMeter=InteriorEquipment:Electricity [J]
+  OnMeter=InteriorEquipment:Electricity:Zone:BUILDING STORY 2 THERMALZONE [J]
+  OnMeter=Elevators:InteriorEquipment:Electricity [J]
+
+ Meters for 370,BUILDING STORY 2 THERMALZONE 27 ELEVATOR LIFT MOTORS:Electric Equipment Electric Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=Electricity:Building [J]
+  OnMeter=Electricity:Zone:BUILDING STORY 2 THERMALZONE [J]
+  OnMeter=InteriorEquipment:Electricity [J]
+  OnMeter=InteriorEquipment:Electricity:Zone:BUILDING STORY 2 THERMALZONE [J]
+  OnMeter=Elevators:InteriorEquipment:Electricity [J]
+
+ Meters for 371,BUILDING STORY 2 THERMALZONE 27 ELEVATOR LIGHTS:Electric Equipment Electric Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=Electricity:Building [J]
+  OnMeter=Electricity:Zone:BUILDING STORY 2 THERMALZONE [J]
+  OnMeter=InteriorEquipment:Electricity [J]
+  OnMeter=InteriorEquipment:Electricity:Zone:BUILDING STORY 2 THERMALZONE [J]
+  OnMeter=Elevators:InteriorEquipment:Electricity [J]
+
+ Meters for 372,BUILDING STORY 2 THERMALZONE OUTPATIENT ANESTHESIA ELEC EQUIP 1:Electric Equipment Electric Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=Electricity:Building [J]
+  OnMeter=Electricity:Zone:BUILDING STORY 2 THERMALZONE [J]
+  OnMeter=InteriorEquipment:Electricity [J]
+  OnMeter=InteriorEquipment:Electricity:Zone:BUILDING STORY 2 THERMALZONE [J]
+  OnMeter=General:InteriorEquipment:Electricity [J]
+
+ Meters for 385,BUILDING STORY 2 THERMALZONE OUTPATIENT BIOHAZARD ELEC EQUIP 1:Electric Equipment Electric Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=Electricity:Building [J]
+  OnMeter=Electricity:Zone:BUILDING STORY 2 THERMALZONE [J]
+  OnMeter=InteriorEquipment:Electricity [J]
+  OnMeter=InteriorEquipment:Electricity:Zone:BUILDING STORY 2 THERMALZONE [J]
+  OnMeter=General:InteriorEquipment:Electricity [J]
+
+ Meters for 386,BUILDING STORY 2 THERMALZONE OUTPATIENT CAFE ELEC EQUIP 1:Electric Equipment Electric Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=Electricity:Building [J]
+  OnMeter=Electricity:Zone:BUILDING STORY 2 THERMALZONE [J]
+  OnMeter=InteriorEquipment:Electricity [J]
+  OnMeter=InteriorEquipment:Electricity:Zone:BUILDING STORY 2 THERMALZONE [J]
+  OnMeter=General:InteriorEquipment:Electricity [J]
+
+ Meters for 387,BUILDING STORY 2 THERMALZONE OUTPATIENT CLEANWORK ELEC EQUIP 1:Electric Equipment Electric Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=Electricity:Building [J]
+  OnMeter=Electricity:Zone:BUILDING STORY 2 THERMALZONE [J]
+  OnMeter=InteriorEquipment:Electricity [J]
+  OnMeter=InteriorEquipment:Electricity:Zone:BUILDING STORY 2 THERMALZONE [J]
+  OnMeter=General:InteriorEquipment:Electricity [J]
+
+ Meters for 388,BUILDING STORY 2 THERMALZONE OUTPATIENT CONFERENCE ELEC EQUIP 1:Electric Equipment Electric Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=Electricity:Building [J]
+  OnMeter=Electricity:Zone:BUILDING STORY 2 THERMALZONE [J]
+  OnMeter=InteriorEquipment:Electricity [J]
+  OnMeter=InteriorEquipment:Electricity:Zone:BUILDING STORY 2 THERMALZONE [J]
+  OnMeter=General:InteriorEquipment:Electricity [J]
+
+ Meters for 389,BUILDING STORY 2 THERMALZONE OUTPATIENT ELEC/MECHROOM ELEC EQUIP 1:Electric Equipment Electric Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=Electricity:Building [J]
+  OnMeter=Electricity:Zone:BUILDING STORY 2 THERMALZONE [J]
+  OnMeter=InteriorEquipment:Electricity [J]
+  OnMeter=InteriorEquipment:Electricity:Zone:BUILDING STORY 2 THERMALZONE [J]
+  OnMeter=General:InteriorEquipment:Electricity [J]
+
+ Meters for 390,BUILDING STORY 2 THERMALZONE OUTPATIENT IT_ROOM ELEC EQUIP 1:Electric Equipment Electric Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=Electricity:Building [J]
+  OnMeter=Electricity:Zone:BUILDING STORY 2 THERMALZONE [J]
+  OnMeter=InteriorEquipment:Electricity [J]
+  OnMeter=InteriorEquipment:Electricity:Zone:BUILDING STORY 2 THERMALZONE [J]
+  OnMeter=General:InteriorEquipment:Electricity [J]
+
+ Meters for 391,BUILDING STORY 2 THERMALZONE OUTPATIENT MEDGAS ELEC EQUIP 1:Electric Equipment Electric Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=Electricity:Building [J]
+  OnMeter=Electricity:Zone:BUILDING STORY 2 THERMALZONE [J]
+  OnMeter=InteriorEquipment:Electricity [J]
+  OnMeter=InteriorEquipment:Electricity:Zone:BUILDING STORY 2 THERMALZONE [J]
+  OnMeter=General:InteriorEquipment:Electricity [J]
+
+ Meters for 392,BUILDING STORY 2 THERMALZONE OUTPATIENT MRI ELEC EQUIP 1:Electric Equipment Electric Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=Electricity:Building [J]
+  OnMeter=Electricity:Zone:BUILDING STORY 2 THERMALZONE [J]
+  OnMeter=InteriorEquipment:Electricity [J]
+  OnMeter=InteriorEquipment:Electricity:Zone:BUILDING STORY 2 THERMALZONE [J]
+  OnMeter=General:InteriorEquipment:Electricity [J]
+
+ Meters for 393,BUILDING STORY 2 THERMALZONE OUTPATIENT MRI_CONTROL ELEC EQUIP 1:Electric Equipment Electric Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=Electricity:Building [J]
+  OnMeter=Electricity:Zone:BUILDING STORY 2 THERMALZONE [J]
+  OnMeter=InteriorEquipment:Electricity [J]
+  OnMeter=InteriorEquipment:Electricity:Zone:BUILDING STORY 2 THERMALZONE [J]
+  OnMeter=General:InteriorEquipment:Electricity [J]
+
+ Meters for 394,BUILDING STORY 2 THERMALZONE OUTPATIENT PREOP ELEC EQUIP 1:Electric Equipment Electric Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=Electricity:Building [J]
+  OnMeter=Electricity:Zone:BUILDING STORY 2 THERMALZONE [J]
+  OnMeter=InteriorEquipment:Electricity [J]
+  OnMeter=InteriorEquipment:Electricity:Zone:BUILDING STORY 2 THERMALZONE [J]
+  OnMeter=General:InteriorEquipment:Electricity [J]
+
+ Meters for 395,BUILDING STORY 2 THERMALZONE OUTPATIENT PROCEDUREROOM ELEC EQUIP 1:Electric Equipment Electric Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=Electricity:Building [J]
+  OnMeter=Electricity:Zone:BUILDING STORY 2 THERMALZONE [J]
+  OnMeter=InteriorEquipment:Electricity [J]
+  OnMeter=InteriorEquipment:Electricity:Zone:BUILDING STORY 2 THERMALZONE [J]
+  OnMeter=General:InteriorEquipment:Electricity [J]
+
+ Meters for 396,BUILDING STORY 2 THERMALZONE OUTPATIENT SOIL WORK ELEC EQUIP 1:Electric Equipment Electric Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=Electricity:Building [J]
+  OnMeter=Electricity:Zone:BUILDING STORY 2 THERMALZONE [J]
+  OnMeter=InteriorEquipment:Electricity [J]
+  OnMeter=InteriorEquipment:Electricity:Zone:BUILDING STORY 2 THERMALZONE [J]
+  OnMeter=General:InteriorEquipment:Electricity [J]
+
+ Meters for 397,BUILDING STORY 1 THERMALZONE OUTPATIENT LOBBY ELEC EQUIP 1:Electric Equipment Electric Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=Electricity:Building [J]
+  OnMeter=Electricity:Zone:BUILDING STORY 1 THERMALZONE [J]
+  OnMeter=InteriorEquipment:Electricity [J]
+  OnMeter=InteriorEquipment:Electricity:Zone:BUILDING STORY 1 THERMALZONE [J]
+  OnMeter=General:InteriorEquipment:Electricity [J]
+
+ Meters for 410,BUILDING STORY 1 THERMALZONE OUTPATIENT LOCKERROOM ELEC EQUIP 1:Electric Equipment Electric Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=Electricity:Building [J]
+  OnMeter=Electricity:Zone:BUILDING STORY 1 THERMALZONE [J]
+  OnMeter=InteriorEquipment:Electricity [J]
+  OnMeter=InteriorEquipment:Electricity:Zone:BUILDING STORY 1 THERMALZONE [J]
+  OnMeter=General:InteriorEquipment:Electricity [J]
+
+ Meters for 411,BUILDING STORY 1 THERMALZONE OUTPATIENT NURSESTATION ELEC EQUIP 1:Electric Equipment Electric Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=Electricity:Building [J]
+  OnMeter=Electricity:Zone:BUILDING STORY 1 THERMALZONE [J]
+  OnMeter=InteriorEquipment:Electricity [J]
+  OnMeter=InteriorEquipment:Electricity:Zone:BUILDING STORY 1 THERMALZONE [J]
+  OnMeter=General:InteriorEquipment:Electricity [J]
+
+ Meters for 412,BUILDING STORY 1 THERMALZONE OUTPATIENT PREOP ELEC EQUIP 2:Electric Equipment Electric Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=Electricity:Building [J]
+  OnMeter=Electricity:Zone:BUILDING STORY 1 THERMALZONE [J]
+  OnMeter=InteriorEquipment:Electricity [J]
+  OnMeter=InteriorEquipment:Electricity:Zone:BUILDING STORY 1 THERMALZONE [J]
+  OnMeter=General:InteriorEquipment:Electricity [J]
+
+ Meters for 413,BUILDING STORY 1 THERMALZONE OUTPATIENT STAIR ELEC EQUIP 1:Electric Equipment Electric Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=Electricity:Building [J]
+  OnMeter=Electricity:Zone:BUILDING STORY 1 THERMALZONE [J]
+  OnMeter=InteriorEquipment:Electricity [J]
+  OnMeter=InteriorEquipment:Electricity:Zone:BUILDING STORY 1 THERMALZONE [J]
+  OnMeter=General:InteriorEquipment:Electricity [J]
+
+ Meters for 414,BUILDING STORY 1 THERMALZONE OUTPATIENT TOILET ELEC EQUIP 1:Electric Equipment Electric Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=Electricity:Building [J]
+  OnMeter=Electricity:Zone:BUILDING STORY 1 THERMALZONE [J]
+  OnMeter=InteriorEquipment:Electricity [J]
+  OnMeter=InteriorEquipment:Electricity:Zone:BUILDING STORY 1 THERMALZONE [J]
+  OnMeter=General:InteriorEquipment:Electricity [J]
+
+ Meters for 415,BUILDING STORY 1 THERMALZONE OUTPATIENT XRAY ELEC EQUIP 1:Electric Equipment Electric Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=Electricity:Building [J]
+  OnMeter=Electricity:Zone:BUILDING STORY 1 THERMALZONE [J]
+  OnMeter=InteriorEquipment:Electricity [J]
+  OnMeter=InteriorEquipment:Electricity:Zone:BUILDING STORY 1 THERMALZONE [J]
+  OnMeter=General:InteriorEquipment:Electricity [J]
+
+ Meters for 416,BUILDING STORY 4 THERMALZONE OUTPATIENT LOUNGE ELEC EQUIP 1:Electric Equipment Electric Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=Electricity:Building [J]
+  OnMeter=Electricity:Zone:BUILDING STORY 4 THERMALZONE [J]
+  OnMeter=InteriorEquipment:Electricity [J]
+  OnMeter=InteriorEquipment:Electricity:Zone:BUILDING STORY 4 THERMALZONE [J]
+  OnMeter=General:InteriorEquipment:Electricity [J]
+
+ Meters for 429,BUILDING STORY 4 THERMALZONE OUTPATIENT OR ELEC EQUIP 1:Electric Equipment Electric Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=Electricity:Building [J]
+  OnMeter=Electricity:Zone:BUILDING STORY 4 THERMALZONE [J]
+  OnMeter=InteriorEquipment:Electricity [J]
+  OnMeter=InteriorEquipment:Electricity:Zone:BUILDING STORY 4 THERMALZONE [J]
+  OnMeter=General:InteriorEquipment:Electricity [J]
+
+ Meters for 430,BUILDING STORY 4 THERMALZONE OUTPATIENT PACU ELEC EQUIP 1:Electric Equipment Electric Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=Electricity:Building [J]
+  OnMeter=Electricity:Zone:BUILDING STORY 4 THERMALZONE [J]
+  OnMeter=InteriorEquipment:Electricity [J]
+  OnMeter=InteriorEquipment:Electricity:Zone:BUILDING STORY 4 THERMALZONE [J]
+  OnMeter=General:InteriorEquipment:Electricity [J]
+
+ Meters for 431,BUILDING STORY 4 THERMALZONE OUTPATIENT XRAY ELEC EQUIP 2:Electric Equipment Electric Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=Electricity:Building [J]
+  OnMeter=Electricity:Zone:BUILDING STORY 4 THERMALZONE [J]
+  OnMeter=InteriorEquipment:Electricity [J]
+  OnMeter=InteriorEquipment:Electricity:Zone:BUILDING STORY 4 THERMALZONE [J]
+  OnMeter=General:InteriorEquipment:Electricity [J]
+
+ Meters for 432,BUILDING STORY 6 THERMALZONE OUTPATIENT OR ELEC EQUIP 2:Electric Equipment Electric Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=Electricity:Building [J]
+  OnMeter=Electricity:Zone:BUILDING STORY 6 THERMALZONE [J]
+  OnMeter=InteriorEquipment:Electricity [J]
+  OnMeter=InteriorEquipment:Electricity:Zone:BUILDING STORY 6 THERMALZONE [J]
+  OnMeter=General:InteriorEquipment:Electricity [J]
+
+ Meters for 445,BUILDING STORY 6 THERMALZONE OUTPATIENT PHYSICALTHERAPY ELEC EQUIP 1:Electric Equipment Electric Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=Electricity:Building [J]
+  OnMeter=Electricity:Zone:BUILDING STORY 6 THERMALZONE [J]
+  OnMeter=InteriorEquipment:Electricity [J]
+  OnMeter=InteriorEquipment:Electricity:Zone:BUILDING STORY 6 THERMALZONE [J]
+  OnMeter=General:InteriorEquipment:Electricity [J]
+
+ Meters for 446,BUILDING STORY 6 THERMALZONE OUTPATIENT RECEPTION ELEC EQUIP 1:Electric Equipment Electric Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=Electricity:Building [J]
+  OnMeter=Electricity:Zone:BUILDING STORY 6 THERMALZONE [J]
+  OnMeter=InteriorEquipment:Electricity [J]
+  OnMeter=InteriorEquipment:Electricity:Zone:BUILDING STORY 6 THERMALZONE [J]
+  OnMeter=General:InteriorEquipment:Electricity [J]
+
+ Meters for 447,BUILDING STORY 3 THERMALZONE OUTPATIENT EXAM ELEC EQUIP 1:Electric Equipment Electric Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=Electricity:Building [J]
+  OnMeter=Electricity:Zone:BUILDING STORY 3 THERMALZONE [J]
+  OnMeter=InteriorEquipment:Electricity [J]
+  OnMeter=InteriorEquipment:Electricity:Zone:BUILDING STORY 3 THERMALZONE [J]
+  OnMeter=General:InteriorEquipment:Electricity [J]
+
+ Meters for 460,BUILDING STORY 3 THERMALZONE OUTPATIENT JANITOR ELEC EQUIP 1:Electric Equipment Electric Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=Electricity:Building [J]
+  OnMeter=Electricity:Zone:BUILDING STORY 3 THERMALZONE [J]
+  OnMeter=InteriorEquipment:Electricity [J]
+  OnMeter=InteriorEquipment:Electricity:Zone:BUILDING STORY 3 THERMALZONE [J]
+  OnMeter=General:InteriorEquipment:Electricity [J]
+
+ Meters for 461,BUILDING STORY 3 THERMALZONE OUTPATIENT PHYSICALTHERAPY ELEC EQUIP 2:Electric Equipment Electric Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=Electricity:Building [J]
+  OnMeter=Electricity:Zone:BUILDING STORY 3 THERMALZONE [J]
+  OnMeter=InteriorEquipment:Electricity [J]
+  OnMeter=InteriorEquipment:Electricity:Zone:BUILDING STORY 3 THERMALZONE [J]
+  OnMeter=General:InteriorEquipment:Electricity [J]
+
+ Meters for 462,BUILDING STORY 8 THERMALZONE OUTPATIENT EXAM ELEC EQUIP 2:Electric Equipment Electric Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=Electricity:Building [J]
+  OnMeter=Electricity:Zone:BUILDING STORY 8 THERMALZONE [J]
+  OnMeter=InteriorEquipment:Electricity [J]
+  OnMeter=InteriorEquipment:Electricity:Zone:BUILDING STORY 8 THERMALZONE [J]
+  OnMeter=General:InteriorEquipment:Electricity [J]
+
+ Meters for 475,BUILDING STORY 8 THERMALZONE OUTPATIENT OFFICE ELEC EQUIP 1:Electric Equipment Electric Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=Electricity:Building [J]
+  OnMeter=Electricity:Zone:BUILDING STORY 8 THERMALZONE [J]
+  OnMeter=InteriorEquipment:Electricity [J]
+  OnMeter=InteriorEquipment:Electricity:Zone:BUILDING STORY 8 THERMALZONE [J]
+  OnMeter=General:InteriorEquipment:Electricity [J]
+
+ Meters for 476,BUILDING STORY 5 THERMALZONE OUTPATIENT OFFICE ELEC EQUIP 2:Electric Equipment Electric Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=Electricity:Building [J]
+  OnMeter=Electricity:Zone:BUILDING STORY 5 THERMALZONE [J]
+  OnMeter=InteriorEquipment:Electricity [J]
+  OnMeter=InteriorEquipment:Electricity:Zone:BUILDING STORY 5 THERMALZONE [J]
+  OnMeter=General:InteriorEquipment:Electricity [J]
+
+ Meters for 489,BUILDING STORY 7 THERMALZONE OUTPATIENT HALL ELEC EQUIP 1:Electric Equipment Electric Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=Electricity:Building [J]
+  OnMeter=Electricity:Zone:BUILDING STORY 7 THERMALZONE [J]
+  OnMeter=InteriorEquipment:Electricity [J]
+  OnMeter=InteriorEquipment:Electricity:Zone:BUILDING STORY 7 THERMALZONE [J]
+  OnMeter=General:InteriorEquipment:Electricity [J]
+
+ Meters for 502,BUILDING STORY 7 THERMALZONE OUTPATIENT OFFICE ELEC EQUIP 3:Electric Equipment Electric Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=Electricity:Building [J]
+  OnMeter=Electricity:Zone:BUILDING STORY 7 THERMALZONE [J]
+  OnMeter=InteriorEquipment:Electricity [J]
+  OnMeter=InteriorEquipment:Electricity:Zone:BUILDING STORY 7 THERMALZONE [J]
+  OnMeter=General:InteriorEquipment:Electricity [J]
+
+ Meters for 503,BUILDING STORY 9 THERMALZONE OUTPATIENT HALL ELEC EQUIP 2:Electric Equipment Electric Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=Electricity:Building [J]
+  OnMeter=Electricity:Zone:BUILDING STORY 9 THERMALZONE [J]
+  OnMeter=InteriorEquipment:Electricity [J]
+  OnMeter=InteriorEquipment:Electricity:Zone:BUILDING STORY 9 THERMALZONE [J]
+  OnMeter=General:InteriorEquipment:Electricity [J]
+
+ Meters for 516,BUILDING STORY 10 THERMALZONE OUTPATIENT HALL ELEC EQUIP 3:Electric Equipment Electric Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=Electricity:Building [J]
+  OnMeter=Electricity:Zone:BUILDING STORY 10 THERMALZONE [J]
+  OnMeter=InteriorEquipment:Electricity [J]
+  OnMeter=InteriorEquipment:Electricity:Zone:BUILDING STORY 10 THERMALZONE [J]
+  OnMeter=General:InteriorEquipment:Electricity [J]
+
+ Meters for 529,BUILDING STORY 4 THERMALZONE OUTPATIENT OR GAS EQUIP 1:Gas Equipment Gas Energy [J]
+  OnMeter=Gas:Facility [J]
+  OnMeter=Gas:Building [J]
+  OnMeter=Gas:Zone:BUILDING STORY 4 THERMALZONE [J]
+  OnMeter=InteriorEquipment:Gas [J]
+  OnMeter=InteriorEquipment:Gas:Zone:BUILDING STORY 4 THERMALZONE [J]
+  OnMeter=General:InteriorEquipment:Gas [J]
+
+ Meters for 602,BUILDING STORY 6 THERMALZONE OUTPATIENT OR GAS EQUIP 2:Gas Equipment Gas Energy [J]
+  OnMeter=Gas:Facility [J]
+  OnMeter=Gas:Building [J]
+  OnMeter=Gas:Zone:BUILDING STORY 6 THERMALZONE [J]
+  OnMeter=InteriorEquipment:Gas [J]
+  OnMeter=InteriorEquipment:Gas:Zone:BUILDING STORY 6 THERMALZONE [J]
+  OnMeter=General:InteriorEquipment:Gas [J]
+
+ Meters for 627,555GAL NATURALGAS WATER HEATER - 555KBTU/HR 0.803 THERM EFF:Water Heater Source Side Heat Transfer Energy [J]
+  OnMeter=PlantLoopHeatingDemand:Facility [J]
+  OnMeter=PlantLoopHeatingDemand:Plant [J]
+  OnMeter=WaterSystems:PlantLoopHeatingDemand [J]
+  OnMeter=General:WaterSystems:PlantLoopHeatingDemand [J]
+
+ Meters for 676,555GAL NATURALGAS WATER HEATER - 555KBTU/HR 0.803 THERM EFF:Water Heater Gas Energy [J]
+  OnMeter=Gas:Facility [J]
+  OnMeter=Gas:Plant [J]
+  OnMeter=WaterSystems:Gas [J]
+  OnMeter=General:WaterSystems:Gas [J]
+
+ Meters for 713,555GAL NATURALGAS WATER HEATER - 555KBTU/HR 0.803 THERM EFF:Water Heater Off Cycle Parasitic Gas Energy [J]
+  OnMeter=Gas:Facility [J]
+  OnMeter=Gas:Plant [J]
+  OnMeter=WaterSystems:Gas [J]
+  OnMeter=General:WaterSystems:Gas [J]
+
+ Meters for 714,555GAL NATURALGAS WATER HEATER - 555KBTU/HR 0.803 THERM EFF:Water Heater On Cycle Parasitic Gas Energy [J]
+  OnMeter=Gas:Facility [J]
+  OnMeter=Gas:Plant [J]
+  OnMeter=WaterSystems:Gas [J]
+  OnMeter=General:WaterSystems:Gas [J]
+
+ Meters for 715,555GAL NATURALGAS WATER HEATER - 555KBTU/HR 0.803 THERM EFF:Water Heater Water Volume [m3]
+  OnMeter=Water:Facility [m3]
+  OnMeter=Water:Plant [m3]
+  OnMeter=WaterSystems:Water [m3]
+  OnMeter=General:WaterSystems:Water [m3]
+
+ Meters for 764,555GAL NATURALGAS WATER HEATER - 555KBTU/HR 0.803 THERM EFF:Water Heater Mains Water Volume [m3]
+  OnMeter=MainsWater:Facility [m3]
+  OnMeter=MainsWater:Plant [m3]
+  OnMeter=WaterSystems:MainsWater [m3]
+  OnMeter=General:WaterSystems:MainsWater [m3]
+
+ Meters for 813,BUILDING STORY 1 THERMALZONE:Zone Air System Sensible Heating Energy [J]
+  OnMeter=EnergyTransfer:Facility [J]
+  OnMeter=EnergyTransfer:Building [J]
+  OnMeter=EnergyTransfer:Zone:BUILDING STORY 1 THERMALZONE [J]
+  OnMeter=Heating:EnergyTransfer [J]
+  OnMeter=Heating:EnergyTransfer:Zone:BUILDING STORY 1 THERMALZONE [J]
+
+ Meters for 874,BUILDING STORY 1 THERMALZONE:Zone Air System Sensible Cooling Energy [J]
+  OnMeter=EnergyTransfer:Facility [J]
+  OnMeter=EnergyTransfer:Building [J]
+  OnMeter=EnergyTransfer:Zone:BUILDING STORY 1 THERMALZONE [J]
+  OnMeter=Cooling:EnergyTransfer [J]
+  OnMeter=Cooling:EnergyTransfer:Zone:BUILDING STORY 1 THERMALZONE [J]
+
+ Meters for 899,BUILDING STORY 10 THERMALZONE:Zone Air System Sensible Heating Energy [J]
+  OnMeter=EnergyTransfer:Facility [J]
+  OnMeter=EnergyTransfer:Building [J]
+  OnMeter=EnergyTransfer:Zone:BUILDING STORY 10 THERMALZONE [J]
+  OnMeter=Heating:EnergyTransfer [J]
+  OnMeter=Heating:EnergyTransfer:Zone:BUILDING STORY 10 THERMALZONE [J]
+
+ Meters for 924,BUILDING STORY 10 THERMALZONE:Zone Air System Sensible Cooling Energy [J]
+  OnMeter=EnergyTransfer:Facility [J]
+  OnMeter=EnergyTransfer:Building [J]
+  OnMeter=EnergyTransfer:Zone:BUILDING STORY 10 THERMALZONE [J]
+  OnMeter=Cooling:EnergyTransfer [J]
+  OnMeter=Cooling:EnergyTransfer:Zone:BUILDING STORY 10 THERMALZONE [J]
+
+ Meters for 937,BUILDING STORY 2 THERMALZONE:Zone Air System Sensible Heating Energy [J]
+  OnMeter=EnergyTransfer:Facility [J]
+  OnMeter=EnergyTransfer:Building [J]
+  OnMeter=EnergyTransfer:Zone:BUILDING STORY 2 THERMALZONE [J]
+  OnMeter=Heating:EnergyTransfer [J]
+  OnMeter=Heating:EnergyTransfer:Zone:BUILDING STORY 2 THERMALZONE [J]
+
+ Meters for 962,BUILDING STORY 2 THERMALZONE:Zone Air System Sensible Cooling Energy [J]
+  OnMeter=EnergyTransfer:Facility [J]
+  OnMeter=EnergyTransfer:Building [J]
+  OnMeter=EnergyTransfer:Zone:BUILDING STORY 2 THERMALZONE [J]
+  OnMeter=Cooling:EnergyTransfer [J]
+  OnMeter=Cooling:EnergyTransfer:Zone:BUILDING STORY 2 THERMALZONE [J]
+
+ Meters for 975,BUILDING STORY 3 THERMALZONE:Zone Air System Sensible Heating Energy [J]
+  OnMeter=EnergyTransfer:Facility [J]
+  OnMeter=EnergyTransfer:Building [J]
+  OnMeter=EnergyTransfer:Zone:BUILDING STORY 3 THERMALZONE [J]
+  OnMeter=Heating:EnergyTransfer [J]
+  OnMeter=Heating:EnergyTransfer:Zone:BUILDING STORY 3 THERMALZONE [J]
+
+ Meters for 1000,BUILDING STORY 3 THERMALZONE:Zone Air System Sensible Cooling Energy [J]
+  OnMeter=EnergyTransfer:Facility [J]
+  OnMeter=EnergyTransfer:Building [J]
+  OnMeter=EnergyTransfer:Zone:BUILDING STORY 3 THERMALZONE [J]
+  OnMeter=Cooling:EnergyTransfer [J]
+  OnMeter=Cooling:EnergyTransfer:Zone:BUILDING STORY 3 THERMALZONE [J]
+
+ Meters for 1013,BUILDING STORY 4 THERMALZONE:Zone Air System Sensible Heating Energy [J]
+  OnMeter=EnergyTransfer:Facility [J]
+  OnMeter=EnergyTransfer:Building [J]
+  OnMeter=EnergyTransfer:Zone:BUILDING STORY 4 THERMALZONE [J]
+  OnMeter=Heating:EnergyTransfer [J]
+  OnMeter=Heating:EnergyTransfer:Zone:BUILDING STORY 4 THERMALZONE [J]
+
+ Meters for 1038,BUILDING STORY 4 THERMALZONE:Zone Air System Sensible Cooling Energy [J]
+  OnMeter=EnergyTransfer:Facility [J]
+  OnMeter=EnergyTransfer:Building [J]
+  OnMeter=EnergyTransfer:Zone:BUILDING STORY 4 THERMALZONE [J]
+  OnMeter=Cooling:EnergyTransfer [J]
+  OnMeter=Cooling:EnergyTransfer:Zone:BUILDING STORY 4 THERMALZONE [J]
+
+ Meters for 1051,BUILDING STORY 5 THERMALZONE:Zone Air System Sensible Heating Energy [J]
+  OnMeter=EnergyTransfer:Facility [J]
+  OnMeter=EnergyTransfer:Building [J]
+  OnMeter=EnergyTransfer:Zone:BUILDING STORY 5 THERMALZONE [J]
+  OnMeter=Heating:EnergyTransfer [J]
+  OnMeter=Heating:EnergyTransfer:Zone:BUILDING STORY 5 THERMALZONE [J]
+
+ Meters for 1076,BUILDING STORY 5 THERMALZONE:Zone Air System Sensible Cooling Energy [J]
+  OnMeter=EnergyTransfer:Facility [J]
+  OnMeter=EnergyTransfer:Building [J]
+  OnMeter=EnergyTransfer:Zone:BUILDING STORY 5 THERMALZONE [J]
+  OnMeter=Cooling:EnergyTransfer [J]
+  OnMeter=Cooling:EnergyTransfer:Zone:BUILDING STORY 5 THERMALZONE [J]
+
+ Meters for 1089,BUILDING STORY 6 THERMALZONE:Zone Air System Sensible Heating Energy [J]
+  OnMeter=EnergyTransfer:Facility [J]
+  OnMeter=EnergyTransfer:Building [J]
+  OnMeter=EnergyTransfer:Zone:BUILDING STORY 6 THERMALZONE [J]
+  OnMeter=Heating:EnergyTransfer [J]
+  OnMeter=Heating:EnergyTransfer:Zone:BUILDING STORY 6 THERMALZONE [J]
+
+ Meters for 1114,BUILDING STORY 6 THERMALZONE:Zone Air System Sensible Cooling Energy [J]
+  OnMeter=EnergyTransfer:Facility [J]
+  OnMeter=EnergyTransfer:Building [J]
+  OnMeter=EnergyTransfer:Zone:BUILDING STORY 6 THERMALZONE [J]
+  OnMeter=Cooling:EnergyTransfer [J]
+  OnMeter=Cooling:EnergyTransfer:Zone:BUILDING STORY 6 THERMALZONE [J]
+
+ Meters for 1127,BUILDING STORY 7 THERMALZONE:Zone Air System Sensible Heating Energy [J]
+  OnMeter=EnergyTransfer:Facility [J]
+  OnMeter=EnergyTransfer:Building [J]
+  OnMeter=EnergyTransfer:Zone:BUILDING STORY 7 THERMALZONE [J]
+  OnMeter=Heating:EnergyTransfer [J]
+  OnMeter=Heating:EnergyTransfer:Zone:BUILDING STORY 7 THERMALZONE [J]
+
+ Meters for 1152,BUILDING STORY 7 THERMALZONE:Zone Air System Sensible Cooling Energy [J]
+  OnMeter=EnergyTransfer:Facility [J]
+  OnMeter=EnergyTransfer:Building [J]
+  OnMeter=EnergyTransfer:Zone:BUILDING STORY 7 THERMALZONE [J]
+  OnMeter=Cooling:EnergyTransfer [J]
+  OnMeter=Cooling:EnergyTransfer:Zone:BUILDING STORY 7 THERMALZONE [J]
+
+ Meters for 1165,BUILDING STORY 8 THERMALZONE:Zone Air System Sensible Heating Energy [J]
+  OnMeter=EnergyTransfer:Facility [J]
+  OnMeter=EnergyTransfer:Building [J]
+  OnMeter=EnergyTransfer:Zone:BUILDING STORY 8 THERMALZONE [J]
+  OnMeter=Heating:EnergyTransfer [J]
+  OnMeter=Heating:EnergyTransfer:Zone:BUILDING STORY 8 THERMALZONE [J]
+
+ Meters for 1190,BUILDING STORY 8 THERMALZONE:Zone Air System Sensible Cooling Energy [J]
+  OnMeter=EnergyTransfer:Facility [J]
+  OnMeter=EnergyTransfer:Building [J]
+  OnMeter=EnergyTransfer:Zone:BUILDING STORY 8 THERMALZONE [J]
+  OnMeter=Cooling:EnergyTransfer [J]
+  OnMeter=Cooling:EnergyTransfer:Zone:BUILDING STORY 8 THERMALZONE [J]
+
+ Meters for 1203,BUILDING STORY 9 THERMALZONE:Zone Air System Sensible Heating Energy [J]
+  OnMeter=EnergyTransfer:Facility [J]
+  OnMeter=EnergyTransfer:Building [J]
+  OnMeter=EnergyTransfer:Zone:BUILDING STORY 9 THERMALZONE [J]
+  OnMeter=Heating:EnergyTransfer [J]
+  OnMeter=Heating:EnergyTransfer:Zone:BUILDING STORY 9 THERMALZONE [J]
+
+ Meters for 1228,BUILDING STORY 9 THERMALZONE:Zone Air System Sensible Cooling Energy [J]
+  OnMeter=EnergyTransfer:Facility [J]
+  OnMeter=EnergyTransfer:Building [J]
+  OnMeter=EnergyTransfer:Zone:BUILDING STORY 9 THERMALZONE [J]
+  OnMeter=Cooling:EnergyTransfer [J]
+  OnMeter=Cooling:EnergyTransfer:Zone:BUILDING STORY 9 THERMALZONE [J]
+
+ Meters for 1241,OUTPATIENT ANESTHESIA - 90.1-2004 SERVICE WATER USE 0.35GPM AT 140F:Water Use Equipment Total Volume [m3]
+  OnMeter=Water:Facility [m3]
+  OnMeter=Water:Plant [m3]
+  OnMeter=WaterSystems:Water [m3]
+  OnMeter=General:WaterSystems:Water [m3]
+
+ Meters for 1242,OUTPATIENT ANESTHESIA - 90.1-2004 SERVICE WATER USE 0.35GPM AT 140F:Water Use Equipment Mains Water Volume [m3]
+  OnMeter=MainsWater:Facility [m3]
+  OnMeter=MainsWater:Plant [m3]
+  OnMeter=WaterSystems:MainsWater [m3]
+  OnMeter=General:WaterSystems:MainsWater [m3]
+
+ Meters for 1243,OUTPATIENT ANESTHESIA - 90.1-2004 SERVICE WATER USE 0.35GPM AT 140F:Water Use Equipment Heating Energy [J]
+  OnMeter=EnergyTransfer:Facility [J]
+  OnMeter=EnergyTransfer:Plant [J]
+  OnMeter=WaterSystems:EnergyTransfer [J]
+  OnMeter=General:WaterSystems:EnergyTransfer [J]
+
+ Meters for 1280,OUTPATIENT MRI - 90.1-2004 SERVICE WATER USE 0.36GPM AT 140F:Water Use Equipment Total Volume [m3]
+  OnMeter=Water:Facility [m3]
+  OnMeter=Water:Plant [m3]
+  OnMeter=WaterSystems:Water [m3]
+  OnMeter=General:WaterSystems:Water [m3]
+
+ Meters for 1281,OUTPATIENT MRI - 90.1-2004 SERVICE WATER USE 0.36GPM AT 140F:Water Use Equipment Mains Water Volume [m3]
+  OnMeter=MainsWater:Facility [m3]
+  OnMeter=MainsWater:Plant [m3]
+  OnMeter=WaterSystems:MainsWater [m3]
+  OnMeter=General:WaterSystems:MainsWater [m3]
+
+ Meters for 1282,OUTPATIENT MRI - 90.1-2004 SERVICE WATER USE 0.36GPM AT 140F:Water Use Equipment Heating Energy [J]
+  OnMeter=EnergyTransfer:Facility [J]
+  OnMeter=EnergyTransfer:Plant [J]
+  OnMeter=WaterSystems:EnergyTransfer [J]
+  OnMeter=General:WaterSystems:EnergyTransfer [J]
+
+ Meters for 1283,OUTPATIENT MRI_CONTROL - 90.1-2004 SERVICE WATER USE 0.36GPM AT 140F:Water Use Equipment Total Volume [m3]
+  OnMeter=Water:Facility [m3]
+  OnMeter=Water:Plant [m3]
+  OnMeter=WaterSystems:Water [m3]
+  OnMeter=General:WaterSystems:Water [m3]
+
+ Meters for 1284,OUTPATIENT MRI_CONTROL - 90.1-2004 SERVICE WATER USE 0.36GPM AT 140F:Water Use Equipment Mains Water Volume [m3]
+  OnMeter=MainsWater:Facility [m3]
+  OnMeter=MainsWater:Plant [m3]
+  OnMeter=WaterSystems:MainsWater [m3]
+  OnMeter=General:WaterSystems:MainsWater [m3]
+
+ Meters for 1285,OUTPATIENT MRI_CONTROL - 90.1-2004 SERVICE WATER USE 0.36GPM AT 140F:Water Use Equipment Heating Energy [J]
+  OnMeter=EnergyTransfer:Facility [J]
+  OnMeter=EnergyTransfer:Plant [J]
+  OnMeter=WaterSystems:EnergyTransfer [J]
+  OnMeter=General:WaterSystems:EnergyTransfer [J]
+
+ Meters for 1286,OUTPATIENT OR - 90.1-2004 SERVICE WATER USE 6.45GPM AT 140F:Water Use Equipment Total Volume [m3]
+  OnMeter=Water:Facility [m3]
+  OnMeter=Water:Plant [m3]
+  OnMeter=WaterSystems:Water [m3]
+  OnMeter=General:WaterSystems:Water [m3]
+
+ Meters for 1287,OUTPATIENT OR - 90.1-2004 SERVICE WATER USE 6.45GPM AT 140F:Water Use Equipment Mains Water Volume [m3]
+  OnMeter=MainsWater:Facility [m3]
+  OnMeter=MainsWater:Plant [m3]
+  OnMeter=WaterSystems:MainsWater [m3]
+  OnMeter=General:WaterSystems:MainsWater [m3]
+
+ Meters for 1288,OUTPATIENT OR - 90.1-2004 SERVICE WATER USE 6.45GPM AT 140F:Water Use Equipment Heating Energy [J]
+  OnMeter=EnergyTransfer:Facility [J]
+  OnMeter=EnergyTransfer:Plant [J]
+  OnMeter=WaterSystems:EnergyTransfer [J]
+  OnMeter=General:WaterSystems:EnergyTransfer [J]
+
+ Meters for 1289,OUTPATIENT PACU - 90.1-2004 SERVICE WATER USE 1.08GPM AT 140F:Water Use Equipment Total Volume [m3]
+  OnMeter=Water:Facility [m3]
+  OnMeter=Water:Plant [m3]
+  OnMeter=WaterSystems:Water [m3]
+  OnMeter=General:WaterSystems:Water [m3]
+
+ Meters for 1290,OUTPATIENT PACU - 90.1-2004 SERVICE WATER USE 1.08GPM AT 140F:Water Use Equipment Mains Water Volume [m3]
+  OnMeter=MainsWater:Facility [m3]
+  OnMeter=MainsWater:Plant [m3]
+  OnMeter=WaterSystems:MainsWater [m3]
+  OnMeter=General:WaterSystems:MainsWater [m3]
+
+ Meters for 1291,OUTPATIENT PACU - 90.1-2004 SERVICE WATER USE 1.08GPM AT 140F:Water Use Equipment Heating Energy [J]
+  OnMeter=EnergyTransfer:Facility [J]
+  OnMeter=EnergyTransfer:Plant [J]
+  OnMeter=WaterSystems:EnergyTransfer [J]
+  OnMeter=General:WaterSystems:EnergyTransfer [J]
+
+ Meters for 1292,OUTPATIENT PHYSICALTHERAPY - 90.1-2004 SERVICE WATER USE 0.72GPM AT 140F:Water Use Equipment Total Volume [m3]
+  OnMeter=Water:Facility [m3]
+  OnMeter=Water:Plant [m3]
+  OnMeter=WaterSystems:Water [m3]
+  OnMeter=General:WaterSystems:Water [m3]
+
+ Meters for 1293,OUTPATIENT PHYSICALTHERAPY - 90.1-2004 SERVICE WATER USE 0.72GPM AT 140F:Water Use Equipment Mains Water Volume [m3]
+  OnMeter=MainsWater:Facility [m3]
+  OnMeter=MainsWater:Plant [m3]
+  OnMeter=WaterSystems:MainsWater [m3]
+  OnMeter=General:WaterSystems:MainsWater [m3]
+
+ Meters for 1294,OUTPATIENT PHYSICALTHERAPY - 90.1-2004 SERVICE WATER USE 0.72GPM AT 140F:Water Use Equipment Heating Energy [J]
+  OnMeter=EnergyTransfer:Facility [J]
+  OnMeter=EnergyTransfer:Plant [J]
+  OnMeter=WaterSystems:EnergyTransfer [J]
+  OnMeter=General:WaterSystems:EnergyTransfer [J]
+
+ Meters for 1295,OUTPATIENT PREOP - 90.1-2004 SERVICE WATER USE 0.72GPM AT 140F:Water Use Equipment Total Volume [m3]
+  OnMeter=Water:Facility [m3]
+  OnMeter=Water:Plant [m3]
+  OnMeter=WaterSystems:Water [m3]
+  OnMeter=General:WaterSystems:Water [m3]
+
+ Meters for 1296,OUTPATIENT PREOP - 90.1-2004 SERVICE WATER USE 0.72GPM AT 140F:Water Use Equipment Mains Water Volume [m3]
+  OnMeter=MainsWater:Facility [m3]
+  OnMeter=MainsWater:Plant [m3]
+  OnMeter=WaterSystems:MainsWater [m3]
+  OnMeter=General:WaterSystems:MainsWater [m3]
+
+ Meters for 1297,OUTPATIENT PREOP - 90.1-2004 SERVICE WATER USE 0.72GPM AT 140F:Water Use Equipment Heating Energy [J]
+  OnMeter=EnergyTransfer:Facility [J]
+  OnMeter=EnergyTransfer:Plant [J]
+  OnMeter=WaterSystems:EnergyTransfer [J]
+  OnMeter=General:WaterSystems:EnergyTransfer [J]
+
+ Meters for 1298,OUTPATIENT PROCEDUREROOM - 90.1-2004 SERVICE WATER USE 0.36GPM AT 140F:Water Use Equipment Total Volume [m3]
+  OnMeter=Water:Facility [m3]
+  OnMeter=Water:Plant [m3]
+  OnMeter=WaterSystems:Water [m3]
+  OnMeter=General:WaterSystems:Water [m3]
+
+ Meters for 1299,OUTPATIENT PROCEDUREROOM - 90.1-2004 SERVICE WATER USE 0.36GPM AT 140F:Water Use Equipment Mains Water Volume [m3]
+  OnMeter=MainsWater:Facility [m3]
+  OnMeter=MainsWater:Plant [m3]
+  OnMeter=WaterSystems:MainsWater [m3]
+  OnMeter=General:WaterSystems:MainsWater [m3]
+
+ Meters for 1300,OUTPATIENT PROCEDUREROOM - 90.1-2004 SERVICE WATER USE 0.36GPM AT 140F:Water Use Equipment Heating Energy [J]
+  OnMeter=EnergyTransfer:Facility [J]
+  OnMeter=EnergyTransfer:Plant [J]
+  OnMeter=WaterSystems:EnergyTransfer [J]
+  OnMeter=General:WaterSystems:EnergyTransfer [J]
+
+ Meters for 1301,OUTPATIENT XRAY - 90.1-2004 SERVICE WATER USE 0.36GPM AT 140F:Water Use Equipment Total Volume [m3]
+  OnMeter=Water:Facility [m3]
+  OnMeter=Water:Plant [m3]
+  OnMeter=WaterSystems:Water [m3]
+  OnMeter=General:WaterSystems:Water [m3]
+
+ Meters for 1302,OUTPATIENT XRAY - 90.1-2004 SERVICE WATER USE 0.36GPM AT 140F:Water Use Equipment Mains Water Volume [m3]
+  OnMeter=MainsWater:Facility [m3]
+  OnMeter=MainsWater:Plant [m3]
+  OnMeter=WaterSystems:MainsWater [m3]
+  OnMeter=General:WaterSystems:MainsWater [m3]
+
+ Meters for 1303,OUTPATIENT XRAY - 90.1-2004 SERVICE WATER USE 0.36GPM AT 140F:Water Use Equipment Heating Energy [J]
+  OnMeter=EnergyTransfer:Facility [J]
+  OnMeter=EnergyTransfer:Plant [J]
+  OnMeter=WaterSystems:EnergyTransfer [J]
+  OnMeter=General:WaterSystems:EnergyTransfer [J]
+
+ Meters for 1304,OUTPATIENT ANESTHESIA - 90.1-2004 WUC 0.35GPM AT 140F:Water Use Connections Plant Hot Water Energy [J]
+  OnMeter=PlantLoopHeatingDemand:Facility [J]
+  OnMeter=PlantLoopHeatingDemand:Plant [J]
+  OnMeter=WaterSystems:PlantLoopHeatingDemand [J]
+
+ Meters for 1305,OUTPATIENT MRI - 90.1-2004 WUC 0.36GPM AT 140F:Water Use Connections Plant Hot Water Energy [J]
+  OnMeter=PlantLoopHeatingDemand:Facility [J]
+  OnMeter=PlantLoopHeatingDemand:Plant [J]
+  OnMeter=WaterSystems:PlantLoopHeatingDemand [J]
+
+ Meters for 1306,OUTPATIENT MRI_CONTROL - 90.1-2004 WUC 0.36GPM AT 140F:Water Use Connections Plant Hot Water Energy [J]
+  OnMeter=PlantLoopHeatingDemand:Facility [J]
+  OnMeter=PlantLoopHeatingDemand:Plant [J]
+  OnMeter=WaterSystems:PlantLoopHeatingDemand [J]
+
+ Meters for 1307,OUTPATIENT OR - 90.1-2004 WUC 6.45GPM AT 140F:Water Use Connections Plant Hot Water Energy [J]
+  OnMeter=PlantLoopHeatingDemand:Facility [J]
+  OnMeter=PlantLoopHeatingDemand:Plant [J]
+  OnMeter=WaterSystems:PlantLoopHeatingDemand [J]
+
+ Meters for 1308,OUTPATIENT PACU - 90.1-2004 WUC 1.08GPM AT 140F:Water Use Connections Plant Hot Water Energy [J]
+  OnMeter=PlantLoopHeatingDemand:Facility [J]
+  OnMeter=PlantLoopHeatingDemand:Plant [J]
+  OnMeter=WaterSystems:PlantLoopHeatingDemand [J]
+
+ Meters for 1309,OUTPATIENT PHYSICALTHERAPY - 90.1-2004 WUC 0.72GPM AT 140F:Water Use Connections Plant Hot Water Energy [J]
+  OnMeter=PlantLoopHeatingDemand:Facility [J]
+  OnMeter=PlantLoopHeatingDemand:Plant [J]
+  OnMeter=WaterSystems:PlantLoopHeatingDemand [J]
+
+ Meters for 1310,OUTPATIENT PREOP - 90.1-2004 WUC 0.72GPM AT 140F:Water Use Connections Plant Hot Water Energy [J]
+  OnMeter=PlantLoopHeatingDemand:Facility [J]
+  OnMeter=PlantLoopHeatingDemand:Plant [J]
+  OnMeter=WaterSystems:PlantLoopHeatingDemand [J]
+
+ Meters for 1311,OUTPATIENT PROCEDUREROOM - 90.1-2004 WUC 0.36GPM AT 140F:Water Use Connections Plant Hot Water Energy [J]
+  OnMeter=PlantLoopHeatingDemand:Facility [J]
+  OnMeter=PlantLoopHeatingDemand:Plant [J]
+  OnMeter=WaterSystems:PlantLoopHeatingDemand [J]
+
+ Meters for 1312,OUTPATIENT XRAY - 90.1-2004 WUC 0.36GPM AT 140F:Water Use Connections Plant Hot Water Energy [J]
+  OnMeter=PlantLoopHeatingDemand:Facility [J]
+  OnMeter=PlantLoopHeatingDemand:Plant [J]
+  OnMeter=WaterSystems:PlantLoopHeatingDemand [J]
+
+ Meters for 1313,Whole Building:Facility Total Purchased Electric Energy [J]
+  OnMeter=ElectricityPurchased:Facility [J]
+  OnMeter=ElectricityPurchased:Plant [J]
+  OnMeter=Cogeneration:ElectricityPurchased [J]
+
+ Meters for 1350,Whole Building:Facility Total Surplus Electric Energy [J]
+  OnMeter=ElectricitySurplusSold:Facility [J]
+  OnMeter=ElectricitySurplusSold:Plant [J]
+  OnMeter=Cogeneration:ElectricitySurplusSold [J]
+
+ Meters for 1387,Whole Building:Facility Net Purchased Electric Energy [J]
+  OnMeter=ElectricityNet:Facility [J]
+  OnMeter=ElectricityNet:Plant [J]
+  OnMeter=Cogeneration:ElectricityNet [J]
+
+ Meters for 1424,BUILDING STORY 1 THERMALZONE REHEAT COIL:Heating Coil Heating Energy [J]
+  OnMeter=EnergyTransfer:Facility [J]
+  OnMeter=EnergyTransfer:HVAC [J]
+  OnMeter=HeatingCoils:EnergyTransfer [J]
+
+ Meters for 1449,BUILDING STORY 1 THERMALZONE REHEAT COIL:Heating Coil Source Side Heat Transfer Energy [J]
+  OnMeter=PlantLoopHeatingDemand:Facility [J]
+  OnMeter=PlantLoopHeatingDemand:HVAC [J]
+  OnMeter=HeatingCoils:PlantLoopHeatingDemand [J]
+
+ Meters for 1474,BUILDING STORY 10 THERMALZONE REHEAT COIL:Heating Coil Heating Energy [J]
+  OnMeter=EnergyTransfer:Facility [J]
+  OnMeter=EnergyTransfer:HVAC [J]
+  OnMeter=HeatingCoils:EnergyTransfer [J]
+
+ Meters for 1475,BUILDING STORY 10 THERMALZONE REHEAT COIL:Heating Coil Source Side Heat Transfer Energy [J]
+  OnMeter=PlantLoopHeatingDemand:Facility [J]
+  OnMeter=PlantLoopHeatingDemand:HVAC [J]
+  OnMeter=HeatingCoils:PlantLoopHeatingDemand [J]
+
+ Meters for 1476,BUILDING STORY 2 THERMALZONE REHEAT COIL:Heating Coil Heating Energy [J]
+  OnMeter=EnergyTransfer:Facility [J]
+  OnMeter=EnergyTransfer:HVAC [J]
+  OnMeter=HeatingCoils:EnergyTransfer [J]
+
+ Meters for 1477,BUILDING STORY 2 THERMALZONE REHEAT COIL:Heating Coil Source Side Heat Transfer Energy [J]
+  OnMeter=PlantLoopHeatingDemand:Facility [J]
+  OnMeter=PlantLoopHeatingDemand:HVAC [J]
+  OnMeter=HeatingCoils:PlantLoopHeatingDemand [J]
+
+ Meters for 1478,BUILDING STORY 3 THERMALZONE REHEAT COIL:Heating Coil Heating Energy [J]
+  OnMeter=EnergyTransfer:Facility [J]
+  OnMeter=EnergyTransfer:HVAC [J]
+  OnMeter=HeatingCoils:EnergyTransfer [J]
+
+ Meters for 1479,BUILDING STORY 3 THERMALZONE REHEAT COIL:Heating Coil Source Side Heat Transfer Energy [J]
+  OnMeter=PlantLoopHeatingDemand:Facility [J]
+  OnMeter=PlantLoopHeatingDemand:HVAC [J]
+  OnMeter=HeatingCoils:PlantLoopHeatingDemand [J]
+
+ Meters for 1480,BUILDING STORY 4 THERMALZONE REHEAT COIL:Heating Coil Heating Energy [J]
+  OnMeter=EnergyTransfer:Facility [J]
+  OnMeter=EnergyTransfer:HVAC [J]
+  OnMeter=HeatingCoils:EnergyTransfer [J]
+
+ Meters for 1481,BUILDING STORY 4 THERMALZONE REHEAT COIL:Heating Coil Source Side Heat Transfer Energy [J]
+  OnMeter=PlantLoopHeatingDemand:Facility [J]
+  OnMeter=PlantLoopHeatingDemand:HVAC [J]
+  OnMeter=HeatingCoils:PlantLoopHeatingDemand [J]
+
+ Meters for 1482,BUILDING STORY 5 THERMALZONE REHEAT COIL:Heating Coil Heating Energy [J]
+  OnMeter=EnergyTransfer:Facility [J]
+  OnMeter=EnergyTransfer:HVAC [J]
+  OnMeter=HeatingCoils:EnergyTransfer [J]
+
+ Meters for 1483,BUILDING STORY 5 THERMALZONE REHEAT COIL:Heating Coil Source Side Heat Transfer Energy [J]
+  OnMeter=PlantLoopHeatingDemand:Facility [J]
+  OnMeter=PlantLoopHeatingDemand:HVAC [J]
+  OnMeter=HeatingCoils:PlantLoopHeatingDemand [J]
+
+ Meters for 1484,BUILDING STORY 6 THERMALZONE REHEAT COIL:Heating Coil Heating Energy [J]
+  OnMeter=EnergyTransfer:Facility [J]
+  OnMeter=EnergyTransfer:HVAC [J]
+  OnMeter=HeatingCoils:EnergyTransfer [J]
+
+ Meters for 1485,BUILDING STORY 6 THERMALZONE REHEAT COIL:Heating Coil Source Side Heat Transfer Energy [J]
+  OnMeter=PlantLoopHeatingDemand:Facility [J]
+  OnMeter=PlantLoopHeatingDemand:HVAC [J]
+  OnMeter=HeatingCoils:PlantLoopHeatingDemand [J]
+
+ Meters for 1486,BUILDING STORY 7 THERMALZONE REHEAT COIL:Heating Coil Heating Energy [J]
+  OnMeter=EnergyTransfer:Facility [J]
+  OnMeter=EnergyTransfer:HVAC [J]
+  OnMeter=HeatingCoils:EnergyTransfer [J]
+
+ Meters for 1487,BUILDING STORY 7 THERMALZONE REHEAT COIL:Heating Coil Source Side Heat Transfer Energy [J]
+  OnMeter=PlantLoopHeatingDemand:Facility [J]
+  OnMeter=PlantLoopHeatingDemand:HVAC [J]
+  OnMeter=HeatingCoils:PlantLoopHeatingDemand [J]
+
+ Meters for 1488,BUILDING STORY 8 THERMALZONE REHEAT COIL:Heating Coil Heating Energy [J]
+  OnMeter=EnergyTransfer:Facility [J]
+  OnMeter=EnergyTransfer:HVAC [J]
+  OnMeter=HeatingCoils:EnergyTransfer [J]
+
+ Meters for 1489,BUILDING STORY 8 THERMALZONE REHEAT COIL:Heating Coil Source Side Heat Transfer Energy [J]
+  OnMeter=PlantLoopHeatingDemand:Facility [J]
+  OnMeter=PlantLoopHeatingDemand:HVAC [J]
+  OnMeter=HeatingCoils:PlantLoopHeatingDemand [J]
+
+ Meters for 1490,BUILDING STORY 9 THERMALZONE REHEAT COIL:Heating Coil Heating Energy [J]
+  OnMeter=EnergyTransfer:Facility [J]
+  OnMeter=EnergyTransfer:HVAC [J]
+  OnMeter=HeatingCoils:EnergyTransfer [J]
+
+ Meters for 1491,BUILDING STORY 9 THERMALZONE REHEAT COIL:Heating Coil Source Side Heat Transfer Energy [J]
+  OnMeter=PlantLoopHeatingDemand:Facility [J]
+  OnMeter=PlantLoopHeatingDemand:HVAC [J]
+  OnMeter=HeatingCoils:PlantLoopHeatingDemand [J]
+
+ Meters for 1492,1 ZONE VAV MAIN HTG COIL:Heating Coil Heating Energy [J]
+  OnMeter=EnergyTransfer:Facility [J]
+  OnMeter=EnergyTransfer:HVAC [J]
+  OnMeter=HeatingCoils:EnergyTransfer [J]
+
+ Meters for 1493,1 ZONE VAV MAIN HTG COIL:Heating Coil Source Side Heat Transfer Energy [J]
+  OnMeter=PlantLoopHeatingDemand:Facility [J]
+  OnMeter=PlantLoopHeatingDemand:HVAC [J]
+  OnMeter=HeatingCoils:PlantLoopHeatingDemand [J]
+
+ Meters for 1494,1 ZONE VAV 1 MAIN HTG COIL:Heating Coil Heating Energy [J]
+  OnMeter=EnergyTransfer:Facility [J]
+  OnMeter=EnergyTransfer:HVAC [J]
+  OnMeter=HeatingCoils:EnergyTransfer [J]
+
+ Meters for 1495,1 ZONE VAV 1 MAIN HTG COIL:Heating Coil Source Side Heat Transfer Energy [J]
+  OnMeter=PlantLoopHeatingDemand:Facility [J]
+  OnMeter=PlantLoopHeatingDemand:HVAC [J]
+  OnMeter=HeatingCoils:PlantLoopHeatingDemand [J]
+
+ Meters for 1496,1 ZONE VAV 2 MAIN HTG COIL:Heating Coil Heating Energy [J]
+  OnMeter=EnergyTransfer:Facility [J]
+  OnMeter=EnergyTransfer:HVAC [J]
+  OnMeter=HeatingCoils:EnergyTransfer [J]
+
+ Meters for 1497,1 ZONE VAV 2 MAIN HTG COIL:Heating Coil Source Side Heat Transfer Energy [J]
+  OnMeter=PlantLoopHeatingDemand:Facility [J]
+  OnMeter=PlantLoopHeatingDemand:HVAC [J]
+  OnMeter=HeatingCoils:PlantLoopHeatingDemand [J]
+
+ Meters for 1498,1 ZONE VAV 3 MAIN HTG COIL:Heating Coil Heating Energy [J]
+  OnMeter=EnergyTransfer:Facility [J]
+  OnMeter=EnergyTransfer:HVAC [J]
+  OnMeter=HeatingCoils:EnergyTransfer [J]
+
+ Meters for 1499,1 ZONE VAV 3 MAIN HTG COIL:Heating Coil Source Side Heat Transfer Energy [J]
+  OnMeter=PlantLoopHeatingDemand:Facility [J]
+  OnMeter=PlantLoopHeatingDemand:HVAC [J]
+  OnMeter=HeatingCoils:PlantLoopHeatingDemand [J]
+
+ Meters for 1500,1 ZONE VAV 4 MAIN HTG COIL:Heating Coil Heating Energy [J]
+  OnMeter=EnergyTransfer:Facility [J]
+  OnMeter=EnergyTransfer:HVAC [J]
+  OnMeter=HeatingCoils:EnergyTransfer [J]
+
+ Meters for 1501,1 ZONE VAV 4 MAIN HTG COIL:Heating Coil Source Side Heat Transfer Energy [J]
+  OnMeter=PlantLoopHeatingDemand:Facility [J]
+  OnMeter=PlantLoopHeatingDemand:HVAC [J]
+  OnMeter=HeatingCoils:PlantLoopHeatingDemand [J]
+
+ Meters for 1502,1 ZONE VAV 5 MAIN HTG COIL:Heating Coil Heating Energy [J]
+  OnMeter=EnergyTransfer:Facility [J]
+  OnMeter=EnergyTransfer:HVAC [J]
+  OnMeter=HeatingCoils:EnergyTransfer [J]
+
+ Meters for 1503,1 ZONE VAV 5 MAIN HTG COIL:Heating Coil Source Side Heat Transfer Energy [J]
+  OnMeter=PlantLoopHeatingDemand:Facility [J]
+  OnMeter=PlantLoopHeatingDemand:HVAC [J]
+  OnMeter=HeatingCoils:PlantLoopHeatingDemand [J]
+
+ Meters for 1504,1 ZONE VAV 6 MAIN HTG COIL:Heating Coil Heating Energy [J]
+  OnMeter=EnergyTransfer:Facility [J]
+  OnMeter=EnergyTransfer:HVAC [J]
+  OnMeter=HeatingCoils:EnergyTransfer [J]
+
+ Meters for 1505,1 ZONE VAV 6 MAIN HTG COIL:Heating Coil Source Side Heat Transfer Energy [J]
+  OnMeter=PlantLoopHeatingDemand:Facility [J]
+  OnMeter=PlantLoopHeatingDemand:HVAC [J]
+  OnMeter=HeatingCoils:PlantLoopHeatingDemand [J]
+
+ Meters for 1506,1 ZONE VAV 7 MAIN HTG COIL:Heating Coil Heating Energy [J]
+  OnMeter=EnergyTransfer:Facility [J]
+  OnMeter=EnergyTransfer:HVAC [J]
+  OnMeter=HeatingCoils:EnergyTransfer [J]
+
+ Meters for 1507,1 ZONE VAV 7 MAIN HTG COIL:Heating Coil Source Side Heat Transfer Energy [J]
+  OnMeter=PlantLoopHeatingDemand:Facility [J]
+  OnMeter=PlantLoopHeatingDemand:HVAC [J]
+  OnMeter=HeatingCoils:PlantLoopHeatingDemand [J]
+
+ Meters for 1508,1 ZONE VAV 8 MAIN HTG COIL:Heating Coil Heating Energy [J]
+  OnMeter=EnergyTransfer:Facility [J]
+  OnMeter=EnergyTransfer:HVAC [J]
+  OnMeter=HeatingCoils:EnergyTransfer [J]
+
+ Meters for 1509,1 ZONE VAV 8 MAIN HTG COIL:Heating Coil Source Side Heat Transfer Energy [J]
+  OnMeter=PlantLoopHeatingDemand:Facility [J]
+  OnMeter=PlantLoopHeatingDemand:HVAC [J]
+  OnMeter=HeatingCoils:PlantLoopHeatingDemand [J]
+
+ Meters for 1510,1 ZONE VAV 9 MAIN HTG COIL:Heating Coil Heating Energy [J]
+  OnMeter=EnergyTransfer:Facility [J]
+  OnMeter=EnergyTransfer:HVAC [J]
+  OnMeter=HeatingCoils:EnergyTransfer [J]
+
+ Meters for 1511,1 ZONE VAV 9 MAIN HTG COIL:Heating Coil Source Side Heat Transfer Energy [J]
+  OnMeter=PlantLoopHeatingDemand:Facility [J]
+  OnMeter=PlantLoopHeatingDemand:HVAC [J]
+  OnMeter=HeatingCoils:PlantLoopHeatingDemand [J]
+
+ Meters for 1512,1 ZONE VAV CLG COIL:Cooling Coil Total Cooling Energy [J]
+  OnMeter=EnergyTransfer:Facility [J]
+  OnMeter=EnergyTransfer:HVAC [J]
+  OnMeter=CoolingCoils:EnergyTransfer [J]
+
+ Meters for 1525,1 ZONE VAV CLG COIL:Cooling Coil Source Side Heat Transfer Energy [J]
+  OnMeter=PlantLoopCoolingDemand:Facility [J]
+  OnMeter=PlantLoopCoolingDemand:HVAC [J]
+  OnMeter=CoolingCoils:PlantLoopCoolingDemand [J]
+
+ Meters for 1562,1 ZONE VAV 1 CLG COIL:Cooling Coil Total Cooling Energy [J]
+  OnMeter=EnergyTransfer:Facility [J]
+  OnMeter=EnergyTransfer:HVAC [J]
+  OnMeter=CoolingCoils:EnergyTransfer [J]
+
+ Meters for 1563,1 ZONE VAV 1 CLG COIL:Cooling Coil Source Side Heat Transfer Energy [J]
+  OnMeter=PlantLoopCoolingDemand:Facility [J]
+  OnMeter=PlantLoopCoolingDemand:HVAC [J]
+  OnMeter=CoolingCoils:PlantLoopCoolingDemand [J]
+
+ Meters for 1564,1 ZONE VAV 2 CLG COIL:Cooling Coil Total Cooling Energy [J]
+  OnMeter=EnergyTransfer:Facility [J]
+  OnMeter=EnergyTransfer:HVAC [J]
+  OnMeter=CoolingCoils:EnergyTransfer [J]
+
+ Meters for 1565,1 ZONE VAV 2 CLG COIL:Cooling Coil Source Side Heat Transfer Energy [J]
+  OnMeter=PlantLoopCoolingDemand:Facility [J]
+  OnMeter=PlantLoopCoolingDemand:HVAC [J]
+  OnMeter=CoolingCoils:PlantLoopCoolingDemand [J]
+
+ Meters for 1566,1 ZONE VAV 3 CLG COIL:Cooling Coil Total Cooling Energy [J]
+  OnMeter=EnergyTransfer:Facility [J]
+  OnMeter=EnergyTransfer:HVAC [J]
+  OnMeter=CoolingCoils:EnergyTransfer [J]
+
+ Meters for 1567,1 ZONE VAV 3 CLG COIL:Cooling Coil Source Side Heat Transfer Energy [J]
+  OnMeter=PlantLoopCoolingDemand:Facility [J]
+  OnMeter=PlantLoopCoolingDemand:HVAC [J]
+  OnMeter=CoolingCoils:PlantLoopCoolingDemand [J]
+
+ Meters for 1568,1 ZONE VAV 4 CLG COIL:Cooling Coil Total Cooling Energy [J]
+  OnMeter=EnergyTransfer:Facility [J]
+  OnMeter=EnergyTransfer:HVAC [J]
+  OnMeter=CoolingCoils:EnergyTransfer [J]
+
+ Meters for 1569,1 ZONE VAV 4 CLG COIL:Cooling Coil Source Side Heat Transfer Energy [J]
+  OnMeter=PlantLoopCoolingDemand:Facility [J]
+  OnMeter=PlantLoopCoolingDemand:HVAC [J]
+  OnMeter=CoolingCoils:PlantLoopCoolingDemand [J]
+
+ Meters for 1570,1 ZONE VAV 5 CLG COIL:Cooling Coil Total Cooling Energy [J]
+  OnMeter=EnergyTransfer:Facility [J]
+  OnMeter=EnergyTransfer:HVAC [J]
+  OnMeter=CoolingCoils:EnergyTransfer [J]
+
+ Meters for 1571,1 ZONE VAV 5 CLG COIL:Cooling Coil Source Side Heat Transfer Energy [J]
+  OnMeter=PlantLoopCoolingDemand:Facility [J]
+  OnMeter=PlantLoopCoolingDemand:HVAC [J]
+  OnMeter=CoolingCoils:PlantLoopCoolingDemand [J]
+
+ Meters for 1572,1 ZONE VAV 6 CLG COIL:Cooling Coil Total Cooling Energy [J]
+  OnMeter=EnergyTransfer:Facility [J]
+  OnMeter=EnergyTransfer:HVAC [J]
+  OnMeter=CoolingCoils:EnergyTransfer [J]
+
+ Meters for 1573,1 ZONE VAV 6 CLG COIL:Cooling Coil Source Side Heat Transfer Energy [J]
+  OnMeter=PlantLoopCoolingDemand:Facility [J]
+  OnMeter=PlantLoopCoolingDemand:HVAC [J]
+  OnMeter=CoolingCoils:PlantLoopCoolingDemand [J]
+
+ Meters for 1574,1 ZONE VAV 7 CLG COIL:Cooling Coil Total Cooling Energy [J]
+  OnMeter=EnergyTransfer:Facility [J]
+  OnMeter=EnergyTransfer:HVAC [J]
+  OnMeter=CoolingCoils:EnergyTransfer [J]
+
+ Meters for 1575,1 ZONE VAV 7 CLG COIL:Cooling Coil Source Side Heat Transfer Energy [J]
+  OnMeter=PlantLoopCoolingDemand:Facility [J]
+  OnMeter=PlantLoopCoolingDemand:HVAC [J]
+  OnMeter=CoolingCoils:PlantLoopCoolingDemand [J]
+
+ Meters for 1576,1 ZONE VAV 8 CLG COIL:Cooling Coil Total Cooling Energy [J]
+  OnMeter=EnergyTransfer:Facility [J]
+  OnMeter=EnergyTransfer:HVAC [J]
+  OnMeter=CoolingCoils:EnergyTransfer [J]
+
+ Meters for 1577,1 ZONE VAV 8 CLG COIL:Cooling Coil Source Side Heat Transfer Energy [J]
+  OnMeter=PlantLoopCoolingDemand:Facility [J]
+  OnMeter=PlantLoopCoolingDemand:HVAC [J]
+  OnMeter=CoolingCoils:PlantLoopCoolingDemand [J]
+
+ Meters for 1578,1 ZONE VAV 9 CLG COIL:Cooling Coil Total Cooling Energy [J]
+  OnMeter=EnergyTransfer:Facility [J]
+  OnMeter=EnergyTransfer:HVAC [J]
+  OnMeter=CoolingCoils:EnergyTransfer [J]
+
+ Meters for 1579,1 ZONE VAV 9 CLG COIL:Cooling Coil Source Side Heat Transfer Energy [J]
+  OnMeter=PlantLoopCoolingDemand:Facility [J]
+  OnMeter=PlantLoopCoolingDemand:HVAC [J]
+  OnMeter=CoolingCoils:PlantLoopCoolingDemand [J]
+
+ Meters for 1580,1 ZONE VAV FAN:Fan Electric Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=Electricity:HVAC [J]
+  OnMeter=Fans:Electricity [J]
+  OnMeter=General:Fans:Electricity [J]
+
+ Meters for 1617,1 ZONE VAV 1 FAN:Fan Electric Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=Electricity:HVAC [J]
+  OnMeter=Fans:Electricity [J]
+  OnMeter=General:Fans:Electricity [J]
+
+ Meters for 1618,1 ZONE VAV 2 FAN:Fan Electric Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=Electricity:HVAC [J]
+  OnMeter=Fans:Electricity [J]
+  OnMeter=General:Fans:Electricity [J]
+
+ Meters for 1619,1 ZONE VAV 3 FAN:Fan Electric Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=Electricity:HVAC [J]
+  OnMeter=Fans:Electricity [J]
+  OnMeter=General:Fans:Electricity [J]
+
+ Meters for 1620,1 ZONE VAV 4 FAN:Fan Electric Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=Electricity:HVAC [J]
+  OnMeter=Fans:Electricity [J]
+  OnMeter=General:Fans:Electricity [J]
+
+ Meters for 1621,1 ZONE VAV 5 FAN:Fan Electric Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=Electricity:HVAC [J]
+  OnMeter=Fans:Electricity [J]
+  OnMeter=General:Fans:Electricity [J]
+
+ Meters for 1622,1 ZONE VAV 6 FAN:Fan Electric Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=Electricity:HVAC [J]
+  OnMeter=Fans:Electricity [J]
+  OnMeter=General:Fans:Electricity [J]
+
+ Meters for 1623,1 ZONE VAV 7 FAN:Fan Electric Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=Electricity:HVAC [J]
+  OnMeter=Fans:Electricity [J]
+  OnMeter=General:Fans:Electricity [J]
+
+ Meters for 1624,1 ZONE VAV 8 FAN:Fan Electric Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=Electricity:HVAC [J]
+  OnMeter=Fans:Electricity [J]
+  OnMeter=General:Fans:Electricity [J]
+
+ Meters for 1625,1 ZONE VAV 9 FAN:Fan Electric Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=Electricity:HVAC [J]
+  OnMeter=Fans:Electricity [J]
+  OnMeter=General:Fans:Electricity [J]
+
+ Meters for 1626,BUILDING FACADES:Exterior Lights Electric Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=ExteriorLights:Electricity [J]
+  OnMeter=Building Facades:ExteriorLights:Electricity [J]
+
+ Meters for 1651,MAIN ENTRIES:Exterior Lights Electric Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=ExteriorLights:Electricity [J]
+  OnMeter=Main Entries:ExteriorLights:Electricity [J]
+
+ Meters for 1664,OTHER DOORS:Exterior Lights Electric Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=ExteriorLights:Electricity [J]
+  OnMeter=Other Doors:ExteriorLights:Electricity [J]
+
+ Meters for 1677,PARKING AREAS AND DRIVES:Exterior Lights Electric Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=ExteriorLights:Electricity [J]
+  OnMeter=Parking Areas and Drives:ExteriorLights:Electricity [J]
+
+ Meters for 1690,90.1-2004 WATERCOOLED  ROTARY SCREW CHILLER 0 1110TONS 0.6KW/TON:Chiller Electric Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=Electricity:Plant [J]
+  OnMeter=Cooling:Electricity [J]
+  OnMeter=General:Cooling:Electricity [J]
+
+ Meters for 1727,90.1-2004 WATERCOOLED  ROTARY SCREW CHILLER 0 1110TONS 0.6KW/TON:Chiller Evaporator Cooling Energy [J]
+  OnMeter=EnergyTransfer:Facility [J]
+  OnMeter=EnergyTransfer:Plant [J]
+  OnMeter=Chillers:EnergyTransfer [J]
+
+ Meters for 1740,90.1-2004 WATERCOOLED  ROTARY SCREW CHILLER 0 1110TONS 0.6KW/TON:Chiller Condenser Heat Transfer Energy [J]
+  OnMeter=EnergyTransfer:Facility [J]
+  OnMeter=EnergyTransfer:Plant [J]
+  OnMeter=HeatRejection:EnergyTransfer [J]
+
+ Meters for 1753,PROPELLER OR AXIAL TWOSPEED FAN OPEN COOLING TOWER 38.2 GPM/HP:Cooling Tower Fan Electric Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=Electricity:Plant [J]
+  OnMeter=HeatRejection:Electricity [J]
+  OnMeter=General:HeatRejection:Electricity [J]
+
+ Meters for 1778,PROPELLER OR AXIAL TWOSPEED FAN OPEN COOLING TOWER 38.2 GPM/HP:Cooling Tower Make Up Water Volume [m3]
+  OnMeter=Water:Facility [m3]
+  OnMeter=Water:Plant [m3]
+  OnMeter=HeatRejection:Water [m3]
+
+ Meters for 1791,PROPELLER OR AXIAL TWOSPEED FAN OPEN COOLING TOWER 38.2 GPM/HP:Cooling Tower Make Up Mains Water Volume [m3]
+  OnMeter=MainsWater:Facility [m3]
+  OnMeter=MainsWater:Plant [m3]
+  OnMeter=HeatRejection:MainsWater [m3]
+
+ Meters for 1804,BOILER 12808KBTU/HR 0.75 THERMAL EFF:Boiler Heating Energy [J]
+  OnMeter=EnergyTransfer:Facility [J]
+  OnMeter=EnergyTransfer:Plant [J]
+  OnMeter=Boilers:EnergyTransfer [J]
+
+ Meters for 1817,BOILER 12808KBTU/HR 0.75 THERMAL EFF:Boiler Gas Energy [J]
+  OnMeter=Gas:Facility [J]
+  OnMeter=Gas:Plant [J]
+  OnMeter=Heating:Gas [J]
+  OnMeter=General:Heating:Gas [J]
+
+ Meters for 1842,BOILER 12808KBTU/HR 0.75 THERMAL EFF:Boiler Ancillary Electric Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=Electricity:Plant [J]
+  OnMeter=Heating:Electricity [J]
+  OnMeter=Boiler Parasitic:Heating:Electricity [J]
+
+ Meters for 1867,CHILLED WATER LOOP SECONDARY PUMP:Pump Electric Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=Electricity:Plant [J]
+  OnMeter=Pumps:Electricity [J]
+  OnMeter=General:Pumps:Electricity [J]
+
+ Meters for 1892,HOT WATER LOOP PUMP:Pump Electric Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=Electricity:Plant [J]
+  OnMeter=Pumps:Electricity [J]
+  OnMeter=General:Pumps:Electricity [J]
+
+ Meters for 1893,CHILLED WATER LOOP PRIMARY PUMP:Pump Electric Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=Electricity:Plant [J]
+  OnMeter=Pumps:Electricity [J]
+  OnMeter=General:Pumps:Electricity [J]
+
+ Meters for 1894,CONDENSER WATER LOOP CONSTANT PUMP:Pump Electric Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=Electricity:Plant [J]
+  OnMeter=Pumps:Electricity [J]
+  OnMeter=General:Pumps:Electricity [J]
+
+ Meters for 1895,OUTPATIENT SHARED SERVICE WATER LOOP CIRCULATOR PUMP:Pump Electric Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=Electricity:Plant [J]
+  OnMeter=Pumps:Electricity [J]
+  OnMeter=General:Pumps:Electricity [J]
+
+ Meters for 1896,Site:Environmental Impact Total N2O Emissions Carbon Equivalent Mass [kg]
+  OnMeter=Carbon Equivalent:Facility [kg]
+  OnMeter=CarbonEquivalentEmissions:Carbon Equivalent [kg]
+
+ Meters for 1921,Site:Environmental Impact Total CH4 Emissions Carbon Equivalent Mass [kg]
+  OnMeter=Carbon Equivalent:Facility [kg]
+  OnMeter=CarbonEquivalentEmissions:Carbon Equivalent [kg]
+
+ Meters for 1922,Site:Environmental Impact Total CO2 Emissions Carbon Equivalent Mass [kg]
+  OnMeter=Carbon Equivalent:Facility [kg]
+  OnMeter=CarbonEquivalentEmissions:Carbon Equivalent [kg]
+
+ For Meter=Electricity:Facility [J], ResourceType=Electricity, contents are:
+  BUILDING STORY 2 THERMALZONE OUTPATIENT ANESTHESIA LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT BIOHAZARD LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT CAFE LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT CLEANWORK LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT CONFERENCE LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT ELEC/MECHROOM LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT IT_ROOM LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT MEDGAS LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT MRI LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT MRI_CONTROL LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT PREOP LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT PROCEDUREROOM LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT SOIL WORK LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 1 THERMALZONE OUTPATIENT LOBBY LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 1 THERMALZONE OUTPATIENT LOCKERROOM LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 1 THERMALZONE OUTPATIENT NURSESTATION LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 1 THERMALZONE OUTPATIENT PREOP LIGHTS 2:Lights Electric Energy
+  BUILDING STORY 1 THERMALZONE OUTPATIENT STAIR LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 1 THERMALZONE OUTPATIENT TOILET LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 1 THERMALZONE OUTPATIENT XRAY LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 4 THERMALZONE OUTPATIENT LOUNGE LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 4 THERMALZONE OUTPATIENT OR LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 4 THERMALZONE OUTPATIENT PACU LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 4 THERMALZONE OUTPATIENT XRAY LIGHTS 2:Lights Electric Energy
+  BUILDING STORY 6 THERMALZONE OUTPATIENT OR LIGHTS 2:Lights Electric Energy
+  BUILDING STORY 6 THERMALZONE OUTPATIENT PHYSICALTHERAPY LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 6 THERMALZONE OUTPATIENT RECEPTION LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 3 THERMALZONE OUTPATIENT EXAM LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 3 THERMALZONE OUTPATIENT JANITOR LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 3 THERMALZONE OUTPATIENT PHYSICALTHERAPY LIGHTS 2:Lights Electric Energy
+  BUILDING STORY 8 THERMALZONE OUTPATIENT EXAM LIGHTS 2:Lights Electric Energy
+  BUILDING STORY 8 THERMALZONE OUTPATIENT OFFICE LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 5 THERMALZONE OUTPATIENT OFFICE LIGHTS 2:Lights Electric Energy
+  BUILDING STORY 7 THERMALZONE OUTPATIENT HALL LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 7 THERMALZONE OUTPATIENT OFFICE LIGHTS 3:Lights Electric Energy
+  BUILDING STORY 9 THERMALZONE OUTPATIENT HALL LIGHTS 2:Lights Electric Energy
+  BUILDING STORY 10 THERMALZONE OUTPATIENT HALL LIGHTS 3:Lights Electric Energy
+  BUILDING STORY 2 THERMALZONE 27 ELEVATOR FANS:Electric Equipment Electric Energy
+  BUILDING STORY 2 THERMALZONE 27 ELEVATOR LIFT MOTORS:Electric Equipment Electric Energy
+  BUILDING STORY 2 THERMALZONE 27 ELEVATOR LIGHTS:Electric Equipment Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT ANESTHESIA ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT BIOHAZARD ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT CAFE ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT CLEANWORK ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT CONFERENCE ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT ELEC/MECHROOM ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT IT_ROOM ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT MEDGAS ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT MRI ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT MRI_CONTROL ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT PREOP ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT PROCEDUREROOM ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT SOIL WORK ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 1 THERMALZONE OUTPATIENT LOBBY ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 1 THERMALZONE OUTPATIENT LOCKERROOM ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 1 THERMALZONE OUTPATIENT NURSESTATION ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 1 THERMALZONE OUTPATIENT PREOP ELEC EQUIP 2:Electric Equipment Electric Energy
+  BUILDING STORY 1 THERMALZONE OUTPATIENT STAIR ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 1 THERMALZONE OUTPATIENT TOILET ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 1 THERMALZONE OUTPATIENT XRAY ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 4 THERMALZONE OUTPATIENT LOUNGE ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 4 THERMALZONE OUTPATIENT OR ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 4 THERMALZONE OUTPATIENT PACU ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 4 THERMALZONE OUTPATIENT XRAY ELEC EQUIP 2:Electric Equipment Electric Energy
+  BUILDING STORY 6 THERMALZONE OUTPATIENT OR ELEC EQUIP 2:Electric Equipment Electric Energy
+  BUILDING STORY 6 THERMALZONE OUTPATIENT PHYSICALTHERAPY ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 6 THERMALZONE OUTPATIENT RECEPTION ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 3 THERMALZONE OUTPATIENT EXAM ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 3 THERMALZONE OUTPATIENT JANITOR ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 3 THERMALZONE OUTPATIENT PHYSICALTHERAPY ELEC EQUIP 2:Electric Equipment Electric Energy
+  BUILDING STORY 8 THERMALZONE OUTPATIENT EXAM ELEC EQUIP 2:Electric Equipment Electric Energy
+  BUILDING STORY 8 THERMALZONE OUTPATIENT OFFICE ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 5 THERMALZONE OUTPATIENT OFFICE ELEC EQUIP 2:Electric Equipment Electric Energy
+  BUILDING STORY 7 THERMALZONE OUTPATIENT HALL ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 7 THERMALZONE OUTPATIENT OFFICE ELEC EQUIP 3:Electric Equipment Electric Energy
+  BUILDING STORY 9 THERMALZONE OUTPATIENT HALL ELEC EQUIP 2:Electric Equipment Electric Energy
+  BUILDING STORY 10 THERMALZONE OUTPATIENT HALL ELEC EQUIP 3:Electric Equipment Electric Energy
+  1 ZONE VAV FAN:Fan Electric Energy
+  1 ZONE VAV 1 FAN:Fan Electric Energy
+  1 ZONE VAV 2 FAN:Fan Electric Energy
+  1 ZONE VAV 3 FAN:Fan Electric Energy
+  1 ZONE VAV 4 FAN:Fan Electric Energy
+  1 ZONE VAV 5 FAN:Fan Electric Energy
+  1 ZONE VAV 6 FAN:Fan Electric Energy
+  1 ZONE VAV 7 FAN:Fan Electric Energy
+  1 ZONE VAV 8 FAN:Fan Electric Energy
+  1 ZONE VAV 9 FAN:Fan Electric Energy
+  BUILDING FACADES:Exterior Lights Electric Energy
+  MAIN ENTRIES:Exterior Lights Electric Energy
+  OTHER DOORS:Exterior Lights Electric Energy
+  PARKING AREAS AND DRIVES:Exterior Lights Electric Energy
+  90.1-2004 WATERCOOLED  ROTARY SCREW CHILLER 0 1110TONS 0.6KW/TON:Chiller Electric Energy
+  PROPELLER OR AXIAL TWOSPEED FAN OPEN COOLING TOWER 38.2 GPM/HP:Cooling Tower Fan Electric Energy
+  BOILER 12808KBTU/HR 0.75 THERMAL EFF:Boiler Ancillary Electric Energy
+  CHILLED WATER LOOP SECONDARY PUMP:Pump Electric Energy
+  HOT WATER LOOP PUMP:Pump Electric Energy
+  CHILLED WATER LOOP PRIMARY PUMP:Pump Electric Energy
+  CONDENSER WATER LOOP CONSTANT PUMP:Pump Electric Energy
+  OUTPATIENT SHARED SERVICE WATER LOOP CIRCULATOR PUMP:Pump Electric Energy
+
+ For Meter=Electricity:Building [J], ResourceType=Electricity, Group=Building, contents are:
+  BUILDING STORY 2 THERMALZONE OUTPATIENT ANESTHESIA LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT BIOHAZARD LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT CAFE LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT CLEANWORK LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT CONFERENCE LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT ELEC/MECHROOM LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT IT_ROOM LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT MEDGAS LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT MRI LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT MRI_CONTROL LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT PREOP LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT PROCEDUREROOM LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT SOIL WORK LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 1 THERMALZONE OUTPATIENT LOBBY LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 1 THERMALZONE OUTPATIENT LOCKERROOM LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 1 THERMALZONE OUTPATIENT NURSESTATION LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 1 THERMALZONE OUTPATIENT PREOP LIGHTS 2:Lights Electric Energy
+  BUILDING STORY 1 THERMALZONE OUTPATIENT STAIR LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 1 THERMALZONE OUTPATIENT TOILET LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 1 THERMALZONE OUTPATIENT XRAY LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 4 THERMALZONE OUTPATIENT LOUNGE LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 4 THERMALZONE OUTPATIENT OR LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 4 THERMALZONE OUTPATIENT PACU LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 4 THERMALZONE OUTPATIENT XRAY LIGHTS 2:Lights Electric Energy
+  BUILDING STORY 6 THERMALZONE OUTPATIENT OR LIGHTS 2:Lights Electric Energy
+  BUILDING STORY 6 THERMALZONE OUTPATIENT PHYSICALTHERAPY LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 6 THERMALZONE OUTPATIENT RECEPTION LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 3 THERMALZONE OUTPATIENT EXAM LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 3 THERMALZONE OUTPATIENT JANITOR LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 3 THERMALZONE OUTPATIENT PHYSICALTHERAPY LIGHTS 2:Lights Electric Energy
+  BUILDING STORY 8 THERMALZONE OUTPATIENT EXAM LIGHTS 2:Lights Electric Energy
+  BUILDING STORY 8 THERMALZONE OUTPATIENT OFFICE LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 5 THERMALZONE OUTPATIENT OFFICE LIGHTS 2:Lights Electric Energy
+  BUILDING STORY 7 THERMALZONE OUTPATIENT HALL LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 7 THERMALZONE OUTPATIENT OFFICE LIGHTS 3:Lights Electric Energy
+  BUILDING STORY 9 THERMALZONE OUTPATIENT HALL LIGHTS 2:Lights Electric Energy
+  BUILDING STORY 10 THERMALZONE OUTPATIENT HALL LIGHTS 3:Lights Electric Energy
+  BUILDING STORY 2 THERMALZONE 27 ELEVATOR FANS:Electric Equipment Electric Energy
+  BUILDING STORY 2 THERMALZONE 27 ELEVATOR LIFT MOTORS:Electric Equipment Electric Energy
+  BUILDING STORY 2 THERMALZONE 27 ELEVATOR LIGHTS:Electric Equipment Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT ANESTHESIA ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT BIOHAZARD ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT CAFE ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT CLEANWORK ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT CONFERENCE ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT ELEC/MECHROOM ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT IT_ROOM ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT MEDGAS ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT MRI ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT MRI_CONTROL ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT PREOP ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT PROCEDUREROOM ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT SOIL WORK ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 1 THERMALZONE OUTPATIENT LOBBY ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 1 THERMALZONE OUTPATIENT LOCKERROOM ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 1 THERMALZONE OUTPATIENT NURSESTATION ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 1 THERMALZONE OUTPATIENT PREOP ELEC EQUIP 2:Electric Equipment Electric Energy
+  BUILDING STORY 1 THERMALZONE OUTPATIENT STAIR ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 1 THERMALZONE OUTPATIENT TOILET ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 1 THERMALZONE OUTPATIENT XRAY ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 4 THERMALZONE OUTPATIENT LOUNGE ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 4 THERMALZONE OUTPATIENT OR ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 4 THERMALZONE OUTPATIENT PACU ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 4 THERMALZONE OUTPATIENT XRAY ELEC EQUIP 2:Electric Equipment Electric Energy
+  BUILDING STORY 6 THERMALZONE OUTPATIENT OR ELEC EQUIP 2:Electric Equipment Electric Energy
+  BUILDING STORY 6 THERMALZONE OUTPATIENT PHYSICALTHERAPY ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 6 THERMALZONE OUTPATIENT RECEPTION ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 3 THERMALZONE OUTPATIENT EXAM ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 3 THERMALZONE OUTPATIENT JANITOR ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 3 THERMALZONE OUTPATIENT PHYSICALTHERAPY ELEC EQUIP 2:Electric Equipment Electric Energy
+  BUILDING STORY 8 THERMALZONE OUTPATIENT EXAM ELEC EQUIP 2:Electric Equipment Electric Energy
+  BUILDING STORY 8 THERMALZONE OUTPATIENT OFFICE ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 5 THERMALZONE OUTPATIENT OFFICE ELEC EQUIP 2:Electric Equipment Electric Energy
+  BUILDING STORY 7 THERMALZONE OUTPATIENT HALL ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 7 THERMALZONE OUTPATIENT OFFICE ELEC EQUIP 3:Electric Equipment Electric Energy
+  BUILDING STORY 9 THERMALZONE OUTPATIENT HALL ELEC EQUIP 2:Electric Equipment Electric Energy
+  BUILDING STORY 10 THERMALZONE OUTPATIENT HALL ELEC EQUIP 3:Electric Equipment Electric Energy
+
+ For Meter=Electricity:Zone:BUILDING STORY 2 THERMALZONE [J], ResourceType=Electricity, Group=Zone, contents are:
+  BUILDING STORY 2 THERMALZONE OUTPATIENT ANESTHESIA LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT BIOHAZARD LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT CAFE LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT CLEANWORK LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT CONFERENCE LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT ELEC/MECHROOM LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT IT_ROOM LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT MEDGAS LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT MRI LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT MRI_CONTROL LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT PREOP LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT PROCEDUREROOM LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT SOIL WORK LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 2 THERMALZONE 27 ELEVATOR FANS:Electric Equipment Electric Energy
+  BUILDING STORY 2 THERMALZONE 27 ELEVATOR LIFT MOTORS:Electric Equipment Electric Energy
+  BUILDING STORY 2 THERMALZONE 27 ELEVATOR LIGHTS:Electric Equipment Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT ANESTHESIA ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT BIOHAZARD ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT CAFE ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT CLEANWORK ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT CONFERENCE ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT ELEC/MECHROOM ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT IT_ROOM ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT MEDGAS ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT MRI ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT MRI_CONTROL ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT PREOP ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT PROCEDUREROOM ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT SOIL WORK ELEC EQUIP 1:Electric Equipment Electric Energy
+
+ For Meter=InteriorLights:Electricity [J], ResourceType=Electricity, EndUse=InteriorLights, contents are:
+  BUILDING STORY 2 THERMALZONE OUTPATIENT ANESTHESIA LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT BIOHAZARD LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT CAFE LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT CLEANWORK LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT CONFERENCE LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT ELEC/MECHROOM LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT IT_ROOM LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT MEDGAS LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT MRI LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT MRI_CONTROL LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT PREOP LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT PROCEDUREROOM LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT SOIL WORK LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 1 THERMALZONE OUTPATIENT LOBBY LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 1 THERMALZONE OUTPATIENT LOCKERROOM LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 1 THERMALZONE OUTPATIENT NURSESTATION LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 1 THERMALZONE OUTPATIENT PREOP LIGHTS 2:Lights Electric Energy
+  BUILDING STORY 1 THERMALZONE OUTPATIENT STAIR LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 1 THERMALZONE OUTPATIENT TOILET LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 1 THERMALZONE OUTPATIENT XRAY LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 4 THERMALZONE OUTPATIENT LOUNGE LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 4 THERMALZONE OUTPATIENT OR LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 4 THERMALZONE OUTPATIENT PACU LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 4 THERMALZONE OUTPATIENT XRAY LIGHTS 2:Lights Electric Energy
+  BUILDING STORY 6 THERMALZONE OUTPATIENT OR LIGHTS 2:Lights Electric Energy
+  BUILDING STORY 6 THERMALZONE OUTPATIENT PHYSICALTHERAPY LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 6 THERMALZONE OUTPATIENT RECEPTION LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 3 THERMALZONE OUTPATIENT EXAM LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 3 THERMALZONE OUTPATIENT JANITOR LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 3 THERMALZONE OUTPATIENT PHYSICALTHERAPY LIGHTS 2:Lights Electric Energy
+  BUILDING STORY 8 THERMALZONE OUTPATIENT EXAM LIGHTS 2:Lights Electric Energy
+  BUILDING STORY 8 THERMALZONE OUTPATIENT OFFICE LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 5 THERMALZONE OUTPATIENT OFFICE LIGHTS 2:Lights Electric Energy
+  BUILDING STORY 7 THERMALZONE OUTPATIENT HALL LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 7 THERMALZONE OUTPATIENT OFFICE LIGHTS 3:Lights Electric Energy
+  BUILDING STORY 9 THERMALZONE OUTPATIENT HALL LIGHTS 2:Lights Electric Energy
+  BUILDING STORY 10 THERMALZONE OUTPATIENT HALL LIGHTS 3:Lights Electric Energy
+
+ For Meter=InteriorLights:Electricity:Zone:BUILDING STORY 2 THERMALZONE [J], ResourceType=Electricity, EndUse=InteriorLights, Group=Zone, contents are:
+  BUILDING STORY 2 THERMALZONE OUTPATIENT ANESTHESIA LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT BIOHAZARD LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT CAFE LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT CLEANWORK LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT CONFERENCE LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT ELEC/MECHROOM LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT IT_ROOM LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT MEDGAS LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT MRI LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT MRI_CONTROL LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT PREOP LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT PROCEDUREROOM LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT SOIL WORK LIGHTS 1:Lights Electric Energy
+
+ For Meter=General:InteriorLights:Electricity [J], ResourceType=Electricity, EndUse=InteriorLights, contents are:
+  BUILDING STORY 2 THERMALZONE OUTPATIENT ANESTHESIA LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT BIOHAZARD LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT CAFE LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT CLEANWORK LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT CONFERENCE LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT ELEC/MECHROOM LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT IT_ROOM LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT MEDGAS LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT MRI LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT MRI_CONTROL LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT PREOP LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT PROCEDUREROOM LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT SOIL WORK LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 1 THERMALZONE OUTPATIENT LOBBY LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 1 THERMALZONE OUTPATIENT LOCKERROOM LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 1 THERMALZONE OUTPATIENT NURSESTATION LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 1 THERMALZONE OUTPATIENT PREOP LIGHTS 2:Lights Electric Energy
+  BUILDING STORY 1 THERMALZONE OUTPATIENT STAIR LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 1 THERMALZONE OUTPATIENT TOILET LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 1 THERMALZONE OUTPATIENT XRAY LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 4 THERMALZONE OUTPATIENT LOUNGE LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 4 THERMALZONE OUTPATIENT OR LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 4 THERMALZONE OUTPATIENT PACU LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 4 THERMALZONE OUTPATIENT XRAY LIGHTS 2:Lights Electric Energy
+  BUILDING STORY 6 THERMALZONE OUTPATIENT OR LIGHTS 2:Lights Electric Energy
+  BUILDING STORY 6 THERMALZONE OUTPATIENT PHYSICALTHERAPY LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 6 THERMALZONE OUTPATIENT RECEPTION LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 3 THERMALZONE OUTPATIENT EXAM LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 3 THERMALZONE OUTPATIENT JANITOR LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 3 THERMALZONE OUTPATIENT PHYSICALTHERAPY LIGHTS 2:Lights Electric Energy
+  BUILDING STORY 8 THERMALZONE OUTPATIENT EXAM LIGHTS 2:Lights Electric Energy
+  BUILDING STORY 8 THERMALZONE OUTPATIENT OFFICE LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 5 THERMALZONE OUTPATIENT OFFICE LIGHTS 2:Lights Electric Energy
+  BUILDING STORY 7 THERMALZONE OUTPATIENT HALL LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 7 THERMALZONE OUTPATIENT OFFICE LIGHTS 3:Lights Electric Energy
+  BUILDING STORY 9 THERMALZONE OUTPATIENT HALL LIGHTS 2:Lights Electric Energy
+  BUILDING STORY 10 THERMALZONE OUTPATIENT HALL LIGHTS 3:Lights Electric Energy
+
+ For Meter=Electricity:Zone:BUILDING STORY 1 THERMALZONE [J], ResourceType=Electricity, Group=Zone, contents are:
+  BUILDING STORY 1 THERMALZONE OUTPATIENT LOBBY LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 1 THERMALZONE OUTPATIENT LOCKERROOM LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 1 THERMALZONE OUTPATIENT NURSESTATION LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 1 THERMALZONE OUTPATIENT PREOP LIGHTS 2:Lights Electric Energy
+  BUILDING STORY 1 THERMALZONE OUTPATIENT STAIR LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 1 THERMALZONE OUTPATIENT TOILET LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 1 THERMALZONE OUTPATIENT XRAY LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 1 THERMALZONE OUTPATIENT LOBBY ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 1 THERMALZONE OUTPATIENT LOCKERROOM ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 1 THERMALZONE OUTPATIENT NURSESTATION ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 1 THERMALZONE OUTPATIENT PREOP ELEC EQUIP 2:Electric Equipment Electric Energy
+  BUILDING STORY 1 THERMALZONE OUTPATIENT STAIR ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 1 THERMALZONE OUTPATIENT TOILET ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 1 THERMALZONE OUTPATIENT XRAY ELEC EQUIP 1:Electric Equipment Electric Energy
+
+ For Meter=InteriorLights:Electricity:Zone:BUILDING STORY 1 THERMALZONE [J], ResourceType=Electricity, EndUse=InteriorLights, Group=Zone, contents are:
+  BUILDING STORY 1 THERMALZONE OUTPATIENT LOBBY LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 1 THERMALZONE OUTPATIENT LOCKERROOM LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 1 THERMALZONE OUTPATIENT NURSESTATION LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 1 THERMALZONE OUTPATIENT PREOP LIGHTS 2:Lights Electric Energy
+  BUILDING STORY 1 THERMALZONE OUTPATIENT STAIR LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 1 THERMALZONE OUTPATIENT TOILET LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 1 THERMALZONE OUTPATIENT XRAY LIGHTS 1:Lights Electric Energy
+
+ For Meter=Electricity:Zone:BUILDING STORY 4 THERMALZONE [J], ResourceType=Electricity, Group=Zone, contents are:
+  BUILDING STORY 4 THERMALZONE OUTPATIENT LOUNGE LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 4 THERMALZONE OUTPATIENT OR LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 4 THERMALZONE OUTPATIENT PACU LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 4 THERMALZONE OUTPATIENT XRAY LIGHTS 2:Lights Electric Energy
+  BUILDING STORY 4 THERMALZONE OUTPATIENT LOUNGE ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 4 THERMALZONE OUTPATIENT OR ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 4 THERMALZONE OUTPATIENT PACU ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 4 THERMALZONE OUTPATIENT XRAY ELEC EQUIP 2:Electric Equipment Electric Energy
+
+ For Meter=InteriorLights:Electricity:Zone:BUILDING STORY 4 THERMALZONE [J], ResourceType=Electricity, EndUse=InteriorLights, Group=Zone, contents are:
+  BUILDING STORY 4 THERMALZONE OUTPATIENT LOUNGE LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 4 THERMALZONE OUTPATIENT OR LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 4 THERMALZONE OUTPATIENT PACU LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 4 THERMALZONE OUTPATIENT XRAY LIGHTS 2:Lights Electric Energy
+
+ For Meter=Electricity:Zone:BUILDING STORY 6 THERMALZONE [J], ResourceType=Electricity, Group=Zone, contents are:
+  BUILDING STORY 6 THERMALZONE OUTPATIENT OR LIGHTS 2:Lights Electric Energy
+  BUILDING STORY 6 THERMALZONE OUTPATIENT PHYSICALTHERAPY LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 6 THERMALZONE OUTPATIENT RECEPTION LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 6 THERMALZONE OUTPATIENT OR ELEC EQUIP 2:Electric Equipment Electric Energy
+  BUILDING STORY 6 THERMALZONE OUTPATIENT PHYSICALTHERAPY ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 6 THERMALZONE OUTPATIENT RECEPTION ELEC EQUIP 1:Electric Equipment Electric Energy
+
+ For Meter=InteriorLights:Electricity:Zone:BUILDING STORY 6 THERMALZONE [J], ResourceType=Electricity, EndUse=InteriorLights, Group=Zone, contents are:
+  BUILDING STORY 6 THERMALZONE OUTPATIENT OR LIGHTS 2:Lights Electric Energy
+  BUILDING STORY 6 THERMALZONE OUTPATIENT PHYSICALTHERAPY LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 6 THERMALZONE OUTPATIENT RECEPTION LIGHTS 1:Lights Electric Energy
+
+ For Meter=Electricity:Zone:BUILDING STORY 3 THERMALZONE [J], ResourceType=Electricity, Group=Zone, contents are:
+  BUILDING STORY 3 THERMALZONE OUTPATIENT EXAM LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 3 THERMALZONE OUTPATIENT JANITOR LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 3 THERMALZONE OUTPATIENT PHYSICALTHERAPY LIGHTS 2:Lights Electric Energy
+  BUILDING STORY 3 THERMALZONE OUTPATIENT EXAM ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 3 THERMALZONE OUTPATIENT JANITOR ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 3 THERMALZONE OUTPATIENT PHYSICALTHERAPY ELEC EQUIP 2:Electric Equipment Electric Energy
+
+ For Meter=InteriorLights:Electricity:Zone:BUILDING STORY 3 THERMALZONE [J], ResourceType=Electricity, EndUse=InteriorLights, Group=Zone, contents are:
+  BUILDING STORY 3 THERMALZONE OUTPATIENT EXAM LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 3 THERMALZONE OUTPATIENT JANITOR LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 3 THERMALZONE OUTPATIENT PHYSICALTHERAPY LIGHTS 2:Lights Electric Energy
+
+ For Meter=Electricity:Zone:BUILDING STORY 8 THERMALZONE [J], ResourceType=Electricity, Group=Zone, contents are:
+  BUILDING STORY 8 THERMALZONE OUTPATIENT EXAM LIGHTS 2:Lights Electric Energy
+  BUILDING STORY 8 THERMALZONE OUTPATIENT OFFICE LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 8 THERMALZONE OUTPATIENT EXAM ELEC EQUIP 2:Electric Equipment Electric Energy
+  BUILDING STORY 8 THERMALZONE OUTPATIENT OFFICE ELEC EQUIP 1:Electric Equipment Electric Energy
+
+ For Meter=InteriorLights:Electricity:Zone:BUILDING STORY 8 THERMALZONE [J], ResourceType=Electricity, EndUse=InteriorLights, Group=Zone, contents are:
+  BUILDING STORY 8 THERMALZONE OUTPATIENT EXAM LIGHTS 2:Lights Electric Energy
+  BUILDING STORY 8 THERMALZONE OUTPATIENT OFFICE LIGHTS 1:Lights Electric Energy
+
+ For Meter=Electricity:Zone:BUILDING STORY 5 THERMALZONE [J], ResourceType=Electricity, Group=Zone, contents are:
+  BUILDING STORY 5 THERMALZONE OUTPATIENT OFFICE LIGHTS 2:Lights Electric Energy
+  BUILDING STORY 5 THERMALZONE OUTPATIENT OFFICE ELEC EQUIP 2:Electric Equipment Electric Energy
+
+ For Meter=InteriorLights:Electricity:Zone:BUILDING STORY 5 THERMALZONE [J], ResourceType=Electricity, EndUse=InteriorLights, Group=Zone, contents are:
+  BUILDING STORY 5 THERMALZONE OUTPATIENT OFFICE LIGHTS 2:Lights Electric Energy
+
+ For Meter=Electricity:Zone:BUILDING STORY 7 THERMALZONE [J], ResourceType=Electricity, Group=Zone, contents are:
+  BUILDING STORY 7 THERMALZONE OUTPATIENT HALL LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 7 THERMALZONE OUTPATIENT OFFICE LIGHTS 3:Lights Electric Energy
+  BUILDING STORY 7 THERMALZONE OUTPATIENT HALL ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 7 THERMALZONE OUTPATIENT OFFICE ELEC EQUIP 3:Electric Equipment Electric Energy
+
+ For Meter=InteriorLights:Electricity:Zone:BUILDING STORY 7 THERMALZONE [J], ResourceType=Electricity, EndUse=InteriorLights, Group=Zone, contents are:
+  BUILDING STORY 7 THERMALZONE OUTPATIENT HALL LIGHTS 1:Lights Electric Energy
+  BUILDING STORY 7 THERMALZONE OUTPATIENT OFFICE LIGHTS 3:Lights Electric Energy
+
+ For Meter=Electricity:Zone:BUILDING STORY 9 THERMALZONE [J], ResourceType=Electricity, Group=Zone, contents are:
+  BUILDING STORY 9 THERMALZONE OUTPATIENT HALL LIGHTS 2:Lights Electric Energy
+  BUILDING STORY 9 THERMALZONE OUTPATIENT HALL ELEC EQUIP 2:Electric Equipment Electric Energy
+
+ For Meter=InteriorLights:Electricity:Zone:BUILDING STORY 9 THERMALZONE [J], ResourceType=Electricity, EndUse=InteriorLights, Group=Zone, contents are:
+  BUILDING STORY 9 THERMALZONE OUTPATIENT HALL LIGHTS 2:Lights Electric Energy
+
+ For Meter=Electricity:Zone:BUILDING STORY 10 THERMALZONE [J], ResourceType=Electricity, Group=Zone, contents are:
+  BUILDING STORY 10 THERMALZONE OUTPATIENT HALL LIGHTS 3:Lights Electric Energy
+  BUILDING STORY 10 THERMALZONE OUTPATIENT HALL ELEC EQUIP 3:Electric Equipment Electric Energy
+
+ For Meter=InteriorLights:Electricity:Zone:BUILDING STORY 10 THERMALZONE [J], ResourceType=Electricity, EndUse=InteriorLights, Group=Zone, contents are:
+  BUILDING STORY 10 THERMALZONE OUTPATIENT HALL LIGHTS 3:Lights Electric Energy
+
+ For Meter=InteriorEquipment:Electricity [J], ResourceType=Electricity, EndUse=InteriorEquipment, contents are:
+  BUILDING STORY 2 THERMALZONE 27 ELEVATOR FANS:Electric Equipment Electric Energy
+  BUILDING STORY 2 THERMALZONE 27 ELEVATOR LIFT MOTORS:Electric Equipment Electric Energy
+  BUILDING STORY 2 THERMALZONE 27 ELEVATOR LIGHTS:Electric Equipment Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT ANESTHESIA ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT BIOHAZARD ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT CAFE ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT CLEANWORK ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT CONFERENCE ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT ELEC/MECHROOM ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT IT_ROOM ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT MEDGAS ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT MRI ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT MRI_CONTROL ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT PREOP ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT PROCEDUREROOM ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT SOIL WORK ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 1 THERMALZONE OUTPATIENT LOBBY ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 1 THERMALZONE OUTPATIENT LOCKERROOM ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 1 THERMALZONE OUTPATIENT NURSESTATION ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 1 THERMALZONE OUTPATIENT PREOP ELEC EQUIP 2:Electric Equipment Electric Energy
+  BUILDING STORY 1 THERMALZONE OUTPATIENT STAIR ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 1 THERMALZONE OUTPATIENT TOILET ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 1 THERMALZONE OUTPATIENT XRAY ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 4 THERMALZONE OUTPATIENT LOUNGE ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 4 THERMALZONE OUTPATIENT OR ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 4 THERMALZONE OUTPATIENT PACU ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 4 THERMALZONE OUTPATIENT XRAY ELEC EQUIP 2:Electric Equipment Electric Energy
+  BUILDING STORY 6 THERMALZONE OUTPATIENT OR ELEC EQUIP 2:Electric Equipment Electric Energy
+  BUILDING STORY 6 THERMALZONE OUTPATIENT PHYSICALTHERAPY ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 6 THERMALZONE OUTPATIENT RECEPTION ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 3 THERMALZONE OUTPATIENT EXAM ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 3 THERMALZONE OUTPATIENT JANITOR ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 3 THERMALZONE OUTPATIENT PHYSICALTHERAPY ELEC EQUIP 2:Electric Equipment Electric Energy
+  BUILDING STORY 8 THERMALZONE OUTPATIENT EXAM ELEC EQUIP 2:Electric Equipment Electric Energy
+  BUILDING STORY 8 THERMALZONE OUTPATIENT OFFICE ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 5 THERMALZONE OUTPATIENT OFFICE ELEC EQUIP 2:Electric Equipment Electric Energy
+  BUILDING STORY 7 THERMALZONE OUTPATIENT HALL ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 7 THERMALZONE OUTPATIENT OFFICE ELEC EQUIP 3:Electric Equipment Electric Energy
+  BUILDING STORY 9 THERMALZONE OUTPATIENT HALL ELEC EQUIP 2:Electric Equipment Electric Energy
+  BUILDING STORY 10 THERMALZONE OUTPATIENT HALL ELEC EQUIP 3:Electric Equipment Electric Energy
+
+ For Meter=InteriorEquipment:Electricity:Zone:BUILDING STORY 2 THERMALZONE [J], ResourceType=Electricity, EndUse=InteriorEquipment, Group=Zone, contents are:
+  BUILDING STORY 2 THERMALZONE 27 ELEVATOR FANS:Electric Equipment Electric Energy
+  BUILDING STORY 2 THERMALZONE 27 ELEVATOR LIFT MOTORS:Electric Equipment Electric Energy
+  BUILDING STORY 2 THERMALZONE 27 ELEVATOR LIGHTS:Electric Equipment Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT ANESTHESIA ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT BIOHAZARD ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT CAFE ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT CLEANWORK ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT CONFERENCE ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT ELEC/MECHROOM ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT IT_ROOM ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT MEDGAS ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT MRI ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT MRI_CONTROL ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT PREOP ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT PROCEDUREROOM ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT SOIL WORK ELEC EQUIP 1:Electric Equipment Electric Energy
+
+ For Meter=Elevators:InteriorEquipment:Electricity [J], ResourceType=Electricity, EndUse=InteriorEquipment, contents are:
+  BUILDING STORY 2 THERMALZONE 27 ELEVATOR FANS:Electric Equipment Electric Energy
+  BUILDING STORY 2 THERMALZONE 27 ELEVATOR LIFT MOTORS:Electric Equipment Electric Energy
+  BUILDING STORY 2 THERMALZONE 27 ELEVATOR LIGHTS:Electric Equipment Electric Energy
+
+ For Meter=General:InteriorEquipment:Electricity [J], ResourceType=Electricity, EndUse=InteriorEquipment, contents are:
+  BUILDING STORY 2 THERMALZONE OUTPATIENT ANESTHESIA ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT BIOHAZARD ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT CAFE ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT CLEANWORK ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT CONFERENCE ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT ELEC/MECHROOM ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT IT_ROOM ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT MEDGAS ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT MRI ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT MRI_CONTROL ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT PREOP ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT PROCEDUREROOM ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 2 THERMALZONE OUTPATIENT SOIL WORK ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 1 THERMALZONE OUTPATIENT LOBBY ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 1 THERMALZONE OUTPATIENT LOCKERROOM ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 1 THERMALZONE OUTPATIENT NURSESTATION ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 1 THERMALZONE OUTPATIENT PREOP ELEC EQUIP 2:Electric Equipment Electric Energy
+  BUILDING STORY 1 THERMALZONE OUTPATIENT STAIR ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 1 THERMALZONE OUTPATIENT TOILET ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 1 THERMALZONE OUTPATIENT XRAY ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 4 THERMALZONE OUTPATIENT LOUNGE ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 4 THERMALZONE OUTPATIENT OR ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 4 THERMALZONE OUTPATIENT PACU ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 4 THERMALZONE OUTPATIENT XRAY ELEC EQUIP 2:Electric Equipment Electric Energy
+  BUILDING STORY 6 THERMALZONE OUTPATIENT OR ELEC EQUIP 2:Electric Equipment Electric Energy
+  BUILDING STORY 6 THERMALZONE OUTPATIENT PHYSICALTHERAPY ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 6 THERMALZONE OUTPATIENT RECEPTION ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 3 THERMALZONE OUTPATIENT EXAM ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 3 THERMALZONE OUTPATIENT JANITOR ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 3 THERMALZONE OUTPATIENT PHYSICALTHERAPY ELEC EQUIP 2:Electric Equipment Electric Energy
+  BUILDING STORY 8 THERMALZONE OUTPATIENT EXAM ELEC EQUIP 2:Electric Equipment Electric Energy
+  BUILDING STORY 8 THERMALZONE OUTPATIENT OFFICE ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 5 THERMALZONE OUTPATIENT OFFICE ELEC EQUIP 2:Electric Equipment Electric Energy
+  BUILDING STORY 7 THERMALZONE OUTPATIENT HALL ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 7 THERMALZONE OUTPATIENT OFFICE ELEC EQUIP 3:Electric Equipment Electric Energy
+  BUILDING STORY 9 THERMALZONE OUTPATIENT HALL ELEC EQUIP 2:Electric Equipment Electric Energy
+  BUILDING STORY 10 THERMALZONE OUTPATIENT HALL ELEC EQUIP 3:Electric Equipment Electric Energy
+
+ For Meter=InteriorEquipment:Electricity:Zone:BUILDING STORY 1 THERMALZONE [J], ResourceType=Electricity, EndUse=InteriorEquipment, Group=Zone, contents are:
+  BUILDING STORY 1 THERMALZONE OUTPATIENT LOBBY ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 1 THERMALZONE OUTPATIENT LOCKERROOM ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 1 THERMALZONE OUTPATIENT NURSESTATION ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 1 THERMALZONE OUTPATIENT PREOP ELEC EQUIP 2:Electric Equipment Electric Energy
+  BUILDING STORY 1 THERMALZONE OUTPATIENT STAIR ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 1 THERMALZONE OUTPATIENT TOILET ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 1 THERMALZONE OUTPATIENT XRAY ELEC EQUIP 1:Electric Equipment Electric Energy
+
+ For Meter=InteriorEquipment:Electricity:Zone:BUILDING STORY 4 THERMALZONE [J], ResourceType=Electricity, EndUse=InteriorEquipment, Group=Zone, contents are:
+  BUILDING STORY 4 THERMALZONE OUTPATIENT LOUNGE ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 4 THERMALZONE OUTPATIENT OR ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 4 THERMALZONE OUTPATIENT PACU ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 4 THERMALZONE OUTPATIENT XRAY ELEC EQUIP 2:Electric Equipment Electric Energy
+
+ For Meter=InteriorEquipment:Electricity:Zone:BUILDING STORY 6 THERMALZONE [J], ResourceType=Electricity, EndUse=InteriorEquipment, Group=Zone, contents are:
+  BUILDING STORY 6 THERMALZONE OUTPATIENT OR ELEC EQUIP 2:Electric Equipment Electric Energy
+  BUILDING STORY 6 THERMALZONE OUTPATIENT PHYSICALTHERAPY ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 6 THERMALZONE OUTPATIENT RECEPTION ELEC EQUIP 1:Electric Equipment Electric Energy
+
+ For Meter=InteriorEquipment:Electricity:Zone:BUILDING STORY 3 THERMALZONE [J], ResourceType=Electricity, EndUse=InteriorEquipment, Group=Zone, contents are:
+  BUILDING STORY 3 THERMALZONE OUTPATIENT EXAM ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 3 THERMALZONE OUTPATIENT JANITOR ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 3 THERMALZONE OUTPATIENT PHYSICALTHERAPY ELEC EQUIP 2:Electric Equipment Electric Energy
+
+ For Meter=InteriorEquipment:Electricity:Zone:BUILDING STORY 8 THERMALZONE [J], ResourceType=Electricity, EndUse=InteriorEquipment, Group=Zone, contents are:
+  BUILDING STORY 8 THERMALZONE OUTPATIENT EXAM ELEC EQUIP 2:Electric Equipment Electric Energy
+  BUILDING STORY 8 THERMALZONE OUTPATIENT OFFICE ELEC EQUIP 1:Electric Equipment Electric Energy
+
+ For Meter=InteriorEquipment:Electricity:Zone:BUILDING STORY 5 THERMALZONE [J], ResourceType=Electricity, EndUse=InteriorEquipment, Group=Zone, contents are:
+  BUILDING STORY 5 THERMALZONE OUTPATIENT OFFICE ELEC EQUIP 2:Electric Equipment Electric Energy
+
+ For Meter=InteriorEquipment:Electricity:Zone:BUILDING STORY 7 THERMALZONE [J], ResourceType=Electricity, EndUse=InteriorEquipment, Group=Zone, contents are:
+  BUILDING STORY 7 THERMALZONE OUTPATIENT HALL ELEC EQUIP 1:Electric Equipment Electric Energy
+  BUILDING STORY 7 THERMALZONE OUTPATIENT OFFICE ELEC EQUIP 3:Electric Equipment Electric Energy
+
+ For Meter=InteriorEquipment:Electricity:Zone:BUILDING STORY 9 THERMALZONE [J], ResourceType=Electricity, EndUse=InteriorEquipment, Group=Zone, contents are:
+  BUILDING STORY 9 THERMALZONE OUTPATIENT HALL ELEC EQUIP 2:Electric Equipment Electric Energy
+
+ For Meter=InteriorEquipment:Electricity:Zone:BUILDING STORY 10 THERMALZONE [J], ResourceType=Electricity, EndUse=InteriorEquipment, Group=Zone, contents are:
+  BUILDING STORY 10 THERMALZONE OUTPATIENT HALL ELEC EQUIP 3:Electric Equipment Electric Energy
+
+ For Meter=Gas:Facility [J], ResourceType=Gas, contents are:
+  BUILDING STORY 4 THERMALZONE OUTPATIENT OR GAS EQUIP 1:Gas Equipment Gas Energy
+  BUILDING STORY 6 THERMALZONE OUTPATIENT OR GAS EQUIP 2:Gas Equipment Gas Energy
+  555GAL NATURALGAS WATER HEATER - 555KBTU/HR 0.803 THERM EFF:Water Heater Gas Energy
+  555GAL NATURALGAS WATER HEATER - 555KBTU/HR 0.803 THERM EFF:Water Heater Off Cycle Parasitic Gas Energy
+  555GAL NATURALGAS WATER HEATER - 555KBTU/HR 0.803 THERM EFF:Water Heater On Cycle Parasitic Gas Energy
+  BOILER 12808KBTU/HR 0.75 THERMAL EFF:Boiler Gas Energy
+
+ For Meter=Gas:Building [J], ResourceType=Gas, Group=Building, contents are:
+  BUILDING STORY 4 THERMALZONE OUTPATIENT OR GAS EQUIP 1:Gas Equipment Gas Energy
+  BUILDING STORY 6 THERMALZONE OUTPATIENT OR GAS EQUIP 2:Gas Equipment Gas Energy
+
+ For Meter=Gas:Zone:BUILDING STORY 4 THERMALZONE [J], ResourceType=Gas, Group=Zone, contents are:
+  BUILDING STORY 4 THERMALZONE OUTPATIENT OR GAS EQUIP 1:Gas Equipment Gas Energy
+
+ For Meter=InteriorEquipment:Gas [J], ResourceType=Gas, EndUse=InteriorEquipment, contents are:
+  BUILDING STORY 4 THERMALZONE OUTPATIENT OR GAS EQUIP 1:Gas Equipment Gas Energy
+  BUILDING STORY 6 THERMALZONE OUTPATIENT OR GAS EQUIP 2:Gas Equipment Gas Energy
+
+ For Meter=InteriorEquipment:Gas:Zone:BUILDING STORY 4 THERMALZONE [J], ResourceType=Gas, EndUse=InteriorEquipment, Group=Zone, contents are:
+  BUILDING STORY 4 THERMALZONE OUTPATIENT OR GAS EQUIP 1:Gas Equipment Gas Energy
+
+ For Meter=General:InteriorEquipment:Gas [J], ResourceType=Gas, EndUse=InteriorEquipment, contents are:
+  BUILDING STORY 4 THERMALZONE OUTPATIENT OR GAS EQUIP 1:Gas Equipment Gas Energy
+  BUILDING STORY 6 THERMALZONE OUTPATIENT OR GAS EQUIP 2:Gas Equipment Gas Energy
+
+ For Meter=Gas:Zone:BUILDING STORY 6 THERMALZONE [J], ResourceType=Gas, Group=Zone, contents are:
+  BUILDING STORY 6 THERMALZONE OUTPATIENT OR GAS EQUIP 2:Gas Equipment Gas Energy
+
+ For Meter=InteriorEquipment:Gas:Zone:BUILDING STORY 6 THERMALZONE [J], ResourceType=Gas, EndUse=InteriorEquipment, Group=Zone, contents are:
+  BUILDING STORY 6 THERMALZONE OUTPATIENT OR GAS EQUIP 2:Gas Equipment Gas Energy
+
+ For Meter=PlantLoopHeatingDemand:Facility [J], ResourceType=PlantLoopHeatingDemand, contents are:
+  555GAL NATURALGAS WATER HEATER - 555KBTU/HR 0.803 THERM EFF:Water Heater Source Side Heat Transfer Energy
+  OUTPATIENT ANESTHESIA - 90.1-2004 WUC 0.35GPM AT 140F:Water Use Connections Plant Hot Water Energy
+  OUTPATIENT MRI - 90.1-2004 WUC 0.36GPM AT 140F:Water Use Connections Plant Hot Water Energy
+  OUTPATIENT MRI_CONTROL - 90.1-2004 WUC 0.36GPM AT 140F:Water Use Connections Plant Hot Water Energy
+  OUTPATIENT OR - 90.1-2004 WUC 6.45GPM AT 140F:Water Use Connections Plant Hot Water Energy
+  OUTPATIENT PACU - 90.1-2004 WUC 1.08GPM AT 140F:Water Use Connections Plant Hot Water Energy
+  OUTPATIENT PHYSICALTHERAPY - 90.1-2004 WUC 0.72GPM AT 140F:Water Use Connections Plant Hot Water Energy
+  OUTPATIENT PREOP - 90.1-2004 WUC 0.72GPM AT 140F:Water Use Connections Plant Hot Water Energy
+  OUTPATIENT PROCEDUREROOM - 90.1-2004 WUC 0.36GPM AT 140F:Water Use Connections Plant Hot Water Energy
+  OUTPATIENT XRAY - 90.1-2004 WUC 0.36GPM AT 140F:Water Use Connections Plant Hot Water Energy
+  BUILDING STORY 1 THERMALZONE REHEAT COIL:Heating Coil Source Side Heat Transfer Energy
+  BUILDING STORY 10 THERMALZONE REHEAT COIL:Heating Coil Source Side Heat Transfer Energy
+  BUILDING STORY 2 THERMALZONE REHEAT COIL:Heating Coil Source Side Heat Transfer Energy
+  BUILDING STORY 3 THERMALZONE REHEAT COIL:Heating Coil Source Side Heat Transfer Energy
+  BUILDING STORY 4 THERMALZONE REHEAT COIL:Heating Coil Source Side Heat Transfer Energy
+  BUILDING STORY 5 THERMALZONE REHEAT COIL:Heating Coil Source Side Heat Transfer Energy
+  BUILDING STORY 6 THERMALZONE REHEAT COIL:Heating Coil Source Side Heat Transfer Energy
+  BUILDING STORY 7 THERMALZONE REHEAT COIL:Heating Coil Source Side Heat Transfer Energy
+  BUILDING STORY 8 THERMALZONE REHEAT COIL:Heating Coil Source Side Heat Transfer Energy
+  BUILDING STORY 9 THERMALZONE REHEAT COIL:Heating Coil Source Side Heat Transfer Energy
+  1 ZONE VAV MAIN HTG COIL:Heating Coil Source Side Heat Transfer Energy
+  1 ZONE VAV 1 MAIN HTG COIL:Heating Coil Source Side Heat Transfer Energy
+  1 ZONE VAV 2 MAIN HTG COIL:Heating Coil Source Side Heat Transfer Energy
+  1 ZONE VAV 3 MAIN HTG COIL:Heating Coil Source Side Heat Transfer Energy
+  1 ZONE VAV 4 MAIN HTG COIL:Heating Coil Source Side Heat Transfer Energy
+  1 ZONE VAV 5 MAIN HTG COIL:Heating Coil Source Side Heat Transfer Energy
+  1 ZONE VAV 6 MAIN HTG COIL:Heating Coil Source Side Heat Transfer Energy
+  1 ZONE VAV 7 MAIN HTG COIL:Heating Coil Source Side Heat Transfer Energy
+  1 ZONE VAV 8 MAIN HTG COIL:Heating Coil Source Side Heat Transfer Energy
+  1 ZONE VAV 9 MAIN HTG COIL:Heating Coil Source Side Heat Transfer Energy
+
+ For Meter=PlantLoopHeatingDemand:Plant [J], ResourceType=PlantLoopHeatingDemand, Group=Plant, contents are:
+  555GAL NATURALGAS WATER HEATER - 555KBTU/HR 0.803 THERM EFF:Water Heater Source Side Heat Transfer Energy
+  OUTPATIENT ANESTHESIA - 90.1-2004 WUC 0.35GPM AT 140F:Water Use Connections Plant Hot Water Energy
+  OUTPATIENT MRI - 90.1-2004 WUC 0.36GPM AT 140F:Water Use Connections Plant Hot Water Energy
+  OUTPATIENT MRI_CONTROL - 90.1-2004 WUC 0.36GPM AT 140F:Water Use Connections Plant Hot Water Energy
+  OUTPATIENT OR - 90.1-2004 WUC 6.45GPM AT 140F:Water Use Connections Plant Hot Water Energy
+  OUTPATIENT PACU - 90.1-2004 WUC 1.08GPM AT 140F:Water Use Connections Plant Hot Water Energy
+  OUTPATIENT PHYSICALTHERAPY - 90.1-2004 WUC 0.72GPM AT 140F:Water Use Connections Plant Hot Water Energy
+  OUTPATIENT PREOP - 90.1-2004 WUC 0.72GPM AT 140F:Water Use Connections Plant Hot Water Energy
+  OUTPATIENT PROCEDUREROOM - 90.1-2004 WUC 0.36GPM AT 140F:Water Use Connections Plant Hot Water Energy
+  OUTPATIENT XRAY - 90.1-2004 WUC 0.36GPM AT 140F:Water Use Connections Plant Hot Water Energy
+
+ For Meter=WaterSystems:PlantLoopHeatingDemand [J], ResourceType=PlantLoopHeatingDemand, EndUse=WaterSystems, contents are:
+  555GAL NATURALGAS WATER HEATER - 555KBTU/HR 0.803 THERM EFF:Water Heater Source Side Heat Transfer Energy
+  OUTPATIENT ANESTHESIA - 90.1-2004 WUC 0.35GPM AT 140F:Water Use Connections Plant Hot Water Energy
+  OUTPATIENT MRI - 90.1-2004 WUC 0.36GPM AT 140F:Water Use Connections Plant Hot Water Energy
+  OUTPATIENT MRI_CONTROL - 90.1-2004 WUC 0.36GPM AT 140F:Water Use Connections Plant Hot Water Energy
+  OUTPATIENT OR - 90.1-2004 WUC 6.45GPM AT 140F:Water Use Connections Plant Hot Water Energy
+  OUTPATIENT PACU - 90.1-2004 WUC 1.08GPM AT 140F:Water Use Connections Plant Hot Water Energy
+  OUTPATIENT PHYSICALTHERAPY - 90.1-2004 WUC 0.72GPM AT 140F:Water Use Connections Plant Hot Water Energy
+  OUTPATIENT PREOP - 90.1-2004 WUC 0.72GPM AT 140F:Water Use Connections Plant Hot Water Energy
+  OUTPATIENT PROCEDUREROOM - 90.1-2004 WUC 0.36GPM AT 140F:Water Use Connections Plant Hot Water Energy
+  OUTPATIENT XRAY - 90.1-2004 WUC 0.36GPM AT 140F:Water Use Connections Plant Hot Water Energy
+
+ For Meter=General:WaterSystems:PlantLoopHeatingDemand [J], ResourceType=PlantLoopHeatingDemand, EndUse=WaterSystems, contents are:
+  555GAL NATURALGAS WATER HEATER - 555KBTU/HR 0.803 THERM EFF:Water Heater Source Side Heat Transfer Energy
+
+ For Meter=Gas:Plant [J], ResourceType=Gas, Group=Plant, contents are:
+  555GAL NATURALGAS WATER HEATER - 555KBTU/HR 0.803 THERM EFF:Water Heater Gas Energy
+  555GAL NATURALGAS WATER HEATER - 555KBTU/HR 0.803 THERM EFF:Water Heater Off Cycle Parasitic Gas Energy
+  555GAL NATURALGAS WATER HEATER - 555KBTU/HR 0.803 THERM EFF:Water Heater On Cycle Parasitic Gas Energy
+  BOILER 12808KBTU/HR 0.75 THERMAL EFF:Boiler Gas Energy
+
+ For Meter=WaterSystems:Gas [J], ResourceType=Gas, EndUse=WaterSystems, contents are:
+  555GAL NATURALGAS WATER HEATER - 555KBTU/HR 0.803 THERM EFF:Water Heater Gas Energy
+  555GAL NATURALGAS WATER HEATER - 555KBTU/HR 0.803 THERM EFF:Water Heater Off Cycle Parasitic Gas Energy
+  555GAL NATURALGAS WATER HEATER - 555KBTU/HR 0.803 THERM EFF:Water Heater On Cycle Parasitic Gas Energy
+
+ For Meter=General:WaterSystems:Gas [J], ResourceType=Gas, EndUse=WaterSystems, contents are:
+  555GAL NATURALGAS WATER HEATER - 555KBTU/HR 0.803 THERM EFF:Water Heater Gas Energy
+  555GAL NATURALGAS WATER HEATER - 555KBTU/HR 0.803 THERM EFF:Water Heater Off Cycle Parasitic Gas Energy
+  555GAL NATURALGAS WATER HEATER - 555KBTU/HR 0.803 THERM EFF:Water Heater On Cycle Parasitic Gas Energy
+
+ For Meter=Water:Facility [m3], ResourceType=Water, contents are:
+  555GAL NATURALGAS WATER HEATER - 555KBTU/HR 0.803 THERM EFF:Water Heater Water Volume
+  OUTPATIENT ANESTHESIA - 90.1-2004 SERVICE WATER USE 0.35GPM AT 140F:Water Use Equipment Total Volume
+  OUTPATIENT MRI - 90.1-2004 SERVICE WATER USE 0.36GPM AT 140F:Water Use Equipment Total Volume
+  OUTPATIENT MRI_CONTROL - 90.1-2004 SERVICE WATER USE 0.36GPM AT 140F:Water Use Equipment Total Volume
+  OUTPATIENT OR - 90.1-2004 SERVICE WATER USE 6.45GPM AT 140F:Water Use Equipment Total Volume
+  OUTPATIENT PACU - 90.1-2004 SERVICE WATER USE 1.08GPM AT 140F:Water Use Equipment Total Volume
+  OUTPATIENT PHYSICALTHERAPY - 90.1-2004 SERVICE WATER USE 0.72GPM AT 140F:Water Use Equipment Total Volume
+  OUTPATIENT PREOP - 90.1-2004 SERVICE WATER USE 0.72GPM AT 140F:Water Use Equipment Total Volume
+  OUTPATIENT PROCEDUREROOM - 90.1-2004 SERVICE WATER USE 0.36GPM AT 140F:Water Use Equipment Total Volume
+  OUTPATIENT XRAY - 90.1-2004 SERVICE WATER USE 0.36GPM AT 140F:Water Use Equipment Total Volume
+  PROPELLER OR AXIAL TWOSPEED FAN OPEN COOLING TOWER 38.2 GPM/HP:Cooling Tower Make Up Water Volume
+
+ For Meter=Water:Plant [m3], ResourceType=Water, Group=Plant, contents are:
+  555GAL NATURALGAS WATER HEATER - 555KBTU/HR 0.803 THERM EFF:Water Heater Water Volume
+  OUTPATIENT ANESTHESIA - 90.1-2004 SERVICE WATER USE 0.35GPM AT 140F:Water Use Equipment Total Volume
+  OUTPATIENT MRI - 90.1-2004 SERVICE WATER USE 0.36GPM AT 140F:Water Use Equipment Total Volume
+  OUTPATIENT MRI_CONTROL - 90.1-2004 SERVICE WATER USE 0.36GPM AT 140F:Water Use Equipment Total Volume
+  OUTPATIENT OR - 90.1-2004 SERVICE WATER USE 6.45GPM AT 140F:Water Use Equipment Total Volume
+  OUTPATIENT PACU - 90.1-2004 SERVICE WATER USE 1.08GPM AT 140F:Water Use Equipment Total Volume
+  OUTPATIENT PHYSICALTHERAPY - 90.1-2004 SERVICE WATER USE 0.72GPM AT 140F:Water Use Equipment Total Volume
+  OUTPATIENT PREOP - 90.1-2004 SERVICE WATER USE 0.72GPM AT 140F:Water Use Equipment Total Volume
+  OUTPATIENT PROCEDUREROOM - 90.1-2004 SERVICE WATER USE 0.36GPM AT 140F:Water Use Equipment Total Volume
+  OUTPATIENT XRAY - 90.1-2004 SERVICE WATER USE 0.36GPM AT 140F:Water Use Equipment Total Volume
+  PROPELLER OR AXIAL TWOSPEED FAN OPEN COOLING TOWER 38.2 GPM/HP:Cooling Tower Make Up Water Volume
+
+ For Meter=WaterSystems:Water [m3], ResourceType=Water, EndUse=WaterSystems, contents are:
+  555GAL NATURALGAS WATER HEATER - 555KBTU/HR 0.803 THERM EFF:Water Heater Water Volume
+  OUTPATIENT ANESTHESIA - 90.1-2004 SERVICE WATER USE 0.35GPM AT 140F:Water Use Equipment Total Volume
+  OUTPATIENT MRI - 90.1-2004 SERVICE WATER USE 0.36GPM AT 140F:Water Use Equipment Total Volume
+  OUTPATIENT MRI_CONTROL - 90.1-2004 SERVICE WATER USE 0.36GPM AT 140F:Water Use Equipment Total Volume
+  OUTPATIENT OR - 90.1-2004 SERVICE WATER USE 6.45GPM AT 140F:Water Use Equipment Total Volume
+  OUTPATIENT PACU - 90.1-2004 SERVICE WATER USE 1.08GPM AT 140F:Water Use Equipment Total Volume
+  OUTPATIENT PHYSICALTHERAPY - 90.1-2004 SERVICE WATER USE 0.72GPM AT 140F:Water Use Equipment Total Volume
+  OUTPATIENT PREOP - 90.1-2004 SERVICE WATER USE 0.72GPM AT 140F:Water Use Equipment Total Volume
+  OUTPATIENT PROCEDUREROOM - 90.1-2004 SERVICE WATER USE 0.36GPM AT 140F:Water Use Equipment Total Volume
+  OUTPATIENT XRAY - 90.1-2004 SERVICE WATER USE 0.36GPM AT 140F:Water Use Equipment Total Volume
+
+ For Meter=General:WaterSystems:Water [m3], ResourceType=Water, EndUse=WaterSystems, contents are:
+  555GAL NATURALGAS WATER HEATER - 555KBTU/HR 0.803 THERM EFF:Water Heater Water Volume
+  OUTPATIENT ANESTHESIA - 90.1-2004 SERVICE WATER USE 0.35GPM AT 140F:Water Use Equipment Total Volume
+  OUTPATIENT MRI - 90.1-2004 SERVICE WATER USE 0.36GPM AT 140F:Water Use Equipment Total Volume
+  OUTPATIENT MRI_CONTROL - 90.1-2004 SERVICE WATER USE 0.36GPM AT 140F:Water Use Equipment Total Volume
+  OUTPATIENT OR - 90.1-2004 SERVICE WATER USE 6.45GPM AT 140F:Water Use Equipment Total Volume
+  OUTPATIENT PACU - 90.1-2004 SERVICE WATER USE 1.08GPM AT 140F:Water Use Equipment Total Volume
+  OUTPATIENT PHYSICALTHERAPY - 90.1-2004 SERVICE WATER USE 0.72GPM AT 140F:Water Use Equipment Total Volume
+  OUTPATIENT PREOP - 90.1-2004 SERVICE WATER USE 0.72GPM AT 140F:Water Use Equipment Total Volume
+  OUTPATIENT PROCEDUREROOM - 90.1-2004 SERVICE WATER USE 0.36GPM AT 140F:Water Use Equipment Total Volume
+  OUTPATIENT XRAY - 90.1-2004 SERVICE WATER USE 0.36GPM AT 140F:Water Use Equipment Total Volume
+
+ For Meter=MainsWater:Facility [m3], ResourceType=MainsWater, contents are:
+  555GAL NATURALGAS WATER HEATER - 555KBTU/HR 0.803 THERM EFF:Water Heater Mains Water Volume
+  OUTPATIENT ANESTHESIA - 90.1-2004 SERVICE WATER USE 0.35GPM AT 140F:Water Use Equipment Mains Water Volume
+  OUTPATIENT MRI - 90.1-2004 SERVICE WATER USE 0.36GPM AT 140F:Water Use Equipment Mains Water Volume
+  OUTPATIENT MRI_CONTROL - 90.1-2004 SERVICE WATER USE 0.36GPM AT 140F:Water Use Equipment Mains Water Volume
+  OUTPATIENT OR - 90.1-2004 SERVICE WATER USE 6.45GPM AT 140F:Water Use Equipment Mains Water Volume
+  OUTPATIENT PACU - 90.1-2004 SERVICE WATER USE 1.08GPM AT 140F:Water Use Equipment Mains Water Volume
+  OUTPATIENT PHYSICALTHERAPY - 90.1-2004 SERVICE WATER USE 0.72GPM AT 140F:Water Use Equipment Mains Water Volume
+  OUTPATIENT PREOP - 90.1-2004 SERVICE WATER USE 0.72GPM AT 140F:Water Use Equipment Mains Water Volume
+  OUTPATIENT PROCEDUREROOM - 90.1-2004 SERVICE WATER USE 0.36GPM AT 140F:Water Use Equipment Mains Water Volume
+  OUTPATIENT XRAY - 90.1-2004 SERVICE WATER USE 0.36GPM AT 140F:Water Use Equipment Mains Water Volume
+  PROPELLER OR AXIAL TWOSPEED FAN OPEN COOLING TOWER 38.2 GPM/HP:Cooling Tower Make Up Mains Water Volume
+
+ For Meter=MainsWater:Plant [m3], ResourceType=MainsWater, Group=Plant, contents are:
+  555GAL NATURALGAS WATER HEATER - 555KBTU/HR 0.803 THERM EFF:Water Heater Mains Water Volume
+  OUTPATIENT ANESTHESIA - 90.1-2004 SERVICE WATER USE 0.35GPM AT 140F:Water Use Equipment Mains Water Volume
+  OUTPATIENT MRI - 90.1-2004 SERVICE WATER USE 0.36GPM AT 140F:Water Use Equipment Mains Water Volume
+  OUTPATIENT MRI_CONTROL - 90.1-2004 SERVICE WATER USE 0.36GPM AT 140F:Water Use Equipment Mains Water Volume
+  OUTPATIENT OR - 90.1-2004 SERVICE WATER USE 6.45GPM AT 140F:Water Use Equipment Mains Water Volume
+  OUTPATIENT PACU - 90.1-2004 SERVICE WATER USE 1.08GPM AT 140F:Water Use Equipment Mains Water Volume
+  OUTPATIENT PHYSICALTHERAPY - 90.1-2004 SERVICE WATER USE 0.72GPM AT 140F:Water Use Equipment Mains Water Volume
+  OUTPATIENT PREOP - 90.1-2004 SERVICE WATER USE 0.72GPM AT 140F:Water Use Equipment Mains Water Volume
+  OUTPATIENT PROCEDUREROOM - 90.1-2004 SERVICE WATER USE 0.36GPM AT 140F:Water Use Equipment Mains Water Volume
+  OUTPATIENT XRAY - 90.1-2004 SERVICE WATER USE 0.36GPM AT 140F:Water Use Equipment Mains Water Volume
+  PROPELLER OR AXIAL TWOSPEED FAN OPEN COOLING TOWER 38.2 GPM/HP:Cooling Tower Make Up Mains Water Volume
+
+ For Meter=WaterSystems:MainsWater [m3], ResourceType=MainsWater, EndUse=WaterSystems, contents are:
+  555GAL NATURALGAS WATER HEATER - 555KBTU/HR 0.803 THERM EFF:Water Heater Mains Water Volume
+  OUTPATIENT ANESTHESIA - 90.1-2004 SERVICE WATER USE 0.35GPM AT 140F:Water Use Equipment Mains Water Volume
+  OUTPATIENT MRI - 90.1-2004 SERVICE WATER USE 0.36GPM AT 140F:Water Use Equipment Mains Water Volume
+  OUTPATIENT MRI_CONTROL - 90.1-2004 SERVICE WATER USE 0.36GPM AT 140F:Water Use Equipment Mains Water Volume
+  OUTPATIENT OR - 90.1-2004 SERVICE WATER USE 6.45GPM AT 140F:Water Use Equipment Mains Water Volume
+  OUTPATIENT PACU - 90.1-2004 SERVICE WATER USE 1.08GPM AT 140F:Water Use Equipment Mains Water Volume
+  OUTPATIENT PHYSICALTHERAPY - 90.1-2004 SERVICE WATER USE 0.72GPM AT 140F:Water Use Equipment Mains Water Volume
+  OUTPATIENT PREOP - 90.1-2004 SERVICE WATER USE 0.72GPM AT 140F:Water Use Equipment Mains Water Volume
+  OUTPATIENT PROCEDUREROOM - 90.1-2004 SERVICE WATER USE 0.36GPM AT 140F:Water Use Equipment Mains Water Volume
+  OUTPATIENT XRAY - 90.1-2004 SERVICE WATER USE 0.36GPM AT 140F:Water Use Equipment Mains Water Volume
+
+ For Meter=General:WaterSystems:MainsWater [m3], ResourceType=MainsWater, EndUse=WaterSystems, contents are:
+  555GAL NATURALGAS WATER HEATER - 555KBTU/HR 0.803 THERM EFF:Water Heater Mains Water Volume
+  OUTPATIENT ANESTHESIA - 90.1-2004 SERVICE WATER USE 0.35GPM AT 140F:Water Use Equipment Mains Water Volume
+  OUTPATIENT MRI - 90.1-2004 SERVICE WATER USE 0.36GPM AT 140F:Water Use Equipment Mains Water Volume
+  OUTPATIENT MRI_CONTROL - 90.1-2004 SERVICE WATER USE 0.36GPM AT 140F:Water Use Equipment Mains Water Volume
+  OUTPATIENT OR - 90.1-2004 SERVICE WATER USE 6.45GPM AT 140F:Water Use Equipment Mains Water Volume
+  OUTPATIENT PACU - 90.1-2004 SERVICE WATER USE 1.08GPM AT 140F:Water Use Equipment Mains Water Volume
+  OUTPATIENT PHYSICALTHERAPY - 90.1-2004 SERVICE WATER USE 0.72GPM AT 140F:Water Use Equipment Mains Water Volume
+  OUTPATIENT PREOP - 90.1-2004 SERVICE WATER USE 0.72GPM AT 140F:Water Use Equipment Mains Water Volume
+  OUTPATIENT PROCEDUREROOM - 90.1-2004 SERVICE WATER USE 0.36GPM AT 140F:Water Use Equipment Mains Water Volume
+  OUTPATIENT XRAY - 90.1-2004 SERVICE WATER USE 0.36GPM AT 140F:Water Use Equipment Mains Water Volume
+
+ For Meter=EnergyTransfer:Facility [J], ResourceType=EnergyTransfer, contents are:
+  BUILDING STORY 1 THERMALZONE:Zone Air System Sensible Heating Energy
+  BUILDING STORY 1 THERMALZONE:Zone Air System Sensible Cooling Energy
+  BUILDING STORY 10 THERMALZONE:Zone Air System Sensible Heating Energy
+  BUILDING STORY 10 THERMALZONE:Zone Air System Sensible Cooling Energy
+  BUILDING STORY 2 THERMALZONE:Zone Air System Sensible Heating Energy
+  BUILDING STORY 2 THERMALZONE:Zone Air System Sensible Cooling Energy
+  BUILDING STORY 3 THERMALZONE:Zone Air System Sensible Heating Energy
+  BUILDING STORY 3 THERMALZONE:Zone Air System Sensible Cooling Energy
+  BUILDING STORY 4 THERMALZONE:Zone Air System Sensible Heating Energy
+  BUILDING STORY 4 THERMALZONE:Zone Air System Sensible Cooling Energy
+  BUILDING STORY 5 THERMALZONE:Zone Air System Sensible Heating Energy
+  BUILDING STORY 5 THERMALZONE:Zone Air System Sensible Cooling Energy
+  BUILDING STORY 6 THERMALZONE:Zone Air System Sensible Heating Energy
+  BUILDING STORY 6 THERMALZONE:Zone Air System Sensible Cooling Energy
+  BUILDING STORY 7 THERMALZONE:Zone Air System Sensible Heating Energy
+  BUILDING STORY 7 THERMALZONE:Zone Air System Sensible Cooling Energy
+  BUILDING STORY 8 THERMALZONE:Zone Air System Sensible Heating Energy
+  BUILDING STORY 8 THERMALZONE:Zone Air System Sensible Cooling Energy
+  BUILDING STORY 9 THERMALZONE:Zone Air System Sensible Heating Energy
+  BUILDING STORY 9 THERMALZONE:Zone Air System Sensible Cooling Energy
+  OUTPATIENT ANESTHESIA - 90.1-2004 SERVICE WATER USE 0.35GPM AT 140F:Water Use Equipment Heating Energy
+  OUTPATIENT MRI - 90.1-2004 SERVICE WATER USE 0.36GPM AT 140F:Water Use Equipment Heating Energy
+  OUTPATIENT MRI_CONTROL - 90.1-2004 SERVICE WATER USE 0.36GPM AT 140F:Water Use Equipment Heating Energy
+  OUTPATIENT OR - 90.1-2004 SERVICE WATER USE 6.45GPM AT 140F:Water Use Equipment Heating Energy
+  OUTPATIENT PACU - 90.1-2004 SERVICE WATER USE 1.08GPM AT 140F:Water Use Equipment Heating Energy
+  OUTPATIENT PHYSICALTHERAPY - 90.1-2004 SERVICE WATER USE 0.72GPM AT 140F:Water Use Equipment Heating Energy
+  OUTPATIENT PREOP - 90.1-2004 SERVICE WATER USE 0.72GPM AT 140F:Water Use Equipment Heating Energy
+  OUTPATIENT PROCEDUREROOM - 90.1-2004 SERVICE WATER USE 0.36GPM AT 140F:Water Use Equipment Heating Energy
+  OUTPATIENT XRAY - 90.1-2004 SERVICE WATER USE 0.36GPM AT 140F:Water Use Equipment Heating Energy
+  BUILDING STORY 1 THERMALZONE REHEAT COIL:Heating Coil Heating Energy
+  BUILDING STORY 10 THERMALZONE REHEAT COIL:Heating Coil Heating Energy
+  BUILDING STORY 2 THERMALZONE REHEAT COIL:Heating Coil Heating Energy
+  BUILDING STORY 3 THERMALZONE REHEAT COIL:Heating Coil Heating Energy
+  BUILDING STORY 4 THERMALZONE REHEAT COIL:Heating Coil Heating Energy
+  BUILDING STORY 5 THERMALZONE REHEAT COIL:Heating Coil Heating Energy
+  BUILDING STORY 6 THERMALZONE REHEAT COIL:Heating Coil Heating Energy
+  BUILDING STORY 7 THERMALZONE REHEAT COIL:Heating Coil Heating Energy
+  BUILDING STORY 8 THERMALZONE REHEAT COIL:Heating Coil Heating Energy
+  BUILDING STORY 9 THERMALZONE REHEAT COIL:Heating Coil Heating Energy
+  1 ZONE VAV MAIN HTG COIL:Heating Coil Heating Energy
+  1 ZONE VAV 1 MAIN HTG COIL:Heating Coil Heating Energy
+  1 ZONE VAV 2 MAIN HTG COIL:Heating Coil Heating Energy
+  1 ZONE VAV 3 MAIN HTG COIL:Heating Coil Heating Energy
+  1 ZONE VAV 4 MAIN HTG COIL:Heating Coil Heating Energy
+  1 ZONE VAV 5 MAIN HTG COIL:Heating Coil Heating Energy
+  1 ZONE VAV 6 MAIN HTG COIL:Heating Coil Heating Energy
+  1 ZONE VAV 7 MAIN HTG COIL:Heating Coil Heating Energy
+  1 ZONE VAV 8 MAIN HTG COIL:Heating Coil Heating Energy
+  1 ZONE VAV 9 MAIN HTG COIL:Heating Coil Heating Energy
+  1 ZONE VAV CLG COIL:Cooling Coil Total Cooling Energy
+  1 ZONE VAV 1 CLG COIL:Cooling Coil Total Cooling Energy
+  1 ZONE VAV 2 CLG COIL:Cooling Coil Total Cooling Energy
+  1 ZONE VAV 3 CLG COIL:Cooling Coil Total Cooling Energy
+  1 ZONE VAV 4 CLG COIL:Cooling Coil Total Cooling Energy
+  1 ZONE VAV 5 CLG COIL:Cooling Coil Total Cooling Energy
+  1 ZONE VAV 6 CLG COIL:Cooling Coil Total Cooling Energy
+  1 ZONE VAV 7 CLG COIL:Cooling Coil Total Cooling Energy
+  1 ZONE VAV 8 CLG COIL:Cooling Coil Total Cooling Energy
+  1 ZONE VAV 9 CLG COIL:Cooling Coil Total Cooling Energy
+  90.1-2004 WATERCOOLED  ROTARY SCREW CHILLER 0 1110TONS 0.6KW/TON:Chiller Evaporator Cooling Energy
+  90.1-2004 WATERCOOLED  ROTARY SCREW CHILLER 0 1110TONS 0.6KW/TON:Chiller Condenser Heat Transfer Energy
+  BOILER 12808KBTU/HR 0.75 THERMAL EFF:Boiler Heating Energy
+
+ For Meter=EnergyTransfer:Building [J], ResourceType=EnergyTransfer, Group=Building, contents are:
+  BUILDING STORY 1 THERMALZONE:Zone Air System Sensible Heating Energy
+  BUILDING STORY 1 THERMALZONE:Zone Air System Sensible Cooling Energy
+  BUILDING STORY 10 THERMALZONE:Zone Air System Sensible Heating Energy
+  BUILDING STORY 10 THERMALZONE:Zone Air System Sensible Cooling Energy
+  BUILDING STORY 2 THERMALZONE:Zone Air System Sensible Heating Energy
+  BUILDING STORY 2 THERMALZONE:Zone Air System Sensible Cooling Energy
+  BUILDING STORY 3 THERMALZONE:Zone Air System Sensible Heating Energy
+  BUILDING STORY 3 THERMALZONE:Zone Air System Sensible Cooling Energy
+  BUILDING STORY 4 THERMALZONE:Zone Air System Sensible Heating Energy
+  BUILDING STORY 4 THERMALZONE:Zone Air System Sensible Cooling Energy
+  BUILDING STORY 5 THERMALZONE:Zone Air System Sensible Heating Energy
+  BUILDING STORY 5 THERMALZONE:Zone Air System Sensible Cooling Energy
+  BUILDING STORY 6 THERMALZONE:Zone Air System Sensible Heating Energy
+  BUILDING STORY 6 THERMALZONE:Zone Air System Sensible Cooling Energy
+  BUILDING STORY 7 THERMALZONE:Zone Air System Sensible Heating Energy
+  BUILDING STORY 7 THERMALZONE:Zone Air System Sensible Cooling Energy
+  BUILDING STORY 8 THERMALZONE:Zone Air System Sensible Heating Energy
+  BUILDING STORY 8 THERMALZONE:Zone Air System Sensible Cooling Energy
+  BUILDING STORY 9 THERMALZONE:Zone Air System Sensible Heating Energy
+  BUILDING STORY 9 THERMALZONE:Zone Air System Sensible Cooling Energy
+
+ For Meter=EnergyTransfer:Zone:BUILDING STORY 1 THERMALZONE [J], ResourceType=EnergyTransfer, Group=Zone, contents are:
+  BUILDING STORY 1 THERMALZONE:Zone Air System Sensible Heating Energy
+  BUILDING STORY 1 THERMALZONE:Zone Air System Sensible Cooling Energy
+
+ For Meter=Heating:EnergyTransfer [J], ResourceType=EnergyTransfer, EndUse=Heating, contents are:
+  BUILDING STORY 1 THERMALZONE:Zone Air System Sensible Heating Energy
+  BUILDING STORY 10 THERMALZONE:Zone Air System Sensible Heating Energy
+  BUILDING STORY 2 THERMALZONE:Zone Air System Sensible Heating Energy
+  BUILDING STORY 3 THERMALZONE:Zone Air System Sensible Heating Energy
+  BUILDING STORY 4 THERMALZONE:Zone Air System Sensible Heating Energy
+  BUILDING STORY 5 THERMALZONE:Zone Air System Sensible Heating Energy
+  BUILDING STORY 6 THERMALZONE:Zone Air System Sensible Heating Energy
+  BUILDING STORY 7 THERMALZONE:Zone Air System Sensible Heating Energy
+  BUILDING STORY 8 THERMALZONE:Zone Air System Sensible Heating Energy
+  BUILDING STORY 9 THERMALZONE:Zone Air System Sensible Heating Energy
+
+ For Meter=Heating:EnergyTransfer:Zone:BUILDING STORY 1 THERMALZONE [J], ResourceType=EnergyTransfer, EndUse=Heating, Group=Zone, contents are:
+  BUILDING STORY 1 THERMALZONE:Zone Air System Sensible Heating Energy
+
+ For Meter=Cooling:EnergyTransfer [J], ResourceType=EnergyTransfer, EndUse=Cooling, contents are:
+  BUILDING STORY 1 THERMALZONE:Zone Air System Sensible Cooling Energy
+  BUILDING STORY 10 THERMALZONE:Zone Air System Sensible Cooling Energy
+  BUILDING STORY 2 THERMALZONE:Zone Air System Sensible Cooling Energy
+  BUILDING STORY 3 THERMALZONE:Zone Air System Sensible Cooling Energy
+  BUILDING STORY 4 THERMALZONE:Zone Air System Sensible Cooling Energy
+  BUILDING STORY 5 THERMALZONE:Zone Air System Sensible Cooling Energy
+  BUILDING STORY 6 THERMALZONE:Zone Air System Sensible Cooling Energy
+  BUILDING STORY 7 THERMALZONE:Zone Air System Sensible Cooling Energy
+  BUILDING STORY 8 THERMALZONE:Zone Air System Sensible Cooling Energy
+  BUILDING STORY 9 THERMALZONE:Zone Air System Sensible Cooling Energy
+
+ For Meter=Cooling:EnergyTransfer:Zone:BUILDING STORY 1 THERMALZONE [J], ResourceType=EnergyTransfer, EndUse=Cooling, Group=Zone, contents are:
+  BUILDING STORY 1 THERMALZONE:Zone Air System Sensible Cooling Energy
+
+ For Meter=EnergyTransfer:Zone:BUILDING STORY 10 THERMALZONE [J], ResourceType=EnergyTransfer, Group=Zone, contents are:
+  BUILDING STORY 10 THERMALZONE:Zone Air System Sensible Heating Energy
+  BUILDING STORY 10 THERMALZONE:Zone Air System Sensible Cooling Energy
+
+ For Meter=Heating:EnergyTransfer:Zone:BUILDING STORY 10 THERMALZONE [J], ResourceType=EnergyTransfer, EndUse=Heating, Group=Zone, contents are:
+  BUILDING STORY 10 THERMALZONE:Zone Air System Sensible Heating Energy
+
+ For Meter=Cooling:EnergyTransfer:Zone:BUILDING STORY 10 THERMALZONE [J], ResourceType=EnergyTransfer, EndUse=Cooling, Group=Zone, contents are:
+  BUILDING STORY 10 THERMALZONE:Zone Air System Sensible Cooling Energy
+
+ For Meter=EnergyTransfer:Zone:BUILDING STORY 2 THERMALZONE [J], ResourceType=EnergyTransfer, Group=Zone, contents are:
+  BUILDING STORY 2 THERMALZONE:Zone Air System Sensible Heating Energy
+  BUILDING STORY 2 THERMALZONE:Zone Air System Sensible Cooling Energy
+
+ For Meter=Heating:EnergyTransfer:Zone:BUILDING STORY 2 THERMALZONE [J], ResourceType=EnergyTransfer, EndUse=Heating, Group=Zone, contents are:
+  BUILDING STORY 2 THERMALZONE:Zone Air System Sensible Heating Energy
+
+ For Meter=Cooling:EnergyTransfer:Zone:BUILDING STORY 2 THERMALZONE [J], ResourceType=EnergyTransfer, EndUse=Cooling, Group=Zone, contents are:
+  BUILDING STORY 2 THERMALZONE:Zone Air System Sensible Cooling Energy
+
+ For Meter=EnergyTransfer:Zone:BUILDING STORY 3 THERMALZONE [J], ResourceType=EnergyTransfer, Group=Zone, contents are:
+  BUILDING STORY 3 THERMALZONE:Zone Air System Sensible Heating Energy
+  BUILDING STORY 3 THERMALZONE:Zone Air System Sensible Cooling Energy
+
+ For Meter=Heating:EnergyTransfer:Zone:BUILDING STORY 3 THERMALZONE [J], ResourceType=EnergyTransfer, EndUse=Heating, Group=Zone, contents are:
+  BUILDING STORY 3 THERMALZONE:Zone Air System Sensible Heating Energy
+
+ For Meter=Cooling:EnergyTransfer:Zone:BUILDING STORY 3 THERMALZONE [J], ResourceType=EnergyTransfer, EndUse=Cooling, Group=Zone, contents are:
+  BUILDING STORY 3 THERMALZONE:Zone Air System Sensible Cooling Energy
+
+ For Meter=EnergyTransfer:Zone:BUILDING STORY 4 THERMALZONE [J], ResourceType=EnergyTransfer, Group=Zone, contents are:
+  BUILDING STORY 4 THERMALZONE:Zone Air System Sensible Heating Energy
+  BUILDING STORY 4 THERMALZONE:Zone Air System Sensible Cooling Energy
+
+ For Meter=Heating:EnergyTransfer:Zone:BUILDING STORY 4 THERMALZONE [J], ResourceType=EnergyTransfer, EndUse=Heating, Group=Zone, contents are:
+  BUILDING STORY 4 THERMALZONE:Zone Air System Sensible Heating Energy
+
+ For Meter=Cooling:EnergyTransfer:Zone:BUILDING STORY 4 THERMALZONE [J], ResourceType=EnergyTransfer, EndUse=Cooling, Group=Zone, contents are:
+  BUILDING STORY 4 THERMALZONE:Zone Air System Sensible Cooling Energy
+
+ For Meter=EnergyTransfer:Zone:BUILDING STORY 5 THERMALZONE [J], ResourceType=EnergyTransfer, Group=Zone, contents are:
+  BUILDING STORY 5 THERMALZONE:Zone Air System Sensible Heating Energy
+  BUILDING STORY 5 THERMALZONE:Zone Air System Sensible Cooling Energy
+
+ For Meter=Heating:EnergyTransfer:Zone:BUILDING STORY 5 THERMALZONE [J], ResourceType=EnergyTransfer, EndUse=Heating, Group=Zone, contents are:
+  BUILDING STORY 5 THERMALZONE:Zone Air System Sensible Heating Energy
+
+ For Meter=Cooling:EnergyTransfer:Zone:BUILDING STORY 5 THERMALZONE [J], ResourceType=EnergyTransfer, EndUse=Cooling, Group=Zone, contents are:
+  BUILDING STORY 5 THERMALZONE:Zone Air System Sensible Cooling Energy
+
+ For Meter=EnergyTransfer:Zone:BUILDING STORY 6 THERMALZONE [J], ResourceType=EnergyTransfer, Group=Zone, contents are:
+  BUILDING STORY 6 THERMALZONE:Zone Air System Sensible Heating Energy
+  BUILDING STORY 6 THERMALZONE:Zone Air System Sensible Cooling Energy
+
+ For Meter=Heating:EnergyTransfer:Zone:BUILDING STORY 6 THERMALZONE [J], ResourceType=EnergyTransfer, EndUse=Heating, Group=Zone, contents are:
+  BUILDING STORY 6 THERMALZONE:Zone Air System Sensible Heating Energy
+
+ For Meter=Cooling:EnergyTransfer:Zone:BUILDING STORY 6 THERMALZONE [J], ResourceType=EnergyTransfer, EndUse=Cooling, Group=Zone, contents are:
+  BUILDING STORY 6 THERMALZONE:Zone Air System Sensible Cooling Energy
+
+ For Meter=EnergyTransfer:Zone:BUILDING STORY 7 THERMALZONE [J], ResourceType=EnergyTransfer, Group=Zone, contents are:
+  BUILDING STORY 7 THERMALZONE:Zone Air System Sensible Heating Energy
+  BUILDING STORY 7 THERMALZONE:Zone Air System Sensible Cooling Energy
+
+ For Meter=Heating:EnergyTransfer:Zone:BUILDING STORY 7 THERMALZONE [J], ResourceType=EnergyTransfer, EndUse=Heating, Group=Zone, contents are:
+  BUILDING STORY 7 THERMALZONE:Zone Air System Sensible Heating Energy
+
+ For Meter=Cooling:EnergyTransfer:Zone:BUILDING STORY 7 THERMALZONE [J], ResourceType=EnergyTransfer, EndUse=Cooling, Group=Zone, contents are:
+  BUILDING STORY 7 THERMALZONE:Zone Air System Sensible Cooling Energy
+
+ For Meter=EnergyTransfer:Zone:BUILDING STORY 8 THERMALZONE [J], ResourceType=EnergyTransfer, Group=Zone, contents are:
+  BUILDING STORY 8 THERMALZONE:Zone Air System Sensible Heating Energy
+  BUILDING STORY 8 THERMALZONE:Zone Air System Sensible Cooling Energy
+
+ For Meter=Heating:EnergyTransfer:Zone:BUILDING STORY 8 THERMALZONE [J], ResourceType=EnergyTransfer, EndUse=Heating, Group=Zone, contents are:
+  BUILDING STORY 8 THERMALZONE:Zone Air System Sensible Heating Energy
+
+ For Meter=Cooling:EnergyTransfer:Zone:BUILDING STORY 8 THERMALZONE [J], ResourceType=EnergyTransfer, EndUse=Cooling, Group=Zone, contents are:
+  BUILDING STORY 8 THERMALZONE:Zone Air System Sensible Cooling Energy
+
+ For Meter=EnergyTransfer:Zone:BUILDING STORY 9 THERMALZONE [J], ResourceType=EnergyTransfer, Group=Zone, contents are:
+  BUILDING STORY 9 THERMALZONE:Zone Air System Sensible Heating Energy
+  BUILDING STORY 9 THERMALZONE:Zone Air System Sensible Cooling Energy
+
+ For Meter=Heating:EnergyTransfer:Zone:BUILDING STORY 9 THERMALZONE [J], ResourceType=EnergyTransfer, EndUse=Heating, Group=Zone, contents are:
+  BUILDING STORY 9 THERMALZONE:Zone Air System Sensible Heating Energy
+
+ For Meter=Cooling:EnergyTransfer:Zone:BUILDING STORY 9 THERMALZONE [J], ResourceType=EnergyTransfer, EndUse=Cooling, Group=Zone, contents are:
+  BUILDING STORY 9 THERMALZONE:Zone Air System Sensible Cooling Energy
+
+ For Meter=EnergyTransfer:Plant [J], ResourceType=EnergyTransfer, Group=Plant, contents are:
+  OUTPATIENT ANESTHESIA - 90.1-2004 SERVICE WATER USE 0.35GPM AT 140F:Water Use Equipment Heating Energy
+  OUTPATIENT MRI - 90.1-2004 SERVICE WATER USE 0.36GPM AT 140F:Water Use Equipment Heating Energy
+  OUTPATIENT MRI_CONTROL - 90.1-2004 SERVICE WATER USE 0.36GPM AT 140F:Water Use Equipment Heating Energy
+  OUTPATIENT OR - 90.1-2004 SERVICE WATER USE 6.45GPM AT 140F:Water Use Equipment Heating Energy
+  OUTPATIENT PACU - 90.1-2004 SERVICE WATER USE 1.08GPM AT 140F:Water Use Equipment Heating Energy
+  OUTPATIENT PHYSICALTHERAPY - 90.1-2004 SERVICE WATER USE 0.72GPM AT 140F:Water Use Equipment Heating Energy
+  OUTPATIENT PREOP - 90.1-2004 SERVICE WATER USE 0.72GPM AT 140F:Water Use Equipment Heating Energy
+  OUTPATIENT PROCEDUREROOM - 90.1-2004 SERVICE WATER USE 0.36GPM AT 140F:Water Use Equipment Heating Energy
+  OUTPATIENT XRAY - 90.1-2004 SERVICE WATER USE 0.36GPM AT 140F:Water Use Equipment Heating Energy
+  90.1-2004 WATERCOOLED  ROTARY SCREW CHILLER 0 1110TONS 0.6KW/TON:Chiller Evaporator Cooling Energy
+  90.1-2004 WATERCOOLED  ROTARY SCREW CHILLER 0 1110TONS 0.6KW/TON:Chiller Condenser Heat Transfer Energy
+  BOILER 12808KBTU/HR 0.75 THERMAL EFF:Boiler Heating Energy
+
+ For Meter=WaterSystems:EnergyTransfer [J], ResourceType=EnergyTransfer, EndUse=WaterSystems, contents are:
+  OUTPATIENT ANESTHESIA - 90.1-2004 SERVICE WATER USE 0.35GPM AT 140F:Water Use Equipment Heating Energy
+  OUTPATIENT MRI - 90.1-2004 SERVICE WATER USE 0.36GPM AT 140F:Water Use Equipment Heating Energy
+  OUTPATIENT MRI_CONTROL - 90.1-2004 SERVICE WATER USE 0.36GPM AT 140F:Water Use Equipment Heating Energy
+  OUTPATIENT OR - 90.1-2004 SERVICE WATER USE 6.45GPM AT 140F:Water Use Equipment Heating Energy
+  OUTPATIENT PACU - 90.1-2004 SERVICE WATER USE 1.08GPM AT 140F:Water Use Equipment Heating Energy
+  OUTPATIENT PHYSICALTHERAPY - 90.1-2004 SERVICE WATER USE 0.72GPM AT 140F:Water Use Equipment Heating Energy
+  OUTPATIENT PREOP - 90.1-2004 SERVICE WATER USE 0.72GPM AT 140F:Water Use Equipment Heating Energy
+  OUTPATIENT PROCEDUREROOM - 90.1-2004 SERVICE WATER USE 0.36GPM AT 140F:Water Use Equipment Heating Energy
+  OUTPATIENT XRAY - 90.1-2004 SERVICE WATER USE 0.36GPM AT 140F:Water Use Equipment Heating Energy
+
+ For Meter=General:WaterSystems:EnergyTransfer [J], ResourceType=EnergyTransfer, EndUse=WaterSystems, contents are:
+  OUTPATIENT ANESTHESIA - 90.1-2004 SERVICE WATER USE 0.35GPM AT 140F:Water Use Equipment Heating Energy
+  OUTPATIENT MRI - 90.1-2004 SERVICE WATER USE 0.36GPM AT 140F:Water Use Equipment Heating Energy
+  OUTPATIENT MRI_CONTROL - 90.1-2004 SERVICE WATER USE 0.36GPM AT 140F:Water Use Equipment Heating Energy
+  OUTPATIENT OR - 90.1-2004 SERVICE WATER USE 6.45GPM AT 140F:Water Use Equipment Heating Energy
+  OUTPATIENT PACU - 90.1-2004 SERVICE WATER USE 1.08GPM AT 140F:Water Use Equipment Heating Energy
+  OUTPATIENT PHYSICALTHERAPY - 90.1-2004 SERVICE WATER USE 0.72GPM AT 140F:Water Use Equipment Heating Energy
+  OUTPATIENT PREOP - 90.1-2004 SERVICE WATER USE 0.72GPM AT 140F:Water Use Equipment Heating Energy
+  OUTPATIENT PROCEDUREROOM - 90.1-2004 SERVICE WATER USE 0.36GPM AT 140F:Water Use Equipment Heating Energy
+  OUTPATIENT XRAY - 90.1-2004 SERVICE WATER USE 0.36GPM AT 140F:Water Use Equipment Heating Energy
+
+ For Meter=ElectricityPurchased:Facility [J], ResourceType=ElectricityPurchased, contents are:
+  Whole Building:Facility Total Purchased Electric Energy
+
+ For Meter=ElectricityPurchased:Plant [J], ResourceType=ElectricityPurchased, Group=Plant, contents are:
+  Whole Building:Facility Total Purchased Electric Energy
+
+ For Meter=Cogeneration:ElectricityPurchased [J], ResourceType=ElectricityPurchased, EndUse=Cogeneration, contents are:
+  Whole Building:Facility Total Purchased Electric Energy
+
+ For Meter=ElectricitySurplusSold:Facility [J], ResourceType=ElectricitySurplusSold, contents are:
+  Whole Building:Facility Total Surplus Electric Energy
+
+ For Meter=ElectricitySurplusSold:Plant [J], ResourceType=ElectricitySurplusSold, Group=Plant, contents are:
+  Whole Building:Facility Total Surplus Electric Energy
+
+ For Meter=Cogeneration:ElectricitySurplusSold [J], ResourceType=ElectricitySurplusSold, EndUse=Cogeneration, contents are:
+  Whole Building:Facility Total Surplus Electric Energy
+
+ For Meter=ElectricityNet:Facility [J], ResourceType=ElectricityNet, contents are:
+  Whole Building:Facility Net Purchased Electric Energy
+
+ For Meter=ElectricityNet:Plant [J], ResourceType=ElectricityNet, Group=Plant, contents are:
+  Whole Building:Facility Net Purchased Electric Energy
+
+ For Meter=Cogeneration:ElectricityNet [J], ResourceType=ElectricityNet, EndUse=Cogeneration, contents are:
+  Whole Building:Facility Net Purchased Electric Energy
+
+ For Meter=EnergyTransfer:HVAC [J], ResourceType=EnergyTransfer, Group=HVAC, contents are:
+  BUILDING STORY 1 THERMALZONE REHEAT COIL:Heating Coil Heating Energy
+  BUILDING STORY 10 THERMALZONE REHEAT COIL:Heating Coil Heating Energy
+  BUILDING STORY 2 THERMALZONE REHEAT COIL:Heating Coil Heating Energy
+  BUILDING STORY 3 THERMALZONE REHEAT COIL:Heating Coil Heating Energy
+  BUILDING STORY 4 THERMALZONE REHEAT COIL:Heating Coil Heating Energy
+  BUILDING STORY 5 THERMALZONE REHEAT COIL:Heating Coil Heating Energy
+  BUILDING STORY 6 THERMALZONE REHEAT COIL:Heating Coil Heating Energy
+  BUILDING STORY 7 THERMALZONE REHEAT COIL:Heating Coil Heating Energy
+  BUILDING STORY 8 THERMALZONE REHEAT COIL:Heating Coil Heating Energy
+  BUILDING STORY 9 THERMALZONE REHEAT COIL:Heating Coil Heating Energy
+  1 ZONE VAV MAIN HTG COIL:Heating Coil Heating Energy
+  1 ZONE VAV 1 MAIN HTG COIL:Heating Coil Heating Energy
+  1 ZONE VAV 2 MAIN HTG COIL:Heating Coil Heating Energy
+  1 ZONE VAV 3 MAIN HTG COIL:Heating Coil Heating Energy
+  1 ZONE VAV 4 MAIN HTG COIL:Heating Coil Heating Energy
+  1 ZONE VAV 5 MAIN HTG COIL:Heating Coil Heating Energy
+  1 ZONE VAV 6 MAIN HTG COIL:Heating Coil Heating Energy
+  1 ZONE VAV 7 MAIN HTG COIL:Heating Coil Heating Energy
+  1 ZONE VAV 8 MAIN HTG COIL:Heating Coil Heating Energy
+  1 ZONE VAV 9 MAIN HTG COIL:Heating Coil Heating Energy
+  1 ZONE VAV CLG COIL:Cooling Coil Total Cooling Energy
+  1 ZONE VAV 1 CLG COIL:Cooling Coil Total Cooling Energy
+  1 ZONE VAV 2 CLG COIL:Cooling Coil Total Cooling Energy
+  1 ZONE VAV 3 CLG COIL:Cooling Coil Total Cooling Energy
+  1 ZONE VAV 4 CLG COIL:Cooling Coil Total Cooling Energy
+  1 ZONE VAV 5 CLG COIL:Cooling Coil Total Cooling Energy
+  1 ZONE VAV 6 CLG COIL:Cooling Coil Total Cooling Energy
+  1 ZONE VAV 7 CLG COIL:Cooling Coil Total Cooling Energy
+  1 ZONE VAV 8 CLG COIL:Cooling Coil Total Cooling Energy
+  1 ZONE VAV 9 CLG COIL:Cooling Coil Total Cooling Energy
+
+ For Meter=HeatingCoils:EnergyTransfer [J], ResourceType=EnergyTransfer, EndUse=HeatingCoils, contents are:
+  BUILDING STORY 1 THERMALZONE REHEAT COIL:Heating Coil Heating Energy
+  BUILDING STORY 10 THERMALZONE REHEAT COIL:Heating Coil Heating Energy
+  BUILDING STORY 2 THERMALZONE REHEAT COIL:Heating Coil Heating Energy
+  BUILDING STORY 3 THERMALZONE REHEAT COIL:Heating Coil Heating Energy
+  BUILDING STORY 4 THERMALZONE REHEAT COIL:Heating Coil Heating Energy
+  BUILDING STORY 5 THERMALZONE REHEAT COIL:Heating Coil Heating Energy
+  BUILDING STORY 6 THERMALZONE REHEAT COIL:Heating Coil Heating Energy
+  BUILDING STORY 7 THERMALZONE REHEAT COIL:Heating Coil Heating Energy
+  BUILDING STORY 8 THERMALZONE REHEAT COIL:Heating Coil Heating Energy
+  BUILDING STORY 9 THERMALZONE REHEAT COIL:Heating Coil Heating Energy
+  1 ZONE VAV MAIN HTG COIL:Heating Coil Heating Energy
+  1 ZONE VAV 1 MAIN HTG COIL:Heating Coil Heating Energy
+  1 ZONE VAV 2 MAIN HTG COIL:Heating Coil Heating Energy
+  1 ZONE VAV 3 MAIN HTG COIL:Heating Coil Heating Energy
+  1 ZONE VAV 4 MAIN HTG COIL:Heating Coil Heating Energy
+  1 ZONE VAV 5 MAIN HTG COIL:Heating Coil Heating Energy
+  1 ZONE VAV 6 MAIN HTG COIL:Heating Coil Heating Energy
+  1 ZONE VAV 7 MAIN HTG COIL:Heating Coil Heating Energy
+  1 ZONE VAV 8 MAIN HTG COIL:Heating Coil Heating Energy
+  1 ZONE VAV 9 MAIN HTG COIL:Heating Coil Heating Energy
+
+ For Meter=PlantLoopHeatingDemand:HVAC [J], ResourceType=PlantLoopHeatingDemand, Group=HVAC, contents are:
+  BUILDING STORY 1 THERMALZONE REHEAT COIL:Heating Coil Source Side Heat Transfer Energy
+  BUILDING STORY 10 THERMALZONE REHEAT COIL:Heating Coil Source Side Heat Transfer Energy
+  BUILDING STORY 2 THERMALZONE REHEAT COIL:Heating Coil Source Side Heat Transfer Energy
+  BUILDING STORY 3 THERMALZONE REHEAT COIL:Heating Coil Source Side Heat Transfer Energy
+  BUILDING STORY 4 THERMALZONE REHEAT COIL:Heating Coil Source Side Heat Transfer Energy
+  BUILDING STORY 5 THERMALZONE REHEAT COIL:Heating Coil Source Side Heat Transfer Energy
+  BUILDING STORY 6 THERMALZONE REHEAT COIL:Heating Coil Source Side Heat Transfer Energy
+  BUILDING STORY 7 THERMALZONE REHEAT COIL:Heating Coil Source Side Heat Transfer Energy
+  BUILDING STORY 8 THERMALZONE REHEAT COIL:Heating Coil Source Side Heat Transfer Energy
+  BUILDING STORY 9 THERMALZONE REHEAT COIL:Heating Coil Source Side Heat Transfer Energy
+  1 ZONE VAV MAIN HTG COIL:Heating Coil Source Side Heat Transfer Energy
+  1 ZONE VAV 1 MAIN HTG COIL:Heating Coil Source Side Heat Transfer Energy
+  1 ZONE VAV 2 MAIN HTG COIL:Heating Coil Source Side Heat Transfer Energy
+  1 ZONE VAV 3 MAIN HTG COIL:Heating Coil Source Side Heat Transfer Energy
+  1 ZONE VAV 4 MAIN HTG COIL:Heating Coil Source Side Heat Transfer Energy
+  1 ZONE VAV 5 MAIN HTG COIL:Heating Coil Source Side Heat Transfer Energy
+  1 ZONE VAV 6 MAIN HTG COIL:Heating Coil Source Side Heat Transfer Energy
+  1 ZONE VAV 7 MAIN HTG COIL:Heating Coil Source Side Heat Transfer Energy
+  1 ZONE VAV 8 MAIN HTG COIL:Heating Coil Source Side Heat Transfer Energy
+  1 ZONE VAV 9 MAIN HTG COIL:Heating Coil Source Side Heat Transfer Energy
+
+ For Meter=HeatingCoils:PlantLoopHeatingDemand [J], ResourceType=PlantLoopHeatingDemand, EndUse=HeatingCoils, contents are:
+  BUILDING STORY 1 THERMALZONE REHEAT COIL:Heating Coil Source Side Heat Transfer Energy
+  BUILDING STORY 10 THERMALZONE REHEAT COIL:Heating Coil Source Side Heat Transfer Energy
+  BUILDING STORY 2 THERMALZONE REHEAT COIL:Heating Coil Source Side Heat Transfer Energy
+  BUILDING STORY 3 THERMALZONE REHEAT COIL:Heating Coil Source Side Heat Transfer Energy
+  BUILDING STORY 4 THERMALZONE REHEAT COIL:Heating Coil Source Side Heat Transfer Energy
+  BUILDING STORY 5 THERMALZONE REHEAT COIL:Heating Coil Source Side Heat Transfer Energy
+  BUILDING STORY 6 THERMALZONE REHEAT COIL:Heating Coil Source Side Heat Transfer Energy
+  BUILDING STORY 7 THERMALZONE REHEAT COIL:Heating Coil Source Side Heat Transfer Energy
+  BUILDING STORY 8 THERMALZONE REHEAT COIL:Heating Coil Source Side Heat Transfer Energy
+  BUILDING STORY 9 THERMALZONE REHEAT COIL:Heating Coil Source Side Heat Transfer Energy
+  1 ZONE VAV MAIN HTG COIL:Heating Coil Source Side Heat Transfer Energy
+  1 ZONE VAV 1 MAIN HTG COIL:Heating Coil Source Side Heat Transfer Energy
+  1 ZONE VAV 2 MAIN HTG COIL:Heating Coil Source Side Heat Transfer Energy
+  1 ZONE VAV 3 MAIN HTG COIL:Heating Coil Source Side Heat Transfer Energy
+  1 ZONE VAV 4 MAIN HTG COIL:Heating Coil Source Side Heat Transfer Energy
+  1 ZONE VAV 5 MAIN HTG COIL:Heating Coil Source Side Heat Transfer Energy
+  1 ZONE VAV 6 MAIN HTG COIL:Heating Coil Source Side Heat Transfer Energy
+  1 ZONE VAV 7 MAIN HTG COIL:Heating Coil Source Side Heat Transfer Energy
+  1 ZONE VAV 8 MAIN HTG COIL:Heating Coil Source Side Heat Transfer Energy
+  1 ZONE VAV 9 MAIN HTG COIL:Heating Coil Source Side Heat Transfer Energy
+
+ For Meter=CoolingCoils:EnergyTransfer [J], ResourceType=EnergyTransfer, EndUse=CoolingCoils, contents are:
+  1 ZONE VAV CLG COIL:Cooling Coil Total Cooling Energy
+  1 ZONE VAV 1 CLG COIL:Cooling Coil Total Cooling Energy
+  1 ZONE VAV 2 CLG COIL:Cooling Coil Total Cooling Energy
+  1 ZONE VAV 3 CLG COIL:Cooling Coil Total Cooling Energy
+  1 ZONE VAV 4 CLG COIL:Cooling Coil Total Cooling Energy
+  1 ZONE VAV 5 CLG COIL:Cooling Coil Total Cooling Energy
+  1 ZONE VAV 6 CLG COIL:Cooling Coil Total Cooling Energy
+  1 ZONE VAV 7 CLG COIL:Cooling Coil Total Cooling Energy
+  1 ZONE VAV 8 CLG COIL:Cooling Coil Total Cooling Energy
+  1 ZONE VAV 9 CLG COIL:Cooling Coil Total Cooling Energy
+
+ For Meter=PlantLoopCoolingDemand:Facility [J], ResourceType=PlantLoopCoolingDemand, contents are:
+  1 ZONE VAV CLG COIL:Cooling Coil Source Side Heat Transfer Energy
+  1 ZONE VAV 1 CLG COIL:Cooling Coil Source Side Heat Transfer Energy
+  1 ZONE VAV 2 CLG COIL:Cooling Coil Source Side Heat Transfer Energy
+  1 ZONE VAV 3 CLG COIL:Cooling Coil Source Side Heat Transfer Energy
+  1 ZONE VAV 4 CLG COIL:Cooling Coil Source Side Heat Transfer Energy
+  1 ZONE VAV 5 CLG COIL:Cooling Coil Source Side Heat Transfer Energy
+  1 ZONE VAV 6 CLG COIL:Cooling Coil Source Side Heat Transfer Energy
+  1 ZONE VAV 7 CLG COIL:Cooling Coil Source Side Heat Transfer Energy
+  1 ZONE VAV 8 CLG COIL:Cooling Coil Source Side Heat Transfer Energy
+  1 ZONE VAV 9 CLG COIL:Cooling Coil Source Side Heat Transfer Energy
+
+ For Meter=PlantLoopCoolingDemand:HVAC [J], ResourceType=PlantLoopCoolingDemand, Group=HVAC, contents are:
+  1 ZONE VAV CLG COIL:Cooling Coil Source Side Heat Transfer Energy
+  1 ZONE VAV 1 CLG COIL:Cooling Coil Source Side Heat Transfer Energy
+  1 ZONE VAV 2 CLG COIL:Cooling Coil Source Side Heat Transfer Energy
+  1 ZONE VAV 3 CLG COIL:Cooling Coil Source Side Heat Transfer Energy
+  1 ZONE VAV 4 CLG COIL:Cooling Coil Source Side Heat Transfer Energy
+  1 ZONE VAV 5 CLG COIL:Cooling Coil Source Side Heat Transfer Energy
+  1 ZONE VAV 6 CLG COIL:Cooling Coil Source Side Heat Transfer Energy
+  1 ZONE VAV 7 CLG COIL:Cooling Coil Source Side Heat Transfer Energy
+  1 ZONE VAV 8 CLG COIL:Cooling Coil Source Side Heat Transfer Energy
+  1 ZONE VAV 9 CLG COIL:Cooling Coil Source Side Heat Transfer Energy
+
+ For Meter=CoolingCoils:PlantLoopCoolingDemand [J], ResourceType=PlantLoopCoolingDemand, EndUse=CoolingCoils, contents are:
+  1 ZONE VAV CLG COIL:Cooling Coil Source Side Heat Transfer Energy
+  1 ZONE VAV 1 CLG COIL:Cooling Coil Source Side Heat Transfer Energy
+  1 ZONE VAV 2 CLG COIL:Cooling Coil Source Side Heat Transfer Energy
+  1 ZONE VAV 3 CLG COIL:Cooling Coil Source Side Heat Transfer Energy
+  1 ZONE VAV 4 CLG COIL:Cooling Coil Source Side Heat Transfer Energy
+  1 ZONE VAV 5 CLG COIL:Cooling Coil Source Side Heat Transfer Energy
+  1 ZONE VAV 6 CLG COIL:Cooling Coil Source Side Heat Transfer Energy
+  1 ZONE VAV 7 CLG COIL:Cooling Coil Source Side Heat Transfer Energy
+  1 ZONE VAV 8 CLG COIL:Cooling Coil Source Side Heat Transfer Energy
+  1 ZONE VAV 9 CLG COIL:Cooling Coil Source Side Heat Transfer Energy
+
+ For Meter=Electricity:HVAC [J], ResourceType=Electricity, Group=HVAC, contents are:
+  1 ZONE VAV FAN:Fan Electric Energy
+  1 ZONE VAV 1 FAN:Fan Electric Energy
+  1 ZONE VAV 2 FAN:Fan Electric Energy
+  1 ZONE VAV 3 FAN:Fan Electric Energy
+  1 ZONE VAV 4 FAN:Fan Electric Energy
+  1 ZONE VAV 5 FAN:Fan Electric Energy
+  1 ZONE VAV 6 FAN:Fan Electric Energy
+  1 ZONE VAV 7 FAN:Fan Electric Energy
+  1 ZONE VAV 8 FAN:Fan Electric Energy
+  1 ZONE VAV 9 FAN:Fan Electric Energy
+
+ For Meter=Fans:Electricity [J], ResourceType=Electricity, EndUse=Fans, contents are:
+  1 ZONE VAV FAN:Fan Electric Energy
+  1 ZONE VAV 1 FAN:Fan Electric Energy
+  1 ZONE VAV 2 FAN:Fan Electric Energy
+  1 ZONE VAV 3 FAN:Fan Electric Energy
+  1 ZONE VAV 4 FAN:Fan Electric Energy
+  1 ZONE VAV 5 FAN:Fan Electric Energy
+  1 ZONE VAV 6 FAN:Fan Electric Energy
+  1 ZONE VAV 7 FAN:Fan Electric Energy
+  1 ZONE VAV 8 FAN:Fan Electric Energy
+  1 ZONE VAV 9 FAN:Fan Electric Energy
+
+ For Meter=General:Fans:Electricity [J], ResourceType=Electricity, EndUse=Fans, contents are:
+  1 ZONE VAV FAN:Fan Electric Energy
+  1 ZONE VAV 1 FAN:Fan Electric Energy
+  1 ZONE VAV 2 FAN:Fan Electric Energy
+  1 ZONE VAV 3 FAN:Fan Electric Energy
+  1 ZONE VAV 4 FAN:Fan Electric Energy
+  1 ZONE VAV 5 FAN:Fan Electric Energy
+  1 ZONE VAV 6 FAN:Fan Electric Energy
+  1 ZONE VAV 7 FAN:Fan Electric Energy
+  1 ZONE VAV 8 FAN:Fan Electric Energy
+  1 ZONE VAV 9 FAN:Fan Electric Energy
+
+ For Meter=ExteriorLights:Electricity [J], ResourceType=Electricity, EndUse=ExteriorLights, contents are:
+  BUILDING FACADES:Exterior Lights Electric Energy
+  MAIN ENTRIES:Exterior Lights Electric Energy
+  OTHER DOORS:Exterior Lights Electric Energy
+  PARKING AREAS AND DRIVES:Exterior Lights Electric Energy
+
+ For Meter=Building Facades:ExteriorLights:Electricity [J], ResourceType=Electricity, EndUse=ExteriorLights, contents are:
+  BUILDING FACADES:Exterior Lights Electric Energy
+
+ For Meter=Main Entries:ExteriorLights:Electricity [J], ResourceType=Electricity, EndUse=ExteriorLights, contents are:
+  MAIN ENTRIES:Exterior Lights Electric Energy
+
+ For Meter=Other Doors:ExteriorLights:Electricity [J], ResourceType=Electricity, EndUse=ExteriorLights, contents are:
+  OTHER DOORS:Exterior Lights Electric Energy
+
+ For Meter=Parking Areas and Drives:ExteriorLights:Electricity [J], ResourceType=Electricity, EndUse=ExteriorLights, contents are:
+  PARKING AREAS AND DRIVES:Exterior Lights Electric Energy
+
+ For Meter=Electricity:Plant [J], ResourceType=Electricity, Group=Plant, contents are:
+  90.1-2004 WATERCOOLED  ROTARY SCREW CHILLER 0 1110TONS 0.6KW/TON:Chiller Electric Energy
+  PROPELLER OR AXIAL TWOSPEED FAN OPEN COOLING TOWER 38.2 GPM/HP:Cooling Tower Fan Electric Energy
+  BOILER 12808KBTU/HR 0.75 THERMAL EFF:Boiler Ancillary Electric Energy
+  CHILLED WATER LOOP SECONDARY PUMP:Pump Electric Energy
+  HOT WATER LOOP PUMP:Pump Electric Energy
+  CHILLED WATER LOOP PRIMARY PUMP:Pump Electric Energy
+  CONDENSER WATER LOOP CONSTANT PUMP:Pump Electric Energy
+  OUTPATIENT SHARED SERVICE WATER LOOP CIRCULATOR PUMP:Pump Electric Energy
+
+ For Meter=Cooling:Electricity [J], ResourceType=Electricity, EndUse=Cooling, contents are:
+  90.1-2004 WATERCOOLED  ROTARY SCREW CHILLER 0 1110TONS 0.6KW/TON:Chiller Electric Energy
+
+ For Meter=General:Cooling:Electricity [J], ResourceType=Electricity, EndUse=Cooling, contents are:
+  90.1-2004 WATERCOOLED  ROTARY SCREW CHILLER 0 1110TONS 0.6KW/TON:Chiller Electric Energy
+
+ For Meter=Chillers:EnergyTransfer [J], ResourceType=EnergyTransfer, EndUse=Chillers, contents are:
+  90.1-2004 WATERCOOLED  ROTARY SCREW CHILLER 0 1110TONS 0.6KW/TON:Chiller Evaporator Cooling Energy
+
+ For Meter=HeatRejection:EnergyTransfer [J], ResourceType=EnergyTransfer, EndUse=HeatRejection, contents are:
+  90.1-2004 WATERCOOLED  ROTARY SCREW CHILLER 0 1110TONS 0.6KW/TON:Chiller Condenser Heat Transfer Energy
+
+ For Meter=HeatRejection:Electricity [J], ResourceType=Electricity, EndUse=HeatRejection, contents are:
+  PROPELLER OR AXIAL TWOSPEED FAN OPEN COOLING TOWER 38.2 GPM/HP:Cooling Tower Fan Electric Energy
+
+ For Meter=General:HeatRejection:Electricity [J], ResourceType=Electricity, EndUse=HeatRejection, contents are:
+  PROPELLER OR AXIAL TWOSPEED FAN OPEN COOLING TOWER 38.2 GPM/HP:Cooling Tower Fan Electric Energy
+
+ For Meter=HeatRejection:Water [m3], ResourceType=Water, EndUse=HeatRejection, contents are:
+  PROPELLER OR AXIAL TWOSPEED FAN OPEN COOLING TOWER 38.2 GPM/HP:Cooling Tower Make Up Water Volume
+
+ For Meter=HeatRejection:MainsWater [m3], ResourceType=MainsWater, EndUse=HeatRejection, contents are:
+  PROPELLER OR AXIAL TWOSPEED FAN OPEN COOLING TOWER 38.2 GPM/HP:Cooling Tower Make Up Mains Water Volume
+
+ For Meter=Boilers:EnergyTransfer [J], ResourceType=EnergyTransfer, EndUse=Boilers, contents are:
+  BOILER 12808KBTU/HR 0.75 THERMAL EFF:Boiler Heating Energy
+
+ For Meter=Heating:Gas [J], ResourceType=Gas, EndUse=Heating, contents are:
+  BOILER 12808KBTU/HR 0.75 THERMAL EFF:Boiler Gas Energy
+
+ For Meter=General:Heating:Gas [J], ResourceType=Gas, EndUse=Heating, contents are:
+  BOILER 12808KBTU/HR 0.75 THERMAL EFF:Boiler Gas Energy
+
+ For Meter=Heating:Electricity [J], ResourceType=Electricity, EndUse=Heating, contents are:
+  BOILER 12808KBTU/HR 0.75 THERMAL EFF:Boiler Ancillary Electric Energy
+
+ For Meter=Boiler Parasitic:Heating:Electricity [J], ResourceType=Electricity, EndUse=Heating, contents are:
+  BOILER 12808KBTU/HR 0.75 THERMAL EFF:Boiler Ancillary Electric Energy
+
+ For Meter=Pumps:Electricity [J], ResourceType=Electricity, EndUse=Pumps, contents are:
+  CHILLED WATER LOOP SECONDARY PUMP:Pump Electric Energy
+  HOT WATER LOOP PUMP:Pump Electric Energy
+  CHILLED WATER LOOP PRIMARY PUMP:Pump Electric Energy
+  CONDENSER WATER LOOP CONSTANT PUMP:Pump Electric Energy
+  OUTPATIENT SHARED SERVICE WATER LOOP CIRCULATOR PUMP:Pump Electric Energy
+
+ For Meter=General:Pumps:Electricity [J], ResourceType=Electricity, EndUse=Pumps, contents are:
+  CHILLED WATER LOOP SECONDARY PUMP:Pump Electric Energy
+  HOT WATER LOOP PUMP:Pump Electric Energy
+  CHILLED WATER LOOP PRIMARY PUMP:Pump Electric Energy
+  CONDENSER WATER LOOP CONSTANT PUMP:Pump Electric Energy
+  OUTPATIENT SHARED SERVICE WATER LOOP CIRCULATOR PUMP:Pump Electric Energy
+
+ For Meter=Carbon Equivalent:Facility [kg], ResourceType=Carbon Equivalent, contents are:
+  Site:Environmental Impact Total N2O Emissions Carbon Equivalent Mass
+  Site:Environmental Impact Total CH4 Emissions Carbon Equivalent Mass
+  Site:Environmental Impact Total CO2 Emissions Carbon Equivalent Mass
+
+ For Meter=CarbonEquivalentEmissions:Carbon Equivalent [kg], ResourceType=Carbon Equivalent, EndUse=CarbonEquivalentEmissions, contents are:
+  Site:Environmental Impact Total N2O Emissions Carbon Equivalent Mass
+  Site:Environmental Impact Total CH4 Emissions Carbon Equivalent Mass
+  Site:Environmental Impact Total CO2 Emissions Carbon Equivalent Mass

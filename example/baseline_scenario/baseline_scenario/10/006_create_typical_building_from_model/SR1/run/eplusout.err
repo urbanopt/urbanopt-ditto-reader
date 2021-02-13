@@ -1,0 +1,97 @@
+Program Version,EnergyPlus, Version 9.1.0-fafb9d5652, YMD=2020.03.26 13:33,
+   ** Warning ** Timestep: Requested number (1) is less than the suggested minimum of 4.
+   **   ~~~   ** Please see entry for Timestep in Input/Output Reference for discussion of considerations.
+   ************* Beginning Zone Sizing Calculations
+   ** Warning ** ProcessScheduleInput: Schedule:Day:Interval="111 SPACE(S) OCC SCH DEFAULT", Blank Schedule Type Limits Name input -- will not be validated.
+   ** Warning ** ProcessScheduleInput: Schedule:Day:Interval="111 SPACE(S) OCC SCH FRIDAY", Blank Schedule Type Limits Name input -- will not be validated.
+   ** Warning ** ProcessScheduleInput: Schedule:Day:Interval="111 SPACE(S) OCC SCH SATURDAY", Blank Schedule Type Limits Name input -- will not be validated.
+   ** Warning ** ProcessScheduleInput: Schedule:Day:Interval="111 SPACE(S) OCC SCH SUMMER DESIGN DAY", Blank Schedule Type Limits Name input -- will not be validated.
+   ** Warning ** ProcessScheduleInput: Schedule:Day:Interval="111 SPACE(S) OCC SCH SUNDAY", Blank Schedule Type Limits Name input -- will not be validated.
+   ** Warning ** ProcessScheduleInput: Schedule:Day:Interval="111 SPACE(S) OCC SCH WINTER DESIGN DAY", Blank Schedule Type Limits Name input -- will not be validated.
+   ** Warning ** ProcessScheduleInput: Schedule:Year="ELEVATOR SCHEDULE", Blank Schedule Type Limits Name input -- will not be validated.
+   ** Warning ** ProcessScheduleInput: Schedule:Constant="ALWAYS OFF DISCRETE", Blank Schedule Type Limits Name input -- will not be validated.
+   ** Warning ** ProcessScheduleInput: Schedule:Constant="ALWAYS ON CONTINUOUS", Blank Schedule Type Limits Name input -- will not be validated.
+   ** Warning ** CheckUsedConstructions: There are 11 nominally unused constructions in input.
+   **   ~~~   ** For explicit details on each unused construction, use Output:Diagnostics,DisplayExtraWarnings;
+   ** Warning ** DetermineShadowingCombinations: There are 7 surfaces which are receiving surfaces and are non-convex.
+   **   ~~~   ** ...Shadowing values may be inaccurate. Check .shd report file for more surface shading details
+   **   ~~~   ** ...Add Output:Diagnostics,DisplayExtraWarnings; to see individual warnings for each surface.
+   ** Warning ** GetDaylightingControls: Fraction of Zone controlled by the Daylighting reference points is < 1.0.
+   **   ~~~   ** ..discovered in "Daylighting:Controls" for Zone="BUILDING STORY 1 THERMALZONE", only 0.43 of the zone is controlled.
+   ** Warning ** GetDaylightingControls: Fraction of Zone controlled by the Daylighting reference points is < 1.0.
+   **   ~~~   ** ..discovered in "Daylighting:Controls" for Zone="BUILDING STORY 3 THERMALZONE", only 1.00 of the zone is controlled.
+   ** Warning ** GetDaylightingControls: Fraction of Zone controlled by the Daylighting reference points is < 1.0.
+   **   ~~~   ** ..discovered in "Daylighting:Controls" for Zone="BUILDING STORY 4 THERMALZONE", only 1.00 of the zone is controlled.
+   ** Warning ** GetDaylightingControls: Fraction of Zone controlled by the Daylighting reference points is < 1.0.
+   **   ~~~   ** ..discovered in "Daylighting:Controls" for Zone="BUILDING STORY 5 THERMALZONE", only 1.00 of the zone is controlled.
+   ** Warning ** GetDaylightingControls: Fraction of Zone controlled by the Daylighting reference points is < 1.0.
+   **   ~~~   ** ..discovered in "Daylighting:Controls" for Zone="BUILDING STORY 6 THERMALZONE", only 0.27 of the zone is controlled.
+   ** Warning ** GetDaylightingControls: Fraction of Zone controlled by the Daylighting reference points is < 1.0.
+   **   ~~~   ** ..discovered in "Daylighting:Controls" for Zone="BUILDING STORY 7 THERMALZONE", only 1.00 of the zone is controlled.
+   ************* Beginning System Sizing Calculations
+   ** Warning ** Since Zone Minimum Air Flow Input Method = CONSTANT, input for Fixed Minimum Air Flow Rate will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = BUILDING STORY 1 THERMALZONE VAV TERMINAL
+   ** Warning ** Since Zone Minimum Air Flow Input Method = CONSTANT, input for Fixed Minimum Air Flow Rate will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = BUILDING STORY 2 THERMALZONE VAV TERMINAL
+   ** Warning ** Since Zone Minimum Air Flow Input Method = CONSTANT, input for Fixed Minimum Air Flow Rate will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = BUILDING STORY 3 THERMALZONE VAV TERMINAL
+   ** Warning ** Since Zone Minimum Air Flow Input Method = CONSTANT, input for Fixed Minimum Air Flow Rate will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = BUILDING STORY 5 THERMALZONE VAV TERMINAL
+   ** Warning ** Since Zone Minimum Air Flow Input Method = CONSTANT, input for Fixed Minimum Air Flow Rate will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = BUILDING STORY 6 THERMALZONE VAV TERMINAL
+   ** Warning ** Since Zone Minimum Air Flow Input Method = CONSTANT, input for Fixed Minimum Air Flow Rate will be ignored.
+   **   ~~~   ** Occurs in AirTerminal:SingleDuct:VAV:Reheat = BUILDING STORY 8 THERMALZONE VAV TERMINAL
+   ************* Beginning Plant Sizing Calculations
+   ** Warning ** The Standard Ratings is calculated for Coil:Cooling:DX:SingleSpeed = BUILDING STORY 4 THERMALZONE PTAC 1SPD DX AC CLG COIL but not at the AHRI test condition due to curve out of bound.
+   **   ~~~   **  Review the Standard Ratings calculations in the Engineering Reference for this coil type. Also, use Output:Diagnostics, DisplayExtraWarnings for further guidance.
+   ** Warning ** The Standard Ratings is calculated for Coil:Cooling:DX:SingleSpeed = BUILDING STORY 7 THERMALZONE PTAC 1SPD DX AC CLG COIL but not at the AHRI test condition due to curve out of bound.
+   **   ~~~   **  Review the Standard Ratings calculations in the Engineering Reference for this coil type. Also, use Output:Diagnostics, DisplayExtraWarnings for further guidance.
+   ** Warning ** Water heater = 4867GAL NATURALGAS WATER HEATER - 4867KBTU/HR:  Recovery Efficiency and Energy Factor could not be calculated during the test for standard ratings
+   **   ~~~   ** Setpoint was never recovered and/or heater never turned on
+   ** Warning ** Water heater = 36X 50GAL ELECTRICITY WATER HEATER - 20KBTU/HR:  Recovery Efficiency and Energy Factor could not be calculated during the test for standard ratings
+   **   ~~~   ** Setpoint was never recovered and/or heater never turned on
+   ** Warning ** Water heater = 36X 50GAL ELECTRICITY WATER HEATER - 20KBTU/HR 1:  Recovery Efficiency and Energy Factor could not be calculated during the test for standard ratings
+   **   ~~~   ** Setpoint was never recovered and/or heater never turned on
+   ** Warning ** Water heater = 71X 50GAL ELECTRICITY WATER HEATER - 20KBTU/HR:  Recovery Efficiency and Energy Factor could not be calculated during the test for standard ratings
+   **   ~~~   ** Setpoint was never recovered and/or heater never turned on
+   ** Warning ** Check input. Pump nominal power or motor efficiency is set to 0, for pump=BOOSTER WATER LOOP PUMP
+   ** Warning ** Check input. Pump nominal power or motor efficiency is set to 0, for pump=BOOSTER WATER LOOP PUMP 1
+   ** Warning ** Missing temperature setpoint for LeavingSetpointModulated mode Boiler named BOILER
+   **   ~~~   **   A temperature setpoint is needed at the outlet node of a boiler in variable flow mode
+   **   ~~~   **   use a Setpoint Manager to establish a setpoint at the boiler outlet node 
+   **   ~~~   **   or use an EMS actuator to establish a setpoint at the boiler outlet node 
+   **   ~~~   **   The overall loop setpoint will be assumed for Boiler. The simulation continues ... 
+   ** Warning ** Check input. Pump nominal power or motor efficiency is set to 0, for pump=STRIPMALL STRIP MALL - TYPE 1 - 90.1-2013 SERVICE WATER LOOP WATER MAINS PRESSURE DRIVEN
+   ** Warning ** Check input. Pump nominal power or motor efficiency is set to 0, for pump=STRIPMALL STRIP MALL - TYPE 2 - 90.1-2013 SERVICE WATER LOOP WATER MAINS PRESSURE DRIVEN
+   ** Warning ** Output:Meter: invalid Key Name="DISTRICTCOOLING:FACILITY" - not found.
+   ** Warning ** Output:Meter: invalid Key Name="DISTRICTHEATING:FACILITY" - not found.
+   ** Warning ** Output:Meter:MeterFileOnly requested for "Electricity:Facility" (TimeStep), already on "Output:Meter". Will report to both eplusout.eso and eplusout.mtr
+   ************* Testing Individual Branch Integrity
+   ************* All Branches passed integrity testing
+   ************* Testing Individual Supply Air Path Integrity
+   ************* All Supply Air Paths passed integrity testing
+   ************* Testing Individual Return Air Path Integrity
+   ************* All Return Air Paths passed integrity testing
+   ************* No node connection errors were found.
+   ************* Beginning Simulation
+   ** Warning ** Output:Table:Monthly requested with SimulationControl Run Simulation for Weather File Run Periods set to No so Output:Table:Monthly will not be generated
+   ** Warning ** Plant Loop: CONDENSER WATER LOOP Demand Side is storing excess heat the majority of the time.
+   ** Warning ** Plant Loop: CONDENSER WATER LOOP Supply Side is storing excess heat the majority of the time.
+   ************* Simulation Error Summary *************
+   ************* There are 8 unused objects in input.
+   ************* Use Output:Diagnostics,DisplayUnusedObjects; to see them.
+   ************* There are 16 unused schedules in input.
+   ************* There are 25 unused week schedules in input.
+   ************* There are 56 unused day schedules in input.
+   ************* Use Output:Diagnostics,DisplayUnusedSchedules; to see them.
+   *************
+   ************* ===== Final Error Summary =====
+   ************* The following error categories occurred.  Consider correcting or noting.
+   ************* Nominally Unused Constructions
+   ************* ..The nominally unused constructions warning is provided to alert you to potential conditions that can cause
+   ************* ..extra time during simulation. Each construction is calculated by the algorithm indicated in the HeatBalanceAlgorithm
+   ************* ..object. You may remove the constructions indicated (when you use the DisplayExtraWarnings option).
+   *************
+   ************* EnergyPlus Warmup Error Summary. During Warmup: 0 Warning; 0 Severe Errors.
+   ************* EnergyPlus Sizing Error Summary. During Sizing: 22 Warning; 0 Severe Errors.
+   ************* EnergyPlus Completed Successfully-- 47 Warning; 0 Severe Errors; Elapsed Time=00hr 00min 15.47sec
