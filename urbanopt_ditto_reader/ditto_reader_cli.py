@@ -2,6 +2,7 @@
 
 import click
 import json
+import sys
 from pathlib import Path
 from urbanopt_ditto_reader.urbanopt_ditto_reader import UrbanoptDittoReader
 
@@ -16,31 +17,31 @@ def cli():
 @click.option(
     '-s',
     '--scenario_file',
-    type=click.Path(exists=True),
+    type=click.Path(exists=True, file_okay=True, dir_okay=False, resolve_path=True),
     help="Path to scenario file"
 )
 @click.option(
     '-f',
     "--feature_file",
-    type=click.Path(exists=True),
+    type=click.Path(exists=True, file_okay=True, dir_okay=False, resolve_path=True),
     help="Path to feature file"
 )
 @click.option(
     "-e",
     "--equipment",
-    type=click.Path(exists=True),
+    type=click.Path(exists=True, file_okay=True, dir_okay=False, resolve_path=True),
     help="Path to optional custom equipment file"
 )
 @click.option(
     '-r',
     '--reopt',
     is_flag=True,
-    help="Flag to signify this project also has reopt data"
+    help="Flag to use REopt data in this openDSS analysis"
 )
 @click.option(
     '-c',
     '--config',
-    type=click.Path(exists=True),
+    type=click.Path(exists=True, file_okay=True, dir_okay=False, resolve_path=True),
     help="Path to a json config file for all settings"
 )
 def run_opendss(scenario_file, feature_file, equipment, reopt, config):
@@ -57,25 +58,27 @@ def run_opendss(scenario_file, feature_file, equipment, reopt, config):
     :param reopt: Boolean, flag to specify that reopt data is present and should be included in modeling
     """
 
-    if config:
-        with open(config) as f:
-            config_dict = json.load(f)
+    try:
+        if config:
+            with open(config) as f:
+                config_dict = json.load(f)
+        else:
+            scenario_name = Path(scenario_file).stem
+            scenario_dir = Path(scenario_file).parent / "run" / scenario_name
+
+            config_dict = {
+                'urbanopt_scenario': scenario_dir,
+                'geojson_file': feature_file,
+                'use_reopt': reopt,
+                'opendss_folder': scenario_dir / 'opendss'
+                }
+            if equipment:
+                config_dict['equipment_file'] = equipment
+
+        ditto = UrbanoptDittoReader(config_dict)
+        ditto.run()
+    except Exception as e:
+        print(f"CLI failed with message: {e}")
+        sys.exit(1)
     else:
-        scenario_name = Path(scenario_file).stem
-        scenario_filepath = Path(scenario_file).resolve()
-        scenario_dir = scenario_filepath.parent / "run" / scenario_name
-        feature_filepath = Path(feature_file).resolve()
-
-        config_dict = {
-            'urbanopt_scenario': scenario_dir,
-            'geojson_file': feature_filepath,
-            'use_reopt': reopt,
-            'opendss_folder': scenario_dir / 'opendss'
-            }
-        if equipment:
-            config_dict['equipment_file'] = Path(equipment)
-
-    ditto = UrbanoptDittoReader(config_dict)
-    ditto.run()
-
-    print(f"\nDone. Results located in {config_dict['opendss_folder']}\n")
+        print(f"\nDone. Results located in {config_dict['opendss_folder']}\n")
