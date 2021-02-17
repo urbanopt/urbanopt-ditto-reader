@@ -39,18 +39,15 @@ class UrbanoptDittoReader(object):
         # load default config from config.json
         default_data = self.default_config()
 
-        # make sure all paths are absolute wrt this module file
-        config_data = self.fix_paths(config_data)
-
         # merge with whatever came in on config_data
         config = {**default_data, **config_data}
 
         print("CONFIGS used: {}".format(config))
 
-        self.geojson_file = os.path.abspath(config['geojson_file'])
-        self.urbanopt_scenario = os.path.abspath(config['urbanopt_scenario'])
-        self.equipment_file = os.path.abspath(config['equipment_file'])
-        self.dss_analysis = os.path.abspath(config['opendss_folder'])
+        self.geojson_file = Path(config['geojson_file']).expanduser()
+        self.urbanopt_scenario = Path(config['urbanopt_scenario']).expanduser()
+        self.equipment_file = Path(config['equipment_file']).expanduser()
+        self.dss_analysis = Path(config['opendss_folder']).expanduser()
         self.use_reopt = config['use_reopt']
         self.number_of_timepoints = None
         if 'number_of_timepoints' in config:
@@ -62,21 +59,19 @@ class UrbanoptDittoReader(object):
         self.timeseries_location = os.path.join(self.dss_analysis, 'profiles')
 
     def default_config(self):
+        """Read default config file"""
         example_config_file = self.module_path / 'example' / 'config.json'
         with open(example_config_file) as f:
             default_data = self.fix_paths(json.load(f))
         return default_data
 
     def fix_paths(self, data):
-
-        # fix data to be relative path wrt this module
+        """Fix data to be relative path wrt this module"""
         for k, v in data.items():
             if k == 'use_reopt' or k == 'number_of_timepoints':
                 continue
-            elif not os.path.isabs(v):
-                data[k] = os.path.join(self.module_path, v)
-                # print("warning: {} is not a full path, using path: {}".format(k, default_data[k]))
-
+            elif not Path(v).is_absolute():
+                data[k] = Path(self.module_path) / v
         return data
 
     def _get_all_voltages(self):
