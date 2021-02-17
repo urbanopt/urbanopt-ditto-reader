@@ -48,7 +48,7 @@ def run_opendss(scenario_file, feature_file, equipment, reopt, config):
     """
     \b
     Run OpenDSS on an existing URBANopt scenario.
-    If referencing your own json config file: all settings must be made in that file using absolute paths (no tilde expansion).
+    If referencing your own json config file: all settings must be made in that file using absolute paths.
 
     \f
     :param scenario_file: Path, location and name of scenario csv file
