@@ -44,8 +44,9 @@ class UrbanoptDittoReader(object):
 
         print("CONFIGS used: {}".format(config))
 
-        self.geojson_file = Path(config['geojson_file']).expanduser()
-        self.urbanopt_scenario = Path(config['urbanopt_scenario']).expanduser()
+        self.geojson_file = Path(config['urbanopt_geojson_file']).expanduser()
+        self.urbanopt_scenario_name = Path(config['urbanopt_scenario_file']).stem
+        self.urbanopt_scenario = Path(config['urbanopt_scenario_file']).expanduser() / 'run' / self.urbanopt_scenario_name
         self.equipment_file = Path(config['equipment_file']).expanduser()
         self.dss_analysis = Path(config['opendss_folder']).expanduser()
         self.use_reopt = config['use_reopt']
