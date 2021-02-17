@@ -22,7 +22,6 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 ****************************************************************************************************
 """
 
-import sys
 import datetime
 import json
 import math
@@ -35,7 +34,7 @@ import opendssdirect as dss
 class UrbanoptDittoReader(object):
     def __init__(self, config_data={}):
 
-        self.module_path = os.path.dirname(os.path.realpath(__file__))
+        self.module_path = Path(__file__).parent.parent
 
         # load default config from config.json
         default_data = self.default_config()
@@ -52,7 +51,6 @@ class UrbanoptDittoReader(object):
         self.urbanopt_scenario = os.path.abspath(config['urbanopt_scenario'])
         self.equipment_file = os.path.abspath(config['equipment_file'])
         self.dss_analysis = os.path.abspath(config['opendss_folder'])
-        self.ditto_folder = os.path.abspath(config['ditto_folder'])
         self.use_reopt = config['use_reopt']
         self.number_of_timepoints = None
         if 'number_of_timepoints' in config:
@@ -64,10 +62,8 @@ class UrbanoptDittoReader(object):
         self.timeseries_location = os.path.join(self.dss_analysis, 'profiles')
 
     def default_config(self):
-        # FIXME: reader/read.py thinks the config file is in the same dir as this file.
-        # Hacky workaround is that I changed the paths in example/config.json
-        dir_path = Path(__file__).parent.parent.resolve() / 'example'
-        with open(dir_path / 'config.json') as f:
+        example_config_file = self.module_path / 'example' / 'config.json'
+        with open(example_config_file) as f:
             default_data = self.fix_paths(json.load(f))
         return default_data
 
@@ -86,8 +82,6 @@ class UrbanoptDittoReader(object):
     def _get_all_voltages(self):
         """Computes over and under voltages for all buses"""
         voltage_dict = {}
-        # vmag_pu = dss.Circuit.AllBusMagPu()
-        # print(len(vmag_pu))
         bus_names = dss.Circuit.AllBusNames()
         for b in bus_names:
             dss.Circuit.SetActiveBus(b)
@@ -169,15 +163,6 @@ class UrbanoptDittoReader(object):
         return transformer_violation_dict
 
     def run(self):
-
-        # relative import (relative to THIS MODULE)
-        if os.path.isabs(self.ditto_folder):
-            # keep it
-            df = self.ditto_folder
-        else:
-            df = os.path.join(os.path.dirname(os.path.realpath(__file__)), self.ditto_folder)
-
-        sys.path.insert(0, df)  # don't append in case there are other multiple DiTTo installations.
 
         from ditto.store import Store
         from ditto.writers.opendss.write import Writer
