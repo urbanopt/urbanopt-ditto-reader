@@ -22,11 +22,11 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 ****************************************************************************************************
 """
 
-import sys
 import datetime
 import json
 import math
 import os
+from pathlib import Path
 import pandas as pd
 import opendssdirect as dss
 
@@ -34,24 +34,21 @@ import opendssdirect as dss
 class UrbanoptDittoReader(object):
     def __init__(self, config_data={}):
 
-        self.module_path = os.path.dirname(os.path.realpath(__file__))
+        self.module_path = Path(__file__).parent.parent
 
         # load default config from config.json
         default_data = self.default_config()
-
-        # make sure all paths are absolute wrt this module file
-        config_data = self.fix_paths(config_data)
 
         # merge with whatever came in on config_data
         config = {**default_data, **config_data}
 
         print("CONFIGS used: {}".format(config))
 
-        self.geojson_file = os.path.abspath(config['geojson_file'])
-        self.urbanopt_scenario = os.path.abspath(config['urbanopt_scenario'])
-        self.equipment_file = os.path.abspath(config['equipment_file'])
-        self.dss_analysis = os.path.abspath(config['opendss_folder'])
-        self.ditto_folder = os.path.abspath(config['ditto_folder'])
+        self.geojson_file = Path(config['urbanopt_geojson_file']).expanduser()
+        self.urbanopt_scenario_name = Path(config['urbanopt_scenario_file']).stem
+        self.urbanopt_scenario = Path(config['urbanopt_scenario_file']).expanduser() / 'run' / self.urbanopt_scenario_name
+        self.equipment_file = Path(config['equipment_file']).expanduser()
+        self.dss_analysis = Path(config['opendss_folder']).expanduser()
         self.use_reopt = config['use_reopt']
         self.number_of_timepoints = None
         if 'number_of_timepoints' in config:
@@ -63,33 +60,24 @@ class UrbanoptDittoReader(object):
         self.timeseries_location = os.path.join(self.dss_analysis, 'profiles')
 
     def default_config(self):
-        dir_path = os.path.dirname(os.path.realpath(__file__))
-        data = open(os.path.join(dir_path, 'config.json'))
-        default_data = json.load(data)
-
-        # fix data to be relative path wrt this module
-        default_data = self.fix_paths(default_data)
-
-        data.close()
+        """Read default config file"""
+        example_config_file = self.module_path / 'example' / 'config.json'
+        with open(example_config_file) as f:
+            default_data = self.fix_paths(json.load(f))
         return default_data
 
     def fix_paths(self, data):
-
-        # fix data to be relative path wrt this module
+        """Fix data to be relative path wrt this module"""
         for k, v in data.items():
             if k == 'use_reopt' or k == 'number_of_timepoints':
                 continue
-            elif not os.path.isabs(v):
-                data[k] = os.path.join(self.module_path, v)
-                # print("warning: {} is not a full path, using path: {}".format(k, default_data[k]))
-
+            elif not Path(v).is_absolute():
+                data[k] = Path(self.module_path) / v
         return data
 
     def _get_all_voltages(self):
         """Computes over and under voltages for all buses"""
         voltage_dict = {}
-        # vmag_pu = dss.Circuit.AllBusMagPu()
-        # print(len(vmag_pu))
         bus_names = dss.Circuit.AllBusNames()
         for b in bus_names:
             dss.Circuit.SetActiveBus(b)
@@ -172,18 +160,9 @@ class UrbanoptDittoReader(object):
 
     def run(self):
 
-        # relative import (relative to THIS MODULE)
-        if os.path.isabs(self.ditto_folder):
-            # keep it
-            df = self.ditto_folder
-        else:
-            df = os.path.join(os.path.dirname(os.path.realpath(__file__)), self.ditto_folder)
-
-        sys.path.insert(0, df)  # don't append in case there are other multiple DiTTo installations.
-
         from ditto.store import Store
         from ditto.writers.opendss.write import Writer
-        from reader.read import Reader
+        from urbanopt_ditto_reader.reader.read import Reader
 
         from ditto.consistency.check_loops import check_loops
         from ditto.consistency.check_loads_connected import check_loads_connected
@@ -214,7 +193,7 @@ class UrbanoptDittoReader(object):
             color = OKGREEN
         print('Result:', f'{color} {result} {ENDC}')
         print()
-        
+
         print('Check loads connected to source:',flush=True)
         result = 'FAIL'
         color = FAIL
@@ -225,7 +204,7 @@ class UrbanoptDittoReader(object):
             color = OKGREEN
         print('Result:', f'{color} {result} {ENDC}')
         print()
-        
+
         print('Check unique path from each load to source:',flush=True)
         unique_path_res = check_unique_path(model,show_all=True,verbose=True)
         final_pass = final_pass and unique_path_res
@@ -236,7 +215,7 @@ class UrbanoptDittoReader(object):
             color = OKGREEN
         print('Result:', f'{color} {result} {ENDC}')
         print()
-        
+
         print('Check that phases on either side of transformer are correct:',flush=True)
         matched_phases_res = check_matched_phases(model,verbose=True)
         final_pass = final_pass and check_matched_phases
@@ -247,7 +226,7 @@ class UrbanoptDittoReader(object):
             color = OKGREEN
         print('Result:', f'{color} {result} {ENDC}')
         print()
-        
+
         print('Check that phases from transformer to load and source are correct:',flush=True)
         transformer_phase_res = check_transformer_phase_path(model,needs_transformers=True, verbose=True)
 

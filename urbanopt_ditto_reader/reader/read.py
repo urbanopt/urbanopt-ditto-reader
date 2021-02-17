@@ -57,7 +57,7 @@ class Reader(AbstractReader):
     Reader for the Urbanopt geojson file with supporting database files
     """
     register_names = ["geojson","GeoJson"]
-    
+
     def __init__(self, **kwargs):
         super(Reader,self).__init__(**kwargs)
 
@@ -145,7 +145,10 @@ class Reader(AbstractReader):
         self.equipment_data = self.get_equipment_data(self.equipment_file)
 
         # Call parse from abstract reader class
-        super(Reader, self).parse(model, **kwargs)
+        try:
+            super(Reader, self).parse(model, **kwargs)
+        except KeyError:
+            raise SystemExit("\nFeatureFile is missing components. Are all electrical features included?")
         return 1
 
     def parse_lines(self, model, **kwargs):
@@ -295,7 +298,7 @@ class Reader(AbstractReader):
                                 transformer.from_element = transformer_panel_map[transformer_id][0]
                                 transformer.to_element = transformer_panel_map[transformer_id][1] #NOTE: Need to figure out correct from and to directions here.
                                 transformer.name = transformer_id
-                                transformer.reactances = [float(db_transformer['reactance'])] 
+                                transformer.reactances = [float(db_transformer['reactance'])]
                                 transformer.is_center_tap = db_transformer['is_center_tap']
                                 windings = [Winding(model),Winding(model)]
                                 connections = db_transformer['connection'].split('-')
@@ -377,7 +380,7 @@ class Reader(AbstractReader):
             seen = set([source_component])
             self.deleted_elements = {}
             modifier = Modifier()
-            while len(seen) < len(components): # Incrementally add closest component to the component connected to the substation 
+            while len(seen) < len(components): # Incrementally add closest component to the component connected to the substation
                 closest_dist = 10000000000000000
                 closest_component = None
                 closest_node_pair = None
@@ -395,7 +398,7 @@ class Reader(AbstractReader):
                                         closest_node_pair = (node1_name,node2_name)
                                         closest_component = c_id
                                         connecting_component = c_id2
-                
+
                 node_to_remove = closest_node_pair[0]
                 node_to_use = closest_node_pair[1]
                 for i in model.models:
@@ -472,7 +475,7 @@ class Reader(AbstractReader):
                     if self.is_timeseries:
                         data = load_data[load_column]
                         timestamps = load_data['Datetime']
-                        delta = datetime.datetime.strptime(timestamps.loc[1],'%Y/%m/%d %H:%M:%S') - datetime.datetime.strptime(timestamps.loc[0],'%Y/%m/%d %H:%M:%S') 
+                        delta = datetime.datetime.strptime(timestamps.loc[1],'%Y/%m/%d %H:%M:%S') - datetime.datetime.strptime(timestamps.loc[0],'%Y/%m/%d %H:%M:%S')
                         data_pu = data/max_load
                         if not self.timeseries_location is None:
                             if not os.path.exists(self.timeseries_location):
@@ -500,7 +503,7 @@ class Reader(AbstractReader):
 
         return 1
 
-            
+
     def parse_dg(self, model, **kwargs):
         """PV parser.
         :param model: DiTTo model
@@ -559,7 +562,7 @@ class Reader(AbstractReader):
                         load_data = pd.read_csv(os.path.join(self.load_folder,id_value,'feature_reports','feature_report_reopt.csv'),header=0)
                         data = load_data['REopt:ElectricityProduced:PV:Total(kw)']
                         timestamps = load_data['Datetime']
-                        delta = datetime.datetime.strptime(timestamps.loc[1],'%Y/%m/%d %H:%M:%S') - datetime.datetime.strptime(timestamps.loc[0],'%Y/%m/%d %H:%M:%S') 
+                        delta = datetime.datetime.strptime(timestamps.loc[1],'%Y/%m/%d %H:%M:%S') - datetime.datetime.strptime(timestamps.loc[0],'%Y/%m/%d %H:%M:%S')
                         data_pu = data/pv_kw
                         if not self.timeseries_location is None:
                             if not os.path.exists(self.timeseries_location): #Should have already been created for the loads
@@ -569,14 +572,13 @@ class Reader(AbstractReader):
                             timeseries = Timeseries(model)
                             timeseries.feeder_name = pv.feeder_name
                             timeseries.substation_name = pv.substation_name
-                            timeseries.interval = delta.seconds/3600.0 
+                            timeseries.interval = delta.seconds/3600.0
                             timeseries.data_type = 'float'
                             timeseries.data_location = os.path.join(self.relative_timeseries_location,'pv_'+id_value+'_pu.csv')
                             timeseries.data_label = 'feature_'+id_value
                             timeseries.scale_factor = 1
                             pv.timeseries = [timeseries]
-                        
+
 
 
         return 1
-

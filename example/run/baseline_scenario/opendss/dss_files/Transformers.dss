@@ -1,0 +1,10 @@
+New Transformer.897530f5-a6d6-446f-94fd-4087196fceaf phases=3 windings=2 wdg=1 conn=wye Kv=13.200000000000001 kva=75.0 %R=0.1 bus=9dae1cd8-ddca-4bdd-8324-61b771b77225 wdg=2 conn=wye Kv=0.48 kva=75.0 %R=0.1 bus=3a0599b8-84a9-488a-ab8d-dc62b244ee8c XHL=0.1
+
+New Transformer.b02e3fe9-77d0-47f9-86cb-e4db960afd62 phases=1 windings=3 wdg=1 conn=wye bus=194f2b59-5877-4485-85b9-bd0ac6f75e25.1 Kv=7.621023553303061 kva=75.0 %r=0.1 wdg=2 conn=wye bus=14080f48-4e0d-4ca6-9ed2-7db253f920f4.1.0 Kv=0.12 kva=75.0 %r=0.1 wdg=3 conn=wye bus=14080f48-4e0d-4ca6-9ed2-7db253f920f4.0.2 Kv=0.12 kva=75.0 %r=0.1 XHL=0.1 XLT=0.1 XHT=0.1
+
+New Transformer.54cd0a5a-2ebe-4b39-936a-f238b503c221 phases=3 windings=2 wdg=1 conn=wye Kv=13.200000000000001 kva=100.0 %R=0.1 bus=3ad29eb4-60b2-4050-a87c-dcd858184622 wdg=2 conn=wye Kv=0.48 kva=100.0 %R=0.1 bus=b1003fd0-cd27-4de5-9851-f14382846fc4 XHL=0.1
+
+New Transformer.1b4b5dcf-8d18-4954-b655-a93634542733 phases=3 windings=2 wdg=1 conn=wye Kv=13.200000000000001 kva=50.0 %R=0.1 bus=c8181999-1d82-4f4f-b0d7-7affddf06378 wdg=2 conn=wye Kv=0.48 kva=50.0 %R=0.1 bus=b4d75954-0bde-4707-875a-c2fabffec277 XHL=0.1
+
+New Transformer.502e96e3-853a-4b3d-b88d-fe59af4d7b65 phases=1 windings=3 wdg=1 conn=wye bus=b9ac3056-629d-40cc-b520-cfe15eb7296c.1 Kv=7.621023553303061 kva=50.0 %r=0.1 wdg=2 conn=wye bus=ed866262-f11e-4ea7-b5f9-eecfea8ecbaf.1.0 Kv=0.12 kva=50.0 %r=0.1 wdg=3 conn=wye bus=ed866262-f11e-4ea7-b5f9-eecfea8ecbaf.0.2 Kv=0.12 kva=50.0 %r=0.1 XHL=0.1 XLT=0.1 XHT=0.1
+

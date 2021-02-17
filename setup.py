@@ -40,5 +40,10 @@ setup(
     license=license,
     packages=find_packages(exclude=("tests", "docs")),
     python_requires='>=3.7',
-    install_requires=requirements
+    py_modules=['ditto_reader_cli'],
+    install_requires=requirements,
+    entry_points='''
+        [console_scripts]
+        ditto_reader_cli=urbanopt_ditto_reader.ditto_reader_cli:cli
+    '''
 )
