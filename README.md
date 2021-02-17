@@ -22,10 +22,18 @@ Install the respository:
 # Running the converter
 
 For help text in the terminal: \
-`ditto_reader_cli -h`
+`ditto_reader_cli run-opendss -h`
 
 Example command to run the ditto-reader: \
 `ditto_reader_cli run-opendss -s <ScenarioFile> -f <FeatureFile>`
 
 Or: \
 `ditto_reader_cli run-opendss -c example/config.json`
+
+If you are using your own config.json file, use the following fields:
+1. "urbanopt_scenario_file": Required, Path to scenario csv file
+1. "urbanopt_geojson_file": Required, Path to feature json file
+1. "equipment_file": Optional, Path to custom equipment file
+1. "opendss_folder": Required, Path to dir created by this command, holding openDSS output
+1. "use_reopt": Required, Boolean (True/False) to analyze reopt data, if it has been provided
+1. "number_of_timepoints": Required, Integer number of hours to simulate. 8760 is a complete year
