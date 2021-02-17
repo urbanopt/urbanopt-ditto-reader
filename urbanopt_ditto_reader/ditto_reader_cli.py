@@ -48,14 +48,13 @@ def run_opendss(scenario_file, feature_file, equipment, reopt, config):
     """
     \b
     Run OpenDSS on an existing URBANopt scenario.
-    If referencing a json config file, all settings must be made in that file.
-    See urbanopt_ditto_reader/config.json for an example.
+    If referencing your own json config file: all settings must be made in that file using absolute paths (no tilde expansion).
 
     \f
     :param scenario_file: Path, location and name of scenario csv file
     :param feature_file: Path, location & name of feature json file
     :param equipment: Path, Location and name of custom equipment file
-    :param reopt: Boolean, flag to specify that reopt data is present and should be included in modeling
+    :param reopt: Boolean, flag to specify that reopt data is present and OpenDSS analysis should include it
     """
 
     try:
