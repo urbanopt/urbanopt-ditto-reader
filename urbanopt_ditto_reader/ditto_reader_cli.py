@@ -66,8 +66,8 @@ def run_opendss(scenario_file, feature_file, equipment, reopt, config):
             scenario_dir = Path(scenario_file).parent / "run" / scenario_name
 
             config_dict = {
-                'urbanopt_scenario': scenario_dir,
-                'geojson_file': feature_file,
+                'urbanopt_scenario_file': scenario_file,
+                'urbanopt_geojson_file': feature_file,
                 'use_reopt': reopt,
                 'opendss_folder': scenario_dir / 'opendss'
                 }
