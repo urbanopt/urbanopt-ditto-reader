@@ -28,4 +28,4 @@ Example command to run the ditto-reader: \
 `ditto_reader_cli run-opendss -s <ScenarioFile> -f <FeatureFile>`
 
 Or: \
-`ditto_reader_cli run-opendss -c urbanopt_ditto_reader/config.json`
+`ditto_reader_cli run-opendss -c example/config.json`
