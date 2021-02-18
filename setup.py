@@ -45,7 +45,6 @@ setup(
     py_modules=['ditto_reader_cli'],
     install_requires=requirements,
     classifiers=[
-        "License :: Custom",
         "Development Status :: 4 - Beta",
         "Environment :: Console",
         "Intended Audience :: Developers",
