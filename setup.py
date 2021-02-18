@@ -24,10 +24,6 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 from setuptools import setup, find_packages
 
-
-with open("LICENSE.md") as f:
-    license = f.read()
-
 with open('requirements.txt') as f:
     requirements = f.read().splitlines()
 
@@ -36,18 +32,29 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name="UrbanoptDittoReader",
-    version="0.3.0",
+    version="0.3.1",
     author="Tarek Elgindy",
     author_email="tarek.elgindy@nrel.gov",
     description="Enhancement of URBANopt GeoJSON that can be consumed by DiTTo reader",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/urbanopt/urbanopt-ditto-reader",
-    license=license,
+    license="Custom",
     packages=find_packages(exclude=("tests", "docs", "example")),
     python_requires='>=3.7',
     py_modules=['ditto_reader_cli'],
     install_requires=requirements,
+    classifiers=[
+        "License :: Custom",
+        "Development Status :: 4 - Beta",
+        "Environment :: Console",
+        "Intended Audience :: Developers",
+        "Intended Audience :: Science/Research",
+        "Topic :: Scientific/Engineering",
+        "Operating System :: OS Independent",
+        "Programming Language :: Python :: 3.7",
+        "Programming Language :: Python :: 3.8"
+    ],
     entry_points='''
         [console_scripts]
         ditto_reader_cli=urbanopt_ditto_reader.ditto_reader_cli:cli
