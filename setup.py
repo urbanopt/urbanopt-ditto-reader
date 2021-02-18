@@ -31,11 +31,17 @@ with open("LICENSE.md") as f:
 with open('requirements.txt') as f:
     requirements = f.read().splitlines()
 
+with open("README.md", "r", encoding="utf-8") as fh:
+    long_description = fh.read()
+
 setup(
     name="UrbanoptDittoReader",
     version="0.2.0",
     author="Tarek Elgindy",
     author_email="tarek.elgindy@nrel.gov",
+    description="Enhancement of URBANopt GeoJSON that can be consumed by DiTTo reader ",
+    long_description=long_description,
+    long_description_content_type="text/markdown",
     url="https://github.com/urbanopt/urbanopt-ditto-reader",
     license=license,
     packages=find_packages(exclude=("tests", "docs")),
