@@ -56,7 +56,6 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 EXCLUDE_FILES = ["__init__.py"]
 PATHS = [
     {"glob": "urbanopt_ditto_reader/**/*.py", "license": PYTHON_LICENSE, "REGEX": PYTHON_REGEX, },
-    # {"glob": "management/**/*.py", "license": PYTHON_LICENSE, "REGEX": PYTHON_REGEX},
     {"glob": "tests/**/*.py", "license": PYTHON_LICENSE, "REGEX": PYTHON_REGEX},
     # single files
     { "glob": 'setup.py', "license": PYTHON_LICENSE, "REGEX": PYTHON_REGEX },
