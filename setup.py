@@ -32,7 +32,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name="urbanopt-ditto-reader",
-    version="0.3.3",
+    version="0.3.4",
     author="Tarek Elgindy",
     author_email="tarek.elgindy@nrel.gov",
     description="Enhancement of URBANopt GeoJSON that can be consumed by DiTTo reader",
@@ -43,6 +43,7 @@ setup(
     packages=find_packages(exclude=("tests", "docs", "example")),
     python_requires='>=3.7',
     py_modules=['ditto_reader_cli'],
+    include_package_data=True,
     install_requires=requirements,
     classifiers=[
         "Development Status :: 4 - Beta",
