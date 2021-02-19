@@ -53,13 +53,14 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 ****************************************************************************************************
 """'''
 
-EXCLUDE_FILES = ["__init__.py", "jmodelica.py"]
+EXCLUDE_FILES = ["__init__.py"]
 PATHS = [
-    {"glob": "geojson_modelica_translator/**/*.py", "license": PYTHON_LICENSE, "REGEX": PYTHON_REGEX, },
-    {"glob": "management/**/*.py", "license": PYTHON_LICENSE, "REGEX": PYTHON_REGEX},
+    {"glob": "urbanopt_ditto_reader/**/*.py", "license": PYTHON_LICENSE, "REGEX": PYTHON_REGEX, },
+    # {"glob": "management/**/*.py", "license": PYTHON_LICENSE, "REGEX": PYTHON_REGEX},
     {"glob": "tests/**/*.py", "license": PYTHON_LICENSE, "REGEX": PYTHON_REGEX},
     # single files
-    # { "glob": 'bin/resources/**/file.py', "license": PYTHON_LICENSE, "REGEX": PYTHON_REGEX },
+    { "glob": 'setup.py', "license": PYTHON_LICENSE, "REGEX": PYTHON_REGEX },
+    { "glob": 'update_licenses.py', "license": PYTHON_LICENSE, "REGEX": PYTHON_REGEX }
 ]
 
 
