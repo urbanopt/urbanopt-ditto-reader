@@ -57,5 +57,6 @@ setup(
     entry_points='''
         [console_scripts]
         ditto_reader_cli=urbanopt_ditto_reader.ditto_reader_cli:cli
+        update_licenses=update_licenses:update_licenses
     '''
 )
