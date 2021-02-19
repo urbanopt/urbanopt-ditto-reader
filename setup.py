@@ -31,8 +31,8 @@ with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 setup(
-    name="UrbanoptDittoReader",
-    version="0.3.1",
+    name="urbanopt_ditto_reader",
+    version="0.3.2",
     author="Tarek Elgindy",
     author_email="tarek.elgindy@nrel.gov",
     description="Enhancement of URBANopt GeoJSON that can be consumed by DiTTo reader",
