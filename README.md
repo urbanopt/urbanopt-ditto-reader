@@ -7,7 +7,7 @@ More detailed documentation is available on the [URBANopt documentation page](ht
 
 # Installation
 
-`pip install urbanopt_ditto_reader`
+`pip install urbanopt-ditto-reader`
 
 # Running the converter
 

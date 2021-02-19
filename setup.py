@@ -31,7 +31,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 setup(
-    name="urbanopt_ditto_reader",
+    name="urbanopt-ditto-reader",
     version="0.3.2",
     author="Tarek Elgindy",
     author_email="tarek.elgindy@nrel.gov",
