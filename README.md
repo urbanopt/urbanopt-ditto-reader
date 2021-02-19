@@ -4,8 +4,6 @@ More detailed documentation is available on the [URBANopt documentation page](ht
 
 # Installation Pre-requisites
 - Python >=3.7
-- git
-- pip
 
 # Installation
 

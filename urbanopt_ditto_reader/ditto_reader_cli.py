@@ -33,6 +33,13 @@ def cli():
     help="Path to optional custom equipment file"
 )
 @click.option(
+    "-t",
+    "--time_points",
+    type=int,
+    default=10,
+    help="Number of hours to analyze. 8760 hours per year"
+)
+@click.option(
     '-r',
     '--reopt',
     is_flag=True,
@@ -44,7 +51,7 @@ def cli():
     type=click.Path(exists=True, file_okay=True, dir_okay=False, resolve_path=True),
     help="Path to a json config file for all settings"
 )
-def run_opendss(scenario_file, feature_file, equipment, reopt, config):
+def run_opendss(scenario_file, feature_file, equipment, time_points, reopt, config):
     """
     \b
     Run OpenDSS on an existing URBANopt scenario.
@@ -53,8 +60,10 @@ def run_opendss(scenario_file, feature_file, equipment, reopt, config):
     \f
     :param scenario_file: Path, location and name of scenario csv file
     :param feature_file: Path, location & name of feature json file
-    :param equipment: Path, Location and name of custom equipment file
+    :param equipment: Path, location and name of custom equipment file
+    :param time_points: Int, number of hours in opendss analysis
     :param reopt: Boolean, flag to specify that reopt data is present and OpenDSS analysis should include it
+    :param config: Path, location of config file specifying input options for OpenDSS
     """
 
     try:
@@ -69,7 +78,8 @@ def run_opendss(scenario_file, feature_file, equipment, reopt, config):
                 'urbanopt_scenario_file': scenario_file,
                 'urbanopt_geojson_file': feature_file,
                 'use_reopt': reopt,
-                'opendss_folder': scenario_dir / 'opendss'
+                'opendss_folder': scenario_dir / 'opendss',
+                'number_of_timepoints': time_points
                 }
             if equipment:
                 config_dict['equipment_file'] = equipment

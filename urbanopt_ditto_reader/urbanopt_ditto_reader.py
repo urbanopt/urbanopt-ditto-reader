@@ -61,7 +61,7 @@ class UrbanoptDittoReader(object):
 
     def default_config(self):
         """Read default config file"""
-        example_config_file = self.module_path / 'example' / 'config.json'
+        example_config_file = Path(__file__).parent / 'example_config.json'
         with open(example_config_file) as f:
             default_data = self.fix_paths(json.load(f))
         return default_data
