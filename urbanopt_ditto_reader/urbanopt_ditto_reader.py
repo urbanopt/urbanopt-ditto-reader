@@ -72,7 +72,7 @@ class UrbanoptDittoReader(object):
             if k == 'use_reopt' or k == 'number_of_timepoints':
                 continue
             elif not Path(v).is_absolute():
-                data[k] = Path(self.module_path) / v
+                data[k] = str(Path(self.module_path) / v)
         return data
 
     def _get_all_voltages(self):
