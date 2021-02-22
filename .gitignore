@@ -135,4 +135,4 @@ dmypy.json
 .DS_Store
 
 # opendss files
-urbanopt_ditto_reader/example/baseline_scenario/opendss
+./example/run/baseline_scenario/opendss/
