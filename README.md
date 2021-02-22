@@ -22,7 +22,7 @@ More detailed documentation is available on the [URBANopt documentation page](ht
 `ditto_reader_cli run-opendss -s <ScenarioFile> -f <FeatureFile>`
 
 ### Or build and use a config file (not necessary if using flags like the above example):
-`ditto_reader_cli run-opendss -c example/config.json`
+`ditto_reader_cli run-opendss -c urbanopt_ditto_reader/example_config.json`
 
 #### If you are using your own config.json file, use the following fields:
 1. "urbanopt_scenario_file": Required, Path to scenario csv file
