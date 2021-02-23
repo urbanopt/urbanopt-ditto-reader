@@ -11,6 +11,8 @@ More detailed documentation is available on the [URBANopt documentation page](ht
 
 # Running the converter
 
+You are expected to have an existing URBANopt project dir with successful simulations of electrical network components before using this package.
+
 ## Use the included Command Line Interface:
 
 `ditto_reader_cli -h`
