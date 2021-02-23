@@ -44,11 +44,11 @@ class UrbanoptDittoReader(object):
 
         print("CONFIGS used: {}".format(config))
 
-        self.geojson_file = Path(config['urbanopt_geojson_file']).expanduser()
+        self.geojson_file = str(Path(config['urbanopt_geojson_file']).expanduser().resolve())
         self.urbanopt_scenario_name = Path(config['urbanopt_scenario_file']).stem
-        self.urbanopt_scenario = Path(config['urbanopt_scenario_file']).expanduser() / 'run' / self.urbanopt_scenario_name
-        self.equipment_file = Path(config['equipment_file']).expanduser()
-        self.dss_analysis = Path(config['opendss_folder']).expanduser()
+        self.urbanopt_scenario = str(Path(config['urbanopt_scenario_file']).expanduser().parent / 'run' / self.urbanopt_scenario_name)
+        self.equipment_file = str(Path(config['equipment_file']).expanduser().resolve())
+        self.dss_analysis = str(Path(config['opendss_folder']).expanduser().resolve())
         self.use_reopt = config['use_reopt']
         self.number_of_timepoints = None
         if 'number_of_timepoints' in config:
@@ -174,7 +174,15 @@ class UrbanoptDittoReader(object):
 
         model = Store()
 
-        reader = Reader(geojson_file=self.geojson_file, equipment_file=self.equipment_file, load_folder=self.urbanopt_scenario, use_reopt=self.use_reopt, is_timeseries=True, timeseries_location=self.timeseries_location, relative_timeseries_location=os.path.join('..', 'profiles'))
+        reader = Reader(
+            geojson_file=self.geojson_file,
+            equipment_file=self.equipment_file,
+            load_folder=self.urbanopt_scenario,
+            use_reopt=self.use_reopt,
+            is_timeseries=True,
+            timeseries_location=self.timeseries_location,
+            relative_timeseries_location=os.path.join('..', 'profiles')
+        )
         reader.parse(model)
 
         OKGREEN='\033[92m'

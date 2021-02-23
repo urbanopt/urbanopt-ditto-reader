@@ -1,8 +1,8 @@
 {
-    "urbanopt_scenario_file": "urbanopt_ditto_reader/example/baseline_scenario.csv",
+    "urbanopt_scenario_file": "example/baseline_scenario.csv",
     "equipment_file": "urbanopt_ditto_reader/electrical_database.json",
-    "opendss_folder": "urbanopt_ditto_reader/example/run/baseline_scenario/opendss",
-    "urbanopt_geojson_file": "urbanopt_ditto_reader/example/urbanopt_example.json",
+    "opendss_folder": "example/run/baseline_scenario/opendss",
+    "urbanopt_geojson_file": "example/urbanopt_example.json",
     "use_reopt": true,
     "number_of_timepoints": 10
 }
