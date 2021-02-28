@@ -60,14 +60,14 @@ def cli():
 @click.option(
     "-b",
     "--start_time",
-    type=int,
+    type=str,
     default="2019/01/01 01:00:00",
     help="Beginning timestamp of simulation."
 )
 @click.option(
     "-e",
     "--end_time",
-    type=int,
+    type=str,
     default="2019/12/31 23:00:00",
     help="Ending timestamp of simulation"
 )
