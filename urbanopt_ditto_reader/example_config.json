@@ -4,5 +4,6 @@
     "opendss_folder": "example/run/baseline_scenario/opendss",
     "urbanopt_geojson_file": "example/urbanopt_example.json",
     "use_reopt": true,
-    "number_of_timepoints": 10
+    "start_time": "2019/01/15 01:00:00",
+    "end_time": "2019/01/16 01:00:00"
 }

@@ -32,7 +32,8 @@ You are expected to have an existing URBANopt project dir with successful simula
 1. "equipment_file": Optional, Path to custom equipment file
 1. "opendss_folder": Required, Path to dir created by this command, holding openDSS output
 1. "use_reopt": Required, Boolean (True/False) to analyze reopt data, if it has been provided
-1. "number_of_timepoints": Required, Integer number of hours to simulate. 8760 is a complete year
+1. "start_time": Required, String timestamp of the start time of the simulation. Uses format "YYYY/MM/DD HH:MM:SS". Cross referenced with the timestamps in the SCENARIO_NAME/opendss/profiles/timestamps.csv file
+1. "end_time": Required, String timestamp of the end time of the simulation. Uses format "YYYY/MM/DD HH:MM:SS". Cross referenced with the timestamps in the SCENARIO_NAME/opendss/profiles/timestamps.csv file
 
 # Developer installation
 

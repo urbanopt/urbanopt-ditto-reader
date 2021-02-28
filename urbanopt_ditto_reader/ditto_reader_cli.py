@@ -58,11 +58,18 @@ def cli():
     help="Path to optional custom equipment file"
 )
 @click.option(
-    "-t",
-    "--time_points",
+    "-b",
+    "--start_time",
     type=int,
-    default=10,
-    help="Number of hours to analyze. 8760 hours per year"
+    default="2019/01/01 01:00:00",
+    help="Beginning timestamp of simulation."
+)
+@click.option(
+    "-e",
+    "--end_time",
+    type=int,
+    default="2019/12/31 23:00:00",
+    help="Ending timestamp of simulation"
 )
 @click.option(
     '-r',
@@ -76,7 +83,7 @@ def cli():
     type=click.Path(exists=True, file_okay=True, dir_okay=False, resolve_path=True),
     help="Path to a json config file for all settings"
 )
-def run_opendss(scenario_file, feature_file, equipment, time_points, reopt, config):
+def run_opendss(scenario_file, feature_file, equipment, start_time, end_time, reopt, config):
     """
     \b
     Run OpenDSS on an existing URBANopt scenario.
@@ -86,7 +93,8 @@ def run_opendss(scenario_file, feature_file, equipment, time_points, reopt, conf
     :param scenario_file: Path, location and name of scenario csv file
     :param feature_file: Path, location & name of feature json file
     :param equipment: Path, location and name of custom equipment file
-    :param time_points: Int, number of hours in opendss analysis
+    :param start_time: String, start timestamp of simulation
+    :param end_time: String, end timestamp of simulation
     :param reopt: Boolean, flag to specify that reopt data is present and OpenDSS analysis should include it
     :param config: Path, location of config file specifying input options for OpenDSS
     """
@@ -104,7 +112,8 @@ def run_opendss(scenario_file, feature_file, equipment, time_points, reopt, conf
                 'urbanopt_geojson_file': feature_file,
                 'use_reopt': reopt,
                 'opendss_folder': scenario_dir / 'opendss',
-                'number_of_timepoints': time_points
+                'start_time': start_time,
+                'end_time': end_time
                 }
             if equipment:
                 config_dict['equipment_file'] = equipment
