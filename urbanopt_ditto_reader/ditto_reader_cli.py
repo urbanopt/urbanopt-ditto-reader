@@ -58,12 +58,27 @@ def cli():
     help="Path to optional custom equipment file"
 )
 @click.option(
-    "-t",
-    "--time_points",
-    type=int,
-    default=10,
-    help="Number of hours to analyze. 8760 hours per year"
+    "-b",
+    "--start_time",
+    type=str,
+    default=None,
+    help="Beginning timestamp of simulation. If invalid or None, all timepoints will be run"
 )
+@click.option(
+    "-e",
+    "--end_time",
+    type=str,
+    default=None,
+    help="Ending timestamp of simulation. If invalid or None, all timepoints will be run"
+)
+@click.option(
+    "-t",
+    "--timestep",
+    type=float,
+    default=None,
+    help="Interval between simulations in minutes."
+)
+
 @click.option(
     '-r',
     '--reopt',
@@ -76,7 +91,7 @@ def cli():
     type=click.Path(exists=True, file_okay=True, dir_okay=False, resolve_path=True),
     help="Path to a json config file for all settings"
 )
-def run_opendss(scenario_file, feature_file, equipment, time_points, reopt, config):
+def run_opendss(scenario_file, feature_file, equipment, start_time, end_time, timestep, reopt, config):
     """
     \b
     Run OpenDSS on an existing URBANopt scenario.
@@ -86,7 +101,9 @@ def run_opendss(scenario_file, feature_file, equipment, time_points, reopt, conf
     :param scenario_file: Path, location and name of scenario csv file
     :param feature_file: Path, location & name of feature json file
     :param equipment: Path, location and name of custom equipment file
-    :param time_points: Int, number of hours in opendss analysis
+    :param start_time: String, timestamp of the start time of the simulation. Uses format "YYYY/MM/DD HH:MM:SS". Cross referenced with the timestamps in the SCENARIO_NAME/opendss/profiles/timestamps.csv file created from profiles in SCENARIO_NAME/FEATURE_ID/feature_reports/feature_report_reopt.csv if use_reopt is true and SCENARIO_NAME/FEATURE_ID/feature_reports/default_feature_report.csv if use_reopt is false. It runs the entire year if timestep not found.
+    :param end_time: String, timestamp of the end time of the simulation. Uses format "YYYY/MM/DD HH:MM:SS". Cross referenced with the timestamps in the SCENARIO_NAME/opendss/profiles/timestamps.csv file created from profiles in SCENARIO_NAME/FEATURE_ID/feature_reports/feature_report_reopt.csv if use_reopt is true and SCENARIO_NAME/FEATURE_ID/feature_reports/default_feature_report.csv if use_reopt is false. It runs the entire year if timestep not found.
+    :param timestep: Float, number of minutes between each simulation. If larger than timesteps provided by the reopt feature reports (if use_repot is true), or urbanopt feature reports (if use_reopt is false), an error is raised
     :param reopt: Boolean, flag to specify that reopt data is present and OpenDSS analysis should include it
     :param config: Path, location of config file specifying input options for OpenDSS
     """
@@ -104,7 +121,9 @@ def run_opendss(scenario_file, feature_file, equipment, time_points, reopt, conf
                 'urbanopt_geojson_file': feature_file,
                 'use_reopt': reopt,
                 'opendss_folder': scenario_dir / 'opendss',
-                'number_of_timepoints': time_points
+                'start_time': start_time,
+                'end_time': end_time,
+                'timestep': timestep
                 }
             if equipment:
                 config_dict['equipment_file'] = equipment

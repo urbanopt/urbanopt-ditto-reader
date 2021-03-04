@@ -50,12 +50,17 @@ class UrbanoptDittoReader(object):
         self.equipment_file = str(Path(config['equipment_file']).expanduser().resolve())
         self.dss_analysis = str(Path(config['opendss_folder']).expanduser().resolve())
         self.use_reopt = config['use_reopt']
-        self.number_of_timepoints = None
-        if 'number_of_timepoints' in config:
-            try:
-                self.number_of_timepoints = int(config['number_of_timepoints'])
-            except:
-                raise IOError("Attribute 'number_of_timeponts' should be an integer")
+        self.start_time = None
+        self.end_time = None
+        self.timestep = None
+        if 'timestep' in config:
+            self.timestep = config['timestep']
+        if 'start_time' in config and 'end_time' in config:
+            self.start_time = str(config['start_time'])
+            self.end_time = str(config['end_time'])
+        else:
+            print('No start_time and end_time provided. Running all timepoints')
+
 
         self.timeseries_location = os.path.join(self.dss_analysis, 'profiles')
 
@@ -69,7 +74,7 @@ class UrbanoptDittoReader(object):
     def fix_paths(self, data):
         """Fix data to be relative path wrt this module"""
         for k, v in data.items():
-            if k == 'use_reopt' or k == 'number_of_timepoints':
+            if k == 'use_reopt' or k == 'start_time' or k == 'end_time' or k == 'timestep':
                 continue
             elif not Path(v).is_absolute():
                 data[k] = str(Path(self.module_path) / v)
@@ -302,23 +307,49 @@ class UrbanoptDittoReader(object):
             if 'properties' in element and 'type' in element['properties'] and 'buildingId' in element['properties'] and element['properties']['type'] == 'ElectricalJunction':
                 building_map[element['properties']['id']] = element['properties']['buildingId']
 
-        if self.number_of_timepoints is not None:
-            print(f'Running for {self.number_of_timepoints} timepoints:')
+        if self.start_time is not None and self.end_time is not None:
+            print(f'Attempting to run from {self.start_time} to {self.end_time}:')
         else:
             print('Running for all timepoints:')
 
-        for i, row in ts.iterrows():
-            time = row['Datetime']
-            if self.number_of_timepoints is not None:
-                if i >= self.number_of_timepoints:
-                    break
-            print('Timepoint',i, flush=True)
-            hour = int(i/(1/interval))
-            seconds = (i % (1/interval))*3600
+        start_index_entry = ts.Datetime[ts.Datetime==self.start_time].index
+        if len(start_index_entry) == 0:
+            print(f'Warning - start time of {self.start_time} not found in timeseries file {os.path.join(self.timeseries_location, "timestamps.csv")}. Running for all times...')
+            start_index = 0
+        if len(start_index_entry) >1:
+            print(f'Warning - start time of {self.start_time} has duplicate entries in timeseries file {os.path.join(self.timeseries_location, "timestamps.csv")}. Running for all times...')
+            start_index = 0
+        if len(start_index_entry) ==1:
+            print(f'Unique starting time of {self.start_time} found')
+            start_index = start_index_entry[0]
+
+        end_index_entry = ts.Datetime[ts.Datetime==self.end_time].index
+        if len(end_index_entry) == 0:
+            print(f'Warning - end time of {self.end_time} not found in timeseries file {os.path.join(self.timeseries_location, "timestamps.csv")}. Running for all times...')
+            end_index = len(ts)
+        if len(end_index_entry) >1:
+            print(f'Warning - end time of {self.end_time} has duplicate entries in timeseries file {os.path.join(self.timeseries_location, "timestamps.csv")}. Running for all times...')
+            end_index = len(ts) 
+        if len(end_index_entry) ==1:
+            print(f'Unique ending time of {self.end_time} found')
+            end_index = end_index_entry[0]+1
+
+        if self.timestep is None or not (isinstance(self.timestep,float) or isinstance(self.timestep,int)):
+            print(f'Using default timestep of {stepsize} minutes')
+            self.timestep = stepsize
+        else:
+            if not self.timestep%stepsize == 0:
+                raise ValueError(f"Timestep {self.timestep} is not a multiple of the loadfile step size of {stepsize}")
+            print(f'Using timestep of {self.timestep} minutes')
+        for i in range(start_index,end_index,int(self.timestep/stepsize)):
+            time = ts.loc[i]['Datetime']
+            print('Timepoint:',time,flush=True)
+            hour = int(i/(1/(self.timestep/60.0)))
+            seconds = (i % (1/(self.timestep/60.0)))*3600
             location = os.path.join(self.dss_analysis, 'dss_files', 'Master.dss')
             dss.run_command("Clear")
             output1 = dss.run_command("Redirect "+location)
-            output2 = dss.run_command("Solve mode=yearly stepsize="+str(stepsize)+"m number=1 hour="+str(hour)+" sec="+str(seconds))
+            output2 = dss.run_command("Solve mode=yearly stepsize="+str(self.timestep)+"m number=1 hour="+str(hour)+" sec="+str(seconds))
             voltages = self._get_all_voltages()
             line_overloads = self._get_line_loading()
             overloaded_xfmrs = self._get_xfmr_overloads()
