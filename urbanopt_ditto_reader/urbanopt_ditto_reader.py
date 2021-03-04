@@ -52,6 +52,9 @@ class UrbanoptDittoReader(object):
         self.use_reopt = config['use_reopt']
         self.start_time = None
         self.end_time = None
+        self.timestep = None
+        if 'timestep' in config:
+            self.timestep = config['timestep']
         if 'start_time' in config and 'end_time' in config:
             self.start_time = str(config['start_time'])
             self.end_time = str(config['end_time'])
@@ -71,7 +74,7 @@ class UrbanoptDittoReader(object):
     def fix_paths(self, data):
         """Fix data to be relative path wrt this module"""
         for k, v in data.items():
-            if k == 'use_reopt' or k == 'start_time' or k == 'end_time':
+            if k == 'use_reopt' or k == 'start_time' or k == 'end_time' or k == 'timestep':
                 continue
             elif not Path(v).is_absolute():
                 data[k] = str(Path(self.module_path) / v)
@@ -331,15 +334,22 @@ class UrbanoptDittoReader(object):
             print(f'Unique ending time of {self.end_time} found')
             end_index = end_index_entry[0]+1
 
-        for i in range(start_index,end_index):
+        if self.timestep is None or not (isinstance(self.timestep,float) or isinstance(self.timestep,int)):
+            print(f'Using default timestep of {stepsize} minutes')
+            self.timestep = stepsize
+        else:
+            if not self.timestep%stepsize == 0:
+                raise ValueError(f"Timestep {self.timestep} is not a multiple of the loadfile step size of {stepsize}")
+            print(f'Using timestep of {self.timestep} minutes')
+        for i in range(start_index,end_index,int(self.timestep/stepsize)):
             time = ts.loc[i]['Datetime']
             print('Timepoint:',time,flush=True)
-            hour = int(i/(1/interval))
-            seconds = (i % (1/interval))*3600
+            hour = int(i/(1/(self.timestep/60.0)))
+            seconds = (i % (1/(self.timestep/60.0)))*3600
             location = os.path.join(self.dss_analysis, 'dss_files', 'Master.dss')
             dss.run_command("Clear")
             output1 = dss.run_command("Redirect "+location)
-            output2 = dss.run_command("Solve mode=yearly stepsize="+str(stepsize)+"m number=1 hour="+str(hour)+" sec="+str(seconds))
+            output2 = dss.run_command("Solve mode=yearly stepsize="+str(self.timestep)+"m number=1 hour="+str(hour)+" sec="+str(seconds))
             voltages = self._get_all_voltages()
             line_overloads = self._get_line_loading()
             overloaded_xfmrs = self._get_xfmr_overloads()

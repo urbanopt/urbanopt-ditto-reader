@@ -32,8 +32,11 @@ You are expected to have an existing URBANopt project dir with successful simula
 1. "equipment_file": Optional, Path to custom equipment file
 1. "opendss_folder": Required, Path to dir created by this command, holding openDSS output
 1. "use_reopt": Required, Boolean (True/False) to analyze reopt data, if it has been provided
-1. "start_time": Required, String timestamp of the start time of the simulation. Uses format "YYYY/MM/DD HH:MM:SS". Cross referenced with the timestamps in the SCENARIO_NAME/opendss/profiles/timestamps.csv file
-1. "end_time": Required, String timestamp of the end time of the simulation. Uses format "YYYY/MM/DD HH:MM:SS". Cross referenced with the timestamps in the SCENARIO_NAME/opendss/profiles/timestamps.csv file
+1. "start_time": Required, String timestamp of the start time of the simulation. Uses format "YYYY/MM/DD HH:MM:SS". Cross referenced with the timestamps in the SCENARIO_NAME/opendss/profiles/timestamps.csv file created from profiles in SCENARIO_NAME/FEATURE_ID/feature_reports/feature_report_reopt.csv if use_reopt is true and SCENARIO_NAME/FEATURE_ID/feature_reports/default_feature_report.csv if use_reopt is false. It runs the entire year if timestep not found.
+1. "end_time": Required, String timestamp of the end time of the simulation. Uses format "YYYY/MM/DD HH:MM:SS". Cross referenced with the timestamps in the SCENARIO_NAME/opendss/profiles/timestamps.csv file created from profiles in SCENARIO_NAME/FEATURE_ID/feature_reports/feature_report_reopt.csv if use_reopt is true and SCENARIO_NAME/FEATURE_ID/feature_reports/default_feature_report.csv if use_reopt is false. It runs the entire year if timestep not found.
+1. "timestep": Optional, Float number of minutes between each simulation. If larger than timesteps provided by the reopt feature reports (if use_repot is true), or urbanopt feature reports (if use_reopt is false), an error is raised
+
+If either start_time and end_time are invalid or set to None, the simulation will be run for all timepoints provided by the reopt simulation (if use_reopt is true) or urbanopt simulation (if use_reopt is false)
 
 # Developer installation
 
