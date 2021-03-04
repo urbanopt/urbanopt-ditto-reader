@@ -61,21 +61,21 @@ def cli():
     "-b",
     "--start_time",
     type=str,
-    default="2019/01/01 00:00:00",
+    default=None,
     help="Beginning timestamp of simulation. If invalid or None, all timepoints will be run"
 )
 @click.option(
     "-e",
     "--end_time",
     type=str,
-    default="2019/12/31 23:00:00",
+    default=None,
     help="Ending timestamp of simulation. If invalid or None, all timepoints will be run"
 )
 @click.option(
     "-t",
     "--timestep",
     type=float,
-    default="60",
+    default=None,
     help="Interval between simulations in minutes."
 )
 

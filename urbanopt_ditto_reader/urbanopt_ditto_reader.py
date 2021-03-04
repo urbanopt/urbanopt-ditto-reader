@@ -59,7 +59,7 @@ class UrbanoptDittoReader(object):
             self.start_time = str(config['start_time'])
             self.end_time = str(config['end_time'])
         else:
-            print('Warning - no start_time and end_time provided. Running all timepoints')
+            print('No start_time and end_time provided. Running all timepoints')
 
 
         self.timeseries_location = os.path.join(self.dss_analysis, 'profiles')
