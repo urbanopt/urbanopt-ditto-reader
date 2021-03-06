@@ -65,7 +65,7 @@ def cli():
     help="Beginning timestamp of simulation. If invalid or None, all timepoints will be run"
 )
 @click.option(
-    "-e",
+    "-n",
     "--end_time",
     type=str,
     default=None,
