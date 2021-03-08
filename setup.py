@@ -32,7 +32,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name="urbanopt-ditto-reader",
-    version="0.3.7",
+    version="0.3.8",
     author="Tarek Elgindy",
     author_email="tarek.elgindy@nrel.gov",
     description="Enhancement of URBANopt GeoJSON that can be consumed by DiTTo reader",
