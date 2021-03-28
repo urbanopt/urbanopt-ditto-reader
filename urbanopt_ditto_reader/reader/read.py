@@ -358,9 +358,10 @@ class Reader(AbstractReader):
         model.set_names()
         network = Network()
         network.build(model,source="source")
+        """
         number_components = nx.number_connected_components(network.graph)
         self.deleted_elements = None
-        if not number_components==1:
+        if not number_components==1 and False:
             updated_model=model
             source_component = None
             c_id = 0
@@ -417,11 +418,13 @@ class Reader(AbstractReader):
             network = Network()
             network.build(model,source="source")
 
+        """
 
         building_map = {}
         for element in self.geojson_content["features"]:
             if 'properties' in element and 'type' in element['properties'] and 'buildingId' in element['properties'] and element['properties']['type'] == 'ElectricalJunction':
                 building_map[element['properties']['buildingId']] = element['properties']['id']
+        disconnected_loads = []
         for element in self.geojson_content["features"]:
             if 'properties' in element and 'type' in element['properties'] and element['properties']['type'] == 'Building':
                 id_value = element['properties']['id']
@@ -431,11 +434,16 @@ class Reader(AbstractReader):
                 connecting_element = building_map[id_value]
                 load = Load(model)
                 load.name = id_value
+                """
                 if self.deleted_elements is not None:
                     while connecting_element in self.deleted_elements:
                         connecting_element = self.deleted_elements[connecting_element]
+                """
                 load.connecting_element = connecting_element
-                upstream_transformer_name = network.get_upstream_transformer(model,connecting_element)
+                try:
+                    upstream_transformer_name = network.get_upstream_transformer(model,connecting_element)
+                except:
+                    disconnected_loads.append(element['properties']['id']) #Caused by elements not being connected
                 if upstream_transformer_name is not None:
                     upstream_transformer = model[upstream_transformer_name]
                     is_center_tap = upstream_transformer.is_center_tap
@@ -501,6 +509,9 @@ class Reader(AbstractReader):
                     print('Load information missing for '+id_value,flush=True)
 
 
+        if len(disconnected_loads) > 1:
+            all_disconnected = ','.join(disconnected_loads)
+            raise ValueError('The following loads have connection problems: '+all_disconnected)
         return 1
 
 
