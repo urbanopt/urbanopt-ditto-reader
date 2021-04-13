@@ -476,8 +476,8 @@ class Reader(AbstractReader):
                         phase_load = PhaseLoad(model)
                         phase_load.phase = phase
                         power_factor = 0.95
-                        phase_load.p = max_load/len(phases)
-                        phase_load.q = phase_load.p * ((1/power_factor-1)**0.5)
+                        phase_load.p = max_load/len(phases) * 1000
+                        phase_load.q = phase_load.p * ((1/power_factor-1)**0.5) * 1000
                         phase_loads.append(phase_load)
                     load.phase_loads = phase_loads
                     if self.is_timeseries:
@@ -511,7 +511,8 @@ class Reader(AbstractReader):
 
         if len(disconnected_loads) > 1:
             all_disconnected = ','.join(disconnected_loads)
-            raise ValueError('The following loads have connection problems: '+all_disconnected)
+            #raise ValueError('The following loads have connection problems: '+all_disconnected)
+            print('The following loads have connection problems: '+all_disconnected)
         return 1
 
 
