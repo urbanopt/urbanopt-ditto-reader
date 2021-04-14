@@ -61,6 +61,10 @@ class UrbanoptDittoReader(object):
         else:
             print('No start_time and end_time provided. Running all timepoints')
 
+        self.upgrade_transformers = False
+        if 'upgrade_transformers' in config:
+            self.upgrade_transformers = config['upgrade_transformers']
+
 
         self.timeseries_location = os.path.join(self.dss_analysis, 'profiles')
 
@@ -74,7 +78,7 @@ class UrbanoptDittoReader(object):
     def fix_paths(self, data):
         """Fix data to be relative path wrt this module"""
         for k, v in data.items():
-            if k == 'use_reopt' or k == 'start_time' or k == 'end_time' or k == 'timestep':
+            if k == 'use_reopt' or k == 'start_time' or k == 'end_time' or k == 'timestep' or k == 'upgrade_transformers':
                 continue
             elif not Path(v).is_absolute():
                 data[k] = str(Path(self.module_path) / v)
@@ -176,6 +180,7 @@ class UrbanoptDittoReader(object):
         from ditto.consistency.check_transformer_phase_path import check_transformer_phase_path
 
         from ditto.consistency.fix_transformer_phase_path import fix_transformer_phase_path
+        from ditto.consistency.fix_undersized_transformers import fix_undersized_transformers
 
         model = Store()
 
@@ -267,6 +272,9 @@ class UrbanoptDittoReader(object):
             print('Result:', f'{color} {result} {ENDC}')
             print()
 
+        if self.upgrade_transformers:
+            print('Upgrading undersized transformers:',flush=True)
+            fix_undersized_transformers(model,verbose=True)
 
 
         if not final_pass:
