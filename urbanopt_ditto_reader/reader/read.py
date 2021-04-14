@@ -452,6 +452,7 @@ class Reader(AbstractReader):
                     print(f'Warning - Load {load.name} is incorrectly connected',flush=True)
 
                 load_path = os.path.join(self.load_folder,id_value,'feature_reports')
+                load_multiplier = 1000
                 if os.path.exists(load_path): #We've found the load data
 
                     load_data = None
@@ -462,6 +463,11 @@ class Reader(AbstractReader):
                     else:
                         load_data = pd.read_csv(os.path.join(load_path,'default_feature_report.csv'),header=0)
                         load_column = 'Net Power(kW)'
+                        if not load_column in load_data:
+                            load_column = 'Net Power(W)'
+                            load_multiplier = 1
+                        if not load_column in load_data:
+                            raise ValueError("Neither of the columns 'Net Power(W)' or 'Net Power(kW)' found in default_feature_report.csv'")
                     max_load = max(load_data[load_column])
 
                     phases = []
@@ -476,8 +482,8 @@ class Reader(AbstractReader):
                         phase_load = PhaseLoad(model)
                         phase_load.phase = phase
                         power_factor = 0.95
-                        phase_load.p = max_load/len(phases) * 1000
-                        phase_load.q = phase_load.p * ((1/power_factor-1)**0.5) * 1000
+                        phase_load.p = max_load/len(phases) * load_multiplier
+                        phase_load.q = phase_load.p * ((1/power_factor-1)**0.5) 
                         phase_loads.append(phase_load)
                     load.phase_loads = phase_loads
                     if self.is_timeseries:
