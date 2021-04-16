@@ -65,7 +65,31 @@
 			"low_voltage": 0.48,
 			"is_center_tap": false,
 			"connection": "Wye-Wye"
+		},
+                {
+			"nameclass": "Transformer--150KVA PM",
+			"kva": 150,
+			"resistance": 0.1,
+			"reactance": 0.1,
+			"phases": ["A","B","C"],
+			"high_voltage": 13.2,
+			"low_voltage": 0.48,
+			"is_center_tap": false,
+			"connection": "Wye-Wye"
+		},
+                {
+			"nameclass": "Transformer--300KVA PM",
+			"kva": 300,
+			"resistance": 0.1,
+			"reactance": 0.1,
+			"phases": ["A","B","C"],
+			"high_voltage": 13.2,
+			"low_voltage": 0.48,
+			"is_center_tap": false,
+			"connection": "Wye-Wye"
 		}
+
+
 	],
     "capacitor_properties": [
 		{
@@ -248,6 +272,37 @@
 			"resistance": 0.000393701,
 			"diameter": 0.0101
 		},
+                {
+			"nameclass": "UG TPLX 1/0 S1",
+			"height": -6,
+			"x": 0,
+			"phase": "A",
+			"ampacity": 200,
+			"gmr":0.0039,
+			"resistance": 0.000393701,
+			"diameter": 0.0101
+		},
+		{
+			"nameclass": "UG TPLX 1/0 S2",
+			"height": -6,
+			"x": 0.5,
+			"phase": "B",
+			"ampacity": 200,
+			"gmr":0.0039,
+			"resistance": 0.000393701,
+			"diameter": 0.0101
+		},
+		{
+			"nameclass": "UG TPLX 1/0 N",
+			"height": -6,
+			"x": 1,
+			"phase": "N",
+			"ampacity": 200,
+			"gmr":0.0039,
+			"resistance": 0.000393701,
+			"diameter": 0.0101
+		},
+
 		{
 			"nameclass": "UG TPLX 1/0 A",
 			"height": -6,
@@ -277,7 +332,48 @@
 			"gmr":0.0039,
 			"resistance": 0.000393701,
 			"diameter": 0.0101
+		},
+                {
+			"nameclass": "UG AL 1/0 A",
+			"height": -6,
+			"x": 0,
+			"phase": "A",
+			"ampacity": 200,
+			"gmr":0.0039,
+			"resistance": 0.000393701,
+			"diameter": 0.0101
+		},
+                {
+			"nameclass": "UG AL 1/0 B",
+			"height": -6,
+			"x": 0.5,
+			"phase": "B",
+			"ampacity": 200,
+			"gmr":0.0039,
+			"resistance": 0.000393701,
+			"diameter": 0.0101
+		},
+                {
+			"nameclass": "UG AL 1/0 C",
+			"height": -6,
+			"x": 1,
+			"phase": "C",
+			"ampacity": 200,
+			"gmr":0.0039,
+			"resistance": 0.000393701,
+			"diameter": 0.0101
+		},
+                {
+			"nameclass": "UG AL 1/0 N",
+			"height": -6,
+			"x": 1.5,
+			"phase": "N",
+			"ampacity": 200,
+			"gmr":0.0039,
+			"resistance": 0.000393701,
+			"diameter": 0.0101
 		}
+
 	]
 
 }
