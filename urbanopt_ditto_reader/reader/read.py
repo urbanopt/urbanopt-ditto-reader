@@ -178,8 +178,10 @@ class Reader(AbstractReader):
                     continue
 
                 for wire_type in element['properties']['wires']:
+                    found_wire = False
                     for db_wire in self.equipment_data['wires']:
                         if db_wire['nameclass'] == wire_type:
+                            found_wire = True
                             wire = Wire(model)
                             wire.nameclass = wire_type.replace(' ','_').replace('/','-')
                             if 'OH' in wire_type:
@@ -199,6 +201,8 @@ class Reader(AbstractReader):
                             wire.X = float(db_wire['x'])*0.3048
                             wire.Y = float(db_wire['height'])*0.3048
                             all_wires.append(wire)
+                    if not found_wire:
+                        raise ValueError(f'No wire found in catalog for {wire_type}')
                 line.wires = all_wires
 
 
@@ -293,8 +297,10 @@ class Reader(AbstractReader):
                     if len(transformer_panel_map[transformer_id]) >2:
                         print("Warning - the transformer "+transformer_id+" should have a from and to element - "+str(len(transformer_panel_map[transformer_id]))+" junctions on the transformer")
                     if len(transformer_panel_map[transformer_id]) >=2:
+                        found_transfomer = False
                         for db_transformer in self.equipment_data['transformer_properties']:
                             if element['properties']['equipment'][0] == db_transformer['nameclass']:
+                                found_transfomer = True
                                 transformer.from_element = transformer_panel_map[transformer_id][0]
                                 transformer.to_element = transformer_panel_map[transformer_id][1] #NOTE: Need to figure out correct from and to directions here.
                                 transformer.name = transformer_id
@@ -334,6 +340,8 @@ class Reader(AbstractReader):
                                         windings[i].voltage_type = 1
                                         windings[i].resistance = float(db_transformer['resistance'])
                                 transformer.windings = windings
+                        if not found_transfomer:
+                            raise ValueError(f'No transfomer found in catalog for {element["properties"]["equipment"][0]}')
 
 
         return 1
@@ -440,6 +448,7 @@ class Reader(AbstractReader):
                         connecting_element = self.deleted_elements[connecting_element]
                 """
                 load.connecting_element = connecting_element
+                upstream_transformer_name = None
                 try:
                     upstream_transformer_name = network.get_upstream_transformer(model,connecting_element)
                 except:
