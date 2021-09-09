@@ -246,13 +246,13 @@ class Reader(AbstractReader):
                 node = Node(model)
                 node.name = element['properties']['id']
                 if node.name in self.substations:
-                    node.nominal_voltage = 13200
+                    node.nominal_voltage = 13200 #placeholder voltage
                     node.is_substation_connection = True
                     node.setpoint = 1.0
                     node.name = 'source'
                     meta = Feeder_metadata(model)
                     meta.headnode = 'source'
-                    meta.nominal_voltage = 13200
+                    meta.nominal_voltage = 13200 #placeholder voltage
                     meta.name = 'urbanopt-feeder'
                     powersource = PowerSource(model)
                     powersource.is_sourcebus = True
@@ -287,6 +287,7 @@ class Reader(AbstractReader):
                 else:
                     transformer_panel_map[element['properties']['DSId']] = [element['properties']['id']]
 
+        source_voltages = set() 
         for element in self.geojson_content["features"]:
             if 'properties' in element and 'district_system_type' in element['properties'] and element['properties']['district_system_type'] == 'Transformer':
                 transformer_id = element['properties']['id']
@@ -329,6 +330,7 @@ class Reader(AbstractReader):
                                     windings[i].rated_power = float(db_transformer['kva'])*1000
                                     if i<1:
                                         windings[i].nominal_voltage = float(db_transformer['high_voltage'])*1000
+                                        source_voltages.add(windings[i].nominal_voltage)
                                         if transformer.is_center_tap:
                                             windings[i].nominal_voltage = windings[i].nominal_voltage/(3**0.5)
                                         windings[i].connection_type = connection_map[connections[0]]
@@ -344,6 +346,16 @@ class Reader(AbstractReader):
                             raise ValueError(f'No transfomer found in catalog for {element["properties"]["equipment"][0]}')
 
 
+        # Note that the source voltage is set to be the highest side of a transformer that is used
+        if len(source_voltages) == 1:
+            source_voltage = source_voltage.pop()
+            model.set_names()
+            model['source'].nominal_voltage = source_voltage
+            model['ps_source'].nominal_voltage = source_voltage
+            model['urbanopt-feeder'].nominal_voltage = source_voltage
+
+        else:
+            raise ValueError('Problem setting source voltage. No high transformer values or non-unique high side voltages. Using defaul of 13.2kV')
         return 1
 
     def parse_capacitors(self, model, **kwargs):
