@@ -348,7 +348,7 @@ class Reader(AbstractReader):
 
         # Note that the source voltage is set to be the highest side of a transformer that is used
         if len(source_voltages) == 1:
-            source_voltage = source_voltage.pop()
+            source_voltage = source_voltages.pop()
             model.set_names()
             model['source'].nominal_voltage = source_voltage
             model['ps_source'].nominal_voltage = source_voltage
