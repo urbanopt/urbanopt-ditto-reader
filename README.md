@@ -50,3 +50,14 @@ Change directories into the repository:
 Install the respository:
 
 `pip install -e .`
+
+
+## Publish Package
+
+- update version in setup.py
+- make a release on GitHub
+- make the package: `python setup.py sdist`
+- install twine `pip install twice`
+- upload to pypi: `twine upload dist/*`
+
+
