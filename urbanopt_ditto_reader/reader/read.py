@@ -354,6 +354,9 @@ class Reader(AbstractReader):
             model['ps_source'].nominal_voltage = source_voltage
             model['urbanopt-feeder'].nominal_voltage = source_voltage
 
+        elif len(source_voltages) == 0:
+            # no transformers in this model
+            pass
         else:
             raise ValueError('Problem setting source voltage. No high transformer values or non-unique high side voltages. Using defaul of 13.2kV')
         return 1
@@ -413,7 +416,8 @@ class Reader(AbstractReader):
                     load_data = None
                     load_column = None
                     if self.use_reopt:
-                        load_data = pd.read_csv(os.path.join(load_path,'feature_report_reopt.csv'),header=0)
+                        #load_data = pd.read_csv(os.path.join(load_path,'feature_report_reopt.csv'),header=0)
+                        load_data = pd.read_csv(os.path.join(load_path,'feature_optimization.csv'),header=0)
                         load_column = 'REopt:Electricity:Load:Total(kw)'
                     else:
                         load_data = pd.read_csv(os.path.join(load_path,'default_feature_report.csv'),header=0)
@@ -501,7 +505,8 @@ class Reader(AbstractReader):
                     continue
                 connecting_element = building_map[id_value]
                 try:
-                    feature_data = self.get_feature_data(os.path.join(self.load_folder,id_value,'feature_reports','feature_report_reopt.json'))
+                #    feature_data = self.get_feature_data(os.path.join(self.load_folder,id_value,'feature_reports','feature_report_reopt.json'))
+                    feature_data = self.get_feature_data(os.path.join(self.load_folder,id_value,'feature_reports','feature_optimization.json'))
                 except Exception as e:
                     print(e)
                     continue
@@ -526,10 +531,10 @@ class Reader(AbstractReader):
                         if is_center_tap:
                             phases = [Unicode('A'),Unicode('B')]
                         pv.phases = phases
-                    pv.rated_power = pv_kw
-                    pv.active_rating = 1.1*pv_kw # Should make this a parameter instead
+                    pv.rated_power = pv_kw *1000 #(stored in watts in ditto)
+                    pv.active_rating = 1.1*pv_kw *1000 # Should make this a parameter instead
                     if self.is_timeseries:
-                        load_data = pd.read_csv(os.path.join(self.load_folder,id_value,'feature_reports','feature_report_reopt.csv'),header=0)
+                        load_data = pd.read_csv(os.path.join(self.load_folder,id_value,'feature_reports','feature_optimization.csv'),header=0)
                         data = load_data['REopt:ElectricityProduced:PV:Total(kw)']
                         timestamps = load_data['Datetime']
                         delta = datetime.datetime.strptime(timestamps.loc[1],'%Y/%m/%d %H:%M:%S') - datetime.datetime.strptime(timestamps.loc[0],'%Y/%m/%d %H:%M:%S')
@@ -545,7 +550,7 @@ class Reader(AbstractReader):
                             timeseries.interval = delta.seconds/3600.0
                             timeseries.data_type = 'float'
                             timeseries.data_location = os.path.join(self.relative_timeseries_location,'pv_'+id_value+'_pu.csv')
-                            timeseries.data_label = 'feature_'+id_value
+                            timeseries.data_label = 'pv_feature_'+id_value
                             timeseries.scale_factor = 1
                             pv.timeseries = [timeseries]
 

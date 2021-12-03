@@ -1,10 +1,11 @@
 {
-    "urbanopt_scenario_file": "example/baseline_scenario.csv",
+    "urbanopt_scenario_file": "example/baseline_new_scenario.csv",
     "equipment_file": "urbanopt_ditto_reader/electrical_database.json",
-    "opendss_folder": "example/run/baseline_scenario/opendss",
-    "urbanopt_geojson_file": "example/urbanopt_example.json",
-    "use_reopt": true,
-    "start_time": "2019/01/15 01:00:00",
-    "end_time": "2019/01/16 01:00:00",
-    "timestep": 120 
+    "opendss_folder": "example/run/baseline_new_scenario/opendss",
+    "urbanopt_geojson_file": "example/geojson_elec_dist_rk_fixed_6.json",
+    "use_reopt": false,
+    "start_time": "2019/09/01 01:00:00",
+    "end_time": "2019/09/02 01:00:00",
+    "timestep": 60,
+    "upgrade_transformers": true
 }
