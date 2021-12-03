@@ -57,7 +57,7 @@ Install the respository:
 - update version in setup.py
 - make a release on GitHub
 - make the package: `python setup.py sdist`
-- install twine `pip install twice`
+- install twine `pip install twine`
 - upload to pypi: `twine upload dist/*`
 
 

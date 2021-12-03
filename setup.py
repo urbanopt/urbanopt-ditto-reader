@@ -24,15 +24,14 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 from setuptools import setup, find_packages
 
-with open('requirements.txt') as f:
-    requirements = f.read().splitlines()
+requirements = ["ditto.py>=0.2.3","opendssdirect.py>=0.6.1","pandas"]
 
 with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 setup(
     name="urbanopt-ditto-reader",
-    version="0.3.12",
+    version="0.3.13",
     author="Tarek Elgindy",
     author_email="tarek.elgindy@nrel.gov",
     description="Enhancement of URBANopt GeoJSON that can be consumed by DiTTo reader",
