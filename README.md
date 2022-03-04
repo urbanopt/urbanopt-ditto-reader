@@ -40,14 +40,15 @@ The start_date and
    file that is cross referenced with the timestamps in the
    SCENARIO_NAME/opendss/profiles/timestamps.csv file created from profiles in
    SCENARIO_NAME/FEATURE_ID/feature_reports/feature_report_reopt.csv if use_reopt is true and
-   SCENARIO_NAME/FEATURE_ID/feature_reports/default_feature_report.csv if use_reopt is false. It runs the entire year if timestep not found.
+   SCENARIO_NAME/FEATURE_ID/feature_reports/default_feature_report.csv if use_reopt is false. It assumes start_time to be 00:00:00 if start_date is found but no
+    start_time. It runs the entire year if timestamp not found.
 1. "end_date": Optional, String, Indicates the end date of the simulation. Uses format "YYYY/MM/DD"
 1. "end_time": Optional, String, Indicates the end time of the simulation. Uses format "HH:MM:SS".
    The end_date and end_time are aggregate to get the timestamp using format (using format
    "YYYY/MM/DD HH:MM:SS") for the config file and is cross referenced with the timestamps in the
    SCENARIO_NAME/opendss/profiles/timestamps.csv file created from profiles in
    SCENARIO_NAME/FEATURE_ID/feature_reports/feature_report_reopt.csv if use_reopt is true and
-   SCENARIO_NAME/FEATURE_ID/feature_reports/default_feature_report.csv if use_reopt is false. It runs the entire year if timestep not found.
+   SCENARIO_NAME/FEATURE_ID/feature_reports/default_feature_report.csv if use_reopt is false. It runs the entire year if timestamp not found.
 1. "timestep": Optional, Float number of minutes between each simulation. If smaller than timesteps (or not an even multiple) provided by the reopt feature reports (if use_repot is true), or urbanopt feature reports (if use_reopt is false), an error is raised
 1. "upgrade_transformers": Optional, Boolean (True/False). If true, will automatically upgrade transformers that are sized smaller than the sum of the peak loads that it serves. Does not update geojson file - just opendss output files
 
