@@ -62,7 +62,7 @@ def cli():
     "--start_date",
     type=str,
     default=None,
-    help="Beginning date of simulation. If invalid or None, all timepoints will be run"
+    help="Beginning date of simulation. Uses format 'YYYY/MM/DD'. If invalid or None, all timepoints will be run"
 )
 @click.option(
     "-b",
