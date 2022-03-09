@@ -58,18 +58,32 @@ def cli():
     help="Path to optional custom equipment file"
 )
 @click.option(
+    "-a",
+    "--start_date",
+    type=str,
+    default=None,
+    help="Beginning date of simulation. Uses format 'YYYY/MM/DD'. If invalid or None, all timepoints will be run"
+)
+@click.option(
     "-b",
     "--start_time",
     type=str,
     default=None,
-    help="Beginning timestamp of simulation. If invalid or None, all timepoints will be run"
+    help="Beginning timestamp of simulation. Uses format 'HH:MM:SS' If invalid or None, all timepoints will be run"
 )
 @click.option(
     "-n",
+    "--end_date",
+    type=str,
+    default=None,
+    help="Ending date of simulation. Uses format 'YYYY/MM/DD'. If invalid or None, all timepoints will be run"
+)
+@click.option(
+    "-d",
     "--end_time",
     type=str,
     default=None,
-    help="Ending timestamp of simulation. If invalid or None, all timepoints will be run"
+    help="Ending timestamp of simulation. Uses format 'HH/MM/SS'. If invalid or None, all timepoints will be run"
 )
 @click.option(
     "-t",
@@ -98,7 +112,7 @@ def cli():
     help="Flag to automatically upgrade transformers if undersized"
 )
 
-def run_opendss(scenario_file, feature_file, equipment, start_time, end_time, timestep, reopt, config, upgrade):
+def run_opendss(scenario_file, feature_file, equipment, start_date, start_time, end_date, end_time, timestep, reopt, config, upgrade):
     """
     \b
     Run OpenDSS on an existing URBANopt scenario.
@@ -108,8 +122,22 @@ def run_opendss(scenario_file, feature_file, equipment, start_time, end_time, ti
     :param scenario_file: Path, location and name of scenario csv file
     :param feature_file: Path, location & name of feature json file
     :param equipment: Path, location and name of custom equipment file
-    :param start_time: String, timestamp of the start time of the simulation. Uses format "YYYY/MM/DD HH:MM:SS". Cross referenced with the timestamps in the SCENARIO_NAME/opendss/profiles/timestamps.csv file created from profiles in SCENARIO_NAME/FEATURE_ID/feature_reports/feature_report_reopt.csv if use_reopt is true and SCENARIO_NAME/FEATURE_ID/feature_reports/default_feature_report.csv if use_reopt is false. It runs the entire year if timestep not found.
-    :param end_time: String, timestamp of the end time of the simulation. Uses format "YYYY/MM/DD HH:MM:SS". Cross referenced with the timestamps in the SCENARIO_NAME/opendss/profiles/timestamps.csv file created from profiles in SCENARIO_NAME/FEATURE_ID/feature_reports/feature_report_reopt.csv if use_reopt is true and SCENARIO_NAME/FEATURE_ID/feature_reports/default_feature_report.csv if use_reopt is false. It runs the entire year if timestep not found.
+    :param start_date: String, date of the start of simulation. Uses format "YYYY/MM/DD"
+    :param start_time: String, start time of the simulation. Uses format "HH:MM:SS". The start_date
+    and start_time are aggregate to get the timestamp (using format "YYYY/MM/DD HH:MM:SS") for the config file and is cross referenced with the timestamps in the SCENARIO_NAME/opendss/profiles/timestamps.csv
+    file created from profiles in SCENARIO_NAME/FEATURE_ID/feature_reports/feature_report_reopt.csv
+    if use_reopt is true and SCENARIO_NAME/FEATURE_ID/feature_reports/default_feature_report.csv if
+    use_reopt is false. It assumes start_time to be 00:00:00 if start_date is found but no
+    start_time. It runs the entire year if timestamp is not found.
+    :param end_date: String, date of the end of simulation. Uses format "YYYY/MM/DD"
+    :param end_time: String, end time of the simulation. Uses format "HH:MM:SS". The end_date
+    and end_time are aggregate to get the timestamp using format (using format "YYYY/MM/DD
+    HH:MM:SS") for the config file and is cross referenced with the timestamps in the
+    SCENARIO_NAME/opendss/profiles/timestamps.csv file created from profiles in
+    SCENARIO_NAME/FEATURE_ID/feature_reports/feature_report_reopt.csv if use_reopt is true and
+    SCENARIO_NAME/FEATURE_ID/feature_reports/default_feature_report.csv if use_reopt is false.  It assumes end_time to be 23:00:00 if end_date is found but no
+    end_time. It
+    runs the entire year if timestamp is not found.
     :param timestep: Float, number of minutes between each simulation. If larger than timesteps provided by the reopt feature reports (if use_repot is true), or urbanopt feature reports (if use_reopt is false), an error is raised
     :param reopt: Boolean, flag to specify that reopt data is present and OpenDSS analysis should include it
     :param upgrade: Boolean, flag to automatically ugrade transformers that are smaller than the sum of the peak loads that they serve.
@@ -124,13 +152,28 @@ def run_opendss(scenario_file, feature_file, equipment, start_time, end_time, ti
             scenario_name = Path(scenario_file).stem
             scenario_dir = Path(scenario_file).parent / "run" / scenario_name
 
+            if start_date and start_time:
+                start_date_time = start_date + " " + start_time
+            elif start_date and start_time is None:
+                start_date_time = start_date + " 00:00:00"
+            elif start_date is None or start_time is None:
+                start_date_time = None
+
+            if end_date and end_time:
+                end_date_time = end_date + " " + end_time
+            elif end_date and end_time is None:
+                end_date_time = end_date + " 23:00:00"
+            elif end_date is None or end_time is None:
+                end_date_time = None
+
+
             config_dict = {
                 'urbanopt_scenario_file': scenario_file,
                 'urbanopt_geojson_file': feature_file,
                 'use_reopt': reopt,
                 'opendss_folder': scenario_dir / 'opendss',
-                'start_time': start_time,
-                'end_time': end_time,
+                'start_time': start_date_time,
+                'end_time': end_date_time,
                 'timestep': timestep,
                 'upgrade_transformers': upgrade
                 }
