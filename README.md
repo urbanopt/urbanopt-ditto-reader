@@ -36,7 +36,7 @@ You are expected to have an existing URBANopt project dir with successful simula
 1. "start_time": Optional, String, Indicates the start time of the simulation. Uses format
    "HH:MM:SS". 
 The start_date and
-   start_time are aggregate to get the timestamp (using format "YYYY/MM/DD HH:MM:SS") for the config
+   start_time are concatenated to get the timestamp (using format "YYYY/MM/DD HH:MM:SS") for the config
    file that is cross referenced with the timestamps in the
    SCENARIO_NAME/opendss/profiles/timestamps.csv file created from profiles in
    SCENARIO_NAME/FEATURE_ID/feature_reports/feature_report_reopt.csv if use_reopt is true and
