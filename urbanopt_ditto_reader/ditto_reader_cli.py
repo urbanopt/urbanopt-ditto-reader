@@ -69,7 +69,7 @@ def cli():
     "--start_time",
     type=str,
     default=None,
-    help="Beginning timestamp of simulation. If invalid or None, all timepoints will be run"
+    help="Beginning timestamp of simulation. Uses format 'HH:MM:SS' If invalid or None, all timepoints will be run"
 )
 @click.option(
     "-n",
@@ -83,7 +83,7 @@ def cli():
     "--end_time",
     type=str,
     default=None,
-    help="Ending timestamp of simulation. If invalid or None, all timepoints will be run"
+    help="Ending timestamp of simulation. Uses format 'HH/MM/SS'. If invalid or None, all timepoints will be run"
 )
 @click.option(
     "-t",
