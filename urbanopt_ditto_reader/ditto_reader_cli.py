@@ -76,7 +76,7 @@ def cli():
     "--end_date",
     type=str,
     default=None,
-    help="Ending date of simulation. If invalid or None, all timepoints will be run"
+    help="Ending date of simulation. Uses format 'YYYY/MM/DD'. If invalid or None, all timepoints will be run"
 )
 @click.option(
     "-d",
