@@ -44,7 +44,7 @@ The start_date and
     start_time. It runs the entire year if timestamp not found.
 1. "end_date": Optional, String, Indicates the end date of the simulation. Uses format "YYYY/MM/DD"
 1. "end_time": Optional, String, Indicates the end time of the simulation. Uses format "HH:MM:SS".
-   The end_date and end_time are aggregate to get the timestamp using format (using format
+   The end_date and end_time are concatenated to get the timestamp (using format
    "YYYY/MM/DD HH:MM:SS") for the config file and is cross referenced with the timestamps in the
    SCENARIO_NAME/opendss/profiles/timestamps.csv file created from profiles in
    SCENARIO_NAME/FEATURE_ID/feature_reports/feature_report_reopt.csv if use_reopt is true and
