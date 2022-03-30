@@ -46,6 +46,8 @@ import re
 
 import click
 
+# Only change the below license text. The above text will be automatically updated when the script is run.
+
 PYTHON_REGEX = re.compile(r'^""".\*{100}.*:copyright.*\*{100}."""$', re.MULTILINE | re.DOTALL)
 PYTHON_LICENSE = '''"""
 ****************************************************************************************************
