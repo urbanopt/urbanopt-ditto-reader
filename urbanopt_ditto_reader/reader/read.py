@@ -193,17 +193,21 @@ class Reader(AbstractReader):
                                     wire.X = db_wire['x (m)']
                                     wire.Y = db_wire['height (m)'] # Database uses meters
                                     wire.ampacity = wire_map[wire_type]['ampacity (A)']
-                                    wire.gmr = wire_map[wire_type]['gmr (mm)'] #TODO: check units on this
-                                    wire.resistance = wire_map[wire_type]['resistance (ohm/km)'] #TODO: check units on this
-                                    wire.diameter = wire_type[wire_type]['diameter (mm)'] #TODO: check units on this
-                                    # TODO: Add underground line pieces
+                                    wire.gmr = wire_map[wire_type]['gmr (mm)'] *1000 #All ditto length units are in meters 
+                                    wire.resistance = wire_map[wire_type]['resistance (ohm/km)'] *1000 # ditto internal resistance is in ohms/meter
+                                    wire.diameter = wire_type[wire_type]['diameter (mm)'] *1000 #All ditto length units are in meters
+                                    if db_wire['type'] == 'UG concentric neutral':
+                                        wire.concentric_neutral_gmr = db_wire['gmr neutral (mm)'] *1000
+                                        wire.concentric_neutral_resistance = db_wire['resistance neutral (ohm/km)'] *1000
+                                        wire.concentric_neutral_diameter = db_wire['concentric diameter neutral strand (mm)'] *1000
+                                        wire.concentric_neutral_outside_diameter = db_wire['concentric neutral outside diameter (mm)'] *1000
+                                        wire.concentric_neutral_nstrand = db_wire['# concentric neutral strands']
 
                                     if 'OH' in wire_map[wire_type]['type']:
                                         line.line_type = 'overhead'
                                     elif 'UG' in wire_map[wire_type]['type']:
                                         line.line_type = 'underground'
 
-                                    # TODO: do we have a concentric neutral class too?
                                     all_wires.append(wire)
                     if not found_line:
                         raise ValueError(f'No line found in catalog for {element["properties"]["line"]}')
@@ -316,8 +320,7 @@ class Reader(AbstractReader):
                                     transformer.to_element = transformer_panel_map[transformer_id][1] #NOTE: direction can be fixed with the consistency module. May be wrong here
                                     transformer.name = transformer_id
                                     transformer.reactances = [float(db_transformer['Reactance (p.u. transf)'])]
-                                    #TODO: Can I add the center tap information? It's currently not in the catalog
-                                    #TODO: put this line back in? transformer.is_center_tap = db_transformer['is_center_tap']
+                                    transformer.is_center_tap = db_transformer['Centertap']
 
                                     windings = [Winding(model),Winding(model)]
                                     connections = db_transformer['connection'].split('-')
@@ -329,21 +332,25 @@ class Reader(AbstractReader):
                                     for i in range(len(windings)):
                                         phase_windings = []
                                         if transformer.is_center_tap and i >0:
+                                            # Create A and B phase for low side of center-tap transformers as per OpenDSS convention
                                             for phase in ['A','B']:
                                                 pw = PhaseWinding(model)
                                                 pw.phase = phase
                                                 phase_windings.append(pw)
                                         else:
-                                            all_phases = ['A','B','C']
-                                            # TODO: Are the phases actually able to be provided? This is quite important
-                                            for phase_num in range(int(db_transformer['Nphases'])):
-                                                phase = all_phases[phase_num]
+                                            # Phases need to be added as an extra attribute in the geojson file attributes under properties. This is an optional field and should be added to the schema
+                                            if 'phases' not in element['properties']:
+                                                raise ValueError(f'Transformer {element["properties"]["id"]} does not have phases included in geojson file')
+                                            phases = element['properties']['phases']
+                                            if len(phases) != int(db_transformer['Nphases']):
+                                                raise ValueError(f'Phases for transformer {element["properties"]["equipment"][0]} in database do not match number of phases of transformer {element["properties"]["id"]} in geojson file')
+
+                                            for phase in phases:
                                                 pw = PhaseWinding(model)
                                                 pw.phase = phase
                                                 phase_windings.append(pw)
                                         windings[i].phase_windings = phase_windings
                                         windings[i].rated_power = float(db_transformer['Installed Power (kVA)'])*1000
-                                        # TODO: Look into secondary voltages in the catalog. They all seem to be 0.416
                                         if i<1:
                                             windings[i].nominal_voltage = float(db_transformer['Primary Voltage (kV)'])*1000
                                             source_voltages.add(windings[i].nominal_voltage)
