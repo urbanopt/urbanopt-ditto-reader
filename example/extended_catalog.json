@@ -10934,7 +10934,6 @@
           "Type": "I",
           "Voltage level": "EHV-HV",
           "Nphases": "3",
-          "Centertap": false,
           "Installed Power(MVA)": "300",
           "Guaranteed Power(MVA)": "300",
           "Primary Voltage (kV)": "230",
@@ -10956,14 +10955,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "0",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": false
         },
         {
           "Name": "MAT_2I_230_69",
           "Type": "I",
           "Voltage level": "EHV-HV",
           "Nphases": "3",
-          "Centertap": false,
           "Installed Power(MVA)": "800",
           "Guaranteed Power(MVA)": "800",
           "Primary Voltage (kV)": "230",
@@ -10985,14 +10984,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "0",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": false
         },
         {
           "Name": "MAT_3I_230_69",
           "Type": "I",
           "Voltage level": "EHV-HV",
           "Nphases": "3",
-          "Centertap": false,
           "Installed Power(MVA)": "1300",
           "Guaranteed Power(MVA)": "1300",
           "Primary Voltage (kV)": "230",
@@ -11014,7 +11013,8 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "100",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": false
         }
       ]
     },
@@ -11025,7 +11025,6 @@
           "Type": "U",
           "Voltage level": "EHV-HV",
           "Nphases": "3",
-          "Centertap": false,
           "Installed Power(MVA)": "300",
           "Guaranteed Power(MVA)": "300",
           "Primary Voltage (kV)": "230",
@@ -11047,14 +11046,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "0",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": false
         },
         {
           "Name": "MAT_2U_230_69",
           "Type": "U",
           "Voltage level": "EHV-HV",
           "Nphases": "3",
-          "Centertap": false,
           "Installed Power(MVA)": "800",
           "Guaranteed Power(MVA)": "800",
           "Primary Voltage (kV)": "230",
@@ -11076,14 +11075,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "0",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": false
         },
         {
           "Name": "MAT_3U_230_69",
           "Type": "U",
           "Voltage level": "EHV-HV",
           "Nphases": "3",
-          "Centertap": false,
           "Installed Power(MVA)": "1300",
           "Guaranteed Power(MVA)": "1300",
           "Primary Voltage (kV)": "230",
@@ -11105,7 +11104,8 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "100",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": false
         }
       ]
     },
@@ -11116,7 +11116,6 @@
           "Type": "I",
           "Voltage level": "HV-MV",
           "Nphases": "3",
-          "Centertap": false,
           "Installed Power(MVA)": "8",
           "Guaranteed Power(MVA)": "8",
           "Primary Voltage (kV)": "69",
@@ -11138,14 +11137,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "0",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": false
         },
         {
           "Name": "SUB_0_69_4",
           "Type": "I",
           "Voltage level": "HV-MV",
           "Nphases": "3",
-          "Centertap": false,
           "Installed Power(MVA)": "16",
           "Guaranteed Power(MVA)": "16",
           "Primary Voltage (kV)": "69",
@@ -11167,14 +11166,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "0",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": false
         },
         {
           "Name": "SUB_1_69_4",
           "Type": "I",
           "Voltage level": "HV-MV",
           "Nphases": "3",
-          "Centertap": false,
           "Installed Power(MVA)": "30",
           "Guaranteed Power(MVA)": "30",
           "Primary Voltage (kV)": "69",
@@ -11196,14 +11195,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "100",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": false
         },
         {
           "Name": "SUB_0_69_12_47",
           "Type": "I",
           "Voltage level": "HV-MV",
           "Nphases": "3",
-          "Centertap": false,
           "Installed Power(MVA)": "16",
           "Guaranteed Power(MVA)": "16",
           "Primary Voltage (kV)": "69",
@@ -11225,14 +11224,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "0",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": false
         },
         {
           "Name": "SUB_1_69_12_47",
           "Type": "I",
           "Voltage level": "HV-MV",
           "Nphases": "3",
-          "Centertap": false,
           "Installed Power(MVA)": "30",
           "Guaranteed Power(MVA)": "30",
           "Primary Voltage (kV)": "69",
@@ -11254,14 +11253,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "0",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": false
         },
         {
           "Name": "SUB_2_69_12_47",
           "Type": "I",
           "Voltage level": "HV-MV",
           "Nphases": "3",
-          "Centertap": false,
           "Installed Power(MVA)": "40",
           "Guaranteed Power(MVA)": "40",
           "Primary Voltage (kV)": "69",
@@ -11283,14 +11282,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "0",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": false
         },
         {
           "Name": "SUB_3_69_12_47",
           "Type": "I",
           "Voltage level": "HV-MV",
           "Nphases": "3",
-          "Centertap": false,
           "Installed Power(MVA)": "50",
           "Guaranteed Power(MVA)": "50",
           "Primary Voltage (kV)": "69",
@@ -11312,14 +11311,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "0",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": false
         },
         {
           "Name": "SUB_1_2x_69_12_47",
           "Type": "I",
           "Voltage level": "HV-MV",
           "Nphases": "3",
-          "Centertap": false,
           "Installed Power(MVA)": "60",
           "Guaranteed Power(MVA)": "60",
           "Primary Voltage (kV)": "69",
@@ -11341,14 +11340,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "0",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": false
         },
         {
           "Name": "SUB_2_2x_69_12_47",
           "Type": "I",
           "Voltage level": "HV-MV",
           "Nphases": "3",
-          "Centertap": false,
           "Installed Power(MVA)": "80",
           "Guaranteed Power(MVA)": "80",
           "Primary Voltage (kV)": "69",
@@ -11370,14 +11369,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "100",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": false
         },
         {
           "Name": "SUB_0_69_13_2",
           "Type": "I",
           "Voltage level": "HV-MV",
           "Nphases": "3",
-          "Centertap": false,
           "Installed Power(MVA)": "16",
           "Guaranteed Power(MVA)": "16",
           "Primary Voltage (kV)": "69",
@@ -11399,14 +11398,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "0",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": false
         },
         {
           "Name": "SUB_1_69_13_2",
           "Type": "I",
           "Voltage level": "HV-MV",
           "Nphases": "3",
-          "Centertap": false,
           "Installed Power(MVA)": "30",
           "Guaranteed Power(MVA)": "30",
           "Primary Voltage (kV)": "69",
@@ -11428,14 +11427,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "0",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": false
         },
         {
           "Name": "SUB_2_69_13_2",
           "Type": "I",
           "Voltage level": "HV-MV",
           "Nphases": "3",
-          "Centertap": false,
           "Installed Power(MVA)": "40",
           "Guaranteed Power(MVA)": "40",
           "Primary Voltage (kV)": "69",
@@ -11457,14 +11456,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "0",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": false
         },
         {
           "Name": "SUB_3_69_13_2",
           "Type": "I",
           "Voltage level": "HV-MV",
           "Nphases": "3",
-          "Centertap": false,
           "Installed Power(MVA)": "50",
           "Guaranteed Power(MVA)": "50",
           "Primary Voltage (kV)": "69",
@@ -11486,14 +11485,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "0",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": false
         },
         {
           "Name": "SUB_1_2x_69_13_2",
           "Type": "I",
           "Voltage level": "HV-MV",
           "Nphases": "3",
-          "Centertap": false,
           "Installed Power(MVA)": "60",
           "Guaranteed Power(MVA)": "60",
           "Primary Voltage (kV)": "69",
@@ -11515,14 +11514,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "0",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": false
         },
         {
           "Name": "SUB_2_2x_69_13_2",
           "Type": "I",
           "Voltage level": "HV-MV",
           "Nphases": "3",
-          "Centertap": false,
           "Installed Power(MVA)": "80",
           "Guaranteed Power(MVA)": "80",
           "Primary Voltage (kV)": "69",
@@ -11544,14 +11543,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "100",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": false
         },
         {
           "Name": "SUB_0_69_25",
           "Type": "I",
           "Voltage level": "HV-MV",
           "Nphases": "3",
-          "Centertap": false,
           "Installed Power(MVA)": "16",
           "Guaranteed Power(MVA)": "16",
           "Primary Voltage (kV)": "69",
@@ -11573,14 +11572,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "0",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": false
         },
         {
           "Name": "SUB_1_69_25",
           "Type": "I",
           "Voltage level": "HV-MV",
           "Nphases": "3",
-          "Centertap": false,
           "Installed Power(MVA)": "30",
           "Guaranteed Power(MVA)": "30",
           "Primary Voltage (kV)": "69",
@@ -11602,14 +11601,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "0",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": false
         },
         {
           "Name": "SUB_2_69_25",
           "Type": "I",
           "Voltage level": "HV-MV",
           "Nphases": "3",
-          "Centertap": false,
           "Installed Power(MVA)": "40",
           "Guaranteed Power(MVA)": "40",
           "Primary Voltage (kV)": "69",
@@ -11631,14 +11630,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "0",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": false
         },
         {
           "Name": "SUB_3_69_25",
           "Type": "I",
           "Voltage level": "HV-MV",
           "Nphases": "3",
-          "Centertap": false,
           "Installed Power(MVA)": "50",
           "Guaranteed Power(MVA)": "50",
           "Primary Voltage (kV)": "69",
@@ -11660,14 +11659,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "0",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": false
         },
         {
           "Name": "SUB_1_2x_69_25",
           "Type": "I",
           "Voltage level": "HV-MV",
           "Nphases": "3",
-          "Centertap": false,
           "Installed Power(MVA)": "60",
           "Guaranteed Power(MVA)": "60",
           "Primary Voltage (kV)": "69",
@@ -11689,14 +11688,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "0",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": false
         },
         {
           "Name": "SUB_2_2x_69_25",
           "Type": "I",
           "Voltage level": "HV-MV",
           "Nphases": "3",
-          "Centertap": false,
           "Installed Power(MVA)": "80",
           "Guaranteed Power(MVA)": "80",
           "Primary Voltage (kV)": "69",
@@ -11718,7 +11717,8 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "100",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": false
         }
       ]
     },
@@ -11729,7 +11729,6 @@
           "Type": "U",
           "Voltage level": "HV-MV",
           "Nphases": "3",
-          "Centertap": false,
           "Installed Power(MVA)": "8",
           "Guaranteed Power(MVA)": "8",
           "Primary Voltage (kV)": "69",
@@ -11751,14 +11750,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "0",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": false
         },
         {
           "Name": "SUB_0_69_4",
           "Type": "U",
           "Voltage level": "HV-MV",
           "Nphases": "3",
-          "Centertap": false,
           "Installed Power(MVA)": "16",
           "Guaranteed Power(MVA)": "16",
           "Primary Voltage (kV)": "69",
@@ -11780,14 +11779,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "0",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": false
         },
         {
           "Name": "SUB_1_69_4",
           "Type": "U",
           "Voltage level": "HV-MV",
           "Nphases": "3",
-          "Centertap": false,
           "Installed Power(MVA)": "30",
           "Guaranteed Power(MVA)": "30",
           "Primary Voltage (kV)": "69",
@@ -11809,14 +11808,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "100",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": false
         },
         {
           "Name": "SUB_0_69_12_47",
           "Type": "U",
           "Voltage level": "HV-MV",
           "Nphases": "3",
-          "Centertap": false,
           "Installed Power(MVA)": "16",
           "Guaranteed Power(MVA)": "16",
           "Primary Voltage (kV)": "69",
@@ -11838,14 +11837,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "0",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": false
         },
         {
           "Name": "SUB_1_69_12_47",
           "Type": "U",
           "Voltage level": "HV-MV",
           "Nphases": "3",
-          "Centertap": false,
           "Installed Power(MVA)": "30",
           "Guaranteed Power(MVA)": "30",
           "Primary Voltage (kV)": "69",
@@ -11867,14 +11866,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "0",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": false
         },
         {
           "Name": "SUB_2_69_12_47",
           "Type": "U",
           "Voltage level": "HV-MV",
           "Nphases": "3",
-          "Centertap": false,
           "Installed Power(MVA)": "40",
           "Guaranteed Power(MVA)": "40",
           "Primary Voltage (kV)": "69",
@@ -11896,14 +11895,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "0",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": false
         },
         {
           "Name": "SUB_3_69_12_47",
           "Type": "U",
           "Voltage level": "HV-MV",
           "Nphases": "3",
-          "Centertap": false,
           "Installed Power(MVA)": "50",
           "Guaranteed Power(MVA)": "50",
           "Primary Voltage (kV)": "69",
@@ -11925,14 +11924,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "0",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": false
         },
         {
           "Name": "SUB_1_2x_69_12_47",
           "Type": "U",
           "Voltage level": "HV-MV",
           "Nphases": "3",
-          "Centertap": false,
           "Installed Power(MVA)": "60",
           "Guaranteed Power(MVA)": "60",
           "Primary Voltage (kV)": "69",
@@ -11954,14 +11953,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "0",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": false
         },
         {
           "Name": "SUB_2_2x_69_12_47",
           "Type": "U",
           "Voltage level": "HV-MV",
           "Nphases": "3",
-          "Centertap": false,
           "Installed Power(MVA)": "80",
           "Guaranteed Power(MVA)": "80",
           "Primary Voltage (kV)": "69",
@@ -11983,14 +11982,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "100",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": false
         },
         {
           "Name": "SUB_0_69_13_2",
           "Type": "U",
           "Voltage level": "HV-MV",
           "Nphases": "3",
-          "Centertap": false,
           "Installed Power(MVA)": "16",
           "Guaranteed Power(MVA)": "16",
           "Primary Voltage (kV)": "69",
@@ -12012,14 +12011,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "0",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": false
         },
         {
           "Name": "SUB_1_69_13_2",
           "Type": "U",
           "Voltage level": "HV-MV",
           "Nphases": "3",
-          "Centertap": false,
           "Installed Power(MVA)": "30",
           "Guaranteed Power(MVA)": "30",
           "Primary Voltage (kV)": "69",
@@ -12041,14 +12040,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "0",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": false
         },
         {
           "Name": "SUB_2_69_13_2",
           "Type": "U",
           "Voltage level": "HV-MV",
           "Nphases": "3",
-          "Centertap": false,
           "Installed Power(MVA)": "40",
           "Guaranteed Power(MVA)": "40",
           "Primary Voltage (kV)": "69",
@@ -12070,14 +12069,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "0",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": false
         },
         {
           "Name": "SUB_3_69_13_2",
           "Type": "U",
           "Voltage level": "HV-MV",
           "Nphases": "3",
-          "Centertap": false,
           "Installed Power(MVA)": "50",
           "Guaranteed Power(MVA)": "50",
           "Primary Voltage (kV)": "69",
@@ -12099,14 +12098,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "0",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": false
         },
         {
           "Name": "SUB_1_2x_69_13_2",
           "Type": "U",
           "Voltage level": "HV-MV",
           "Nphases": "3",
-          "Centertap": false,
           "Installed Power(MVA)": "60",
           "Guaranteed Power(MVA)": "60",
           "Primary Voltage (kV)": "69",
@@ -12128,14 +12127,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "0",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": false
         },
         {
           "Name": "SUB_2_2x_69_13_2",
           "Type": "U",
           "Voltage level": "HV-MV",
           "Nphases": "3",
-          "Centertap": false,
           "Installed Power(MVA)": "80",
           "Guaranteed Power(MVA)": "80",
           "Primary Voltage (kV)": "69",
@@ -12157,14 +12156,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "100",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": false
         },
         {
           "Name": "SUB_0_69_25",
           "Type": "U",
           "Voltage level": "HV-MV",
           "Nphases": "3",
-          "Centertap": false,
           "Installed Power(MVA)": "16",
           "Guaranteed Power(MVA)": "16",
           "Primary Voltage (kV)": "69",
@@ -12186,14 +12185,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "0",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": false
         },
         {
           "Name": "SUB_1_69_25",
           "Type": "U",
           "Voltage level": "HV-MV",
           "Nphases": "3",
-          "Centertap": false,
           "Installed Power(MVA)": "30",
           "Guaranteed Power(MVA)": "30",
           "Primary Voltage (kV)": "69",
@@ -12215,14 +12214,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "0",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": false
         },
         {
           "Name": "SUB_2_69_25",
           "Type": "U",
           "Voltage level": "HV-MV",
           "Nphases": "3",
-          "Centertap": false,
           "Installed Power(MVA)": "40",
           "Guaranteed Power(MVA)": "40",
           "Primary Voltage (kV)": "69",
@@ -12244,14 +12243,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "0",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": false
         },
         {
           "Name": "SUB_3_69_25",
           "Type": "U",
           "Voltage level": "HV-MV",
           "Nphases": "3",
-          "Centertap": false,
           "Installed Power(MVA)": "50",
           "Guaranteed Power(MVA)": "50",
           "Primary Voltage (kV)": "69",
@@ -12273,14 +12272,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "0",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": false
         },
         {
           "Name": "SUB_1_2x_69_25",
           "Type": "U",
           "Voltage level": "HV-MV",
           "Nphases": "3",
-          "Centertap": false,
           "Installed Power(MVA)": "60",
           "Guaranteed Power(MVA)": "60",
           "Primary Voltage (kV)": "69",
@@ -12302,14 +12301,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "0",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": false
         },
         {
           "Name": "SUB_2_2x_69_25",
           "Type": "U",
           "Voltage level": "HV-MV",
           "Nphases": "3",
-          "Centertap": false,
           "Installed Power(MVA)": "80",
           "Guaranteed Power(MVA)": "80",
           "Primary Voltage (kV)": "69",
@@ -12331,7 +12330,8 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "100",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": false
         }
       ]
     },
@@ -12342,7 +12342,6 @@
           "Type": "I",
           "Voltage level": "MV-LV",
           "Nphases": "1",
-          "Centertap": true,
           "Installed Power(kVA)": "10",
           "Guaranteed Power(kVA)": "10",
           "Primary Voltage (kV)": "4",
@@ -12364,14 +12363,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "21",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": true
         },
         {
           "Name": "OH1_2_4_0_120",
           "Type": "I",
           "Voltage level": "MV-LV",
           "Nphases": "1",
-          "Centertap": true,
           "Installed Power(kVA)": "25",
           "Guaranteed Power(kVA)": "25",
           "Primary Voltage (kV)": "4",
@@ -12393,14 +12392,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "21",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": true
         },
         {
           "Name": "OH1_3_4_0_120",
           "Type": "I",
           "Voltage level": "MV-LV",
           "Nphases": "1",
-          "Centertap": true,
           "Installed Power(kVA)": "50",
           "Guaranteed Power(kVA)": "50",
           "Primary Voltage (kV)": "4",
@@ -12422,14 +12421,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "54",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": true
         },
         {
           "Name": "OH1_4_4_0_120",
           "Type": "I",
           "Voltage level": "MV-LV",
           "Nphases": "1",
-          "Centertap": true,
           "Installed Power(kVA)": "75",
           "Guaranteed Power(kVA)": "75",
           "Primary Voltage (kV)": "4",
@@ -12451,14 +12450,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "4",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": true
         },
         {
           "Name": "PM3_1_4_0_480",
           "Type": "I",
           "Voltage level": "MV-LV",
           "Nphases": "3",
-          "Centertap": false,
           "Installed Power(kVA)": "75",
           "Guaranteed Power(kVA)": "75",
           "Primary Voltage (kV)": "4",
@@ -12480,14 +12479,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "15",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": false
         },
         {
           "Name": "PM3_2_4_0_480",
           "Type": "I",
           "Voltage level": "MV-LV",
           "Nphases": "3",
-          "Centertap": false,
           "Installed Power(kVA)": "100",
           "Guaranteed Power(kVA)": "100",
           "Primary Voltage (kV)": "4",
@@ -12509,14 +12508,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "36",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": false
         },
         {
           "Name": "PM3_3_4_0_480",
           "Type": "I",
           "Voltage level": "MV-LV",
           "Nphases": "3",
-          "Centertap": false,
           "Installed Power(kVA)": "150",
           "Guaranteed Power(kVA)": "150",
           "Primary Voltage (kV)": "4",
@@ -12538,14 +12537,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "36",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": false
         },
         {
           "Name": "PM3_4_4_0_480",
           "Type": "I",
           "Voltage level": "MV-LV",
           "Nphases": "3",
-          "Centertap": false,
           "Installed Power(kVA)": "300",
           "Guaranteed Power(kVA)": "300",
           "Primary Voltage (kV)": "4",
@@ -12567,14 +12566,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "6",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": false
         },
         {
           "Name": "PM3_5_4_0_480",
           "Type": "I",
           "Voltage level": "MV-LV",
           "Nphases": "3",
-          "Centertap": false,
           "Installed Power(kVA)": "500",
           "Guaranteed Power(kVA)": "500",
           "Primary Voltage (kV)": "4",
@@ -12596,14 +12595,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "7",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": false
         },
         {
           "Name": "PM3_6_4_0_480",
           "Type": "I",
           "Voltage level": "MV-LV",
           "Nphases": "3",
-          "Centertap": false,
           "Installed Power(kVA)": "1000",
           "Guaranteed Power(kVA)": "1000",
           "Primary Voltage (kV)": "4",
@@ -12625,14 +12624,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "0",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": false
         },
         {
           "Name": "PM3_6_4_0_480",
           "Type": "I",
           "Voltage level": "MV-LV",
           "Nphases": "3",
-          "Centertap": false,
           "Installed Power(kVA)": "1500",
           "Guaranteed Power(kVA)": "1500",
           "Primary Voltage (kV)": "4",
@@ -12654,14 +12653,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "0",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": false
         },
         {
           "Name": "OH1_1_12_47_0_120",
           "Type": "I",
           "Voltage level": "MV-LV",
           "Nphases": "1",
-          "Centertap": true,
           "Installed Power(kVA)": "10",
           "Guaranteed Power(kVA)": "10",
           "Primary Voltage (kV)": "12.47",
@@ -12683,14 +12682,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "21",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": true
         },
         {
           "Name": "OH1_2_12_47_0_120",
           "Type": "I",
           "Voltage level": "MV-LV",
           "Nphases": "1",
-          "Centertap": true,
           "Installed Power(kVA)": "25",
           "Guaranteed Power(kVA)": "25",
           "Primary Voltage (kV)": "12.47",
@@ -12712,14 +12711,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "21",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": true
         },
         {
           "Name": "OH1_3_12_47_0_120",
           "Type": "I",
           "Voltage level": "MV-LV",
           "Nphases": "1",
-          "Centertap": true,
           "Installed Power(kVA)": "50",
           "Guaranteed Power(kVA)": "50",
           "Primary Voltage (kV)": "12.47",
@@ -12741,14 +12740,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "54",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": true
         },
         {
           "Name": "OH1_4_12_47_0_120",
           "Type": "I",
           "Voltage level": "MV-LV",
           "Nphases": "1",
-          "Centertap": true,
           "Installed Power(kVA)": "75",
           "Guaranteed Power(kVA)": "75",
           "Primary Voltage (kV)": "12.47",
@@ -12770,14 +12769,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "4",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": true
         },
         {
           "Name": "PM3_1_12_47_0_480",
           "Type": "I",
           "Voltage level": "MV-LV",
           "Nphases": "3",
-          "Centertap": false,
           "Installed Power(kVA)": "75",
           "Guaranteed Power(kVA)": "75",
           "Primary Voltage (kV)": "12.47",
@@ -12799,14 +12798,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "15",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": false
         },
         {
           "Name": "PM3_2_12_47_0_480",
           "Type": "I",
           "Voltage level": "MV-LV",
           "Nphases": "3",
-          "Centertap": false,
           "Installed Power(kVA)": "100",
           "Guaranteed Power(kVA)": "100",
           "Primary Voltage (kV)": "12.47",
@@ -12828,14 +12827,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "36",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": false
         },
         {
           "Name": "PM3_3_12_47_0_480",
           "Type": "I",
           "Voltage level": "MV-LV",
           "Nphases": "3",
-          "Centertap": false,
           "Installed Power(kVA)": "150",
           "Guaranteed Power(kVA)": "150",
           "Primary Voltage (kV)": "12.47",
@@ -12857,14 +12856,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "36",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": false
         },
         {
           "Name": "PM3_4_12_47_0_480",
           "Type": "I",
           "Voltage level": "MV-LV",
           "Nphases": "3",
-          "Centertap": false,
           "Installed Power(kVA)": "300",
           "Guaranteed Power(kVA)": "300",
           "Primary Voltage (kV)": "12.47",
@@ -12886,14 +12885,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "6",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": false
         },
         {
           "Name": "PM3_5_12_47_0_480",
           "Type": "I",
           "Voltage level": "MV-LV",
           "Nphases": "3",
-          "Centertap": false,
           "Installed Power(kVA)": "500",
           "Guaranteed Power(kVA)": "500",
           "Primary Voltage (kV)": "12.47",
@@ -12915,14 +12914,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "7",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": false
         },
         {
           "Name": "PM3_6_12_47_0_480",
           "Type": "I",
           "Voltage level": "MV-LV",
           "Nphases": "3",
-          "Centertap": false,
           "Installed Power(kVA)": "1000",
           "Guaranteed Power(kVA)": "1000",
           "Primary Voltage (kV)": "12.47",
@@ -12944,14 +12943,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "0",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": false
         },
         {
           "Name": "PM3_6_12_47_0_480",
           "Type": "I",
           "Voltage level": "MV-LV",
           "Nphases": "3",
-          "Centertap": false,
           "Installed Power(kVA)": "1500",
           "Guaranteed Power(kVA)": "1500",
           "Primary Voltage (kV)": "12.47",
@@ -12973,14 +12972,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "0",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": false
         },
         {
           "Name": "OH1_1_13_2_0_120",
           "Type": "I",
           "Voltage level": "MV-LV",
           "Nphases": "1",
-          "Centertap": true,
           "Installed Power(kVA)": "10",
           "Guaranteed Power(kVA)": "10",
           "Primary Voltage (kV)": "13.2",
@@ -13002,14 +13001,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "21",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": true
         },
         {
           "Name": "OH1_2_13_2_0_120",
           "Type": "I",
           "Voltage level": "MV-LV",
           "Nphases": "1",
-          "Centertap": true,
           "Installed Power(kVA)": "25",
           "Guaranteed Power(kVA)": "25",
           "Primary Voltage (kV)": "13.2",
@@ -13031,14 +13030,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "21",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": true
         },
         {
           "Name": "OH1_3_13_2_0_120",
           "Type": "I",
           "Voltage level": "MV-LV",
           "Nphases": "1",
-          "Centertap": true,
           "Installed Power(kVA)": "50",
           "Guaranteed Power(kVA)": "50",
           "Primary Voltage (kV)": "13.2",
@@ -13060,14 +13059,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "54",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": true
         },
         {
           "Name": "OH1_4_13_2_0_120",
           "Type": "I",
           "Voltage level": "MV-LV",
           "Nphases": "1",
-          "Centertap": true,
           "Installed Power(kVA)": "75",
           "Guaranteed Power(kVA)": "75",
           "Primary Voltage (kV)": "13.2",
@@ -13089,14 +13088,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "4",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": true
         },
         {
           "Name": "PM3_1_13_2_0_480",
           "Type": "I",
           "Voltage level": "MV-LV",
           "Nphases": "3",
-          "Centertap": false,
           "Installed Power(kVA)": "75",
           "Guaranteed Power(kVA)": "75",
           "Primary Voltage (kV)": "13.2",
@@ -13118,14 +13117,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "15",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": false
         },
         {
           "Name": "PM3_2_13_2_0_480",
           "Type": "I",
           "Voltage level": "MV-LV",
           "Nphases": "3",
-          "Centertap": false,
           "Installed Power(kVA)": "100",
           "Guaranteed Power(kVA)": "100",
           "Primary Voltage (kV)": "13.2",
@@ -13147,14 +13146,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "36",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": false
         },
         {
           "Name": "PM3_3_13_2_0_480",
           "Type": "I",
           "Voltage level": "MV-LV",
           "Nphases": "3",
-          "Centertap": false,
           "Installed Power(kVA)": "150",
           "Guaranteed Power(kVA)": "150",
           "Primary Voltage (kV)": "13.2",
@@ -13176,14 +13175,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "36",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": false
         },
         {
           "Name": "PM3_4_13_2_0_480",
           "Type": "I",
           "Voltage level": "MV-LV",
           "Nphases": "3",
-          "Centertap": false,
           "Installed Power(kVA)": "300",
           "Guaranteed Power(kVA)": "300",
           "Primary Voltage (kV)": "13.2",
@@ -13205,14 +13204,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "6",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": false
         },
         {
           "Name": "PM3_5_13_2_0_480",
           "Type": "I",
           "Voltage level": "MV-LV",
           "Nphases": "3",
-          "Centertap": false,
           "Installed Power(kVA)": "500",
           "Guaranteed Power(kVA)": "500",
           "Primary Voltage (kV)": "13.2",
@@ -13234,14 +13233,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "7",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": false
         },
         {
           "Name": "PM3_6_13_2_0_480",
           "Type": "I",
           "Voltage level": "MV-LV",
           "Nphases": "3",
-          "Centertap": false,
           "Installed Power(kVA)": "1000",
           "Guaranteed Power(kVA)": "1000",
           "Primary Voltage (kV)": "13.2",
@@ -13263,14 +13262,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "0",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": false
         },
         {
           "Name": "PM3_6_13_2_0_480",
           "Type": "I",
           "Voltage level": "MV-LV",
           "Nphases": "3",
-          "Centertap": false,
           "Installed Power(kVA)": "1500",
           "Guaranteed Power(kVA)": "1500",
           "Primary Voltage (kV)": "13.2",
@@ -13292,14 +13291,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "0",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": false
         },
         {
           "Name": "OH1_1_25_0_120",
           "Type": "I",
           "Voltage level": "MV-LV",
           "Nphases": "1",
-          "Centertap": true,
           "Installed Power(kVA)": "10",
           "Guaranteed Power(kVA)": "10",
           "Primary Voltage (kV)": "25",
@@ -13321,14 +13320,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "21",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": true
         },
         {
           "Name": "OH1_2_25_0_120",
           "Type": "I",
           "Voltage level": "MV-LV",
           "Nphases": "1",
-          "Centertap": true,
           "Installed Power(kVA)": "25",
           "Guaranteed Power(kVA)": "25",
           "Primary Voltage (kV)": "25",
@@ -13350,14 +13349,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "21",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": true
         },
         {
           "Name": "OH1_3_25_0_120",
           "Type": "I",
           "Voltage level": "MV-LV",
           "Nphases": "1",
-          "Centertap": true,
           "Installed Power(kVA)": "50",
           "Guaranteed Power(kVA)": "50",
           "Primary Voltage (kV)": "25",
@@ -13379,14 +13378,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "54",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": true
         },
         {
           "Name": "OH1_4_25_0_120",
           "Type": "I",
           "Voltage level": "MV-LV",
           "Nphases": "1",
-          "Centertap": true,
           "Installed Power(kVA)": "75",
           "Guaranteed Power(kVA)": "75",
           "Primary Voltage (kV)": "25",
@@ -13408,14 +13407,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "4",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": true
         },
         {
           "Name": "PM3_1_25_0_480",
           "Type": "I",
           "Voltage level": "MV-LV",
           "Nphases": "3",
-          "Centertap": false,
           "Installed Power(kVA)": "75",
           "Guaranteed Power(kVA)": "75",
           "Primary Voltage (kV)": "25",
@@ -13437,14 +13436,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "15",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": false
         },
         {
           "Name": "PM3_2_25_0_480",
           "Type": "I",
           "Voltage level": "MV-LV",
           "Nphases": "3",
-          "Centertap": false,
           "Installed Power(kVA)": "100",
           "Guaranteed Power(kVA)": "100",
           "Primary Voltage (kV)": "25",
@@ -13466,14 +13465,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "36",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": false
         },
         {
           "Name": "PM3_3_25_0_480",
           "Type": "I",
           "Voltage level": "MV-LV",
           "Nphases": "3",
-          "Centertap": false,
           "Installed Power(kVA)": "150",
           "Guaranteed Power(kVA)": "150",
           "Primary Voltage (kV)": "25",
@@ -13495,14 +13494,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "36",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": false
         },
         {
           "Name": "PM3_4_25_0_480",
           "Type": "I",
           "Voltage level": "MV-LV",
           "Nphases": "3",
-          "Centertap": false,
           "Installed Power(kVA)": "300",
           "Guaranteed Power(kVA)": "300",
           "Primary Voltage (kV)": "25",
@@ -13524,14 +13523,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "6",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": false
         },
         {
           "Name": "PM3_5_25_0_480",
           "Type": "I",
           "Voltage level": "MV-LV",
           "Nphases": "3",
-          "Centertap": false,
           "Installed Power(kVA)": "500",
           "Guaranteed Power(kVA)": "500",
           "Primary Voltage (kV)": "25",
@@ -13553,14 +13552,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "7",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": false
         },
         {
           "Name": "PM3_6_25_0_480",
           "Type": "I",
           "Voltage level": "MV-LV",
           "Nphases": "3",
-          "Centertap": false,
           "Installed Power(kVA)": "1000",
           "Guaranteed Power(kVA)": "1000",
           "Primary Voltage (kV)": "25",
@@ -13582,14 +13581,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "0",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": false
         },
         {
           "Name": "PM3_6_25_0_480",
           "Type": "I",
           "Voltage level": "MV-LV",
           "Nphases": "3",
-          "Centertap": false,
           "Installed Power(kVA)": "1500",
           "Guaranteed Power(kVA)": "1500",
           "Primary Voltage (kV)": "25",
@@ -13611,7 +13610,8 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "0",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": false
         }
       ]
     },
@@ -13622,7 +13622,6 @@
           "Type": "U",
           "Voltage level": "MV-LV",
           "Nphases": "1",
-          "Centertap": true,
           "Installed Power(kVA)": "25",
           "Guaranteed Power(kVA)": "25",
           "Primary Voltage (kV)": "4",
@@ -13644,14 +13643,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "12",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": true
         },
         {
           "Name": "OH1_3_4_0_120",
           "Type": "U",
           "Voltage level": "MV-LV",
           "Nphases": "1",
-          "Centertap": true,
           "Installed Power(kVA)": "50",
           "Guaranteed Power(kVA)": "50",
           "Primary Voltage (kV)": "4",
@@ -13673,14 +13672,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "53",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": true
         },
         {
           "Name": "OH1_4_4_0_120",
           "Type": "U",
           "Voltage level": "MV-LV",
           "Nphases": "1",
-          "Centertap": true,
           "Installed Power(kVA)": "75",
           "Guaranteed Power(kVA)": "75",
           "Primary Voltage (kV)": "4",
@@ -13702,14 +13701,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "35",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": true
         },
         {
           "Name": "PM3_1_4_0_480",
           "Type": "U",
           "Voltage level": "MV-LV",
           "Nphases": "3",
-          "Centertap": false,
           "Installed Power(kVA)": "75",
           "Guaranteed Power(kVA)": "75",
           "Primary Voltage (kV)": "4",
@@ -13731,14 +13730,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "6",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": false
         },
         {
           "Name": "PM3_2_4_0_480",
           "Type": "U",
           "Voltage level": "MV-LV",
           "Nphases": "3",
-          "Centertap": false,
           "Installed Power(kVA)": "100",
           "Guaranteed Power(kVA)": "100",
           "Primary Voltage (kV)": "4",
@@ -13760,14 +13759,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "14",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": false
         },
         {
           "Name": "PM3_3_4_0_480",
           "Type": "U",
           "Voltage level": "MV-LV",
           "Nphases": "3",
-          "Centertap": false,
           "Installed Power(kVA)": "150",
           "Guaranteed Power(kVA)": "150",
           "Primary Voltage (kV)": "4",
@@ -13789,14 +13788,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "14",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": false
         },
         {
           "Name": "PM3_4_4_0_480",
           "Type": "U",
           "Voltage level": "MV-LV",
           "Nphases": "3",
-          "Centertap": false,
           "Installed Power(kVA)": "300",
           "Guaranteed Power(kVA)": "300",
           "Primary Voltage (kV)": "4",
@@ -13818,14 +13817,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "28",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": false
         },
         {
           "Name": "PM3_5_4_0_480",
           "Type": "U",
           "Voltage level": "MV-LV",
           "Nphases": "3",
-          "Centertap": false,
           "Installed Power(kVA)": "500",
           "Guaranteed Power(kVA)": "500",
           "Primary Voltage (kV)": "4",
@@ -13847,14 +13846,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "24",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": false
         },
         {
           "Name": "PM3_6_4_0_480",
           "Type": "U",
           "Voltage level": "MV-LV",
           "Nphases": "3",
-          "Centertap": false,
           "Installed Power(kVA)": "1000",
           "Guaranteed Power(kVA)": "1000",
           "Primary Voltage (kV)": "4",
@@ -13876,14 +13875,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "10",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": false
         },
         {
           "Name": "PM3_6_4_0_480",
           "Type": "U",
           "Voltage level": "MV-LV",
           "Nphases": "3",
-          "Centertap": false,
           "Installed Power(kVA)": "1500",
           "Guaranteed Power(kVA)": "1500",
           "Primary Voltage (kV)": "4",
@@ -13905,14 +13904,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "4",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": false
         },
         {
           "Name": "OH1_2_12_47_0_120",
           "Type": "U",
           "Voltage level": "MV-LV",
           "Nphases": "1",
-          "Centertap": true,
           "Installed Power(kVA)": "25",
           "Guaranteed Power(kVA)": "25",
           "Primary Voltage (kV)": "12.47",
@@ -13934,14 +13933,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "12",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": true
         },
         {
           "Name": "OH1_3_12_47_0_120",
           "Type": "U",
           "Voltage level": "MV-LV",
           "Nphases": "1",
-          "Centertap": true,
           "Installed Power(kVA)": "50",
           "Guaranteed Power(kVA)": "50",
           "Primary Voltage (kV)": "12.47",
@@ -13963,14 +13962,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "53",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": true
         },
         {
           "Name": "OH1_4_12_47_0_120",
           "Type": "U",
           "Voltage level": "MV-LV",
           "Nphases": "1",
-          "Centertap": true,
           "Installed Power(kVA)": "75",
           "Guaranteed Power(kVA)": "75",
           "Primary Voltage (kV)": "12.47",
@@ -13992,14 +13991,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "35",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": true
         },
         {
           "Name": "PM3_1_12_47_0_480",
           "Type": "U",
           "Voltage level": "MV-LV",
           "Nphases": "3",
-          "Centertap": false,
           "Installed Power(kVA)": "75",
           "Guaranteed Power(kVA)": "75",
           "Primary Voltage (kV)": "12.47",
@@ -14021,14 +14020,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "6",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": false
         },
         {
           "Name": "PM3_2_12_47_0_480",
           "Type": "U",
           "Voltage level": "MV-LV",
           "Nphases": "3",
-          "Centertap": false,
           "Installed Power(kVA)": "100",
           "Guaranteed Power(kVA)": "100",
           "Primary Voltage (kV)": "12.47",
@@ -14050,14 +14049,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "14",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": false
         },
         {
           "Name": "PM3_3_12_47_0_480",
           "Type": "U",
           "Voltage level": "MV-LV",
           "Nphases": "3",
-          "Centertap": false,
           "Installed Power(kVA)": "150",
           "Guaranteed Power(kVA)": "150",
           "Primary Voltage (kV)": "12.47",
@@ -14079,14 +14078,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "14",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": false
         },
         {
           "Name": "PM3_4_12_47_0_480",
           "Type": "U",
           "Voltage level": "MV-LV",
           "Nphases": "3",
-          "Centertap": false,
           "Installed Power(kVA)": "300",
           "Guaranteed Power(kVA)": "300",
           "Primary Voltage (kV)": "12.47",
@@ -14108,14 +14107,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "28",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": false
         },
         {
           "Name": "PM3_5_12_47_0_480",
           "Type": "U",
           "Voltage level": "MV-LV",
           "Nphases": "3",
-          "Centertap": false,
           "Installed Power(kVA)": "500",
           "Guaranteed Power(kVA)": "500",
           "Primary Voltage (kV)": "12.47",
@@ -14137,14 +14136,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "24",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": false
         },
         {
           "Name": "PM3_6_12_47_0_480",
           "Type": "U",
           "Voltage level": "MV-LV",
           "Nphases": "3",
-          "Centertap": false,
           "Installed Power(kVA)": "1000",
           "Guaranteed Power(kVA)": "1000",
           "Primary Voltage (kV)": "12.47",
@@ -14166,14 +14165,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "10",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": false
         },
         {
           "Name": "PM3_6_12_47_0_480",
           "Type": "U",
           "Voltage level": "MV-LV",
           "Nphases": "3",
-          "Centertap": false,
           "Installed Power(kVA)": "1500",
           "Guaranteed Power(kVA)": "1500",
           "Primary Voltage (kV)": "12.47",
@@ -14195,14 +14194,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "4",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": false
         },
         {
           "Name": "OH1_2_13_2_0_120",
           "Type": "U",
           "Voltage level": "MV-LV",
           "Nphases": "1",
-          "Centertap": true,
           "Installed Power(kVA)": "25",
           "Guaranteed Power(kVA)": "25",
           "Primary Voltage (kV)": "13.2",
@@ -14224,14 +14223,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "12",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": true
         },
         {
           "Name": "OH1_3_13_2_0_120",
           "Type": "U",
           "Voltage level": "MV-LV",
           "Nphases": "1",
-          "Centertap": true,
           "Installed Power(kVA)": "50",
           "Guaranteed Power(kVA)": "50",
           "Primary Voltage (kV)": "13.2",
@@ -14253,14 +14252,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "53",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": true
         },
         {
           "Name": "OH1_4_13_2_0_120",
           "Type": "U",
           "Voltage level": "MV-LV",
           "Nphases": "1",
-          "Centertap": true,
           "Installed Power(kVA)": "75",
           "Guaranteed Power(kVA)": "75",
           "Primary Voltage (kV)": "13.2",
@@ -14282,14 +14281,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "35",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": true
         },
         {
           "Name": "PM3_1_13_2_0_480",
           "Type": "U",
           "Voltage level": "MV-LV",
           "Nphases": "3",
-          "Centertap": false,
           "Installed Power(kVA)": "75",
           "Guaranteed Power(kVA)": "75",
           "Primary Voltage (kV)": "13.2",
@@ -14311,14 +14310,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "6",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": false
         },
         {
           "Name": "PM3_2_13_2_0_480",
           "Type": "U",
           "Voltage level": "MV-LV",
           "Nphases": "3",
-          "Centertap": false,
           "Installed Power(kVA)": "100",
           "Guaranteed Power(kVA)": "100",
           "Primary Voltage (kV)": "13.2",
@@ -14340,14 +14339,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "14",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": false
         },
         {
           "Name": "PM3_3_13_2_0_480",
           "Type": "U",
           "Voltage level": "MV-LV",
           "Nphases": "3",
-          "Centertap": false,
           "Installed Power(kVA)": "150",
           "Guaranteed Power(kVA)": "150",
           "Primary Voltage (kV)": "13.2",
@@ -14369,14 +14368,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "14",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": false
         },
         {
           "Name": "PM3_4_13_2_0_480",
           "Type": "U",
           "Voltage level": "MV-LV",
           "Nphases": "3",
-          "Centertap": false,
           "Installed Power(kVA)": "300",
           "Guaranteed Power(kVA)": "300",
           "Primary Voltage (kV)": "13.2",
@@ -14398,14 +14397,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "28",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": false
         },
         {
           "Name": "PM3_5_13_2_0_480",
           "Type": "U",
           "Voltage level": "MV-LV",
           "Nphases": "3",
-          "Centertap": false,
           "Installed Power(kVA)": "500",
           "Guaranteed Power(kVA)": "500",
           "Primary Voltage (kV)": "13.2",
@@ -14427,14 +14426,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "24",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": false
         },
         {
           "Name": "PM3_6_13_2_0_480",
           "Type": "U",
           "Voltage level": "MV-LV",
           "Nphases": "3",
-          "Centertap": false,
           "Installed Power(kVA)": "1000",
           "Guaranteed Power(kVA)": "1000",
           "Primary Voltage (kV)": "13.2",
@@ -14456,14 +14455,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "10",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": false
         },
         {
           "Name": "PM3_6_13_2_0_480",
           "Type": "U",
           "Voltage level": "MV-LV",
           "Nphases": "3",
-          "Centertap": false,
           "Installed Power(kVA)": "1500",
           "Guaranteed Power(kVA)": "1500",
           "Primary Voltage (kV)": "13.2",
@@ -14485,14 +14484,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "4",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": false
         },
         {
           "Name": "OH1_2_25_0_120",
           "Type": "U",
           "Voltage level": "MV-LV",
           "Nphases": "1",
-          "Centertap": true,
           "Installed Power(kVA)": "25",
           "Guaranteed Power(kVA)": "25",
           "Primary Voltage (kV)": "25",
@@ -14514,14 +14513,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "12",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": true
         },
         {
           "Name": "OH1_3_25_0_120",
           "Type": "U",
           "Voltage level": "MV-LV",
           "Nphases": "1",
-          "Centertap": true,
           "Installed Power(kVA)": "50",
           "Guaranteed Power(kVA)": "50",
           "Primary Voltage (kV)": "25",
@@ -14543,14 +14542,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "53",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": true
         },
         {
           "Name": "OH1_4_25_0_120",
           "Type": "U",
           "Voltage level": "MV-LV",
           "Nphases": "1",
-          "Centertap": true,
           "Installed Power(kVA)": "75",
           "Guaranteed Power(kVA)": "75",
           "Primary Voltage (kV)": "25",
@@ -14572,14 +14571,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "35",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": true
         },
         {
           "Name": "PM3_1_25_0_480",
           "Type": "U",
           "Voltage level": "MV-LV",
           "Nphases": "3",
-          "Centertap": false,
           "Installed Power(kVA)": "75",
           "Guaranteed Power(kVA)": "75",
           "Primary Voltage (kV)": "25",
@@ -14601,14 +14600,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "6",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": false
         },
         {
           "Name": "PM3_2_25_0_480",
           "Type": "U",
           "Voltage level": "MV-LV",
           "Nphases": "3",
-          "Centertap": false,
           "Installed Power(kVA)": "100",
           "Guaranteed Power(kVA)": "100",
           "Primary Voltage (kV)": "25",
@@ -14630,14 +14629,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "14",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": false
         },
         {
           "Name": "PM3_3_25_0_480",
           "Type": "U",
           "Voltage level": "MV-LV",
           "Nphases": "3",
-          "Centertap": false,
           "Installed Power(kVA)": "150",
           "Guaranteed Power(kVA)": "150",
           "Primary Voltage (kV)": "25",
@@ -14659,14 +14658,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "14",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": false
         },
         {
           "Name": "PM3_4_25_0_480",
           "Type": "U",
           "Voltage level": "MV-LV",
           "Nphases": "3",
-          "Centertap": false,
           "Installed Power(kVA)": "300",
           "Guaranteed Power(kVA)": "300",
           "Primary Voltage (kV)": "25",
@@ -14688,14 +14687,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "28",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": false
         },
         {
           "Name": "PM3_5_25_0_480",
           "Type": "U",
           "Voltage level": "MV-LV",
           "Nphases": "3",
-          "Centertap": false,
           "Installed Power(kVA)": "500",
           "Guaranteed Power(kVA)": "500",
           "Primary Voltage (kV)": "25",
@@ -14717,14 +14716,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "24",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": false
         },
         {
           "Name": "PM3_6_25_0_480",
           "Type": "U",
           "Voltage level": "MV-LV",
           "Nphases": "3",
-          "Centertap": false,
           "Installed Power(kVA)": "1000",
           "Guaranteed Power(kVA)": "1000",
           "Primary Voltage (kV)": "25",
@@ -14746,14 +14745,14 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "10",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": false
         },
         {
           "Name": "PM3_6_25_0_480",
           "Type": "U",
           "Voltage level": "MV-LV",
           "Nphases": "3",
-          "Centertap": false,
           "Installed Power(kVA)": "1500",
           "Guaranteed Power(kVA)": "1500",
           "Primary Voltage (kV)": "25",
@@ -14775,7 +14774,8 @@
           "Repair time medium (hours)": "30",
           "Repair time maximum (hours)": "44",
           "Probability": "4",
-          "connection": "Wye-Wye"
+          "connection": "Wye-Wye",
+          "Centertap": false
         }
       ]
     }
