@@ -246,7 +246,8 @@ class UrbanoptDittoReader(object):
         print()
 
         print('Check that phases from transformer to load and source are correct:',flush=True)
-        transformer_phase_res = check_transformer_phase_path(model,needs_transformers=True, verbose=True)
+        # Allowing MV loads
+        transformer_phase_res = check_transformer_phase_path(model,needs_transformers=False, verbose=True)
 
         # don't do check here - see if we can fix it first
         #final_pass = final_pass and transformer_phase_res
@@ -261,8 +262,8 @@ class UrbanoptDittoReader(object):
 
         print('Attempting to fix phases from transformer to load and source', flush=True)
         if result == 'FAIL':
-            fix_transformer_phase_path(model,needs_transformers=True, verbose=True)
-            transformer_phase_res = check_transformer_phase_path(model,needs_transformers=True, verbose=True)
+            fix_transformer_phase_path(model,needs_transformers=False, verbose=True)
+            transformer_phase_res = check_transformer_phase_path(model,needs_transformers=False, verbose=True)
             final_pass = final_pass and transformer_phase_res
             result = 'FAIL'
             color = FAIL
