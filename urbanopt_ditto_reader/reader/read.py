@@ -196,11 +196,11 @@ class Reader(AbstractReader):
                                         wire.Y = db_wire['height (m)'] # Database uses meters
                                         wire.ampacity = wire_map[wire_type]['ampacity (A)']
                                         wire.gmr = wire_map[wire_type]['gmr (mm)'] /1000 #All ditto length units are in meters 
-                                        wire.resistance = wire_map[wire_type]['resistance (ohm/km)'] *1000 # ditto internal resistance is in ohms/meter
+                                        wire.resistance = wire_map[wire_type]['resistance (ohm/km)'] /1000# ditto internal resistance is in ohms/meter
                                         wire.diameter = wire_map[wire_type]['diameter (mm)'] /1000 #All ditto length units are in meters
                                         if wire_map[wire_type]['type'] == 'UG concentric neutral':
                                             wire.concentric_neutral_gmr = wire_map[wire_type]['gmr neutral (mm)'] /1000
-                                            wire.concentric_neutral_resistance =wire_map[wire_type]['resistance neutral (ohm/km)'] *1000
+                                            wire.concentric_neutral_resistance =wire_map[wire_type]['resistance neutral (ohm/km)'] /1000 
                                             wire.concentric_neutral_diameter = wire_map[wire_type]['concentric diameter neutral strand (mm)'] /1000
                                             wire.concentric_neutral_outside_diameter = wire_map[wire_type]['concentric neutral outside diameter (mm)'] /1000
                                             wire.concentric_neutral_nstrand = wire_map[wire_type]['# concentric neutral strands']
@@ -442,7 +442,10 @@ class Reader(AbstractReader):
                     is_center_tap = upstream_transformer.is_center_tap
                     load.nominal_voltage = upstream_transformer.windings[1].nominal_voltage
                 else:
-                    print(f'Warning - Load {load.name} is incorrectly connected',flush=True)
+                    print(f'Warning - Load {load.name} has no transformer. Assigning as MV load',flush=True)
+                    load.nominal_voltage = model['urbanopt-feeder'].nominal_voltage
+
+
 
                 load_path = os.path.join(self.load_folder,id_value,'feature_reports')
                 load_multiplier = 1000
@@ -470,7 +473,10 @@ class Reader(AbstractReader):
                             phases.append(ph_wdg.phase)
                         if is_center_tap:
                             phases = ['A','B']
-
+                    else:
+                        # WARNING - we are assuming that MV loads are all three phase
+                        phases = ['A','B','C']
+                    
                     phase_loads = []
                     for phase in phases:
                         phase_load = PhaseLoad(model)
