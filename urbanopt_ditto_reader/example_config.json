@@ -1,6 +1,6 @@
 {
     "urbanopt_scenario_file": "example/baseline_scenario.csv",
-    "equipment_file": "urbanopt_ditto_reader/electrical_database.json",
+    "equipment_file": "urbanopt_ditto_reader/extended_catalog.json",
     "opendss_folder": "example/run/baseline_scenario/opendss",
     "urbanopt_geojson_file": "example/urbanopt_example.json",
     "use_reopt": true,
