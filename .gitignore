@@ -136,3 +136,6 @@ dmypy.json
 
 # opendss files
 ./example/run/baseline_scenario/opendss/
+
+# ditto local checkout
+ditto/

@@ -163,10 +163,7 @@ class Reader(AbstractReader):
         self.equipment_data = self.get_equipment_data(self.equipment_file)
 
         # Call parse from abstract reader class
-        try:
-            super(Reader, self).parse(model, **kwargs)
-        except KeyError:
-            raise SystemExit("\nFeatureFile is missing components. Are all electrical features included?")
+        super(Reader, self).parse(model, **kwargs)
         return 1
 
     def parse_lines(self, model, **kwargs):
@@ -176,6 +173,11 @@ class Reader(AbstractReader):
         :returns: 1 for success, -1 for failure
         :rtype: int
         """
+
+        wire_map = {}
+        for wire in self.equipment_data['WIRES']['WIRES CATALOG']:
+            wire_map[wire['nameclass']] = wire
+
         bad_lines = []
         for element in self.geojson_content["features"]:
             if 'properties' in element and 'type' in element['properties'] and element['properties']['type'] == 'ElectricalConnector':
@@ -191,36 +193,49 @@ class Reader(AbstractReader):
                     line.to_element = element['properties']['endJunctionId']
                 line.length = element['properties']['total_length']*0.3048 #length from feet to meters
                 all_wires = []
-                if not 'wires' in element['properties'] or len(element['properties']['wires']) == 0:
-                    bad_lines.append(line.name)
-                    continue
+                if 'electrical_catalog_name' in element['properties']:
+                    found_line = False
+                    for all_zone in self.equipment_data['LINES']: # Look in all zones. TODO: Should we do this or use a single zone?
+                        if not isinstance(all_zone,dict):
+                            continue
+                        for zone in all_zone:
+                            for db_line in all_zone[zone]:
+                                if found_line:
+                                    break
+                                if element['properties']['electrical_catalog_name'] == db_line['Name']:
+                                    found_line = True
+                                    for db_wire in db_line['Line geometry']:
+                                        wire = Wire(model)
+                                        wire_type = db_wire['wire']
+                                        wire.nameclass = wire_type.replace(' ','_').replace('/','-')
+    
+                                        wire.phase = db_wire['phase']
+                                        wire.X = db_wire['x (m)']
+                                        wire.Y = db_wire['height (m)'] # Database uses meters
+                                        wire.ampacity = wire_map[wire_type]['ampacity (A)']
+                                        wire.gmr = wire_map[wire_type]['gmr (mm)'] /1000 #All ditto length units are in meters 
+                                        wire.resistance = wire_map[wire_type]['resistance (ohm/km)'] /1000# ditto internal resistance is in ohms/meter
+                                        wire.diameter = wire_map[wire_type]['diameter (mm)'] /1000 #All ditto length units are in meters
+                                        if wire_map[wire_type]['type'] == 'UG concentric neutral':
+                                            wire.concentric_neutral_gmr = wire_map[wire_type]['gmr neutral (mm)'] /1000
+                                            wire.concentric_neutral_resistance =wire_map[wire_type]['resistance neutral (ohm/km)'] /1000 
+                                            wire.concentric_neutral_diameter = wire_map[wire_type]['concentric diameter neutral strand (mm)'] /1000
+                                            wire.concentric_neutral_outside_diameter = wire_map[wire_type]['concentric neutral outside diameter (mm)'] /1000
+                                            wire.concentric_neutral_nstrand = wire_map[wire_type]['# concentric neutral strands']
+                                            wire.insulation_thickness = 10/1000.0
+    
+                                        if 'OH' in wire_map[wire_type]['type']:
+                                            line.line_type = 'overhead'
+                                        elif 'UG' in wire_map[wire_type]['type']:
+                                            line.line_type = 'underground'
+    
+                                        all_wires.append(wire)
+                    if not found_line:
+                        raise ValueError(f'No line found in catalog for {element["properties"]["electrical_catalog_name"]}')
 
-                for wire_type in element['properties']['wires']:
-                    found_wire = False
-                    for db_wire in self.equipment_data['wires']:
-                        if db_wire['nameclass'] == wire_type:
-                            found_wire = True
-                            wire = Wire(model)
-                            wire.nameclass = wire_type.replace(' ','_').replace('/','-')
-                            if 'OH' in wire_type:
-                                line.line_type = 'overhead'
-                            else:
-                                line.line_type = 'underground'
-                            if 'S1' in wire_type:
-                                wire.phase = 'A'
-                            elif 'S2' in wire_type:
-                                wire.phase = 'B'
-                            else:
-                                wire.phase = wire_type.split(' ')[-1] #Currently the convention is that the last element is the phase.
-                            wire.ampacity = float(db_wire['ampacity'])
-                            wire.gmr = float(db_wire['gmr'])*0.3048
-                            wire.resistance = float(db_wire['resistance'])*0.3048
-                            wire.diameter = float(db_wire['diameter'])*0.3048
-                            wire.X = float(db_wire['x'])*0.3048
-                            wire.Y = float(db_wire['height'])*0.3048
-                            all_wires.append(wire)
-                    if not found_wire:
-                        raise ValueError(f'No wire found in catalog for {wire_type}')
+
+                else:
+                    bad_lines.append(line.name)
                 line.wires = all_wires
 
 
@@ -317,51 +332,69 @@ class Reader(AbstractReader):
                         print("Warning - the transformer "+transformer_id+" should have a from and to element - "+str(len(transformer_panel_map[transformer_id]))+" junctions on the transformer")
                     if len(transformer_panel_map[transformer_id]) >=2:
                         found_transfomer = False
-                        for db_transformer in self.equipment_data['transformer_properties']:
-                            if element['properties']['equipment'][0] == db_transformer['nameclass']:
-                                found_transfomer = True
-                                transformer.from_element = transformer_panel_map[transformer_id][0]
-                                transformer.to_element = transformer_panel_map[transformer_id][1] #NOTE: Need to figure out correct from and to directions here.
-                                transformer.name = transformer_id
-                                transformer.reactances = [float(db_transformer['reactance'])]
-                                transformer.is_center_tap = db_transformer['is_center_tap']
-                                windings = [Winding(model),Winding(model)]
-                                connections = db_transformer['connection'].split('-')
-
-                                if transformer.is_center_tap:
-                                    windings.append(Winding(model))
-                                    transformer.reactances.append(float(db_transformer['reactance']))
-                                    transformer.reactances.append(float(db_transformer['reactance'])) #TODO: map reactance values correctly for center-taps
-                                for i in range(len(windings)):
-                                    phase_windings = []
-                                    if transformer.is_center_tap and i >0:
-                                        for phase in ['A','B']:
-                                            pw = PhaseWinding(model)
-                                            pw.phase = phase
-                                            phase_windings.append(pw)
-                                    else:
-                                        for phase in db_transformer['phases']:
-                                            pw = PhaseWinding(model)
-                                            pw.phase = phase
-                                            phase_windings.append(pw)
-                                    windings[i].phase_windings = phase_windings
-                                    windings[i].rated_power = float(db_transformer['kva'])*1000
-                                    if i<1:
-                                        windings[i].nominal_voltage = float(db_transformer['high_voltage'])*1000
-                                        source_voltages.add(windings[i].nominal_voltage)
+                        for all_zone in self.equipment_data['SUBSTATIONS AND DISTRIBUTION TRANSFORMERS']: #TODO: Why are there duplicate zones? Is it important?
+                            for zone in all_zone:
+                                for db_transformer in all_zone[zone]:
+                                    if found_transfomer:
+                                        break
+                                    if element['properties']['electrical_catalog_name'] == db_transformer['Name']:
+                                        found_transfomer = True
+                                        transformer.from_element = transformer_panel_map[transformer_id][0]
+                                        transformer.to_element = transformer_panel_map[transformer_id][1] #NOTE: direction can be fixed with the consistency module. May be wrong here
+                                        transformer.name = transformer_id
+                                        transformer.reactances = [float(db_transformer['Reactance (p.u. transf)'])]
+                                        transformer.is_center_tap = db_transformer['Centertap']
+    
+                                        windings = [Winding(model),Winding(model)]
+                                        connections = db_transformer['connection'].split('-')
+        
                                         if transformer.is_center_tap:
-                                            windings[i].nominal_voltage = windings[i].nominal_voltage/(3**0.5)
-                                        windings[i].connection_type = connection_map[connections[0]]
-                                        windings[i].voltage_type = 0
-                                        windings[i].resistance = float(db_transformer['resistance'])
-                                    else:
-                                        windings[i].nominal_voltage = float(db_transformer['low_voltage'])*1000
-                                        windings[i].connection_type = connection_map[connections[1]]
-                                        windings[i].voltage_type = 1
-                                        windings[i].resistance = float(db_transformer['resistance'])
-                                transformer.windings = windings
+                                            windings.append(Winding(model))
+                                            transformer.reactances.append(float(db_transformer['Reactance (p.u. transf)']))
+                                            transformer.reactances.append(float(db_transformer['Reactance (p.u. transf)'])) #TODO: map reactance values correctly for center-taps
+                                        for i in range(len(windings)):
+                                            phase_windings = []
+                                            if transformer.is_center_tap and i >0:
+                                                # Create A and B phase for low side of center-tap transformers as per OpenDSS convention
+                                                for phase in ['A','B']:
+                                                    pw = PhaseWinding(model)
+                                                    pw.phase = phase
+                                                    phase_windings.append(pw)
+                                            else:
+                                                # Phases need to be added as an extra attribute in the geojson file attributes under properties. This is an optional field and should be added to the schema
+                                                if 'phases' not in element['properties']:
+                                                    raise ValueError(f'Transformer {element["properties"]["id"]} does not have phases included in geojson file')
+                                                phases = element['properties']['phases']
+                                                if len(phases) != int(db_transformer['Nphases']):
+                                                    raise ValueError(f'Phases for transformer {element["properties"]["electrical_catalog_name"]} in database do not match number of phases of transformer {element["properties"]["id"]} in geojson file')
+    
+                                                for phase in phases:
+                                                    pw = PhaseWinding(model)
+                                                    pw.phase = phase
+                                                    phase_windings.append(pw)
+                                            windings[i].phase_windings = phase_windings
+                                            if 'Installed Power(MVA)' in db_transformer:
+                                                kva = float(db_transformer['Installed Power (MVA)']) *1000
+                                            else:
+                                                kva = float(db_transformer['Installed Power(kVA)'])
+
+                                            windings[i].rated_power = kva*1000
+                                            if i<1:
+                                                windings[i].nominal_voltage = float(db_transformer['Primary Voltage (kV)'])*1000
+                                                source_voltages.add(windings[i].nominal_voltage)
+                                                if transformer.is_center_tap:
+                                                    windings[i].nominal_voltage = windings[i].nominal_voltage/(3**0.5)
+                                                windings[i].connection_type = connection_map[connections[0]]
+                                                windings[i].voltage_type = 0
+                                                windings[i].resistance = float(db_transformer['Low-voltage-side short-circuit resistance (ohms)'])
+                                            else:
+                                                windings[i].nominal_voltage = float(db_transformer['Secondary Voltage (kV)'])*1000
+                                                windings[i].connection_type = connection_map[connections[1]]
+                                                windings[i].voltage_type = 1
+                                                windings[i].resistance = float(db_transformer['Low-voltage-side short-circuit resistance (ohms)'])
+                                        transformer.windings = windings
                         if not found_transfomer:
-                            raise ValueError(f'No transfomer found in catalog for {element["properties"]["equipment"][0]}')
+                            raise ValueError(f'No transfomer found in catalog for {element["properties"]["electrical_catalog_name"]}')
 
 
         # Note that the source voltage is set to be the highest side of a transformer that is used
@@ -386,6 +419,8 @@ class Reader(AbstractReader):
         :returns: 1 for success, -1 for failure
         :rtype: int
         """
+        # TODO: actually fill this in. Are these in the catalog?
+
 
         return 1
 
@@ -425,7 +460,10 @@ class Reader(AbstractReader):
                     is_center_tap = upstream_transformer.is_center_tap
                     load.nominal_voltage = upstream_transformer.windings[1].nominal_voltage
                 else:
-                    print(f'Warning - Load {load.name} is incorrectly connected',flush=True)
+                    print(f'Warning - Load {load.name} has no transformer. Assigning as MV load',flush=True)
+                    load.nominal_voltage = model['urbanopt-feeder'].nominal_voltage
+
+
 
                 load_path = os.path.join(self.load_folder,id_value,'feature_reports')
                 load_multiplier = 1000
@@ -453,7 +491,10 @@ class Reader(AbstractReader):
                             phases.append(ph_wdg.phase)
                         if is_center_tap:
                             phases = ['A','B']
-
+                    else:
+                        # WARNING - we are assuming that MV loads are all three phase
+                        phases = ['A','B','C']
+                    
                     phase_loads = []
                     for phase in phases:
                         phase_load = PhaseLoad(model)

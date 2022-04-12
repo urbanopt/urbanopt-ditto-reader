@@ -29,7 +29,7 @@ You are expected to have an existing URBANopt project dir with successful simula
 #### If you are using your own config.json file, use the following fields:
 1. "urbanopt_scenario_file": Required, Path to scenario csv file
 1. "urbanopt_geojson_file": Required, Path to feature json file
-1. "equipment_file": Optional, Path to custom equipment file
+1. "equipment_file": Optional, Path to custom equipment file. If not specified, the 'extended_catalog.json' file will be used
 1. "opendss_folder": Required, Path to dir created by this command, holding openDSS output
 1. "use_reopt": Required, Boolean (True/False) to analyze reopt data, if it has been provided
 1. "start_date": Optional, String, Indicates the start date of the simulation. Uses format "YYYY/MM/DD"
