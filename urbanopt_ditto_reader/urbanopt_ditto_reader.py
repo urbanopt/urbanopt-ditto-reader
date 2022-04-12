@@ -296,7 +296,7 @@ class UrbanoptDittoReader(object):
         writer.write(model)
 
         # write in JSON format as well
-        json_writer = JSONWriter(output_path=os.path.join(self.dss_analysis, 'json_files'), split_feeders=False, split_substations=False)
+        json_writer = JSONWriter(output_path=os.path.join(self.dss_analysis, 'json_files'))
         json_writer.write(model)
 
         ts = pd.read_csv(os.path.join(self.timeseries_location, 'timestamps.csv'), header=0)
