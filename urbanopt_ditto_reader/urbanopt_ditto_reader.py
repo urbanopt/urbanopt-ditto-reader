@@ -189,6 +189,7 @@ class UrbanoptDittoReader(object):
 
         from ditto.store import Store
         from ditto.writers.opendss.write import Writer
+        from ditto.writers.json.write import Writer as JSONWriter
         from urbanopt_ditto_reader.reader.read import Reader
 
         from ditto.consistency.check_loops import check_loops
@@ -307,9 +308,15 @@ class UrbanoptDittoReader(object):
             os.makedirs(os.path.join(self.dss_analysis, 'results', 'Transformers'), exist_ok=True)
         if not os.path.exists(os.path.join(self.dss_analysis, 'results', 'Lines')):
             os.makedirs(os.path.join(self.dss_analysis, 'results', 'Lines'), exist_ok=True)
+        if not os.path.exists(os.path.join(self.dss_analysis, 'json_files')):
+            os.makedirs(os.path.join(self.dss_analysis, 'json_files'), exist_ok=True)
 
         writer = Writer(output_path=os.path.join(self.dss_analysis, 'dss_files'), split_feeders=False, split_substations=False)
         writer.write(model)
+
+        # write in JSON format as well
+        json_writer = JSONWriter(output_path=os.path.join(self.dss_analysis, 'json_files'))
+        json_writer.write(model)
 
         ts = pd.read_csv(os.path.join(self.timeseries_location, 'timestamps.csv'), header=0)
         number_iterations = len(ts)
