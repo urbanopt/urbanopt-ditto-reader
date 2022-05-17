@@ -208,27 +208,27 @@ class Reader(AbstractReader):
                                         wire = Wire(model)
                                         wire_type = db_wire['wire']
                                         wire.nameclass = wire_type.replace(' ','_').replace('/','-')
-    
+
                                         wire.phase = db_wire['phase']
                                         wire.X = db_wire['x (m)']
                                         wire.Y = db_wire['height (m)'] # Database uses meters
                                         wire.ampacity = wire_map[wire_type]['ampacity (A)']
-                                        wire.gmr = wire_map[wire_type]['gmr (mm)'] /1000 #All ditto length units are in meters 
+                                        wire.gmr = wire_map[wire_type]['gmr (mm)'] /1000 #All ditto length units are in meters
                                         wire.resistance = wire_map[wire_type]['resistance (ohm/km)'] /1000# ditto internal resistance is in ohms/meter
                                         wire.diameter = wire_map[wire_type]['diameter (mm)'] /1000 #All ditto length units are in meters
                                         if wire_map[wire_type]['type'] == 'UG concentric neutral':
                                             wire.concentric_neutral_gmr = wire_map[wire_type]['gmr neutral (mm)'] /1000
-                                            wire.concentric_neutral_resistance =wire_map[wire_type]['resistance neutral (ohm/km)'] /1000 
+                                            wire.concentric_neutral_resistance =wire_map[wire_type]['resistance neutral (ohm/km)'] /1000
                                             wire.concentric_neutral_diameter = wire_map[wire_type]['concentric diameter neutral strand (mm)'] /1000
                                             wire.concentric_neutral_outside_diameter = wire_map[wire_type]['concentric neutral outside diameter (mm)'] /1000
                                             wire.concentric_neutral_nstrand = wire_map[wire_type]['# concentric neutral strands']
                                             wire.insulation_thickness = 10/1000.0
-    
+
                                         if 'OH' in wire_map[wire_type]['type']:
                                             line.line_type = 'overhead'
                                         elif 'UG' in wire_map[wire_type]['type']:
                                             line.line_type = 'underground'
-    
+
                                         all_wires.append(wire)
                     if not found_line:
                         raise ValueError(f'No line found in catalog for {element["properties"]["electrical_catalog_name"]}')
@@ -320,7 +320,7 @@ class Reader(AbstractReader):
                 else:
                     transformer_panel_map[element['properties']['DSId']] = [element['properties']['id']]
 
-        source_voltages = set() 
+        source_voltages = set()
         for element in self.geojson_content["features"]:
             if 'properties' in element and 'district_system_type' in element['properties'] and element['properties']['district_system_type'] == 'Transformer':
                 transformer_id = element['properties']['id']
@@ -344,10 +344,10 @@ class Reader(AbstractReader):
                                         transformer.name = transformer_id
                                         transformer.reactances = [float(db_transformer['Reactance (p.u. transf)'])]
                                         transformer.is_center_tap = db_transformer['Centertap']
-    
+
                                         windings = [Winding(model),Winding(model)]
                                         connections = db_transformer['connection'].split('-')
-        
+
                                         if transformer.is_center_tap:
                                             windings.append(Winding(model))
                                             transformer.reactances.append(float(db_transformer['Reactance (p.u. transf)']))
@@ -367,7 +367,7 @@ class Reader(AbstractReader):
                                                 phases = element['properties']['phases']
                                                 if len(phases) != int(db_transformer['Nphases']):
                                                     raise ValueError(f'Phases for transformer {element["properties"]["electrical_catalog_name"]} in database do not match number of phases of transformer {element["properties"]["id"]} in geojson file')
-    
+
                                                 for phase in phases:
                                                     pw = PhaseWinding(model)
                                                     pw.phase = phase
@@ -494,14 +494,14 @@ class Reader(AbstractReader):
                     else:
                         # WARNING - we are assuming that MV loads are all three phase
                         phases = ['A','B','C']
-                    
+
                     phase_loads = []
                     for phase in phases:
                         phase_load = PhaseLoad(model)
                         phase_load.phase = phase
                         power_factor = 0.95
                         phase_load.p = max_load/len(phases) * load_multiplier
-                        phase_load.q = phase_load.p * ((1/power_factor-1)**0.5) 
+                        phase_load.q = phase_load.p * ((1/power_factor-1)**0.5)
                         phase_loads.append(phase_load)
                     load.phase_loads = phase_loads
                     if self.is_timeseries:
@@ -576,8 +576,8 @@ class Reader(AbstractReader):
                     upstream_transformer = model[upstream_transformer_name]
                     is_center_tap = upstream_transformer.is_center_tap
                 else:
-                    print(f'Warning - DG {pv.name} is incorrectly connected',flush=True)
-                if pv_kw >0:
+                    print(f'Warning - DG {upstream_transformer_name} is incorrectly connected',flush=True)
+                if pv_kw > 0:
                     pv = Photovoltaic(model)
                     pv.name = 'solar_'+id_value
                     pv.connecting_element = connecting_element
