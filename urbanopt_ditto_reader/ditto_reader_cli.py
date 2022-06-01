@@ -200,8 +200,7 @@ def run_opendss(scenario_file, feature_file, equipment, start_date, start_time, 
 
         ditto = UrbanoptDittoReader(config_dict)
         ditto.run()
-    except Exception as e:
-        print(f"CLI failed with message: {e}")
-        sys.exit(1)
+    except UnboundLocalError as ube:
+        raise SystemError(f"CLI failed with message:\n{ube}")
     else:
         print(f"\nDone. Results located in {config_dict['opendss_folder']}\n")
