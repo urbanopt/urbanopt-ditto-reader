@@ -62,6 +62,9 @@ Clone the repository:
 Change directories into the repository:
 `cd urbanopt-ditto-reader`
 
+If you are using an ARM chip (Apple Silicon) computer, install this branch of OpenDSSDirect.py:
+`pip install git+https://github.com/dss-extensions/OpenDSSDirect.py@dss_python-0.12.0`
+
 Install the respository:
 
 `pip install -e .`
