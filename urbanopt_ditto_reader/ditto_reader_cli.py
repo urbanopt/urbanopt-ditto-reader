@@ -51,117 +51,118 @@ from urbanopt_ditto_reader.urbanopt_ditto_reader import UrbanoptDittoReader
 
 CONTEXT_SETTINGS = dict(help_option_names=['-h', '--help'])
 
+
 @click.group(context_settings=CONTEXT_SETTINGS)
 def cli():
     """URBANopt Ditto Reader"""
     pass
 
-@cli.command(short_help="Run OpenDSS on existing urbanopt simulations")
+
+@cli.command(
+    short_help='Run OpenDSS on an URBANopt GeoJSON containing detailed electrical '
+    'grid objects.'
+)
 @click.option(
     '-s',
     '--scenario_file',
     type=click.Path(exists=True, file_okay=True, dir_okay=False, resolve_path=True),
-    help="Path to scenario file"
+    help='Path to scenario file'
 )
 @click.option(
     '-f',
-    "--feature_file",
+    '--feature_file',
     type=click.Path(exists=True, file_okay=True, dir_okay=False, resolve_path=True),
-    help="Path to feature file"
+    help='Path to feature file'
 )
 @click.option(
-    "-e",
-    "--equipment",
+    '-e',
+    '--equipment',
     type=click.Path(exists=True, file_okay=True, dir_okay=False, resolve_path=True),
-    help="Path to optional custom equipment file"
+    help='Path to optional custom equipment file'
 )
 @click.option(
-    "-a",
-    "--start_date",
+    '-a',
+    '--start_date',
     type=str,
     default=None,
-    help="Beginning date of simulation. Uses format 'YYYY/MM/DD'. If invalid or None, all timepoints will be run"
+    help='Beginning date of simulation. Uses format "YYYY/MM/DD". If unspecified or '
+    'invalid, the simulation will begin from the earliest date available.'
 )
 @click.option(
-    "-b",
-    "--start_time",
+    '-b',
+    '--start_time',
     type=str,
     default=None,
-    help="Beginning timestamp of simulation. Uses format 'HH:MM:SS' If invalid or None, all timepoints will be run"
+    help='Beginning timestamp of simulation. Uses format "HH:MM:SS". If unspecified, '
+    'a default assumption of 00:00:00 is used if the --start_date is specified or '
+    'it will simply be the earliest timepoint available.'
 )
 @click.option(
-    "-n",
-    "--end_date",
+    '-n',
+    '--end_date',
     type=str,
     default=None,
-    help="Ending date of simulation. Uses format 'YYYY/MM/DD'. If invalid or None, all timepoints will be run"
+    help='Ending date of simulation. Uses format "YYYY/MM/DD". If unspecified or '
+    'invalid, the simulation will begin to the latest date available.'
 )
 @click.option(
-    "-d",
-    "--end_time",
+    '-d',
+    '--end_time',
     type=str,
     default=None,
-    help="Ending timestamp of simulation. Uses format 'HH/MM/SS'. If invalid or None, all timepoints will be run"
+    help='Ending timestamp of simulation. Uses format "HH/MM/SS". If unspecified, '
+    'a default assumption of 32:00:00 is used if the --end_date is specified or '
+    'it will simply be the latest timepoint available.'
 )
 @click.option(
-    "-t",
-    "--timestep",
+    '-t',
+    '--timestep',
     type=float,
     default=None,
-    help="Interval between simulations in minutes."
+    help='Interval between simulation steps in minutes. If unspecified, the timestep '
+    'will be inferred from the load profile results.'
 )
-
 @click.option(
     '-r',
     '--reopt',
     is_flag=True,
-    help="Flag to use REopt data in this openDSS analysis"
+    help='Flag to use REopt data in this openDSS analysis.'
+)
+@click.option(
+    '-m',
+    '--rnm',
+    is_flag=True,
+    help='Flag to use RNM-generated DSS files in this analysis.'
 )
 @click.option(
     '-c',
     '--config',
     type=click.Path(exists=True, file_okay=True, dir_okay=False, resolve_path=True),
-    help="Path to a json config file for all settings"
+    help='Path to a json config file that specifies all simulation settings.'
 )
 @click.option(
     '-u',
     '--upgrade',
     is_flag=True,
-    help="Flag to automatically upgrade transformers if undersized"
+    help='Flag to automatically upgrade transformers that are undersized before '
+    'running OpenDSS. Note that this will only upgrade the size of transformers '
+    'that are smaller than the sum of the peak loads that they serve.'
 )
+def run_opendss(scenario_file, feature_file, equipment, start_date, start_time,
+                end_date, end_time, timestep, reopt, rnm, config, upgrade):
+    """Run OpenDSS on an URBANopt GeoJSON containing detailed electrical grid objects.
 
-def run_opendss(scenario_file, feature_file, equipment, start_date, start_time, end_date, end_time, timestep, reopt, config, upgrade):
-    """
     \b
-    Run OpenDSS on an existing URBANopt scenario.
-    If referencing your own json config file: all settings must be made in that file using absolute paths.
+    If referencing your own json config file, all settings must be made in that
+    file using absolute paths.
 
-    \f
-    :param scenario_file: Path, location and name of scenario csv file
-    :param feature_file: Path, location & name of feature json file
-    :param equipment: Path, location and name of custom equipment file
-    :param start_date: String, date of the start of simulation. Uses format "YYYY/MM/DD"
-    :param start_time: String, start time of the simulation. Uses format "HH:MM:SS". The start_date
-    and start_time are aggregate to get the timestamp (using format "YYYY/MM/DD HH:MM:SS") for the config file and is cross referenced with the timestamps in the SCENARIO_NAME/opendss/profiles/timestamps.csv
-    file created from profiles in SCENARIO_NAME/FEATURE_ID/feature_reports/feature_report_reopt.csv
-    if use_reopt is true and SCENARIO_NAME/FEATURE_ID/feature_reports/default_feature_report.csv if
-    use_reopt is false. It assumes start_time to be 00:00:00 if start_date is found but no
-    start_time. It runs the entire year if timestamp is not found.
-    :param end_date: String, date of the end of simulation. Uses format "YYYY/MM/DD"
-    :param end_time: String, end time of the simulation. Uses format "HH:MM:SS". The end_date
-    and end_time are aggregate to get the timestamp using format (using format "YYYY/MM/DD
-    HH:MM:SS") for the config file and is cross referenced with the timestamps in the
-    SCENARIO_NAME/opendss/profiles/timestamps.csv file created from profiles in
-    SCENARIO_NAME/FEATURE_ID/feature_reports/feature_report_reopt.csv if use_reopt is true and
-    SCENARIO_NAME/FEATURE_ID/feature_reports/default_feature_report.csv if use_reopt is false.  It assumes end_time to be 23:00:00 if end_date is found but no
-    end_time. It
-    runs the entire year if timestamp is not found.
-    :param timestep: Float, number of minutes between each simulation. If larger than timesteps provided by the reopt feature reports (if use_repot is true), or urbanopt feature reports (if use_reopt is false), an error is raised
-    :param reopt: Boolean, flag to specify that reopt data is present and OpenDSS analysis should include it
-    :param upgrade: Boolean, flag to automatically ugrade transformers that are smaller than the sum of the peak loads that they serve.
-    :param config: Path, location of config file specifying input options for OpenDSS
+    \b
+    Note that the start/end date and time are aggregated to get the start/end timestamp
+    (using format"YYYY/MM/DD HH:MM:SS"), which is cross referenced with the timestamps
+    in the SCENARIO_NAME/opendss/profiles/timestamps.csv. This file is created from
+    profiles in SCENARIO_NAME/FEATURE_ID/feature_reports/feature_report_reopt.csv
+    if use_reopt is true and SCENARIO_NAME/FEATURE_ID/feature_reports/
     """
-
     try:
         if config:
             with open(config) as f:
@@ -184,7 +185,6 @@ def run_opendss(scenario_file, feature_file, equipment, start_date, start_time, 
             elif end_date is None or end_time is None:
                 end_date_time = None
 
-
             config_dict = {
                 'urbanopt_scenario_file': scenario_file,
                 'urbanopt_geojson_file': feature_file,
@@ -194,13 +194,17 @@ def run_opendss(scenario_file, feature_file, equipment, start_date, start_time, 
                 'end_time': end_date_time,
                 'timestep': timestep,
                 'upgrade_transformers': upgrade
-                }
+            }
             if equipment:
                 config_dict['equipment_file'] = equipment
 
         ditto = UrbanoptDittoReader(config_dict)
-        ditto.run()
+        if rnm:
+            ditto.run_rnm_opendss()
+        else:
+            ditto.run_urbanopt_geojson()
     except UnboundLocalError as ube:
         raise SystemError(f"CLI failed with message:\n{ube}")
     else:
         print(f"\nDone. Results located in {config_dict['opendss_folder']}\n")
+        sys.exit(0)

@@ -48,24 +48,40 @@ from pathlib import Path
 import pandas as pd
 import opendssdirect as dss
 
+from ditto.store import Store
+from ditto.readers.opendss import OpenDSSReader
+from ditto.writers.opendss.write import Writer
+from ditto.writers.json.write import Writer as JSONWriter
+
+from ditto.consistency.check_loops import check_loops
+from ditto.consistency.check_loads_connected import check_loads_connected
+from ditto.consistency.check_unique_path import check_unique_path
+from ditto.consistency.check_matched_phases import check_matched_phases
+from ditto.consistency.check_transformer_phase_path import check_transformer_phase_path
+from ditto.consistency.fix_transformer_phase_path import fix_transformer_phase_path
+from ditto.consistency.fix_undersized_transformers import fix_undersized_transformers
+
+from urbanopt_ditto_reader.reader import UrbanoptReader
+
 
 class UrbanoptDittoReader(object):
-    """A base class for managing inputs for OpenDSS simulation.
+    """A class for running OpenDSS simulation using URBANopt results.
 
     Args:
         config_data: An optional dictionary to specify the configuration parameters.
 
     Properties:
-        * module_path
         * geojson_file
         * urbanopt_scenario_name
         * urbanopt_scenario
         * equipment_file
+        * rnm_results
         * dss_analysis
         * use_reopt
         * start_time
         * end_time
         * timestep
+        * upgrade_transformers
     """
 
     def __init__(self, config_data=None):
@@ -89,6 +105,8 @@ class UrbanoptDittoReader(object):
         self.urbanopt_scenario = str(
             Path(scenario).expanduser().parent / 'run' / self.urbanopt_scenario_name)
         self.equipment_file = str(Path(config['equipment_file']).expanduser().resolve())
+        self.rnm_results = os.path.join(
+            self.urbanopt_scenario, 'rnm-us', 'results', 'OpenDSS')
         self.dss_analysis = str(Path(config['opendss_folder']).expanduser().resolve())
         self.use_reopt = config['use_reopt']
         self.start_time = None
@@ -202,28 +220,40 @@ class UrbanoptDittoReader(object):
 
         return transformer_violation_dict
 
-    def run(self):
+    def run_rnm_opendss(self):
+        """Run OpenDSS with DSS files output by URBANopt RNM."""
+        # write the loads from the URBANopt files
+        print('\nRE-SERIALIZING MODEL')
+        reader = UrbanoptReader(
+            geojson_file=self.geojson_file,
+            equipment_file=self.equipment_file,
+            load_folder=self.urbanopt_scenario,
+            use_reopt=self.use_reopt,
+            is_timeseries=True,
+            timeseries_location=self.timeseries_location,
+            relative_timeseries_location=os.path.join('..', 'profiles')
+        )
+        reader.write_load_csv()
 
-        from ditto.store import Store
-        from ditto.writers.opendss.write import Writer
-        from ditto.writers.json.write import Writer as JSONWriter
-        from urbanopt_ditto_reader.reader.read import Reader
+        # build a model from the raw OpenDSS files output by RNM
+        model = Store()
+        master_file = os.path.join(self.rnm_results, 'Master.dss')
+        buscoordinates_file = os.path.join(self.rnm_results, 'BusCoord.dss')
+        reader = OpenDSSReader(
+            master_file=master_file,
+            buscoordinates_file=buscoordinates_file
+        )
+        reader.parse(model)
 
-        from ditto.consistency.check_loops import check_loops
-        from ditto.consistency.check_loads_connected import check_loads_connected
-        from ditto.consistency.check_unique_path import check_unique_path
-        from ditto.consistency.check_matched_phases import check_matched_phases
-        from ditto.consistency.check_transformer_phase_path import \
-            check_transformer_phase_path
-        from ditto.consistency.fix_transformer_phase_path import \
-            fix_transformer_phase_path
-        from ditto.consistency.fix_undersized_transformers import \
-            fix_undersized_transformers
+        # run the model through OpenDSS
+        self.run(model)
 
+    def run_urbanopt_geojson(self):
+        """Run OpenDSS assuming that the GeoJSON contains detailed OpenDSS objects."""
         # load the OpenDSS model from the URBANopt files
         print('\nRE-SERIALIZING MODEL')
         model = Store()
-        reader = Reader(
+        reader = UrbanoptReader(
             geojson_file=self.geojson_file,
             equipment_file=self.equipment_file,
             load_folder=self.urbanopt_scenario,
@@ -234,13 +264,22 @@ class UrbanoptDittoReader(object):
         )
         reader.parse(model)
 
+        # run the model through OpenDSS
+        self.run(model)
+
+    def run(self, model):
+        """Run a Ditto Model through OpenDSS.
+
+        Args:
+            model: A DiTTo model to be simulated and have its results recorded.
+        """
         # variables for reporting the status of tests
-        print('\nCHECKING MODEL')
         OKGREEN = '\033[92m'
         FAIL = '\033[91m'
         ENDC = '\033[0m'
 
         # perform several checks on the model and report results
+        print('\nCHECKING MODEL')
         print('Checking that the network has no loops:', flush=True)
         loops_res = check_loops(model, verbose=True)
         result, color = ('PASS', OKGREEN) if loops_res else ('FAIL', FAIL)
@@ -280,7 +319,7 @@ class UrbanoptDittoReader(object):
         final_pass = all((loops_res, loads_connected_res, unique_path_res,
                           matched_phases_res, transformer_phase_res))
         if not final_pass:
-            raise ValueError("Geojson file input structure incorrect")
+            raise ValueError('Invalid OpenDSS input.')
 
         # autosize the transformers if this specified
         if self.upgrade_transformers:
@@ -433,11 +472,11 @@ class UrbanoptDittoReader(object):
 
         # write the collected results into CSV files
         for element, result_values in voltage_df_dic.items():
-            res_path = os.path.join(features_path, '{}.csv'.format(element))
+            res_path = os.path.join(features_path, '%s.csv' % element.replace(':', ''))
             result_values.to_csv(res_path, header=True, index=False)
         for element, result_values in line_df_dic.items():
-            res_path = os.path.join(lines_path, '{}.csv'.format(element))
+            res_path = os.path.join(lines_path, '%s.csv' % element.replace(':', ''))
             result_values.to_csv(res_path, header=True, index=False)
         for element, result_values in transformer_df_dic.items():
-            res_path = os.path.join(trans_path, '{}.csv'.format(element))
+            res_path = os.path.join(trans_path, '%s.csv' % element.replace(':', ''))
             result_values.to_csv(res_path, header=True, index=False)

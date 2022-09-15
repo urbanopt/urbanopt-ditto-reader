@@ -44,7 +44,6 @@ import json
 from datetime import datetime
 import pandas as pd
 
-
 from ditto.readers.abstract_reader import AbstractReader
 from ditto.models.node import Node
 from ditto.models.line import Line
@@ -64,7 +63,7 @@ from ditto.models.timeseries import Timeseries
 
 
 class Reader(AbstractReader):
-    """Object to translate URBANopt GeoJSON and database files to OpenDSS.
+    """Object to translate URBANopt GeoJSON files and scenario results to OpenDSS.
 
     Keyword Arguments:
         geojson_file (str): Path to a GeoJSON file following the URBANopt schema.
@@ -701,6 +700,50 @@ class Reader(AbstractReader):
                         timeseries.scale_factor = 1
                         pv.timeseries = [timeseries]
         return 1
+
+    def write_load_csv(self):
+        """Write out CSV files for the load profiles of the buildings."""
+        # loop through the buildings and write their load profiles
+        self.geojson_content = self.get_json_data(self.geojson_file)
+        bldg_elements = self.collect_building_elements(self.geojson_content)
+        for element in bldg_elements:
+            # load the power draw of the buildings from the energy sim results
+            id_value = element['properties']['id']
+            load_path = os.path.join(self.load_folder, id_value, 'feature_reports')
+            if os.path.exists(load_path):  # We've found the load data
+                load_data = None
+                load_column = None
+                if self.use_reopt:
+                    rep_csv = os.path.join(load_path, 'feature_optimization.csv')
+                    load_data = pd.read_csv(rep_csv, header=0)
+                    load_column = 'REopt:Electricity:Load:Total(kw)'
+                else:
+                    rep_csv = os.path.join(load_path, 'default_feature_report.csv')
+                    load_data = pd.read_csv(rep_csv, header=0)
+                    load_column = 'Net Power(kW)'
+                    if load_column not in load_data:
+                        load_column = 'Net Power(W)'
+                    if load_column not in load_data:
+                        raise ValueError(
+                            'Neither of the columns "Net Power(W)" or "Net Power'
+                            '(kW)" were found in default_feature_report.csv')
+                max_load = max(load_data[load_column])
+
+                # assign the timeseries load profile
+                if self.is_timeseries:
+                    data = load_data[load_column]
+                    timestamps = load_data['Datetime']
+                    data_pu = data / max_load
+                    ts_loc = self.timeseries_location
+                    if ts_loc is not None:
+                        if not os.path.exists(ts_loc):
+                            os.makedirs(ts_loc)
+                        load_path = os.path.join(ts_loc, 'load_{}.csv'.format(id_value))
+                        pu_path = os.path.join(ts_loc, 'load_{}_pu.csv'.format(id_value))
+                        ts_path = os.path.join(ts_loc, 'timestamps.csv')
+                        data.to_csv(load_path, header=False, index=False)
+                        data_pu.to_csv(pu_path, header=False, index=False)
+                        timestamps.to_csv(ts_path, header=True, index=False)
 
     @staticmethod
     def create_building_map(geojson_content):
