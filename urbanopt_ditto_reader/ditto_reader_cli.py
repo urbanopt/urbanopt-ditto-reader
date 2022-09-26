@@ -40,13 +40,13 @@ OF THE POSSIBILITY OF SUCH DAMAGE.
 ****************************************************************************************************
 """
 
-
 # ditto_reader_cli
-
-import click
+import os
 import json
 import sys
 from pathlib import Path
+import click
+
 from urbanopt_ditto_reader.urbanopt_ditto_reader import UrbanoptDittoReader
 
 CONTEXT_SETTINGS = dict(help_option_names=['-h', '--help'])
@@ -200,6 +200,8 @@ def run_opendss(scenario_file, feature_file, equipment, start_date, start_time,
 
         ditto = UrbanoptDittoReader(config_dict)
         if rnm:
+            assert os.path.isdir(ditto.rnm_results), 'The --rnm option was requested ' \
+                'but no RNM results were found at "{}".'.format(ditto.rnm_results)
             ditto.run_rnm_opendss()
         else:
             ditto.run_urbanopt_geojson()
