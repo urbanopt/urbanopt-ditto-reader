@@ -701,6 +701,19 @@ class Reader(AbstractReader):
                         pv.timeseries = [timeseries]
         return 1
 
+    def write_timestamps_csv(self):
+        """Write out a timestamps CSV file without any of the load profiles."""
+        if self.is_timeseries:
+            rep_csv = os.path.join(self.load_folder, 'default_scenario_report.csv')
+            load_data = pd.read_csv(rep_csv, header=0)
+            timestamps = load_data['Datetime']
+            ts_loc = self.timeseries_location
+            if ts_loc is not None:
+                if not os.path.exists(ts_loc):
+                    os.makedirs(ts_loc)
+                ts_path = os.path.join(ts_loc, 'timestamps.csv')
+                timestamps.to_csv(ts_path, header=True, index=False)
+
     def write_load_csv(self):
         """Write out CSV files for the load profiles of the buildings."""
         # loop through the buildings and write their load profiles

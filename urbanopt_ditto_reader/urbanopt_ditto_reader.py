@@ -233,12 +233,12 @@ class UrbanoptDittoReader(object):
             timeseries_location=self.timeseries_location,
             relative_timeseries_location=os.path.join('..', 'profiles')
         )
-        reader.write_load_csv()
+        reader.write_timestamps_csv()
 
         # build a model from the raw OpenDSS files output by RNM
         model = Store()
-        master_file = os.path.join(self.rnm_results, 'Master.dss')
-        buscoordinates_file = os.path.join(self.rnm_results, 'BusCoord.dss')
+        master_file = os.path.join(self.rnm_results, 'dss_files', 'Master.dss')
+        buscoordinates_file = os.path.join(self.rnm_results, 'dss_files', 'BusCoord.dss')
         reader = OpenDSSReader(
             master_file=master_file,
             buscoordinates_file=buscoordinates_file
@@ -246,7 +246,7 @@ class UrbanoptDittoReader(object):
         reader.parse(model)
 
         # run the model through OpenDSS
-        self.run(model)
+        self.run(model, bypass_checks=True)
 
     def run_urbanopt_geojson(self):
         """Run OpenDSS assuming that the GeoJSON contains detailed OpenDSS objects."""
@@ -267,11 +267,13 @@ class UrbanoptDittoReader(object):
         # run the model through OpenDSS
         self.run(model)
 
-    def run(self, model):
+    def run(self, model, bypass_checks=False):
         """Run a Ditto Model through OpenDSS.
 
         Args:
             model: A DiTTo model to be simulated and have its results recorded.
+            bypass_checks: A Boolean to note whether the checks on the DiTTo
+                model should be bypassed. (Default: False).
         """
         # variables for reporting the status of tests
         OKGREEN = '\033[92m'
@@ -279,47 +281,49 @@ class UrbanoptDittoReader(object):
         ENDC = '\033[0m'
 
         # perform several checks on the model and report results
-        print('\nCHECKING MODEL')
-        print('Checking that the network has no loops:', flush=True)
-        loops_res = check_loops(model, verbose=True)
-        result, color = ('PASS', OKGREEN) if loops_res else ('FAIL', FAIL)
-        print('Result:', f'{color} {result} {ENDC}')
+        if not bypass_checks:
+            print('\nCHECKING MODEL')
+            print('Checking that the network has no loops:', flush=True)
+            loops_res = check_loops(model, verbose=True)
+            result, color = ('PASS', OKGREEN) if loops_res else ('FAIL', FAIL)
+            print('Result:', f'{color} {result} {ENDC}')
 
-        print('Checking that all loads are connected to source:', flush=True)
-        loads_connected_res = check_loads_connected(model, verbose=True)
-        result, color = ('PASS', OKGREEN) if loads_connected_res else ('FAIL', FAIL)
-        print('Result:', f'{color} {result} {ENDC}')
+            print('Checking that all loads are connected to source:', flush=True)
+            loads_connected_res = check_loads_connected(model, verbose=True)
+            result, color = ('PASS', OKGREEN) if loads_connected_res else ('FAIL', FAIL)
+            print('Result:', f'{color} {result} {ENDC}')
 
-        print('Checking for unique paths from each load to source:', flush=True)
-        unique_path_res = check_unique_path(model, show_all=True, verbose=True)
-        result, color = ('PASS', OKGREEN) if unique_path_res else ('FAIL', FAIL)
-        print('Result:', f'{color} {result} {ENDC}')
+            print('Checking for unique paths from each load to source:', flush=True)
+            unique_path_res = check_unique_path(model, show_all=True, verbose=True)
+            result, color = ('PASS', OKGREEN) if unique_path_res else ('FAIL', FAIL)
+            print('Result:', f'{color} {result} {ENDC}')
 
-        print('Checking that phases on either side of transformer are correct:',
-              flush=True)
-        matched_phases_res = check_matched_phases(model, verbose=True)
-        result, color = ('PASS', OKGREEN) if matched_phases_res else ('FAIL', FAIL)
-        print('Result:', f'{color} {result} {ENDC}')
-
-        # check that phases are correct and allow for MV loads
-        print('Checking that phases from transformer to load and source match:',
-              flush=True)
-        transformer_phase_res = check_transformer_phase_path(
-            model, needs_transformers=False, verbose=True)
-        if not transformer_phase_res:
-            print('Attempting to fix phases from transformer to load and source',
+            print('Checking that phases on either side of transformer are correct:',
                   flush=True)
-            fix_transformer_phase_path(model, needs_transformers=False, verbose=True)
+            matched_phases_res = check_matched_phases(model, verbose=True)
+            result, color = ('PASS', OKGREEN) if matched_phases_res else ('FAIL', FAIL)
+            print('Result:', f'{color} {result} {ENDC}')
+
+            # check that phases are correct and allow for MV loads
+            print('Checking that phases from transformer to load and source match:',
+                  flush=True)
             transformer_phase_res = check_transformer_phase_path(
                 model, needs_transformers=False, verbose=True)
-        result, color = ('PASS', OKGREEN) if transformer_phase_res else ('FAIL', FAIL)
-        print('Result:', f'{color} {result} {ENDC}')
+            if not transformer_phase_res:
+                print('Attempting to fix phases from transformer to load and source',
+                      flush=True)
+                fix_transformer_phase_path(model, needs_transformers=False, verbose=True)
+                transformer_phase_res = check_transformer_phase_path(
+                    model, needs_transformers=False, verbose=True)
+            result, color = ('PASS', OKGREEN) if transformer_phase_res \
+                else ('FAIL', FAIL)
+            print('Result:', f'{color} {result} {ENDC}')
 
-        # if any of the previous tests failed, raise an error
-        final_pass = all((loops_res, loads_connected_res, unique_path_res,
-                          matched_phases_res, transformer_phase_res))
-        if not final_pass:
-            raise ValueError('Invalid OpenDSS input.')
+            # if any of the previous tests failed, raise an error
+            final_pass = all((loops_res, loads_connected_res, unique_path_res,
+                              matched_phases_res, transformer_phase_res))
+            if not final_pass:
+                raise ValueError('Invalid OpenDSS input.')
 
         # autosize the transformers if this specified
         if self.upgrade_transformers:
