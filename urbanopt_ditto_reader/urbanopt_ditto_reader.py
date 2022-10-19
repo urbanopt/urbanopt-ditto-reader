@@ -246,7 +246,7 @@ class UrbanoptDittoReader(object):
         reader.parse(model)
 
         # run the model through OpenDSS
-        self.run(model, bypass_checks=True)
+        self.run(model, write_input_files=False, master_file=master_file)
 
     def run_urbanopt_geojson(self):
         """Run OpenDSS assuming that the GeoJSON contains detailed OpenDSS objects."""
@@ -264,16 +264,15 @@ class UrbanoptDittoReader(object):
         )
         reader.parse(model)
 
-        # run the model through OpenDSS
+        # check the model and run it through OpenDSS
+        self.check_model(model)
         self.run(model)
 
-    def run(self, model, bypass_checks=False):
-        """Run a Ditto Model through OpenDSS.
+    def check_model(self, model):
+        """Check a Ditto Model using routines within DiTTo.
 
         Args:
             model: A DiTTo model to be simulated and have its results recorded.
-            bypass_checks: A Boolean to note whether the checks on the DiTTo
-                model should be bypassed. (Default: False).
         """
         # variables for reporting the status of tests
         OKGREEN = '\033[92m'
@@ -281,72 +280,84 @@ class UrbanoptDittoReader(object):
         ENDC = '\033[0m'
 
         # perform several checks on the model and report results
-        if not bypass_checks:
-            print('\nCHECKING MODEL')
-            print('Checking that the network has no loops:', flush=True)
-            loops_res = check_loops(model, verbose=True)
-            result, color = ('PASS', OKGREEN) if loops_res else ('FAIL', FAIL)
-            print('Result:', f'{color} {result} {ENDC}')
+        print('\nCHECKING MODEL')
+        print('Checking that the network has no loops:', flush=True)
+        loops_res = check_loops(model, verbose=True)
+        result, color = ('PASS', OKGREEN) if loops_res else ('FAIL', FAIL)
+        print('Result:', f'{color} {result} {ENDC}')
 
-            print('Checking that all loads are connected to source:', flush=True)
-            loads_connected_res = check_loads_connected(model, verbose=True)
-            result, color = ('PASS', OKGREEN) if loads_connected_res else ('FAIL', FAIL)
-            print('Result:', f'{color} {result} {ENDC}')
+        print('Checking that all loads are connected to source:', flush=True)
+        loads_connected_res = check_loads_connected(model, verbose=True)
+        result, color = ('PASS', OKGREEN) if loads_connected_res else ('FAIL', FAIL)
+        print('Result:', f'{color} {result} {ENDC}')
 
-            print('Checking for unique paths from each load to source:', flush=True)
-            unique_path_res = check_unique_path(model, show_all=True, verbose=True)
-            result, color = ('PASS', OKGREEN) if unique_path_res else ('FAIL', FAIL)
-            print('Result:', f'{color} {result} {ENDC}')
+        print('Checking for unique paths from each load to source:', flush=True)
+        unique_path_res = check_unique_path(model, show_all=True, verbose=True)
+        result, color = ('PASS', OKGREEN) if unique_path_res else ('FAIL', FAIL)
+        print('Result:', f'{color} {result} {ENDC}')
 
-            print('Checking that phases on either side of transformer are correct:',
+        print('Checking that phases on either side of transformer are correct:',
+              flush=True)
+        matched_phases_res = check_matched_phases(model, verbose=True)
+        result, color = ('PASS', OKGREEN) if matched_phases_res else ('FAIL', FAIL)
+        print('Result:', f'{color} {result} {ENDC}')
+
+        # check that phases are correct and allow for MV loads
+        print('Checking that phases from transformer to load and source match:',
+              flush=True)
+        transformer_phase_res = check_transformer_phase_path(
+            model, needs_transformers=False, verbose=True)
+        if not transformer_phase_res:
+            print('Attempting to fix phases from transformer to load and source',
                   flush=True)
-            matched_phases_res = check_matched_phases(model, verbose=True)
-            result, color = ('PASS', OKGREEN) if matched_phases_res else ('FAIL', FAIL)
-            print('Result:', f'{color} {result} {ENDC}')
-
-            # check that phases are correct and allow for MV loads
-            print('Checking that phases from transformer to load and source match:',
-                  flush=True)
+            fix_transformer_phase_path(model, needs_transformers=False, verbose=True)
             transformer_phase_res = check_transformer_phase_path(
                 model, needs_transformers=False, verbose=True)
-            if not transformer_phase_res:
-                print('Attempting to fix phases from transformer to load and source',
-                      flush=True)
-                fix_transformer_phase_path(model, needs_transformers=False, verbose=True)
-                transformer_phase_res = check_transformer_phase_path(
-                    model, needs_transformers=False, verbose=True)
-            result, color = ('PASS', OKGREEN) if transformer_phase_res \
-                else ('FAIL', FAIL)
-            print('Result:', f'{color} {result} {ENDC}')
+        result, color = ('PASS', OKGREEN) if transformer_phase_res \
+            else ('FAIL', FAIL)
+        print('Result:', f'{color} {result} {ENDC}')
 
-            # if any of the previous tests failed, raise an error
-            final_pass = all((loops_res, loads_connected_res, unique_path_res,
-                              matched_phases_res, transformer_phase_res))
-            if not final_pass:
-                raise ValueError('Invalid OpenDSS input.')
+        # if any of the previous tests failed, raise an error
+        final_pass = all((loops_res, loads_connected_res, unique_path_res,
+                          matched_phases_res, transformer_phase_res))
+        if not final_pass:
+            raise ValueError('Invalid OpenDSS input.')
 
+    def run(self, model, write_input_files=True, master_file=None):
+        """Run a Ditto Model through OpenDSS.
+
+        Args:
+            model: A DiTTo model to be simulated and have its results recorded.
+            write_input_files: A Boolean to note whether the DiTTo input files
+                should be written from the model. (Default: True).
+            master_file: Optional path to the master DSS file to which the simulation
+                will be redirected.
+        """
         # autosize the transformers if this specified
         if self.upgrade_transformers:
             print('Upgrading undersized transformers:', flush=True)
             fix_undersized_transformers(model, verbose=True)
 
+        # write the OpenDSS files and the JSON formatted files if requested
+        if write_input_files:
+            dss_files_path = os.path.join(self.dss_analysis, 'dss_files')
+            dss_json_path = os.path.join(self.dss_analysis, 'json_files')
+            for out_dir in (dss_files_path, dss_json_path):
+                os.makedirs(out_dir, exist_ok=True)
+            writer = Writer(output_path=dss_files_path,
+                            split_feeders=False, split_substations=False)
+            writer.write(model)
+            json_writer = JSONWriter(output_path=dss_json_path)
+            json_writer.write(model)
+
         # set up the directories into which the results will be written
-        dss_files_path = os.path.join(self.dss_analysis, 'dss_files')
-        dss_json_path = os.path.join(self.dss_analysis, 'json_files')
         results_path = os.path.join(self.dss_analysis, 'results')
         features_path = os.path.join(results_path, 'Features')
         trans_path = os.path.join(results_path, 'Transformers')
         lines_path = os.path.join(results_path, 'Lines')
-        all_path = (dss_files_path, dss_json_path, features_path, trans_path, lines_path)
+        all_path = (features_path, trans_path, lines_path)
         for out_dir in all_path:
             os.makedirs(out_dir, exist_ok=True)
-
-        # write the OpenDSS files and the JSON formatted files
-        writer = Writer(output_path=dss_files_path,
-                        split_feeders=False, split_substations=False)
-        writer.write(model)
-        json_writer = JSONWriter(output_path=dss_json_path)
-        json_writer.write(model)
 
         # read the timestamps and compute the simulation interval
         timestamp_file = os.path.join(self.timeseries_location, 'timestamps.csv')
@@ -419,9 +430,15 @@ class UrbanoptDittoReader(object):
 
         # begin running the simulation
         print('\nBEGINNING SIMULATION')
-        # setup template strings for OpenDSS commands
-        master_dss = os.path.join(self.dss_analysis, 'dss_files', 'Master.dss')
+        dss.run_command('Clear')
+        # redirect the simulation to the master file
+        master_dss = os.path.join(self.dss_analysis, 'dss_files', 'Master.dss') \
+            if master_file is None else master_file
         redirect_cmd = 'Redirect {}'.format(master_dss)
+        redirect_output = dss.run_command(redirect_cmd)
+        if redirect_output:
+            print(redirect_output)
+        # set up the template of the command to solve for a timestep
         solve_cmd = 'Solve mode=yearly stepsize={}m number=1 hour={} sec={}'
         # setup the column in the result data frames
         bldg_columns = ['Datetime', 'p.u. voltage', 'overvoltage', 'undervoltage']
@@ -434,13 +451,9 @@ class UrbanoptDittoReader(object):
             print('Timepoint:', time, flush=True)
             hour = int(i / (1 / (self.timestep / 60.0)))
             seconds = (i % (1 / (self.timestep / 60.0))) * 3600
-            dss.run_command('Clear')
-            output1 = dss.run_command(redirect_cmd)
-            if output1:
-                print(output1)
-            output2 = dss.run_command(solve_cmd.format(self.timestep, hour, seconds))
-            if output2:
-                print(output2)
+            output = dss.run_command(solve_cmd.format(self.timestep, hour, seconds))
+            if output:
+                print(output)
             voltages = self._get_all_voltages()
             line_overloads = self._get_line_loading()
             overloaded_xfmrs = self._get_xfmr_overloads()
