@@ -358,8 +358,8 @@ class UrbanoptDittoReader(object):
         if 'features' in geojson_content:
             for element in geojson_content['features']:
                 if 'properties' in element and 'type' in element['properties'] and \
-                        'buildingId' in element['properties'] and \
-                        element['properties']['type'] == 'ElectricalJunction':
+                        element['properties']['type'] == 'ElectricalJunction' and \
+                        'buildingId' in element['properties']:
                     building_map[element['properties']['id']] = \
                         element['properties']['buildingId']
         # if nothing is found, try looking for an RNM output GeoJSON
@@ -367,15 +367,22 @@ class UrbanoptDittoReader(object):
             rnm_parent = os.path.split(self.rnm_results)[0]
             rnm_json = os.path.join(rnm_parent, 'GeoJSON', 'Distribution_system.json')
             if os.path.isfile(rnm_json):
+                bldg_set = {}
                 rnm_json_content = self._load_json_content(rnm_json)
                 if 'features' in rnm_json_content:
                     for element in rnm_json_content['features']:
                         if 'properties' in element and 'type' in element['properties'] \
-                                and 'Node' in element['properties'] and \
-                                element['properties']['type'] == 'Consumer':
+                                and element['properties']['type'] == 'Consumer' and \
+                                'Node' in element['properties']:
                             node_id = element['properties']['Node']
                             bldg_id = '_'.join(node_id.split('_')[:-1])
-                            building_map[node_id.lower()] = bldg_id
+                            if bldg_id in bldg_set:  # more than 1 node per building
+                                old_node_id = bldg_set[bldg_id]
+                                building_map[old_node_id.lower()] = old_node_id
+                                building_map[node_id.lower()] = node_id
+                            else:
+                                building_map[node_id.lower()] = bldg_id
+                                bldg_set[bldg_id] = node_id
 
         # process the start time and end time into indices
         print('\nSETTING UP SIMULATION')
