@@ -147,7 +147,8 @@ class UrbanoptDittoReader(object):
                 data[k] = str(Path(self.module_path) / v)
         return data
 
-    def _get_all_voltages(self):
+    @staticmethod
+    def _get_all_voltages():
         """Get a dictionary of over and under voltages for all buses."""
         voltage_dict = {}
         bus_names = dss.Circuit.AllBusNames()
@@ -162,7 +163,8 @@ class UrbanoptDittoReader(object):
 
         return voltage_dict
 
-    def _get_line_loading(self):
+    @staticmethod
+    def _get_line_loading():
         """Get a dictionary of loading for the Lines."""
         line_overloads_dict = {}
         # Set the active class to be the lines
@@ -190,7 +192,8 @@ class UrbanoptDittoReader(object):
             flag = dss.ActiveClass.Next()
         return line_overloads_dict
 
-    def _get_xfmr_overloads(self, ub=1.0):
+    @staticmethod
+    def _get_xfmr_overloads(ub=1.0):
         """Get a dictionary of Transformer current violations."""
         transformer_violation_dict = {}
         dss.Circuit.SetActiveClass("Transformer")
@@ -220,59 +223,22 @@ class UrbanoptDittoReader(object):
 
         return transformer_violation_dict
 
-    def run_rnm_opendss(self):
-        """Run OpenDSS with DSS files output by URBANopt RNM."""
-        # write the loads from the URBANopt files
-        print('\nRE-SERIALIZING MODEL')
-        reader = UrbanoptReader(
-            geojson_file=self.geojson_file,
-            equipment_file=self.equipment_file,
-            load_folder=self.urbanopt_scenario,
-            use_reopt=self.use_reopt,
-            is_timeseries=True,
-            timeseries_location=self.timeseries_location,
-            relative_timeseries_location=os.path.join('..', 'profiles')
-        )
-        reader.write_timestamps_csv()
-
-        # build a model from the raw OpenDSS files output by RNM
-        model = Store()
-        master_file = os.path.join(self.rnm_results, 'dss_files', 'Master.dss')
-        buscoordinates_file = os.path.join(self.rnm_results, 'dss_files', 'BusCoord.dss')
-        reader = OpenDSSReader(
-            master_file=master_file,
-            buscoordinates_file=buscoordinates_file
-        )
-        reader.parse(model)
-
-        # run the model through OpenDSS
-        self.run(model, write_input_files=False, master_file=master_file)
-
-    def run_urbanopt_geojson(self):
-        """Run OpenDSS assuming that the GeoJSON contains detailed OpenDSS objects."""
-        # load the OpenDSS model from the URBANopt files
-        print('\nRE-SERIALIZING MODEL')
-        model = Store()
-        reader = UrbanoptReader(
-            geojson_file=self.geojson_file,
-            equipment_file=self.equipment_file,
-            load_folder=self.urbanopt_scenario,
-            use_reopt=self.use_reopt,
-            is_timeseries=True,
-            timeseries_location=self.timeseries_location,
-            relative_timeseries_location=os.path.join('..', 'profiles')
-        )
-        reader.parse(model)
-
-        # check the model and run it through OpenDSS
-        self.check_model(model)
-        self.run(model)
+    @staticmethod
+    def _load_json_content(json_file):
+        """Load the content of a JSON file to a dictionary."""
+        try:
+            with open(json_file, 'r') as f:
+                file_content = json.load(f)
+            return file_content
+        except Exception:
+            raise IOError(
+                'Problem trying to read json from file "{}".'.format(json_file))
 
     def check_model(self, model):
         """Check a Ditto Model using routines within DiTTo.
 
         Args:
-            model: A DiTTo model to be simulated and have its results recorded.
+            model: A DiTTo model to be validated using DiTTo routines.
         """
         # variables for reporting the status of tests
         OKGREEN = '\033[92m'
@@ -323,33 +289,50 @@ class UrbanoptDittoReader(object):
         if not final_pass:
             raise ValueError('Invalid OpenDSS input.')
 
-    def run(self, model, write_input_files=True, master_file=None):
-        """Run a Ditto Model through OpenDSS.
+    def upgrade_model_transformers(self, model):
+        """Automatically upgrade any undersized transformers in a Ditto Model.
 
         Args:
-            model: A DiTTo model to be simulated and have its results recorded.
-            write_input_files: A Boolean to note whether the DiTTo input files
-                should be written from the model. (Default: True).
-            master_file: Optional path to the master DSS file to which the simulation
-                will be redirected.
+            model: A DiTTo model to have its transformers upgraded.
         """
-        # autosize the transformers if this specified
-        if self.upgrade_transformers:
-            print('Upgrading undersized transformers:', flush=True)
-            fix_undersized_transformers(model, verbose=True)
+        print('Upgrading undersized transformers:', flush=True)
+        fix_undersized_transformers(model, verbose=True)
 
-        # write the OpenDSS files and the JSON formatted files if requested
-        if write_input_files:
-            dss_files_path = os.path.join(self.dss_analysis, 'dss_files')
-            dss_json_path = os.path.join(self.dss_analysis, 'json_files')
-            for out_dir in (dss_files_path, dss_json_path):
-                os.makedirs(out_dir, exist_ok=True)
-            writer = Writer(output_path=dss_files_path,
-                            split_feeders=False, split_substations=False)
-            writer.write(model)
-            json_writer = JSONWriter(output_path=dss_json_path)
-            json_writer.write(model)
+    def write_opendss_files(self, model):
+        """Write out OpenDSS files from a DiTTo model.
 
+        This includes both the DSS files and the JSON representation of the files.
+        Files will be written using the dss_analysis property on this object instance.
+
+        Args:
+            model: A DiTTo model, which will be written to OpenDSS files.
+
+        Returns:
+            The path to the master file, which can be used to execute the OpenDSS
+            simulation.
+        """
+        dss_files_path = os.path.join(self.dss_analysis, 'dss_files')
+        dss_json_path = os.path.join(self.dss_analysis, 'json_files')
+        for out_dir in (dss_files_path, dss_json_path):
+            os.makedirs(out_dir, exist_ok=True)
+        writer = Writer(output_path=dss_files_path,
+                        split_feeders=False, split_substations=False)
+        writer.write(model)
+        json_writer = JSONWriter(output_path=dss_json_path)
+        json_writer.write(model)
+        return os.path.join(self.dss_analysis, 'dss_files', 'Master.dss')
+
+    def run(self, master_file):
+        """Run an OpenDSS simulation using a master DSS file.
+
+        Note that the timeseries_location property on this class must contain a
+        timestamps CSV file in order for this simulation to run successfully. Result
+        CSVs will be written to the dss_analysis folder on this object instance.
+
+        Args:
+            master_file: The path to the master DSS file to which the simulation
+                will be redirected for simulation.
+        """
         # set up the directories into which the results will be written
         results_path = os.path.join(self.dss_analysis, 'results')
         features_path = os.path.join(results_path, 'Features')
@@ -369,19 +352,30 @@ class UrbanoptDittoReader(object):
         stepsize = 60 * interval
 
         # get a map from the electrical junctions to buildings
-        geojson_content = []
-        try:
-            with open(self.geojson_file, 'r') as f:
-                geojson_content = json.load(f)
-        except Exception:
-            raise IOError("Problem trying to read json from file " + self.geojson_file)
         building_map = {}
-        for element in geojson_content["features"]:
-            if 'properties' in element and 'type' in element['properties'] and \
-                    'buildingId' in element['properties'] and \
-                    element['properties']['type'] == 'ElectricalJunction':
-                building_map[element['properties']['id']] = \
-                    element['properties']['buildingId']
+        # first, look up the junctions and buildings in the feature GeoJSON
+        geojson_content = self._load_json_content(self.geojson_file)
+        if 'features' in geojson_content:
+            for element in geojson_content['features']:
+                if 'properties' in element and 'type' in element['properties'] and \
+                        'buildingId' in element['properties'] and \
+                        element['properties']['type'] == 'ElectricalJunction':
+                    building_map[element['properties']['id']] = \
+                        element['properties']['buildingId']
+        # if nothing is found, try looking for an RNM output GeoJSON
+        if building_map == {} and os.path.isdir(self.rnm_results):
+            rnm_parent = os.path.split(self.rnm_results)[0]
+            rnm_json = os.path.join(rnm_parent, 'GeoJSON', 'Distribution_system.json')
+            if os.path.isfile(rnm_json):
+                rnm_json_content = self._load_json_content(rnm_json)
+                if 'features' in rnm_json_content:
+                    for element in rnm_json_content['features']:
+                        if 'properties' in element and 'type' in element['properties'] \
+                                and 'Node' in element['properties'] and \
+                                element['properties']['type'] == 'Consumer':
+                            node_id = element['properties']['Node']
+                            bldg_id = '_'.join(node_id.split('_')[:-1])
+                            building_map[node_id.lower()] = bldg_id
 
         # process the start time and end time into indices
         print('\nSETTING UP SIMULATION')
@@ -497,3 +491,54 @@ class UrbanoptDittoReader(object):
         for element, result_values in transformer_df_dic.items():
             res_path = os.path.join(trans_path, '%s.csv' % element.replace(':', ''))
             result_values.to_csv(res_path, header=True, index=False)
+
+    def run_rnm_opendss(self):
+        """Run OpenDSS with DSS files output by URBANopt RNM."""
+        # load the URBANopt files and use them to write a timestamps CSV
+        print('\nRE-SERIALIZING MODEL')
+        reader = UrbanoptReader(
+            geojson_file=self.geojson_file,
+            equipment_file=self.equipment_file,
+            load_folder=self.urbanopt_scenario,
+            use_reopt=self.use_reopt,
+            is_timeseries=True,
+            timeseries_location=self.timeseries_location,
+            relative_timeseries_location=os.path.join('..', 'profiles')
+        )
+        reader.write_timestamps_csv()
+
+        # build a model from the raw OpenDSS files output by RNM
+        model = Store()
+        master_file = os.path.join(self.rnm_results, 'dss_files', 'Master.dss')
+        buscoordinates_file = os.path.join(self.rnm_results, 'dss_files', 'BusCoord.dss')
+        reader = OpenDSSReader(
+            master_file=master_file,
+            buscoordinates_file=buscoordinates_file
+        )
+        reader.parse(model)
+
+        # run the model through OpenDSS
+        self.run(master_file)
+
+    def run_urbanopt_geojson(self):
+        """Run OpenDSS assuming that the GeoJSON contains detailed OpenDSS objects."""
+        # load the OpenDSS model from the URBANopt files
+        print('\nRE-SERIALIZING MODEL')
+        model = Store()
+        reader = UrbanoptReader(
+            geojson_file=self.geojson_file,
+            equipment_file=self.equipment_file,
+            load_folder=self.urbanopt_scenario,
+            use_reopt=self.use_reopt,
+            is_timeseries=True,
+            timeseries_location=self.timeseries_location,
+            relative_timeseries_location=os.path.join('..', 'profiles')
+        )
+        reader.parse(model)
+
+        # check the model and run it through OpenDSS
+        self.check_model(model)
+        if self.upgrade_transformers:
+            self.upgrade_model_transformers(model)
+        master_file = self.write_opendss_files(model)
+        self.run(master_file)
