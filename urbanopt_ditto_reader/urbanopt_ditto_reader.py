@@ -45,7 +45,6 @@ import math
 import os
 from datetime import datetime
 from pathlib import Path
-import pandas as pd
 import opendssdirect as dss
 
 from ditto.store import Store
@@ -344,10 +343,10 @@ class UrbanoptDittoReader(object):
 
         # read the timestamps and compute the simulation interval
         timestamp_file = os.path.join(self.timeseries_location, 'timestamps.csv')
-        ts = pd.read_csv(timestamp_file, header=0)
+        ts = self._read_single_column_csv(timestamp_file)
+        ts.pop(0)  # remove the header
         dt_format = '%Y/%m/%d %H:%M:%S'
-        delta = datetime.strptime(ts.loc[1]['Datetime'], dt_format) - \
-            datetime.strptime(ts.loc[0]['Datetime'], dt_format)
+        delta = datetime.strptime(ts[1], dt_format) - datetime.strptime(ts[0], dt_format)
         interval = delta.seconds / 3600.0
         stepsize = 60 * interval
 
@@ -387,30 +386,24 @@ class UrbanoptDittoReader(object):
         # process the start time and end time into indices
         print('\nSETTING UP SIMULATION')
         no_warn = 'Warning - Specified {} time of {} not found in timeseries file {}. {}'
-        dup_warn = 'Warning - Specified {} time of {} has duplicate entries in ' \
-            'timeseries file {}. {}'
         all_t = 'Using default value...'
         found_msg = 'Specified {} time of {} found in timeseries file'
         start_index, end_index = 0, len(ts)
-        start_time, end_time = ts.loc[0]['Datetime'], ts.loc[end_index - 1]['Datetime']
+        start_time, end_time = ts[0], ts[end_index - 1]
         if self.start_time is not None:
-            start_index_entry = ts.Datetime[ts.Datetime == self.start_time].index
-            if len(start_index_entry) == 1:
+            try:
+                start_index = ts.index(self.start_time)
                 print(found_msg.format('start', self.start_time))
-                start_index, start_time = start_index_entry[0], self.start_time
-            elif len(start_index_entry) == 0:
+                start_time = self.start_time
+            except ValueError:
                 print(no_warn.format('start', self.start_time, timestamp_file, all_t))
-            else:
-                print(dup_warn.format('start', self.start_time, timestamp_file, all_t))
         if self.end_time is not None:
-            end_index_entry = ts.Datetime[ts.Datetime == self.end_time].index
-            if len(end_index_entry) == 1:
+            try:
+                end_index = ts.index(self.end_time) + 1
                 print(found_msg.format('end', self.end_time))
-                end_index, end_time = end_index_entry[0] + 1, self.end_time
-            elif len(end_index_entry) == 0:
+                end_time = self.end_time
+            except ValueError:
                 print(no_warn.format('end', self.end_time, timestamp_file, all_t))
-            else:
-                print(dup_warn.format('end', self.end_time, timestamp_file, all_t))
         print(f'Running from {start_time} to {end_time}:')
 
         # process the step size into an integer
@@ -448,7 +441,7 @@ class UrbanoptDittoReader(object):
         # loop through the timesteps and compute power flow
         for i in range(start_index, end_index, int(self.timestep / stepsize)):
             # simulate conditions at the time point
-            time = ts.loc[i]['Datetime']
+            time = ts[i]
             print('Timepoint:', time, flush=True)
             hour = int(i / (1 / (self.timestep / 60.0)))
             seconds = (i % (1 / (self.timestep / 60.0))) * 3600
@@ -459,60 +452,113 @@ class UrbanoptDittoReader(object):
             line_overloads = self._get_line_loading()
             overloaded_xfmrs = self._get_xfmr_overloads()
 
-            # if this is the first timestep, setup the data frames
+            # if this is the first timestep, setup the dictionaries to hold outputs
             if i == start_index:
                 for element in voltages:
                     try:
-                        voltage_df_dic[building_map[element]] = \
-                            pd.DataFrame(columns=bldg_columns)
+                        voltage_df_dic[building_map[element]] = [bldg_columns]
                     except KeyError:  # element is not a building
                         pass
                 for element in line_overloads:
-                    line_df_dic[element] = pd.DataFrame(columns=line_columns)
+                    line_df_dic[element] = [line_columns]
                 for element in overloaded_xfmrs:
-                    transformer_df_dic[element] = pd.DataFrame(columns=trans_columns)
+                    transformer_df_dic[element] = [trans_columns]
 
             # record the OpenDSS results in dictionaries
-            for element in voltages:
-                if element not in building_map:
-                    continue
-                volt_val = voltages[element]
-                voltage_df_dic[building_map[element]].loc[i] = \
-                    [time, volt_val, volt_val > 1.05, volt_val < 0.95]
-            for element in line_overloads:
-                line_load_val = line_overloads[element]
-                line_df_dic[element].loc[i] = \
-                    [time, line_load_val, line_load_val > 1.0]
-            for element in overloaded_xfmrs:
-                xfrm_load_val = overloaded_xfmrs[element]
-                transformer_df_dic[element].loc[i] = \
-                    [time, xfrm_load_val, xfrm_load_val > 1.0]
+            for element, volt_val in voltages.items():
+                try:
+                    voltage_df_dic[building_map[element]].append(
+                        [time, volt_val, volt_val > 1.05, volt_val < 0.95])
+                except KeyError:  # element is not a building
+                    pass
+            for element, line_load_val in line_overloads.items():
+                line_df_dic[element].append(
+                    [time, line_load_val, line_load_val > 1.0])
+            for element, xfrm_load_val in overloaded_xfmrs.items():
+                transformer_df_dic[element].append(
+                    [time, xfrm_load_val, xfrm_load_val > 1.0])
 
         # write the collected results into CSV files
         for element, result_values in voltage_df_dic.items():
             res_path = os.path.join(features_path, '%s.csv' % element.replace(':', ''))
-            result_values.to_csv(res_path, header=True, index=False)
+            self._write_csv(result_values, res_path)
         for element, result_values in line_df_dic.items():
             res_path = os.path.join(lines_path, '%s.csv' % element.replace(':', ''))
-            result_values.to_csv(res_path, header=True, index=False)
+            self._write_csv(result_values, res_path)
         for element, result_values in transformer_df_dic.items():
             res_path = os.path.join(trans_path, '%s.csv' % element.replace(':', ''))
-            result_values.to_csv(res_path, header=True, index=False)
+            self._write_csv(result_values, res_path)
+
+    @staticmethod
+    def _read_single_column_csv(csv_file_path):
+        """Load a single columns CSV file into a Python matrix of strings.
+
+        Args:
+            csv_file_path: Full path to a valid CSV file.
+        """
+        mtx = []
+        with open(csv_file_path) as csv_data_file:
+            for row in csv_data_file:
+                mtx.append(row.strip())
+        return mtx
+
+    @staticmethod
+    def _read_csv(csv_file_path):
+        """Load a single columns CSV file into a Python matrix of strings.
+
+        Args:
+            csv_file_path: Full path to a valid CSV file.
+        """
+        mtx = []
+        with open(csv_file_path) as csv_data_file:
+            for row in csv_data_file:
+                mtx.append(row.split(','))
+        return mtx
+
+    @staticmethod
+    def _write_single_column_csv(value_list, csv_file_path, header=None):
+        """Write a Python list into a single-columns CSV file.
+
+        Args:
+            value_list: A Python List.
+            csv_file_path: Full path to where the CSV file.
+        """
+        if header is not None:
+            value_list.insert(0, header)
+        with open(csv_file_path, 'w') as csv_data_file:
+            for v in value_list:
+                csv_data_file.write(str(v) + '\n')
+        return csv_file_path
+
+    @staticmethod
+    def _write_csv(matrix, csv_file_path):
+        """Write a Python matrix into a CSV file.
+
+        Args:
+            matrix: A Python Matrix (list of lists).
+            csv_file_path: Full path to where the CSV file.
+        """
+        with open(csv_file_path, 'w') as csv_data_file:
+            for row in matrix:
+                csv_data_file.write(','.join(str(v) for v in row))
+                csv_data_file.write('\n')
+        return csv_file_path
 
     def run_rnm_opendss(self):
         """Run OpenDSS with DSS files output by URBANopt RNM."""
         # load the URBANopt files and use them to write a timestamps CSV
         print('\nRE-SERIALIZING MODEL')
-        reader = UrbanoptReader(
-            geojson_file=self.geojson_file,
-            equipment_file=self.equipment_file,
-            load_folder=self.urbanopt_scenario,
-            use_reopt=self.use_reopt,
-            is_timeseries=True,
-            timeseries_location=self.timeseries_location,
-            relative_timeseries_location=os.path.join('..', 'profiles')
-        )
-        reader.write_timestamps_csv()
+        rep_csv = os.path.join(self.urbanopt_scenario, 'default_scenario_report.csv')
+        report_mtx = self._read_csv(rep_csv)
+        header_row = report_mtx.pop(0)
+        ts_i = header_row.index('Datetime')
+        timestamps = [row[ts_i] for row in report_mtx]
+        ts_loc = self.timeseries_location
+        if ts_loc is not None:
+            if not os.path.exists(ts_loc):
+                os.makedirs(ts_loc)
+            ts_path = os.path.join(ts_loc, 'timestamps.csv')
+            self._write_single_column_csv(timestamps, ts_path, 'Datetime')
 
         # build a model from the raw OpenDSS files output by RNM
         model = Store()

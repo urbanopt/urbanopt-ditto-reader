@@ -42,7 +42,6 @@ OF THE POSSIBILITY OF SUCH DAMAGE.
 import os
 import json
 from datetime import datetime
-import pandas as pd
 
 from ditto.readers.abstract_reader import AbstractReader
 from ditto.models.node import Node
@@ -525,24 +524,28 @@ class Reader(AbstractReader):
             load_path = os.path.join(self.load_folder, id_value, 'feature_reports')
             load_multiplier = 1000
             if os.path.exists(load_path):  # We've found the load data
-                load_data = None
-                load_column = None
                 if self.use_reopt:
                     rep_csv = os.path.join(load_path, 'feature_optimization.csv')
-                    load_data = pd.read_csv(rep_csv, header=0)
-                    load_column = 'REopt:Electricity:Load:Total(kw)'
+                    report_mtx = self._read_csv(rep_csv)
+                    header_row = report_mtx.pop(0)
+                    load_col_i = header_row.index('REopt:Electricity:Load:Total(kw)')
+                    load_column = [row[load_col_i] for row in report_mtx]
                 else:
                     rep_csv = os.path.join(load_path, 'default_feature_report.csv')
-                    load_data = pd.read_csv(rep_csv, header=0)
-                    load_column = 'Net Power(kW)'
-                    if load_column not in load_data:
-                        load_column = 'Net Power(W)'
-                        load_multiplier = 1
-                    if load_column not in load_data:
-                        raise ValueError(
-                            'Neither of the columns "Net Power(W)" or "Net Power'
-                            '(kW)" were found in default_feature_report.csv')
-                max_load = max(load_data[load_column])
+                    report_mtx = self._read_csv(rep_csv)
+                    header_row = report_mtx.pop(0)
+                    try:
+                        load_col_i = header_row.index('Net Power(kW)')
+                    except ValueError:  # column has a different name
+                        try:
+                            load_col_i = header_row.index('Net Power(W)')
+                            load_multiplier = 1
+                        except ValueError:  # no load data was found
+                            raise ValueError(
+                                'Neither of the columns "Net Power(W)" or "Net Power'
+                                '(kW)" were found in default_feature_report.csv')
+                load_column = [float(row[load_col_i]) for row in report_mtx]
+                max_load = max(load_column)
 
                 # get the phases of the load profile from the transformer
                 phases = []
@@ -567,12 +570,13 @@ class Reader(AbstractReader):
 
                 # assign the timeseries load profile
                 if self.is_timeseries:
-                    data = load_data[load_column]
-                    timestamps = load_data['Datetime']
+                    data = load_column
+                    data_pu = [d / max_load for d in data]
+                    ts_i = header_row.index('Datetime')
+                    timestamps = [row[ts_i] for row in report_mtx]
                     dt_format = '%Y/%m/%d %H:%M:%S'
-                    delta = datetime.strptime(timestamps.loc[1], dt_format) - \
-                        datetime.strptime(timestamps.loc[0], dt_format)
-                    data_pu = data / max_load
+                    delta = datetime.strptime(timestamps[1], dt_format) - \
+                        datetime.strptime(timestamps[0], dt_format)
                     ts_loc = self.timeseries_location
                     if ts_loc is not None:
                         if not os.path.exists(ts_loc):
@@ -580,9 +584,9 @@ class Reader(AbstractReader):
                         load_path = os.path.join(ts_loc, 'load_{}.csv'.format(id_value))
                         pu_path = os.path.join(ts_loc, 'load_{}_pu.csv'.format(id_value))
                         ts_path = os.path.join(ts_loc, 'timestamps.csv')
-                        data.to_csv(load_path, header=False, index=False)
-                        data_pu.to_csv(pu_path, header=False, index=False)
-                        timestamps.to_csv(ts_path, header=True, index=False)
+                        self._write_single_column_csv(data, load_path)
+                        self._write_single_column_csv(data_pu, pu_path)
+                        self._write_single_column_csv(timestamps, ts_path, 'Datetime')
                         timeseries = Timeseries(model)
                         timeseries.feeder_name = load.feeder_name
                         timeseries.substation_name = load.substation_name
@@ -673,21 +677,24 @@ class Reader(AbstractReader):
                 # assign the timeseries load profile
                 if self.is_timeseries:
                     ts_csv = os.path.join(re_folder, 'feature_optimization.csv')
-                    load_data = pd.read_csv(ts_csv, header=0)
-                    data = load_data['REopt:ElectricityProduced:PV:Total(kw)']
-                    timestamps = load_data['Datetime']
+                    report_mtx = self._read_csv(ts_csv)
+                    header_row = report_mtx.pop(0)
+                    load_i = header_row.index('REopt:ElectricityProduced:PV:Total(kw)')
+                    load_data = [float(row[load_i]) for row in report_mtx]
+                    ts_i = header_row.index('Datetime')
+                    timestamps = [row[ts_i] for row in report_mtx]
                     dt_format = '%Y/%m/%d %H:%M:%S'
-                    delta = datetime.strptime(timestamps.loc[1], dt_format) - \
-                        datetime.strptime(timestamps.loc[0], dt_format)
-                    data_pu = data / pv_kw
+                    delta = datetime.strptime(timestamps[1], dt_format) - \
+                        datetime.strptime(timestamps[0], dt_format)
+                    data_pu = [d / pv_kw for d in load_data]
                     ts_loc = self.timeseries_location
                     if ts_loc is not None:
                         if not os.path.exists(ts_loc):
                             os.makedirs(ts_loc)
                         load_path = os.path.join(ts_loc, 'pv_{}.csv'.format(id_value))
                         pu_path = os.path.join(ts_loc, 'pv_{}_pu.csv'.format(id_value))
-                        data.to_csv(load_path, header=False, index=False)
-                        data_pu.to_csv(pu_path, header=False, index=False)
+                        self._write_single_column_csv(load_data, load_path)
+                        self._write_single_column_csv(data_pu, pu_path)
                         timeseries = Timeseries(model)
                         timeseries.feeder_name = pv.feeder_name
                         timeseries.substation_name = pv.substation_name
@@ -700,63 +707,6 @@ class Reader(AbstractReader):
                         timeseries.scale_factor = 1
                         pv.timeseries = [timeseries]
         return 1
-
-    def write_timestamps_csv(self):
-        """Write out a timestamps CSV file without any of the load profiles."""
-        if self.is_timeseries:
-            rep_csv = os.path.join(self.load_folder, 'default_scenario_report.csv')
-            load_data = pd.read_csv(rep_csv, header=0)
-            timestamps = load_data['Datetime']
-            ts_loc = self.timeseries_location
-            if ts_loc is not None:
-                if not os.path.exists(ts_loc):
-                    os.makedirs(ts_loc)
-                ts_path = os.path.join(ts_loc, 'timestamps.csv')
-                timestamps.to_csv(ts_path, header=True, index=False)
-
-    def write_load_csv(self):
-        """Write out CSV files for the load profiles of the buildings."""
-        # loop through the buildings and write their load profiles
-        self.geojson_content = self.get_json_data(self.geojson_file)
-        bldg_elements = self.collect_building_elements(self.geojson_content)
-        for element in bldg_elements:
-            # load the power draw of the buildings from the energy sim results
-            id_value = element['properties']['id']
-            load_path = os.path.join(self.load_folder, id_value, 'feature_reports')
-            if os.path.exists(load_path):  # We've found the load data
-                load_data = None
-                load_column = None
-                if self.use_reopt:
-                    rep_csv = os.path.join(load_path, 'feature_optimization.csv')
-                    load_data = pd.read_csv(rep_csv, header=0)
-                    load_column = 'REopt:Electricity:Load:Total(kw)'
-                else:
-                    rep_csv = os.path.join(load_path, 'default_feature_report.csv')
-                    load_data = pd.read_csv(rep_csv, header=0)
-                    load_column = 'Net Power(kW)'
-                    if load_column not in load_data:
-                        load_column = 'Net Power(W)'
-                    if load_column not in load_data:
-                        raise ValueError(
-                            'Neither of the columns "Net Power(W)" or "Net Power'
-                            '(kW)" were found in default_feature_report.csv')
-                max_load = max(load_data[load_column])
-
-                # assign the timeseries load profile
-                if self.is_timeseries:
-                    data = load_data[load_column]
-                    timestamps = load_data['Datetime']
-                    data_pu = data / max_load
-                    ts_loc = self.timeseries_location
-                    if ts_loc is not None:
-                        if not os.path.exists(ts_loc):
-                            os.makedirs(ts_loc)
-                        load_path = os.path.join(ts_loc, 'load_{}.csv'.format(id_value))
-                        pu_path = os.path.join(ts_loc, 'load_{}_pu.csv'.format(id_value))
-                        ts_path = os.path.join(ts_loc, 'timestamps.csv')
-                        data.to_csv(load_path, header=False, index=False)
-                        data_pu.to_csv(pu_path, header=False, index=False)
-                        timestamps.to_csv(ts_path, header=True, index=False)
 
     @staticmethod
     def create_building_map(geojson_content):
@@ -780,3 +730,31 @@ class Reader(AbstractReader):
                     element['properties']['type'] == 'Building':
                 bldg_elements.append(element)
         return bldg_elements
+
+    @staticmethod
+    def _read_csv(csv_file_path):
+        """Load a single columns CSV file into a Python matrix of strings.
+
+        Args:
+            csv_file_path: Full path to a valid CSV file.
+        """
+        mtx = []
+        with open(csv_file_path) as csv_data_file:
+            for row in csv_data_file:
+                mtx.append(row.split(','))
+        return mtx
+
+    @staticmethod
+    def _write_single_column_csv(value_list, csv_file_path, header=None):
+        """Write a Python list into a single-columns CSV file.
+
+        Args:
+            value_list: A Python List.
+            csv_file_path: Full path to where the CSV file.
+        """
+        if header is not None:
+            value_list.insert(0, header)
+        with open(csv_file_path, 'w') as csv_data_file:
+            for v in value_list:
+                csv_data_file.write(str(v) + '\n')
+        return csv_file_path
