@@ -1,5 +1,12 @@
 # URBANopt DiTTo Reader CHANGELOG
 
+# Version 0.5.0
+Date Range 04/13/2022 - 11/28/2022
+- Fix typo in extended catalog
+- Extended catalog updates to match the RNM catalog
+- Feature: Add an option to simulate RNM results
+- CLI bug fixes
+
 # Version 0.4.0
 Date Range: 12/04/2021 - 04/12/2022
 - Start and end time not being processes by URBANopt CLI opendss command

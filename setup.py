@@ -42,7 +42,7 @@ OF THE POSSIBILITY OF SUCH DAMAGE.
 
 from setuptools import setup, find_packages
 
-requirements = ["ditto.py>=0.2.3", "opendssdirect.py>=0.6.1"]
+requirements = ["ditto.py~=0.2.3", "opendssdirect.py~=0.6.1"]
 
 with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()

@@ -4,6 +4,7 @@ More detailed documentation is available on the [URBANopt documentation page](ht
 
 # Installation Pre-requisites
 - Python >=3.7
+- Requires Python 3.10 if using via the URBANopt CLI.
 
 # Installation
 
