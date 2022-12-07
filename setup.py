@@ -42,14 +42,14 @@ OF THE POSSIBILITY OF SUCH DAMAGE.
 
 from setuptools import setup, find_packages
 
-requirements = ["ditto.py>=0.2.3", "opendssdirect.py>=0.6.1"]
+requirements = ["ditto.py~=0.2.3", "opendssdirect.py~=0.6.1"]
 
 with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 setup(
     name="urbanopt-ditto-reader",
-    version="0.4.0",
+    version="0.5.0",
     author="Tarek Elgindy",
     author_email="tarek.elgindy@nrel.gov",
     description="Enhancement of URBANopt GeoJSON that can be consumed by DiTTo reader",
