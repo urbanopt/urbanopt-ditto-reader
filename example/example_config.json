@@ -1,0 +1,11 @@
+{
+    "urbanopt_scenario_file": "baseline_scenario",
+    "equipment_file": "extended_catalog.json",
+    "opendss_folder": "run/baseline_scenario/opendss",
+    "urbanopt_geojson_file": "example_project_with_electric_network.json",
+    "use_reopt": false,
+    "start_time": "2017/01/15 01:00:00",
+    "end_time": "2017/01/15 23:00:00",
+    "timestep": 120,
+    "upgrade_transformers": false
+}

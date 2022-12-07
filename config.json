@@ -1,8 +1,0 @@
-{
-    "urbanopt_scenario": "example/baseline_scenario/baseline_scenario",
-    "equipment_file": "example/electrical_database.json",
-    "opendss_folder": "example/baseline_scenario/opendss",
-    "geojson_file": "example/urbanopt_example.json",
-    "ditto_folder":"ditto",
-    "use_reopt": true
-}

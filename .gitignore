@@ -110,6 +110,9 @@ ENV/
 env.bak/
 venv.bak/
 
+# IDE settings
+.vscode/
+
 # Spyder project settings
 .spyderproject
 .spyproject
@@ -130,3 +133,9 @@ dmypy.json
 
 # DS_Store
 .DS_Store
+
+# opendss files
+./example/run/baseline_scenario/opendss/
+
+# ditto local checkout
+ditto/

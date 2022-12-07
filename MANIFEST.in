@@ -1,0 +1,3 @@
+include LICENSE.md
+include urbanopt_ditto_reader/example_config.json
+include urbanopt_ditto_reader/extended_catalog.json

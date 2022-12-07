@@ -1,0 +1,53 @@
+{
+  "id": "Transformer.502e96e3-853a-4b3d-b88d-fe59af4d7b65",
+  "name": "Transformer.502e96e3-853a-4b3d-b88d-fe59af4d7b65",
+  "directory_name": "C:/urbanopt_tutorials/project_2/run/baseline_scenario/Transformer.502e96e3-853a-4b3d-b88d-fe59af4d7b65",
+  "feature_type": "Transformer",
+  "timesteps_per_hour": 1,
+  "simulation_status": "complete",
+  "timeseries_csv": {
+    "column_names": [
+
+    ]
+  },
+  "location": {
+  },
+  "program": {
+    "building_types": [
+      {
+      }
+    ],
+    "window_area_sqft": {
+    },
+    "wall_area_sqft": {
+    },
+    "roof_area_sqft": {
+    }
+  },
+  "construction_costs": [
+
+  ],
+  "reporting_periods": [
+
+  ],
+  "distributed_generation": {
+    "solar_pv": [
+
+    ],
+    "wind": [
+
+    ],
+    "generator": [
+
+    ],
+    "storage": [
+
+    ]
+  },
+  "power_distribution": {
+    "under_voltage_hours": 0,
+    "over_voltage_hours": 8760
+  },
+  "thermal_storage": {
+  }
+}
