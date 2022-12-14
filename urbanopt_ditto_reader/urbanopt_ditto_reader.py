@@ -570,6 +570,11 @@ class UrbanoptDittoReader(object):
         )
         reader.parse(model)
 
+        dss_json_path = os.path.join(self.dss_analysis, 'json_files')
+        os.makedirs(dss_json_path, exist_ok=True)
+        json_writer = JSONWriter(output_path=dss_json_path)
+        json_writer.write(model)
+
         # run the model through OpenDSS
         self.run(master_file)
 
