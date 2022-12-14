@@ -564,6 +564,7 @@ class UrbanoptDittoReader(object):
         model = Store()
         master_file = os.path.join(self.rnm_results, 'dss_files', 'Master.dss')
         buscoordinates_file = os.path.join(self.rnm_results, 'dss_files', 'BusCoord.dss')
+        print(f"!!! masterFILE: {master_file}, buscoords: {buscoordinates_file}")
         reader = OpenDSSReader(
             master_file=master_file,
             buscoordinates_file=buscoordinates_file
