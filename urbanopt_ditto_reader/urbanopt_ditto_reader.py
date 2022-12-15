@@ -564,11 +564,17 @@ class UrbanoptDittoReader(object):
         model = Store()
         master_file = os.path.join(self.rnm_results, 'dss_files', 'Master.dss')
         buscoordinates_file = os.path.join(self.rnm_results, 'dss_files', 'BusCoord.dss')
+        print(f"!!! masterFILE: {master_file}, buscoords: {buscoordinates_file}")
         reader = OpenDSSReader(
             master_file=master_file,
             buscoordinates_file=buscoordinates_file
         )
         reader.parse(model)
+
+        dss_json_path = os.path.join(self.dss_analysis, 'json_files')
+        os.makedirs(dss_json_path, exist_ok=True)
+        json_writer = JSONWriter(output_path=dss_json_path)
+        json_writer.write(model)
 
         # run the model through OpenDSS
         self.run(master_file)
