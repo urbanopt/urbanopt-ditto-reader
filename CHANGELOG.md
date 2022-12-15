@@ -1,5 +1,10 @@
 # URBANopt DiTTo Reader CHANGELOG
 
+# Version 0.5.1
+Date Range 11/28/2022 - 12/15/2022
+- Update dependency management for DiTTo
+- Generate Model.json results file for RNM to OpenDSS workflow
+
 # Version 0.5.0
 Date Range 04/13/2022 - 11/28/2022
 - Fix typo in extended catalog
