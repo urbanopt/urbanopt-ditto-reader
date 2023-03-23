@@ -62,15 +62,17 @@ If either start_time and end_time are invalid or set to None, the simulation wil
 - Create & activate your favorite venv in the repo (I prefer pyenv for [mac/linux](https://github.com/pyenv/pyenv#installation) or [windows](https://github.com/pyenv-win/pyenv-win#installation), and the [virtualenv plugin](https://github.com/pyenv/pyenv-virtualenv))
     - Activate pre-commit (only once, after making a new venv): `pre-commit install`
     - Runs automatically on your staged changes before every commit
-- Update pip and setuptools: `pip install -U pip setuptools .`
+- Update pip and setuptools: `pip install -U pip setuptools`
 - Install the respository with developer dependencies: `pip install -e .[dev]`
 - To check all files, run `pre-commit run --all-files`
     - Settings and documentation links for pre-commit and ruff are in .pre-commit-config.yaml and pyproject.toml
 
-## Publish Package
+# Releasing
+Follow the [PyPA guidance](https://packaging.python.org/en/latest/tutorials/packaging-projects/#generating-distribution-archives) as of April 2, 2022
 
-- update version in setup.py
+Roughly:
+- update version in pyproject.toml
 - make a release on GitHub
-- make the package: `python setup.py sdist`
+- make the package: `python -m build`
 - install twine `pip install twine`
 - upload to pypi: `twine upload dist/*`
