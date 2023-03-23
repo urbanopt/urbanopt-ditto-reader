@@ -1,6 +1,78 @@
 [build-system]
 requires = [
-    "setuptools>=42",
-    "wheel"
+    "setuptools>=67",
+    "wheel",
 ]
 build-backend = "setuptools.build_meta"
+
+# https://setuptools.pypa.io/en/latest/userguide/pyproject_config.html
+[project]
+name = "urbanopt-ditto-reader"
+dynamic = [
+    "readme",
+    "license",
+    ]
+version = "0.5.2"
+authors = [
+  { name="Tarek Elgindy", email="tarek.elgindy@nrel.gov" },
+  { name="Nathan Moore", email="nathan.moore@nrel.gov" },
+  { name="Katherine Fleming", email="katherine.fleming@nrel.gov" },
+]
+description = "Enhancement of URBANopt GeoJSON that can be consumed by DiTTo reader"
+requires-python = "~=3.7"
+classifiers = [
+        "Development Status :: 4 - Beta",
+        "Environment :: Console",
+        "Intended Audience :: Developers",
+        "Intended Audience :: Science/Research",
+        "Topic :: Scientific/Engineering",
+        "Operating System :: OS Independent",
+        "Programming Language :: Python :: 3.10"
+    ]
+dependencies = [
+    "ditto.py[opendss]~=0.2",
+    "opendssdirect.py ~= 0.7"
+    ]
+
+[project.optional-dependencies]
+dev = [
+    "pytest >= 6.0",
+    "pre-commit ~= 3.2",
+    "black ~= 23.1",
+    "ruff ~= 0.0",
+]
+
+# https://setuptools.pypa.io/en/latest/userguide/package_discovery.html
+[tool.setuptools.packages.find]
+# Must include a MANIFEST.in file in our repo: https://setuptools.pypa.io/en/latest/userguide/datafiles.html
+
+# https://setuptools.pypa.io/en/latest/userguide/pyproject_config.html#dynamic-metadata
+[tool.setuptools.dynamic]
+readme = {file = ["README.md", ]}
+license = {file = ["LICENSE", ]}
+
+[project.urls]
+"Homepage" = "https://github.com/urbanopt/urbanopt-ditto-reader"
+"Bug Tracker" = "https://github.com/urbanopt/urbanopt-ditto-reader/issues"
+
+# https://docs.pytest.org/en/6.2.x/customize.html#pyproject-toml
+[tool.pytest.ini_options]
+minversion = "6.0"
+testpaths = "tests"
+
+[tool.black]
+line-length = 120 # Ruff and Black must have the same line-length setting to work together
+
+# https://github.com/charliermarsh/ruff
+[tool.ruff]
+fix = true # automatically fix problems if possible
+select = ["RUF", "E", "F", "I", "UP", "N", "S", "BLE", "A", "C4", "T10", "ISC", "ICN", "PT",
+"Q", "SIM", "TID", "ARG", "DTZ", "PD", "PGH", "PLC", "PLE", "PLR", "PLW", "PIE", "COM"] # Enable these rules
+ignore = ["PLR0913", "PLR2004", "PLR0402", "COM812", "COM819", "SIM108", "ARG002"] # except for these specific errors
+line-length = 120
+
+[tool.ruff.per-file-ignores]
+"tests/*" = ["S101"]
+
+[project.scripts]
+ditto_reader_cli = "urbanopt_ditto_reader.ditto_reader_cli:cli"
