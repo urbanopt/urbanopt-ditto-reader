@@ -112,6 +112,7 @@ venv.bak/
 
 # IDE settings
 .vscode/
+.ruff_cache
 
 # Spyder project settings
 .spyderproject
