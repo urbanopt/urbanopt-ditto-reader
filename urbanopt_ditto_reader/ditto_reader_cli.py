@@ -57,7 +57,10 @@ def cli():
     """URBANopt Ditto Reader"""
 
 
-@cli.command(short_help="Run OpenDSS on an URBANopt GeoJSON containing detailed electrical grid objects.")
+@cli.command(
+    short_help="Run OpenDSS on an URBANopt GeoJSON containing detailed electrical grid "
+    "objects."
+)
 @click.option(
     "-s",
     "--scenario_file",
@@ -107,7 +110,7 @@ def cli():
     type=str,
     default=None,
     help='Ending timestamp of simulation. Uses format "HH/MM/SS". If unspecified, '
-    "a default assumption of 32:00:00 is used if the --end_date is specified or "
+    "a default assumption of 23:00:00 is used if the --end_date is specified or "
     "it will simply be the latest timepoint available.",
 )
 @click.option(
@@ -118,8 +121,15 @@ def cli():
     help="Interval between simulation steps in minutes. If unspecified, the timestep "
     "will be inferred from the load profile results.",
 )
-@click.option("-r", "--reopt", is_flag=True, help="Flag to use REopt data in this openDSS analysis.")
-@click.option("-m", "--rnm", is_flag=True, help="Flag to use RNM-generated DSS files in this analysis.")
+@click.option(
+    "-r", "--reopt", is_flag=True, help="Flag to use REopt data in this openDSS analysis."
+)
+@click.option(
+    "-m",
+    "--rnm",
+    is_flag=True,
+    help="Flag to use RNM-generated DSS files in this analysis.",
+)
 @click.option(
     "-c",
     "--config",
@@ -208,7 +218,8 @@ def run_opendss(  # noqa: PLR0912, PLR0915
         if rnm:
             if not Path(ditto.rnm_results).is_dir():
                 raise ValueError(
-                    f"The --rnm option was requested but no RNM results were found at '{ditto.rnm_results}'."
+                    "The --rnm option was requested but no RNM results were found at "
+                    f"'{ditto.rnm_results}'."
                 )
             ditto.run_rnm_opendss()
         else:
