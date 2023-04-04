@@ -1,0 +1,2 @@
+Code,NodeA,NodeB,Vnom1,Vnom2,Phases,Xsc(pu),TapMin,TapMax,Subest,Feeder,
+sub_5840ecc6-7f2b-400c-a683-528d02f140f6_MAQ1 ,ST_MAT ,sub_5840ecc6-7f2b-400c-a683-528d02f140f6_12.47 ,69.000 ,12.470 ,3 ,0.00009288 ,0.9000 ,1.1000 ,True ,True ,
