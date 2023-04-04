@@ -64,7 +64,7 @@ If either start_time and end_time are invalid or set to None, the simulation wil
     - Runs automatically on your staged changes before every commit
 - Update pip and setuptools: `pip install -U pip setuptools`
 - Install the respository with developer dependencies: `pip install -e .[dev]`
-- To check all files, run `pre-commit run --all-files`
+- To check the whole repo, run `pre-commit run --all-files`
     - Settings and documentation links for pre-commit and ruff are in .pre-commit-config.yaml and pyproject.toml
 
 # Releasing
