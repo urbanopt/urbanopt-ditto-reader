@@ -44,6 +44,7 @@ def test_upgrade_transformers(capfd):
     # This text is printed by ditto.consistency.fix_undersized_transformers
 
 
+# REopt data for testing not present in this repo as of 2023-04-05
 # def test_use_reopt(capfd):
 #     subprocess.run(
 #         ["ditto_reader_cli", "run-opendss", "--config", "example_config.json", "-r"],
