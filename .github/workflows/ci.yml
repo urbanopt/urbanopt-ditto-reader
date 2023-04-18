@@ -1,0 +1,25 @@
+# https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions
+name: ci
+on: [push]
+
+jobs:
+  test:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        python-version: ["3.7", "3.11"]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install Library
+        run: pip install .[dev]
+      - name: Run pre-commit
+        # https://github.com/pre-commit/action
+        uses: pre-commit/action@v3.0.0
+        with:
+          extra_args: --all-files
+      - name: Run unit tests
+        run: python -Wonce::DeprecationWarning -Im pytest -vv
