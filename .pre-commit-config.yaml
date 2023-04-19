@@ -26,10 +26,10 @@ repos:
     rev: 23.1.0
     hooks:
     - id: black-jupyter
-  - repo: https://github.com/charliermarsh/ruff-pre-commit
-    rev: 'v0.0.258'
-    hooks:
-      - id: ruff
+  # - repo: https://github.com/charliermarsh/ruff-pre-commit
+  #   rev: 'v0.0.258'
+  #   hooks:
+  #     - id: ruff
 default_language_version:
   python: python3.10
 # Don't check dirs/files that are brought in from other repositories
