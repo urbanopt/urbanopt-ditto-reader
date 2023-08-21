@@ -6,5 +6,5 @@
     "use_reopt": true,
     "start_time": "2019/01/15 01:00:00",
     "end_time": "2019/01/16 01:00:00",
-    "timestep": 120 
+    "timestep": 120
 }

@@ -58,8 +58,10 @@ def cli():
 
 
 @cli.command(
-    short_help="Run OpenDSS on an URBANopt GeoJSON containing detailed electrical grid "
-    "objects."
+    short_help=(
+        "Run OpenDSS on an URBANopt GeoJSON containing"
+        " detailed electrical grid objects."
+    )
 )
 @click.option(
     "-s",
@@ -131,6 +133,15 @@ def cli():
     help="Flag to use RNM-generated DSS files in this analysis.",
 )
 @click.option(
+    "-r", "--reopt", is_flag=True, help="Flag to use REopt data in this openDSS analysis."
+)
+@click.option(
+    "-m",
+    "--rnm",
+    is_flag=True,
+    help="Flag to use RNM-generated DSS files in this analysis.",
+)
+@click.option(
     "-c",
     "--config",
     type=click.Path(exists=True, file_okay=True, dir_okay=False, resolve_path=True),
@@ -144,7 +155,7 @@ def cli():
     "running OpenDSS. Note that this will only upgrade the size of transformers "
     "that are smaller than the sum of the peak loads that they serve.",
 )
-def run_opendss(  # noqa: PLR0912, PLR0915
+def run_opendss(  # noqa: PLR0912
     scenario_file,
     feature_file,
     equipment,
@@ -197,29 +208,40 @@ def run_opendss(  # noqa: PLR0912, PLR0915
             # Get scenario dir using scenario file
             scenario_name = Path(scenario_file).stem
             scenario_dir = Path(scenario_file).parent / "run" / scenario_name
-            config_dict["urbanopt_scenario_file"] = scenario_file
-            config_dict["opendss_folder"] = scenario_dir / "opendss"
-        if feature_file:
-            config_dict["urbanopt_geojson_file"] = feature_file
-        if reopt:
-            config_dict["use_reopt"] = True
-        if start_date_time:
-            config_dict["start_time"] = start_date_time
-        if end_date_time:
-            config_dict["end_time"] = end_date_time
-        if timestep:
-            config_dict["timestep"] = timestep
-        if upgrade:
-            config_dict["upgrade_transformers"] = True
-        if equipment:
-            config_dict["equipment_file"] = equipment
+
+            if start_date and start_time:
+                start_date_time = start_date + " " + start_time
+            elif start_date and start_time is None:
+                start_date_time = start_date + " 00:00:00"
+            elif start_date is None or start_time is None:
+                start_date_time = None
+
+            if end_date and end_time:
+                end_date_time = end_date + " " + end_time
+            elif end_date and end_time is None:
+                end_date_time = end_date + " 23:00:00"
+            elif end_date is None or end_time is None:
+                end_date_time = None
+
+            config_dict = {
+                "urbanopt_scenario_file": scenario_file,
+                "urbanopt_geojson_file": feature_file,
+                "use_reopt": reopt,
+                "opendss_folder": scenario_dir / "opendss",
+                "start_time": start_date_time,
+                "end_time": end_date_time,
+                "timestep": timestep,
+                "upgrade_transformers": upgrade,
+            }
+            if equipment:
+                config_dict["equipment_file"] = equipment
 
         ditto = UrbanoptDittoReader(config_dict)
         if rnm:
             if not Path(ditto.rnm_results).is_dir():
-                raise ValueError(
-                    "The --rnm option was requested but no RNM results were found at "
-                    f"'{ditto.rnm_results}'."
+                raise FileNotFoundError(
+                    "The --rnm option was requested but no RNM results were "
+                    f'found at "{ditto.rnm_results}".'
                 )
             ditto.run_rnm_opendss()
         else:
