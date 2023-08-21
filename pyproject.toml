@@ -10,7 +10,6 @@ build-backend = "setuptools.build_meta"
 name = "urbanopt-ditto-reader"
 dynamic = [
     "readme",
-    "license",
     ]
 version = "0.5.2"
 authors = [
@@ -49,7 +48,6 @@ dev = [
 # https://setuptools.pypa.io/en/latest/userguide/pyproject_config.html#dynamic-metadata
 [tool.setuptools.dynamic]
 readme = {file = ["README.md", ]}
-license = {file = ["LICENSE", ]}
 
 [project.urls]
 "Homepage" = "https://github.com/urbanopt/urbanopt-ditto-reader"
