@@ -43,6 +43,7 @@ OF THE POSSIBILITY OF SUCH DAMAGE.
 import json
 import math
 import os
+from contextlib import suppress
 from datetime import datetime
 from pathlib import Path
 
@@ -223,8 +224,8 @@ class UrbanoptDittoReader:
             with open(json_file) as f:
                 file_content = json.load(f)
             return file_content
-        except Exception:
-            raise OSError(f'Problem trying to read json from file "{json_file}".')
+        except FileNotFoundError:
+            raise f"Datafile {json_file} could not be found."
 
     def check_model(self, model):
         """Check a Ditto Model using routines within DiTTo.
@@ -233,9 +234,9 @@ class UrbanoptDittoReader:
             model: A DiTTo model to be validated using DiTTo routines.
         """
         # variables for reporting the status of tests
-        OKGREEN = "\033[92m"
-        FAIL = "\033[91m"
-        ENDC = "\033[0m"
+        OKGREEN = "\033[92m"  # noqa: N806
+        FAIL = "\033[91m"  # noqa: N806
+        ENDC = "\033[0m"  # noqa: N806
 
         # perform several checks on the model and report results
         print("\nCHECKING MODEL")
@@ -331,7 +332,7 @@ class UrbanoptDittoReader:
         ts = self._read_single_column_csv(timestamp_file)
         ts.pop(0)  # remove the header
         dt_format = "%Y/%m/%d %H:%M:%S"
-        delta = datetime.strptime(ts[1], dt_format) - datetime.strptime(ts[0], dt_format)
+        delta = datetime.strptime(ts[1], dt_format).astimezone() - datetime.strptime(ts[0], dt_format).astimezone()
         interval = delta.seconds / 3600.0
         stepsize = 60 * interval
 
@@ -445,10 +446,8 @@ class UrbanoptDittoReader:
             # if this is the first timestep, setup the dictionaries to hold outputs
             if i == start_index:
                 for element in voltages:
-                    try:
+                    with suppress(KeyError):  # element is not a building
                         voltage_df_dic[building_map[element]] = [bldg_columns]
-                    except KeyError:  # element is not a building
-                        pass
                 for element in line_overloads:
                     line_df_dic[element] = [line_columns]
                 for element in overloaded_xfmrs:
@@ -456,10 +455,8 @@ class UrbanoptDittoReader:
 
             # record the OpenDSS results in dictionaries
             for element, volt_val in voltages.items():
-                try:
+                with suppress(KeyError):  # element is not a building
                     voltage_df_dic[building_map[element]].append([time, volt_val, volt_val > 1.05, volt_val < 0.95])
-                except KeyError:  # element is not a building
-                    pass
             for element, line_load_val in line_overloads.items():
                 line_df_dic[element].append([time, line_load_val, line_load_val > 1.0])
             for element, xfrm_load_val in overloaded_xfmrs.items():
