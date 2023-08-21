@@ -23,4 +23,3 @@ New Load.11 bus1=14072af7-3121-4e3d-b85f-c79868702ec9.1.2.3 kV=0.48 model=1 kW=3
 New Load.12 bus1=753b77b9-b88b-443f-9c3b-3cd977bb3558.1.2.3 kV=12.47 model=1 kW=1313.8416564929219 kvar=301.415947814038 Phases=3 yearly=feature_12
 
 New Load.13 bus1=38a42375-ff02-497e-90ef-c5d9eb78850e.1.2.3 kV=12.47 model=1 kW=1139.366097122639 kvar=261.3885093186278 Phases=3 yearly=feature_13
-

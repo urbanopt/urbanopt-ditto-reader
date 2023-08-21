@@ -41,115 +41,114 @@ OF THE POSSIBILITY OF SUCH DAMAGE.
 """
 
 # ditto_reader_cli
-import os
 import json
+import os
 import sys
 from pathlib import Path
+
 import click
 
 from urbanopt_ditto_reader.urbanopt_ditto_reader import UrbanoptDittoReader
 
-CONTEXT_SETTINGS = dict(help_option_names=['-h', '--help'])
+CONTEXT_SETTINGS = {"help_option_names": ["-h", "--help"]}
 
 
 @click.group(context_settings=CONTEXT_SETTINGS)
 def cli():
     """URBANopt Ditto Reader"""
-    pass
 
 
-@cli.command(
-    short_help='Run OpenDSS on an URBANopt GeoJSON containing detailed electrical '
-    'grid objects.'
-)
+@cli.command(short_help="Run OpenDSS on an URBANopt GeoJSON containing detailed electrical grid objects.")
 @click.option(
-    '-s',
-    '--scenario_file',
+    "-s",
+    "--scenario_file",
     type=click.Path(exists=True, file_okay=True, dir_okay=False, resolve_path=True),
-    help='Path to scenario file'
+    help="Path to scenario file",
 )
 @click.option(
-    '-f',
-    '--feature_file',
+    "-f",
+    "--feature_file",
     type=click.Path(exists=True, file_okay=True, dir_okay=False, resolve_path=True),
-    help='Path to feature file'
+    help="Path to feature file",
 )
 @click.option(
-    '-e',
-    '--equipment',
+    "-e",
+    "--equipment",
     type=click.Path(exists=True, file_okay=True, dir_okay=False, resolve_path=True),
-    help='Path to optional custom equipment file'
+    help="Path to optional custom equipment file",
 )
 @click.option(
-    '-a',
-    '--start_date',
+    "-a",
+    "--start_date",
     type=str,
     default=None,
     help='Beginning date of simulation. Uses format "YYYY/MM/DD". If unspecified or '
-    'invalid, the simulation will begin from the earliest date available.'
+    "invalid, the simulation will begin from the earliest date available.",
 )
 @click.option(
-    '-b',
-    '--start_time',
+    "-b",
+    "--start_time",
     type=str,
     default=None,
     help='Beginning timestamp of simulation. Uses format "HH:MM:SS". If unspecified, '
-    'a default assumption of 00:00:00 is used if the --start_date is specified or '
-    'it will simply be the earliest timepoint available.'
+    "a default assumption of 00:00:00 is used if the --start_date is specified or "
+    "it will simply be the earliest timepoint available.",
 )
 @click.option(
-    '-n',
-    '--end_date',
+    "-n",
+    "--end_date",
     type=str,
     default=None,
     help='Ending date of simulation. Uses format "YYYY/MM/DD". If unspecified or '
-    'invalid, the simulation will begin to the latest date available.'
+    "invalid, the simulation will begin to the latest date available.",
 )
 @click.option(
-    '-d',
-    '--end_time',
+    "-d",
+    "--end_time",
     type=str,
     default=None,
     help='Ending timestamp of simulation. Uses format "HH/MM/SS". If unspecified, '
-    'a default assumption of 32:00:00 is used if the --end_date is specified or '
-    'it will simply be the latest timepoint available.'
+    "a default assumption of 32:00:00 is used if the --end_date is specified or "
+    "it will simply be the latest timepoint available.",
 )
 @click.option(
-    '-t',
-    '--timestep',
+    "-t",
+    "--timestep",
     type=float,
     default=None,
-    help='Interval between simulation steps in minutes. If unspecified, the timestep '
-    'will be inferred from the load profile results.'
+    help="Interval between simulation steps in minutes. If unspecified, the timestep "
+    "will be inferred from the load profile results.",
 )
+@click.option("-r", "--reopt", is_flag=True, help="Flag to use REopt data in this openDSS analysis.")
+@click.option("-m", "--rnm", is_flag=True, help="Flag to use RNM-generated DSS files in this analysis.")
 @click.option(
-    '-r',
-    '--reopt',
-    is_flag=True,
-    help='Flag to use REopt data in this openDSS analysis.'
-)
-@click.option(
-    '-m',
-    '--rnm',
-    is_flag=True,
-    help='Flag to use RNM-generated DSS files in this analysis.'
-)
-@click.option(
-    '-c',
-    '--config',
+    "-c",
+    "--config",
     type=click.Path(exists=True, file_okay=True, dir_okay=False, resolve_path=True),
-    help='Path to a json config file that specifies all simulation settings.'
+    help="Path to a json config file that specifies all simulation settings.",
 )
 @click.option(
-    '-u',
-    '--upgrade',
+    "-u",
+    "--upgrade",
     is_flag=True,
-    help='Flag to automatically upgrade transformers that are undersized before '
-    'running OpenDSS. Note that this will only upgrade the size of transformers '
-    'that are smaller than the sum of the peak loads that they serve.'
+    help="Flag to automatically upgrade transformers that are undersized before "
+    "running OpenDSS. Note that this will only upgrade the size of transformers "
+    "that are smaller than the sum of the peak loads that they serve.",
 )
-def run_opendss(scenario_file, feature_file, equipment, start_date, start_time,
-                end_date, end_time, timestep, reopt, rnm, config, upgrade):
+def run_opendss(
+    scenario_file,
+    feature_file,
+    equipment,
+    start_date,
+    start_time,
+    end_date,
+    end_time,
+    timestep,
+    reopt,
+    rnm,
+    config,
+    upgrade,
+):
     """Run OpenDSS on an URBANopt GeoJSON containing detailed electrical grid objects.
 
     \b
@@ -186,22 +185,23 @@ def run_opendss(scenario_file, feature_file, equipment, start_date, start_time,
                 end_date_time = None
 
             config_dict = {
-                'urbanopt_scenario_file': scenario_file,
-                'urbanopt_geojson_file': feature_file,
-                'use_reopt': reopt,
-                'opendss_folder': scenario_dir / 'opendss',
-                'start_time': start_date_time,
-                'end_time': end_date_time,
-                'timestep': timestep,
-                'upgrade_transformers': upgrade
+                "urbanopt_scenario_file": scenario_file,
+                "urbanopt_geojson_file": feature_file,
+                "use_reopt": reopt,
+                "opendss_folder": scenario_dir / "opendss",
+                "start_time": start_date_time,
+                "end_time": end_date_time,
+                "timestep": timestep,
+                "upgrade_transformers": upgrade,
             }
             if equipment:
-                config_dict['equipment_file'] = equipment
+                config_dict["equipment_file"] = equipment
 
         ditto = UrbanoptDittoReader(config_dict)
         if rnm:
-            assert os.path.isdir(ditto.rnm_results), 'The --rnm option was requested ' \
-                'but no RNM results were found at "{}".'.format(ditto.rnm_results)
+            assert os.path.isdir(ditto.rnm_results), (
+                "The --rnm option was requested " f'but no RNM results were found at "{ditto.rnm_results}".'
+            )
             ditto.run_rnm_opendss()
         else:
             ditto.run_urbanopt_geojson()
