@@ -81,7 +81,7 @@ class Reader(AbstractReader):
             the timeseries_location).
     """
 
-    register_names = ["geojson", "GeoJson"]
+    # register_names = ["geojson", "GeoJson"] # Deprecated Aug 21 by NM
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
@@ -127,7 +127,9 @@ class Reader(AbstractReader):
         try:
             with open(filename) as f:
                 content = json.load(f)
-        except Exception:
+        except FileNotFoundError:
+            raise OSError(f"Datafile {filename} could not be found.")
+        except TypeError:
             raise OSError(f"Problem trying to read json from file {filename}.")
         return content
 
@@ -334,7 +336,7 @@ class Reader(AbstractReader):
                 transformer = PowerTransformer(model)
                 if tr_id in transformer_panel_map:
                     if len(transformer_panel_map[tr_id]) < 2:
-                        print("No from and to elements found for transformer " f"{tr_id}")
+                        print(f"No from and to elements found for transformer {tr_id}")
                     if len(transformer_panel_map[tr_id]) > 2:
                         print(
                             f"Warning - the transformer {tr_id} should have a from and to "
@@ -361,7 +363,7 @@ class Reader(AbstractReader):
                                         nv = db_transformer["Primary Voltage (kV)"]
                                         source_voltages.add(float(nv) * 1000)
                         if not found_transformer:
-                            raise ValueError("No transformer found in catalog for " f"{catalog_name}")
+                            raise ValueError(f"No transformer found in catalog for {catalog_name}")
 
         # Note that the source voltage is set to be the highest side of the transformer
         if len(source_voltages) == 1:
@@ -495,14 +497,15 @@ class Reader(AbstractReader):
             upstream_transformer_name = None
             try:
                 upstream_transformer_name = network.get_upstream_transformer(model, connecting_element)
-            except Exception:  # caused by elements not being connected
+            # FIXME: What exception should be caught here?
+            except Exception:  # caused by elements not being connected # noqa: BLE001
                 disconnected_loads.append(element["properties"]["id"])
             if upstream_transformer_name is not None:
                 upstream_transformer = model[upstream_transformer_name]
                 is_center_tap = upstream_transformer.is_center_tap
                 load.nominal_voltage = upstream_transformer.windings[1].nominal_voltage
             else:
-                print(f"Warning - Load {load.name} has no transformer. " "Assigning as MV load", flush=True)
+                print(f"Warning - Load {load.name} has no transformer. Assigning as MV load", flush=True)
                 load.nominal_voltage = model["urbanopt-feeder"].nominal_voltage
 
             # load the power draw of the buildings from the energy sim results
@@ -561,7 +564,10 @@ class Reader(AbstractReader):
                     ts_i = header_row.index("Datetime")
                     timestamps = [row[ts_i] for row in report_mtx]
                     dt_format = "%Y/%m/%d %H:%M:%S"
-                    delta = datetime.strptime(timestamps[1], dt_format) - datetime.strptime(timestamps[0], dt_format)
+                    delta = (
+                        datetime.strptime(timestamps[1], dt_format).astimezone()
+                        - datetime.strptime(timestamps[0], dt_format).astimezone()
+                    )
                     ts_loc = self.timeseries_location
                     if ts_loc is not None:
                         if not os.path.exists(ts_loc):
@@ -623,7 +629,7 @@ class Reader(AbstractReader):
             try:
                 load_file = os.path.join(re_folder, "feature_optimization.json")
                 feature_data = self.get_json_data(load_file)
-            except Exception as e:
+            except FileNotFoundError as e:
                 print(e)
                 continue
             pv_kw = feature_data["distributed_generation"]["total_solar_pv_kw"]
@@ -634,7 +640,7 @@ class Reader(AbstractReader):
                 upstream_transformer = model[upstream_transformer_name]
                 is_center_tap = upstream_transformer.is_center_tap
             else:
-                print(f"Warning - DG {upstream_transformer_name} is incorrectly " "connected", flush=True)
+                print(f"Warning - DG {upstream_transformer_name} is incorrectly connected", flush=True)
 
             # if there is PV on the building, create an OpenDSS object for it
             if pv_kw > 0:
@@ -664,7 +670,10 @@ class Reader(AbstractReader):
                     ts_i = header_row.index("Datetime")
                     timestamps = [row[ts_i] for row in report_mtx]
                     dt_format = "%Y/%m/%d %H:%M:%S"
-                    delta = datetime.strptime(timestamps[1], dt_format) - datetime.strptime(timestamps[0], dt_format)
+                    delta = (
+                        datetime.strptime(timestamps[1], dt_format).astimezone()
+                        - datetime.strptime(timestamps[0], dt_format).astimezone()
+                    )
                     data_pu = [d / pv_kw for d in load_data]
                     ts_loc = self.timeseries_location
                     if ts_loc is not None:
