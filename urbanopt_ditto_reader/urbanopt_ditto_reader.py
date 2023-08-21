@@ -186,7 +186,7 @@ class UrbanoptDittoReader:
         return line_overloads_dict
 
     @staticmethod
-    def _get_xfmr_overloads(ub=1.0):
+    def _get_xfmr_overloads():
         """Get a dictionary of Transformer current violations."""
         transformer_violation_dict = {}
         dss.Circuit.SetActiveClass("Transformer")
