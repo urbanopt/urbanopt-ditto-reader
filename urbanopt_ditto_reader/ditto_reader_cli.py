@@ -42,7 +42,6 @@ OF THE POSSIBILITY OF SUCH DAMAGE.
 
 # ditto_reader_cli
 import json
-import os
 import sys
 from pathlib import Path
 
@@ -135,7 +134,7 @@ def cli():
     "running OpenDSS. Note that this will only upgrade the size of transformers "
     "that are smaller than the sum of the peak loads that they serve.",
 )
-def run_opendss(
+def run_opendss(  # noqa: PLR0912
     scenario_file,
     feature_file,
     equipment,
@@ -199,9 +198,10 @@ def run_opendss(
 
         ditto = UrbanoptDittoReader(config_dict)
         if rnm:
-            assert os.path.isdir(ditto.rnm_results), (
-                "The --rnm option was requested " f'but no RNM results were found at "{ditto.rnm_results}".'
-            )
+            if not Path(ditto.rnm_results).is_dir():
+                raise FileNotFoundError(
+                    f'The --rnm option was requested but no RNM results were found at "{ditto.rnm_results}".'
+                )
             ditto.run_rnm_opendss()
         else:
             ditto.run_urbanopt_geojson()
