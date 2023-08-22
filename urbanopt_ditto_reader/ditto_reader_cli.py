@@ -216,7 +216,7 @@ def run_opendss(  # noqa: PLR0912
         if rnm:
             if not Path(ditto.rnm_results).is_dir():
                 raise FileNotFoundError(
-                    "The --rnm option was requested but no RNM results were found at {ditto.rnm_results}."
+                    f"The --rnm option was requested but no RNM results were found at {ditto.rnm_results}."
                 )
             ditto.run_rnm_opendss()
         else:
