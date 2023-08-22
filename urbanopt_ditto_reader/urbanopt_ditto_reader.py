@@ -60,7 +60,7 @@ from ditto.store import Store
 from ditto.writers.json.write import Writer as JSONWriter
 from ditto.writers.opendss.write import Writer
 
-from urbanopt_ditto_reader.reader import UrbanoptReader
+from urbanopt_ditto_reader.reader.read import Reader
 
 
 class UrbanoptDittoReader:
@@ -565,7 +565,7 @@ class UrbanoptDittoReader:
         # load the OpenDSS model from the URBANopt files
         print("\nRE-SERIALIZING MODEL")
         model = Store()
-        reader = UrbanoptReader(
+        reader = Reader(
             geojson_file=self.geojson_file,
             equipment_file=self.equipment_file,
             load_folder=self.urbanopt_scenario,
