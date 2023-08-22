@@ -2,7 +2,6 @@ import subprocess
 from pathlib import Path
 
 examples_dir = Path(__file__).parent.parent.parent / "example"
-config_file_path = examples_dir / "example_config.json"
 
 # Test CLI commands
 
@@ -13,6 +12,7 @@ def test_default_settings(capfd):
     subprocess.run(
         ["ditto_reader_cli", "run-opendss", "--config", "example_config.json"],
         cwd=examples_dir,
+        check=True,
     )
     captured = capfd.readouterr()
     assert "Done. Results located in" in captured.out
@@ -23,6 +23,7 @@ def test_rnm(capfd):
     subprocess.run(
         ["ditto_reader_cli", "run-opendss", "--config", "example_config.json", "-m"],
         cwd=examples_dir,
+        check=True,
     )
     captured = capfd.readouterr()
     assert "Done. Results located in" in captured.out
@@ -38,6 +39,7 @@ def test_upgrade_transformers(capfd):
             "--upgrade",
         ],
         cwd=examples_dir,
+        check=True,
     )
     captured = capfd.readouterr()
     assert "Upgrading to" in captured.out
@@ -71,6 +73,7 @@ def test_specific_times(capfd):
             "12:00:00",
         ],
         cwd=examples_dir,
+        check=True,
     )
     captured = capfd.readouterr()
     assert "Timepoint: 2017/08/16 12:00:00" in captured.out
@@ -88,6 +91,7 @@ def test_timestep(capfd):
             "360",
         ],
         cwd=examples_dir,
+        check=True,
     )
     captured = capfd.readouterr()
     assert "timestep: 360" in captured.out
