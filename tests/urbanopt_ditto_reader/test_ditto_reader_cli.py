@@ -27,6 +27,8 @@ def test_rnm(capfd):
     )
     captured = capfd.readouterr()
     assert "Done. Results located in" in captured.out
+    assert "!!! masterFILE" in captured.out
+    assert "no RNM results were found" not in captured.out
 
 
 def test_upgrade_transformers(capfd):
