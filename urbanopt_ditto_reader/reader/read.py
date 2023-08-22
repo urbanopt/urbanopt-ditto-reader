@@ -128,9 +128,9 @@ class Reader(AbstractReader):
             with open(filename) as f:
                 content = json.load(f)
         except FileNotFoundError:
-            raise OSError(f"Datafile {filename} could not be found.")
+            raise SystemExit(f"ERROR: Datafile {filename} could not be found.")
         except TypeError:
-            raise OSError(f"Problem trying to read json from file {filename}.")
+            raise SystemExit(f"ERROR: Problem trying to read json from file {filename}.")
         return content
 
     def parse(self, model, **kwargs):
