@@ -11,7 +11,7 @@ name = "urbanopt-ditto-reader"
 dynamic = [
     "readme",
     ]
-version = "0.5.2"
+version = "0.6.0"
 authors = [
   { name="Tarek Elgindy", email="tarek.elgindy@nrel.gov" },
   { name="Nathan Moore", email="nathan.moore@nrel.gov" },
@@ -39,8 +39,8 @@ dependencies = [
 [project.optional-dependencies]
 dev = [
     "pytest >= 6.0",
-    "pre-commit ~= 3.2",
-    "black ~= 23.1",
+    "pre-commit ~= 3.3",
+    "black ~= 23.7",
     "ruff ~= 0.0",
 ]
 
