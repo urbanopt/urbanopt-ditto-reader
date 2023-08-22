@@ -33,7 +33,7 @@ classifiers = [
     ]
 dependencies = [
     "ditto.py[opendss]~=0.2",
-    "opendssdirect.py ~= 0.7"
+    "opendssdirect.py ~= 0.8"
     ]
 
 [project.optional-dependencies]
