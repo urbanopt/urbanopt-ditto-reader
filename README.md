@@ -3,7 +3,7 @@ Enhancement of URBANopt™ GeoJSON that can be consumed by DiTTo reader \
 More detailed documentation is available on the [URBANopt documentation page](https://docs.urbanopt.net/opendss/opendss.html)
 
 # Installation Pre-requisites
-- Python >=3.7
+- Python >=3.8
 - Requires Python 3.10 if using via the URBANopt CLI.
 
 # Installation
