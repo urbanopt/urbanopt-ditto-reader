@@ -41,7 +41,7 @@ dev = [
     "pytest >= 6.0",
     "pre-commit ~= 3.3",
     "black ~= 23.7",
-    "ruff ~= 0.0",
+    "ruff ~= 0.1",
 ]
 
 # https://setuptools.pypa.io/en/latest/userguide/package_discovery.html
