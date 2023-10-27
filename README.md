@@ -59,6 +59,8 @@ If either start_time and end_time are invalid or set to None, the simulation wil
 
 - Clone the repository: `git clone https://github.com/urbanopt/urbanopt-ditto-reader.git`
 - Change directories into the repository: `cd urbanopt-ditto-reader`
+- If you are using an ARM chip (Apple Silicon) computer, install this branch of OpenDSSDirect.py:
+`pip install git+https://github.com/dss-extensions/OpenDSSDirect.py@dss_python-0.12.0`
 - Create & activate your favorite venv in the repo (I prefer pyenv for [mac/linux](https://github.com/pyenv/pyenv#installation) or [windows](https://github.com/pyenv-win/pyenv-win#installation), and the [virtualenv plugin](https://github.com/pyenv/pyenv-virtualenv))
     - Activate pre-commit (only once, after making a new venv): `pre-commit install`
     - Runs automatically on your staged changes before every commit
