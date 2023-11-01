@@ -1,13 +1,13 @@
 # https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions
 name: ci
 on:
-  # push:
-  schedule:
+  push:
+  # schedule:
     # https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#schedule
     # 5:20 am UTC (11:20pm MDT the day before) every weekday night in MDT
-    - cron: '20 5 * * 2-6'
-  pull_request:
-    types: [review_requested]
+  #   - cron: '20 5 * * 2-6'
+  # pull_request:
+  #   types: [review_requested]
 
 jobs:
   test:
