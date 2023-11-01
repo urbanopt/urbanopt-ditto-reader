@@ -135,8 +135,5 @@ dmypy.json
 # DS_Store
 .DS_Store
 
-# opendss files
-example/run/baseline_scenario/opendss/
-
 # ditto local checkout
 ditto/
