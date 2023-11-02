@@ -90,10 +90,10 @@ def test_timestep(capfd):
             "--config",
             "example_config.json",
             "--timestep",
-            "360",
+            "120",
         ],
         cwd=examples_dir,
         check=True,
     )
     captured = capfd.readouterr()
-    assert "timestep: 360" in captured.out
+    assert "timestep: 120" in captured.out
