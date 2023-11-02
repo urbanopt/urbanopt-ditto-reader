@@ -1,0 +1,13 @@
+New Loadshape.1_27_profile Npts=8760 Interval=1 Pmult=(file=..\profiles\load_1_27_p.csv) Qmult=(file=..\profiles\load_1_27_q.csv) UseActual=True
+New Loadshape.2_0_profile Npts=8760 Interval=1 Pmult=(file=..\profiles\load_2_0_p.csv) Qmult=(file=..\profiles\load_2_0_q.csv) UseActual=True
+New Loadshape.3_14_profile Npts=8760 Interval=1 Pmult=(file=..\profiles\load_3_14_p.csv) Qmult=(file=..\profiles\load_3_14_q.csv) UseActual=True
+New Loadshape.4_3_profile Npts=8760 Interval=1 Pmult=(file=..\profiles\load_4_3_p.csv) Qmult=(file=..\profiles\load_4_3_q.csv) UseActual=True
+New Loadshape.5_0_profile Npts=8760 Interval=1 Pmult=(file=..\profiles\load_5_0_p.csv) Qmult=(file=..\profiles\load_5_0_q.csv) UseActual=True
+New Loadshape.6_8_profile Npts=8760 Interval=1 Pmult=(file=..\profiles\load_6_8_p.csv) Qmult=(file=..\profiles\load_6_8_q.csv) UseActual=True
+New Loadshape.7_7_profile Npts=8760 Interval=1 Pmult=(file=..\profiles\load_7_7_p.csv) Qmult=(file=..\profiles\load_7_7_q.csv) UseActual=True
+New Loadshape.8_10_profile Npts=8760 Interval=1 Pmult=(file=..\profiles\load_8_10_p.csv) Qmult=(file=..\profiles\load_8_10_q.csv) UseActual=True
+New Loadshape.9_13_profile Npts=8760 Interval=1 Pmult=(file=..\profiles\load_9_13_p.csv) Qmult=(file=..\profiles\load_9_13_q.csv) UseActual=True
+New Loadshape.10_28_profile Npts=8760 Interval=1 Pmult=(file=..\profiles\load_10_28_p.csv) Qmult=(file=..\profiles\load_10_28_q.csv) UseActual=True
+New Loadshape.11_0_profile Npts=8760 Interval=1 Pmult=(file=..\profiles\load_11_0_p.csv) Qmult=(file=..\profiles\load_11_0_q.csv) UseActual=True
+New Loadshape.12_20_profile Npts=8760 Interval=1 Pmult=(file=..\profiles\load_12_20_p.csv) Qmult=(file=..\profiles\load_12_20_q.csv) UseActual=True
+New Loadshape.13_4_profile Npts=8760 Interval=1 Pmult=(file=..\profiles\load_13_4_p.csv) Qmult=(file=..\profiles\load_13_4_q.csv) UseActual=True

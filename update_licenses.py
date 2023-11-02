@@ -93,11 +93,15 @@ OF THE POSSIBILITY OF SUCH DAMAGE.
 
 EXCLUDE_FILES = ["__init__.py"]
 PATHS = [
-    {"glob": "urbanopt_ditto_reader/**/*.py", "license": PYTHON_LICENSE, "REGEX": PYTHON_REGEX, },
+    {
+        "glob": "urbanopt_ditto_reader/**/*.py",
+        "license": PYTHON_LICENSE,
+        "REGEX": PYTHON_REGEX,
+    },
     {"glob": "tests/**/*.py", "license": PYTHON_LICENSE, "REGEX": PYTHON_REGEX},
     # single files
-    { "glob": 'setup.py', "license": PYTHON_LICENSE, "REGEX": PYTHON_REGEX },
-    { "glob": 'update_licenses.py', "license": PYTHON_LICENSE, "REGEX": PYTHON_REGEX }
+    {"glob": "setup.py", "license": PYTHON_LICENSE, "REGEX": PYTHON_REGEX},
+    {"glob": "update_licenses.py", "license": PYTHON_LICENSE, "REGEX": PYTHON_REGEX},
 ]
 
 
@@ -108,7 +112,7 @@ def check_and_update_license(filename):
     :param filename: str, path of the file to update
     :return: None
     """
-    s = open(filename, "r").read()
+    s = open(filename).read()
     if PYTHON_REGEX.search(s):
         print("License already exists, updating")
         content = re.sub(PYTHON_REGEX, PYTHON_LICENSE, s)
@@ -125,7 +129,7 @@ def check_and_update_license(filename):
 
 
 @click.command()
-@click.argument('license', required=False)
+@click.argument("license", required=False)
 def update_licenses(license):
     for p in PATHS:
         gl = glob.glob(p["glob"], recursive=True)

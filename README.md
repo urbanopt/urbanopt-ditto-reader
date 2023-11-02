@@ -3,7 +3,7 @@ Enhancement of URBANopt™ GeoJSON that can be consumed by DiTTo reader \
 More detailed documentation is available on the [URBANopt documentation page](https://docs.urbanopt.net/opendss/opendss.html)
 
 # Installation Pre-requisites
-- Python >=3.7
+- Python >=3.8
 - Requires Python 3.10 if using via the URBANopt CLI.
 
 # Installation
@@ -35,7 +35,7 @@ You are expected to have an existing URBANopt project dir with successful simula
 1. "use_reopt": Required, Boolean (True/False) to analyze reopt data, if it has been provided
 1. "start_date": Optional, String, Indicates the start date of the simulation. Uses format "YYYY/MM/DD"
 1. "start_time": Optional, String, Indicates the start time of the simulation. Uses format
-   "HH:MM:SS". 
+   "HH:MM:SS".
 The start_date and
    start_time are concatenated to get the timestamp (using format "YYYY/MM/DD HH:MM:SS") for the config
    file that is cross referenced with the timestamps in the
@@ -57,26 +57,24 @@ If either start_time and end_time are invalid or set to None, the simulation wil
 
 # Developer installation
 
-Clone the repository:
-`git clone https://github.com/urbanopt/urbanopt-ditto-reader.git`
-
-Change directories into the repository:
-`cd urbanopt-ditto-reader`
-
-If you are using an ARM chip (Apple Silicon) computer, install this branch of OpenDSSDirect.py:
+- Clone the repository: `git clone https://github.com/urbanopt/urbanopt-ditto-reader.git`
+- Change directories into the repository: `cd urbanopt-ditto-reader`
+- If you are using an ARM chip (Apple Silicon) computer, install this branch of OpenDSSDirect.py:
 `pip install git+https://github.com/dss-extensions/OpenDSSDirect.py@dss_python-0.12.0`
+- Create & activate your favorite venv in the repo (I prefer pyenv for [mac/linux](https://github.com/pyenv/pyenv#installation) or [windows](https://github.com/pyenv-win/pyenv-win#installation), and the [virtualenv plugin](https://github.com/pyenv/pyenv-virtualenv))
+    - Activate pre-commit (only once, after making a new venv): `pre-commit install`
+    - Runs automatically on your staged changes before every commit
+- Update pip and setuptools: `pip install -U pip setuptools`
+- Install the respository with developer dependencies: `pip install -e .[dev]`
+- To check the whole repo, run `pre-commit run --all-files`
+    - Settings and documentation links for pre-commit and ruff are in .pre-commit-config.yaml and pyproject.toml
 
-Install the respository:
+# Releasing
+Follow the [PyPA guidance](https://packaging.python.org/en/latest/tutorials/packaging-projects/#generating-distribution-archives) as of April 2, 2022
 
-`pip install -e .`
-
-
-## Publish Package
-
-- update version in setup.py
+Roughly:
+- update version in pyproject.toml
 - make a release on GitHub
-- make the package: `python setup.py sdist`
+- make the package: `python -m build`
 - install twine `pip install twine`
 - upload to pypi: `twine upload dist/*`
-
-

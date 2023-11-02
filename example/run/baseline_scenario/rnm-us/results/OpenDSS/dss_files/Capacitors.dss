@@ -1,0 +1,3 @@
+New Capacitor.C0 bus1=1_27 phases=3 kvar=600 kV=12.47 Conn=wye Basefreq=60
+New Capacitor.C1 bus1=DT2 phases=3 kvar=600 kV=12.47 Conn=wye Basefreq=60
+New Capacitor.C2 bus1=DT1 phases=3 kvar=600 kV=12.47 Conn=wye Basefreq=60

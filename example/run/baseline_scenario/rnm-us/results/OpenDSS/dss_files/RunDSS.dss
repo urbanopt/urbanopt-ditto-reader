@@ -1,0 +1,9 @@
+Compile [Master.dss]
+solve
+show voltages ln nodes
+show powers kva elements
+show overloads
+show currents elements
+show losses
+Export Capacity
+Export summary
