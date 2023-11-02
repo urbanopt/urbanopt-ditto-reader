@@ -57,7 +57,7 @@ def cli():
     """URBANopt Ditto Reader"""
 
 
-@cli.command(short_help="Run OpenDSS on an URBANopt GeoJSON containing detailed electrical grid objects.")
+@cli.command(short_help=("Run OpenDSS on an URBANopt GeoJSON containing detailed electrical grid objects."))
 @click.option(
     "-s",
     "--scenario_file",
@@ -107,7 +107,7 @@ def cli():
     type=str,
     default=None,
     help='Ending timestamp of simulation. Uses format "HH/MM/SS". If unspecified, '
-    "a default assumption of 32:00:00 is used if the --end_date is specified or "
+    "a default assumption of 23:00:00 is used if the --end_date is specified or "
     "it will simply be the latest timepoint available.",
 )
 @click.option(
@@ -119,7 +119,12 @@ def cli():
     "will be inferred from the load profile results.",
 )
 @click.option("-r", "--reopt", is_flag=True, help="Flag to use REopt data in this openDSS analysis.")
-@click.option("-m", "--rnm", is_flag=True, help="Flag to use RNM-generated DSS files in this analysis.")
+@click.option(
+    "-m",
+    "--rnm",
+    is_flag=True,
+    help="Flag to use RNM-generated DSS files in this analysis.",
+)
 @click.option(
     "-c",
     "--config",
@@ -166,41 +171,52 @@ def run_opendss(  # noqa: PLR0912
             with open(config) as f:
                 config_dict = json.load(f)
         else:
+            config_dict = {}
+
+        if start_date and start_time:
+            config_dict["start_time"] = start_date + " " + start_time
+        elif start_date and start_time is None:
+            config_dict["start_time"] = start_date + " 00:00:00"
+        elif start_date is None and start_time:
+            config_dict["start_time"] = "2017/01/15 " + start_time
+
+        if end_date and end_time:
+            config_dict["end_time"] = end_date + " " + end_time
+        elif end_date and end_time is None:
+            config_dict["end_time"] = end_date + " 23:00:00"
+        elif end_date is None and end_time:
+            config_dict["end_time"] = "2017/01/15 " + end_time
+
+        if scenario_file:
+            # Get scenario dir using scenario file
             scenario_name = Path(scenario_file).stem
             scenario_dir = Path(scenario_file).parent / "run" / scenario_name
 
-            if start_date and start_time:
-                start_date_time = start_date + " " + start_time
-            elif start_date and start_time is None:
-                start_date_time = start_date + " 00:00:00"
-            elif start_date is None or start_time is None:
-                start_date_time = None
+            config_dict["urbanopt_scenario_file"] = scenario_file
+            config_dict["opendss_folder"] = scenario_dir / "opendss"
 
-            if end_date and end_time:
-                end_date_time = end_date + " " + end_time
-            elif end_date and end_time is None:
-                end_date_time = end_date + " 23:00:00"
-            elif end_date is None or end_time is None:
-                end_date_time = None
+        if feature_file:
+            config_dict["urbanopt_geojson_file"] = feature_file
 
-            config_dict = {
-                "urbanopt_scenario_file": scenario_file,
-                "urbanopt_geojson_file": feature_file,
-                "use_reopt": reopt,
-                "opendss_folder": scenario_dir / "opendss",
-                "start_time": start_date_time,
-                "end_time": end_date_time,
-                "timestep": timestep,
-                "upgrade_transformers": upgrade,
-            }
-            if equipment:
-                config_dict["equipment_file"] = equipment
+        if timestep:
+            config_dict["timestep"] = timestep
+
+        if reopt:
+            config_dict["use_reopt"] = reopt
+
+        if upgrade:
+            config_dict["upgrade_transformers"] = upgrade
+
+        if equipment:
+            config_dict["equipment_file"] = equipment
 
         ditto = UrbanoptDittoReader(config_dict)
+
+        # rnm has it's own run method, separate from run_urbanopt_geojson
         if rnm:
             if not Path(ditto.rnm_results).is_dir():
                 raise FileNotFoundError(
-                    f'The --rnm option was requested but no RNM results were found at "{ditto.rnm_results}".'
+                    f"The --rnm option was requested but no RNM results were found at {ditto.rnm_results}."
                 )
             ditto.run_rnm_opendss()
         else:

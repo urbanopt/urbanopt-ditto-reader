@@ -1,0 +1,13 @@
+New Load.1_27 yearly=1_27_profile phases=3 kV=12.47 bus1=1_27 kW=4746.89 kvar=2299.03 Basefreq=60 Model=1 Vminpu=0.8 Vmaxpu=1.2 NumCust=1
+New Load.2_0 yearly=2_0_profile phases=3 kV=0.48 bus1=2_0 kW=226.561 kvar=109.728 Basefreq=60 Model=1 Vminpu=0.8 Vmaxpu=1.2 NumCust=1
+New Load.3_14 yearly=3_14_profile phases=3 kV=12.47 bus1=3_14 kW=1287.35 kvar=623.494 Basefreq=60 Model=1 Vminpu=0.8 Vmaxpu=1.2 NumCust=1
+New Load.4_3 yearly=4_3_profile phases=3 kV=0.48 bus1=4_3 kW=336.075 kvar=162.768 Basefreq=60 Model=1 Vminpu=0.8 Vmaxpu=1.2 NumCust=1
+New Load.5_0 yearly=5_0_profile phases=3 kV=0.48 bus1=5_0 kW=84.9466 kvar=41.1415 Basefreq=60 Model=1 Vminpu=0.8 Vmaxpu=1.2 NumCust=1
+New Load.6_8 yearly=6_8_profile phases=3 kV=0.48 bus1=6_8 kW=107.501 kvar=52.0652 Basefreq=60 Model=1 Vminpu=0.8 Vmaxpu=1.2 NumCust=1
+New Load.7_7 yearly=7_7_profile phases=3 kV=12.47 bus1=7_7 kW=1010.5 kvar=489.406 Basefreq=60 Model=1 Vminpu=0.8 Vmaxpu=1.2 NumCust=1
+New Load.8_10 yearly=8_10_profile phases=3 kV=12.47 bus1=8_10 kW=2184.74 kvar=1058.12 Basefreq=60 Model=1 Vminpu=0.8 Vmaxpu=1.2 NumCust=1
+New Load.9_13 yearly=9_13_profile phases=3 kV=12.47 bus1=9_13 kW=1369.3 kvar=663.184 Basefreq=60 Model=1 Vminpu=0.8 Vmaxpu=1.2 NumCust=1
+New Load.10_28 yearly=10_28_profile phases=3 kV=12.47 bus1=10_28 kW=5980.98 kvar=2896.72 Basefreq=60 Model=1 Vminpu=0.8 Vmaxpu=1.2 NumCust=1
+New Load.11_0 yearly=11_0_profile phases=3 kV=0.48 bus1=11_0 kW=345.669 kvar=167.415 Basefreq=60 Model=1 Vminpu=0.8 Vmaxpu=1.2 NumCust=1
+New Load.12_20 yearly=12_20_profile phases=3 kV=12.47 bus1=12_20 kW=1362.43 kvar=659.853 Basefreq=60 Model=1 Vminpu=0.8 Vmaxpu=1.2 NumCust=1
+New Load.13_4 yearly=13_4_profile phases=3 kV=12.47 bus1=13_4 kW=1140.48 kvar=552.359 Basefreq=60 Model=1 Vminpu=0.8 Vmaxpu=1.2 NumCust=1

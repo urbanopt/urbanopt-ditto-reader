@@ -1,0 +1,5 @@
+New Transformer.sub_5840ecc6-7f2b-400c-a683-528d02f140f6_MAQ1 phases=3 wdg=1 bus=ST_MAT kv=69 kva=80000 tap=1 Conn=delta wdg=2 bus=sub_5840ecc6-7f2b-400c-a683-528d02f140f6_1247 kv=12.47 kva=80000 tap=1.00859 Conn=wye XHL=7.43 %loadloss=1.36063e-05 %noloadloss=0.0825 basefreq=60 sub=Yes
+New Transformer.Tr(R:DT0-DT0LV) phases=3 wdg=1 bus=DT0 kv=12.47 kva=1000 tap=1 wdg=2 bus=DT0LV kv=0.48 kva=1000 tap=1.03 XHL=5.62 %loadloss=1.59763 %noloadloss=0.2 basefreq=60 sub=No
+New Transformer.Tr(R:DT1-DT1LV) phases=3 wdg=1 bus=DT1 kv=12.47 kva=1000 tap=1 wdg=2 bus=DT1LV kv=0.48 kva=1000 tap=1.03 XHL=5.62 %loadloss=1.59763 %noloadloss=0.2 basefreq=60 sub=No
+New Transformer.Tr(R:DT2-DT2LV) phases=3 wdg=1 bus=DT2 kv=12.47 kva=300 tap=1 wdg=2 bus=DT2LV kv=0.48 kva=300 tap=1.03 XHL=3.76 %loadloss=1.82396 %noloadloss=0.325 basefreq=60 sub=No
+New Transformer.Tr(R:DT3-DT3LV) phases=3 wdg=1 bus=DT3 kv=12.47 kva=1000 tap=1 wdg=2 bus=DT3LV kv=0.48 kva=1000 tap=1.03 XHL=5.62 %loadloss=1.59763 %noloadloss=0.2 basefreq=60 sub=No
