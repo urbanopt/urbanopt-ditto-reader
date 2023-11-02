@@ -1,0 +1,90 @@
+{
+"Case study" :
+[
+{  "Case" : "simulations/4e71bcd6-7189-49f3-957d-2adb7ee0646f/Outputs/Summary/" , "Date" : "Mon Jan 30 22:41:16 2023" , "Computing time (minutes):" : "0"  }
+]
+,
+"Demand/generation and number of consumers/distributed generators" :
+[
+{  "Type" : "Consumers " , "Voltage level" : "LV" , "Demand/generation (kW)" : 1101 , "Number" : 5 , "Num. Points" : 5 , "Peak demand/generation (kW)" : 1101  },
+{  "Type" : "Consumers " , "Voltage level" : "MV" , "Demand/generation (kW)" : 19082 , "Number" : 8 , "Num. Points" : 8 , "Peak demand/generation (kW)" : 19082  },
+{  "Type" : "Distributed generators " , "Voltage level" : "LV" , "Demand/generation (kW)" : 0 , "Number" : 0 , "Num. Points" : 0 , "Peak demand/generation (kW)" : 0  },
+{  "Type" : "Distributed generators " , "Voltage level" : "MV" , "Demand/generation (kW)" : 0 , "Number" : 0 , "Num. Points" : 0 , "Peak demand/generation (kW)" : 0  }
+]
+,
+"Length of overhead and underground electrical lines" :
+[
+{  "Voltage level" : "Lines LV" , "Overhead (km)" : 0.00 , "Underground (km)" : 0.20  },
+{  "Voltage level" : "Lines MV" , "Overhead (km)" : 1.01 , "Underground (km)" : 1.82  }
+]
+,
+"Demand and energy losses" :
+[
+{  "Voltage level" : "LV" , "Energy losses - Year0 (USD)" : 3267 , "Energy losses - Year0 (kWh)" : 65336 , "Peak demand P1 (kW)" : 142 , "Energy losses - Year0 P1 (kW)" : 0 , "Peak demand P2 (kW)" : 80 , "Energy losses - Year0 P2 (kW)" : 0 , "Peak demand P3 (kW)" : 96 , "Energy losses - Year0 P3 (kW)" : 0 , "Peak demand P4 (kW)" : 80 , "Energy losses - Year0 P4 (kW)" : 0 , "Peak demand P5 (kW)" : 174 , "Energy losses - Year0 P5 (kW)" : 0 , "Peak demand P6 (kW)" : 272 , "Energy losses - Year0 P6 (kW)" : 1 , "Peak demand P7 (kW)" : 301 , "Energy losses - Year0 P7 (kW)" : 1 , "Peak demand P8 (kW)" : 675 , "Energy losses - Year0 P8 (kW)" : 6 , "Peak demand P9 (kW)" : 807 , "Energy losses - Year0 P9 (kW)" : 8 , "Peak demand P10 (kW)" : 888 , "Energy losses - Year0 P10 (kW)" : 10 , "Peak demand P11 (kW)" : 981 , "Energy losses - Year0 P11 (kW)" : 12 , "Peak demand P12 (kW)" : 1096 , "Energy losses - Year0 P12 (kW)" : 15 , "Peak demand P13 (kW)" : 1090 , "Energy losses - Year0 P13 (kW)" : 15 , "Peak demand P14 (kW)" : 1069 , "Energy losses - Year0 P14 (kW)" : 14 , "Peak demand P15 (kW)" : 940 , "Energy losses - Year0 P15 (kW)" : 11 , "Peak demand P16 (kW)" : 889 , "Energy losses - Year0 P16 (kW)" : 10 , "Peak demand P17 (kW)" : 968 , "Energy losses - Year0 P17 (kW)" : 12 , "Peak demand P18 (kW)" : 1029 , "Energy losses - Year0 P18 (kW)" : 13 , "Peak demand P19 (kW)" : 1012 , "Energy losses - Year0 P19 (kW)" : 13 , "Peak demand P20 (kW)" : 960 , "Energy losses - Year0 P20 (kW)" : 11 , "Peak demand P21 (kW)" : 972 , "Energy losses - Year0 P21 (kW)" : 12 , "Peak demand P22 (kW)" : 882 , "Energy losses - Year0 P22 (kW)" : 10 , "Peak demand P23 (kW)" : 588 , "Energy losses - Year0 P23 (kW)" : 4 , "Peak demand P24 (kW)" : 327 , "Energy losses - Year0 P24 (kW)" : 1  },
+{  "Voltage level" : "Dist.Transf." , "Energy losses - Year0 (USD)" : 4821 , "Energy losses - Year0 (kWh)" : 96428 , "Peak demand P1 (kW)" : 143 , "Energy losses - Year0 P1 (kW)" : 7 , "Peak demand P2 (kW)" : 80 , "Energy losses - Year0 P2 (kW)" : 7 , "Peak demand P3 (kW)" : 96 , "Energy losses - Year0 P3 (kW)" : 7 , "Peak demand P4 (kW)" : 81 , "Energy losses - Year0 P4 (kW)" : 7 , "Peak demand P5 (kW)" : 174 , "Energy losses - Year0 P5 (kW)" : 7 , "Peak demand P6 (kW)" : 273 , "Energy losses - Year0 P6 (kW)" : 7 , "Peak demand P7 (kW)" : 302 , "Energy losses - Year0 P7 (kW)" : 8 , "Peak demand P8 (kW)" : 680 , "Energy losses - Year0 P8 (kW)" : 10 , "Peak demand P9 (kW)" : 815 , "Energy losses - Year0 P9 (kW)" : 11 , "Peak demand P10 (kW)" : 898 , "Energy losses - Year0 P10 (kW)" : 12 , "Peak demand P11 (kW)" : 993 , "Energy losses - Year0 P11 (kW)" : 13 , "Peak demand P12 (kW)" : 1112 , "Energy losses - Year0 P12 (kW)" : 15 , "Peak demand P13 (kW)" : 1104 , "Energy losses - Year0 P13 (kW)" : 15 , "Peak demand P14 (kW)" : 1083 , "Energy losses - Year0 P14 (kW)" : 15 , "Peak demand P15 (kW)" : 951 , "Energy losses - Year0 P15 (kW)" : 13 , "Peak demand P16 (kW)" : 898 , "Energy losses - Year0 P16 (kW)" : 12 , "Peak demand P17 (kW)" : 980 , "Energy losses - Year0 P17 (kW)" : 13 , "Peak demand P18 (kW)" : 1042 , "Energy losses - Year0 P18 (kW)" : 14 , "Peak demand P19 (kW)" : 1024 , "Energy losses - Year0 P19 (kW)" : 14 , "Peak demand P20 (kW)" : 971 , "Energy losses - Year0 P20 (kW)" : 13 , "Peak demand P21 (kW)" : 984 , "Energy losses - Year0 P21 (kW)" : 13 , "Peak demand P22 (kW)" : 892 , "Energy losses - Year0 P22 (kW)" : 12 , "Peak demand P23 (kW)" : 592 , "Energy losses - Year0 P23 (kW)" : 9 , "Peak demand P24 (kW)" : 328 , "Energy losses - Year0 P24 (kW)" : 8  },
+{  "Voltage level" : "MV" , "Energy losses - Year0 (USD)" : 41935 , "Energy losses - Year0 (kWh)" : 838707 , "Peak demand P1 (kW)" : 5555 , "Energy losses - Year0 P1 (kW)" : 16 , "Peak demand P2 (kW)" : 4093 , "Energy losses - Year0 P2 (kW)" : 11 , "Peak demand P3 (kW)" : 4891 , "Energy losses - Year0 P3 (kW)" : 13 , "Peak demand P4 (kW)" : 3924 , "Energy losses - Year0 P4 (kW)" : 10 , "Peak demand P5 (kW)" : 5730 , "Energy losses - Year0 P5 (kW)" : 16 , "Peak demand P6 (kW)" : 6020 , "Energy losses - Year0 P6 (kW)" : 18 , "Peak demand P7 (kW)" : 7158 , "Energy losses - Year0 P7 (kW)" : 25 , "Peak demand P8 (kW)" : 12429 , "Energy losses - Year0 P8 (kW)" : 79 , "Peak demand P9 (kW)" : 14445 , "Energy losses - Year0 P9 (kW)" : 108 , "Peak demand P10 (kW)" : 16108 , "Energy losses - Year0 P10 (kW)" : 134 , "Peak demand P11 (kW)" : 17197 , "Energy losses - Year0 P11 (kW)" : 155 , "Peak demand P12 (kW)" : 17801 , "Energy losses - Year0 P12 (kW)" : 168 , "Peak demand P13 (kW)" : 17396 , "Energy losses - Year0 P13 (kW)" : 159 , "Peak demand P14 (kW)" : 18150 , "Energy losses - Year0 P14 (kW)" : 172 , "Peak demand P15 (kW)" : 16891 , "Energy losses - Year0 P15 (kW)" : 147 , "Peak demand P16 (kW)" : 16736 , "Energy losses - Year0 P16 (kW)" : 142 , "Peak demand P17 (kW)" : 17313 , "Energy losses - Year0 P17 (kW)" : 156 , "Peak demand P18 (kW)" : 17461 , "Energy losses - Year0 P18 (kW)" : 160 , "Peak demand P19 (kW)" : 15754 , "Energy losses - Year0 P19 (kW)" : 135 , "Peak demand P20 (kW)" : 15564 , "Energy losses - Year0 P20 (kW)" : 131 , "Peak demand P21 (kW)" : 15216 , "Energy losses - Year0 P21 (kW)" : 128 , "Peak demand P22 (kW)" : 14070 , "Energy losses - Year0 P22 (kW)" : 108 , "Peak demand P23 (kW)" : 11476 , "Energy losses - Year0 P23 (kW)" : 71 , "Peak demand P24 (kW)" : 8242 , "Energy losses - Year0 P24 (kW)" : 37  },
+{  "Voltage level" : "HV/MV Subest." , "Energy losses - Year0 (USD)" : 0 , "Energy losses - Year0 (kWh)" : 4 , "Peak demand P1 (kW)" : 5714 , "Energy losses - Year0 P1 (kW)" : 0 , "Peak demand P2 (kW)" : 4184 , "Energy losses - Year0 P2 (kW)" : 0 , "Peak demand P3 (kW)" : 4999 , "Energy losses - Year0 P3 (kW)" : 0 , "Peak demand P4 (kW)" : 4015 , "Energy losses - Year0 P4 (kW)" : 0 , "Peak demand P5 (kW)" : 5921 , "Energy losses - Year0 P5 (kW)" : 0 , "Peak demand P6 (kW)" : 6311 , "Energy losses - Year0 P6 (kW)" : 0 , "Peak demand P7 (kW)" : 7485 , "Energy losses - Year0 P7 (kW)" : 0 , "Peak demand P8 (kW)" : 13188 , "Energy losses - Year0 P8 (kW)" : 0 , "Peak demand P9 (kW)" : 15367 , "Energy losses - Year0 P9 (kW)" : 0 , "Peak demand P10 (kW)" : 17139 , "Energy losses - Year0 P10 (kW)" : 0 , "Peak demand P11 (kW)" : 18345 , "Energy losses - Year0 P11 (kW)" : 0 , "Peak demand P12 (kW)" : 19080 , "Energy losses - Year0 P12 (kW)" : 0 , "Peak demand P13 (kW)" : 18660 , "Energy losses - Year0 P13 (kW)" : 0 , "Peak demand P14 (kW)" : 19405 , "Energy losses - Year0 P14 (kW)" : 0 , "Peak demand P15 (kW)" : 17989 , "Energy losses - Year0 P15 (kW)" : 0 , "Peak demand P16 (kW)" : 17777 , "Energy losses - Year0 P16 (kW)" : 0 , "Peak demand P17 (kW)" : 18449 , "Energy losses - Year0 P17 (kW)" : 0 , "Peak demand P18 (kW)" : 18662 , "Energy losses - Year0 P18 (kW)" : 0 , "Peak demand P19 (kW)" : 16913 , "Energy losses - Year0 P19 (kW)" : 0 , "Peak demand P20 (kW)" : 16666 , "Energy losses - Year0 P20 (kW)" : 0 , "Peak demand P21 (kW)" : 16328 , "Energy losses - Year0 P21 (kW)" : 0 , "Peak demand P22 (kW)" : 15071 , "Energy losses - Year0 P22 (kW)" : 0 , "Peak demand P23 (kW)" : 12139 , "Energy losses - Year0 P23 (kW)" : 0 , "Peak demand P24 (kW)" : 8607 , "Energy losses - Year0 P24 (kW)" : 0  },
+{  "Voltage level" : "Trans.Subest." , "Energy losses - Year0 (USD)" : 0 , "Energy losses - Year0 (kWh)" : 0 , "Peak demand P1 (kW)" : 0 , "Energy losses - Year0 P1 (kW)" : 0 , "Peak demand P2 (kW)" : 0 , "Energy losses - Year0 P2 (kW)" : 0 , "Peak demand P3 (kW)" : 0 , "Energy losses - Year0 P3 (kW)" : 0 , "Peak demand P4 (kW)" : 0 , "Energy losses - Year0 P4 (kW)" : 0 , "Peak demand P5 (kW)" : 0 , "Energy losses - Year0 P5 (kW)" : 0 , "Peak demand P6 (kW)" : 0 , "Energy losses - Year0 P6 (kW)" : 0 , "Peak demand P7 (kW)" : 0 , "Energy losses - Year0 P7 (kW)" : 0 , "Peak demand P8 (kW)" : 0 , "Energy losses - Year0 P8 (kW)" : 0 , "Peak demand P9 (kW)" : 0 , "Energy losses - Year0 P9 (kW)" : 0 , "Peak demand P10 (kW)" : 0 , "Energy losses - Year0 P10 (kW)" : 0 , "Peak demand P11 (kW)" : 0 , "Energy losses - Year0 P11 (kW)" : 0 , "Peak demand P12 (kW)" : 0 , "Energy losses - Year0 P12 (kW)" : 0 , "Peak demand P13 (kW)" : 0 , "Energy losses - Year0 P13 (kW)" : 0 , "Peak demand P14 (kW)" : 0 , "Energy losses - Year0 P14 (kW)" : 0 , "Peak demand P15 (kW)" : 0 , "Energy losses - Year0 P15 (kW)" : 0 , "Peak demand P16 (kW)" : 0 , "Energy losses - Year0 P16 (kW)" : 0 , "Peak demand P17 (kW)" : 0 , "Energy losses - Year0 P17 (kW)" : 0 , "Peak demand P18 (kW)" : 0 , "Energy losses - Year0 P18 (kW)" : 0 , "Peak demand P19 (kW)" : 0 , "Energy losses - Year0 P19 (kW)" : 0 , "Peak demand P20 (kW)" : 0 , "Energy losses - Year0 P20 (kW)" : 0 , "Peak demand P21 (kW)" : 0 , "Energy losses - Year0 P21 (kW)" : 0 , "Peak demand P22 (kW)" : 0 , "Energy losses - Year0 P22 (kW)" : 0 , "Peak demand P23 (kW)" : 0 , "Energy losses - Year0 P23 (kW)" : 0 , "Peak demand P24 (kW)" : 0 , "Energy losses - Year0 P24 (kW)" : 0  }
+]
+,
+"Summary" :
+[
+{  "Level" : "LV" , "Investment cost" : 83196 , "Preventive maintenance (yearly)" : 28 , "Corrective maintenance (yearly)" : 0 , "Inv.cost + maint. (NPV)" : 83641 , "Losses (NPV)" : 25853 , "Switching Dev. (NPV)" : 0 , "Volt. Reg. (NPV)" : 0 , "TOTAL (NPV)" : 109494 , "Increase(%)" : "inf"  },
+{  "Level" : "Dist.Transf." , "Investment cost" : 255900 , "Preventive maintenance (yearly)" : 6858 , "Corrective maintenance (yearly)" : 0 , "Inv.cost + maint. (NPV)" : 363930 , "Losses (NPV)" : 61970 , "Switching Dev. (NPV)" : "" , "Volt. Reg. (NPV)" : "" , "TOTAL (NPV)" : 425899 , "Increase(%)" : "inf"  },
+{  "Level" : "MV" , "Investment cost" : 3871766 , "Preventive maintenance (yearly)" : 9187 , "Corrective maintenance (yearly)" : 0 , "Inv.cost + maint. (NPV)" : 4016481 , "Losses (NPV)" : 331866 , "Switching Dev. (NPV)" : 1661460 , "Volt. Reg. (NPV)" : 0 , "TOTAL (NPV)" : 6009807 , "Increase(%)" : "inf"  },
+{  "Level" : "HV/MV Subest." , "Investment cost" : 0 , "Preventive maintenance (yearly)" : 0 , "Corrective maintenance (yearly)" : 0 , "Inv.cost + maint. (NPV)" : 0 , "Losses (NPV)" : 1 , "Switching Dev. (NPV)" : "" , "Volt. Reg. (NPV)" : "" , "TOTAL (NPV)" : 1 , "Increase(%)" : 0.0  },
+{  "Level" : "Trans.Subest." , "Investment cost" : 0 , "Preventive maintenance (yearly)" : 0 , "Corrective maintenance (yearly)" : 0 , "Inv.cost + maint. (NPV)" : 0 , "Losses (NPV)" : 0 , "Switching Dev. (NPV)" : "" , "Volt. Reg. (NPV)" : "" , "TOTAL (NPV)" : 0 , "Increase(%)" : "NaN"  }
+]
+,
+"Trenches, facades and posts Length" :
+[
+{  "Level" : "LV" , "Facade" : 0.00 , "Post" : 0.00 , "Trench" : 0.20 , "Total" : 0.20  },
+{  "Level" : "MV" , "Facade" : 0.00 , "Post" : 0.92 , "Trench" : 1.75 , "Total" : 2.66  }
+]
+,
+"Trenches, facades and posts Cost" :
+[
+{  "Level" : "LV" , "Facade" : 0.00 , "Post" : 0.00 , "Trench" : 80470.53 , "Total" : 80470.53  },
+{  "Level" : "MV" , "Facade" : 0.00 , "Post" : 200647.14 , "Trench" : 2778281.91 , "Total" : 2978929.05  }
+]
+,
+"Reliability indexes" :
+[
+{  "ASIDI" : 1.28 , "ASIFI" : 0.08  }
+]
+,
+"Substations and distribution transformers" :
+[
+{  "TYPE OF EQUIPMENT" : "Dist.Transf." , "Vnom1(kV)" : 12.5 , "Vnom2(kV)" : 0.4 , "NumPhases" : 3 , "Snom(kVA)" : 1000 , "Number" : 3 , "Size (kVA)" : 1000 , "Investment cost" : 208800 , "Preventive maintenance (yearly)" : 5596 , "Corrective maintenance (yearly)" : 0  },
+{  "TYPE OF EQUIPMENT" : "Dist.Transf." , "Vnom1(kV)" : 12.5 , "Vnom2(kV)" : 0.4 , "NumPhases" : 3 , "Snom(kVA)" : 300 , "Number" : 1 , "Size (kVA)" : 300 , "Investment cost" : 47100 , "Preventive maintenance (yearly)" : 1262 , "Corrective maintenance (yearly)" : 0  }
+]
+,
+"Transformers" :
+[
+{  }
+]
+,
+"Electrical lines and equipment" :
+[
+{  "TYPE OF EQUIPMENT" : "LINE" , "Vnom(kV)" : 12.5 , "Snom(kVA)" : 22463 , "Number" : 1 , "Length(km)" : 0.22 , "Investment cost" : 193648 , "Preventive maintenance (yearly)" : 1936 , "Corrective maintenance (yearly)" : 0  },
+{  "TYPE OF EQUIPMENT" : "LINE" , "Vnom(kV)" : 12.5 , "Snom(kVA)" : 14255 , "Number" : 1 , "Length(km)" : 0.14 , "Investment cost" : 31889 , "Preventive maintenance (yearly)" : 331 , "Corrective maintenance (yearly)" : 0  },
+{  "TYPE OF EQUIPMENT" : "LINE" , "Vnom(kV)" : 12.5 , "Snom(kVA)" : 13823 , "Number" : 1 , "Length(km)" : 0.41 , "Investment cost" : 193522 , "Preventive maintenance (yearly)" : 2007 , "Corrective maintenance (yearly)" : 0  },
+{  "TYPE OF EQUIPMENT" : "LINE" , "Vnom(kV)" : 12.5 , "Snom(kVA)" : 11231 , "Number" : 2 , "Length(km)" : 0.47 , "Investment cost" : 90814 , "Preventive maintenance (yearly)" : 942 , "Corrective maintenance (yearly)" : 0  },
+{  "TYPE OF EQUIPMENT" : "LINE" , "Vnom(kV)" : 12.5 , "Snom(kVA)" : 9503 , "Number" : 1 , "Length(km)" : 0.24 , "Investment cost" : 78836 , "Preventive maintenance (yearly)" : 818 , "Corrective maintenance (yearly)" : 0  },
+{  "TYPE OF EQUIPMENT" : "LINE" , "Vnom(kV)" : 12.5 , "Snom(kVA)" : 7884 , "Number" : 2 , "Length(km)" : 0.40 , "Investment cost" : 58661 , "Preventive maintenance (yearly)" : 608 , "Corrective maintenance (yearly)" : 0  },
+{  "TYPE OF EQUIPMENT" : "LINE" , "Vnom(kV)" : 12.5 , "Snom(kVA)" : 7128 , "Number" : 7 , "Length(km)" : 0.95 , "Investment cost" : 245467 , "Preventive maintenance (yearly)" : 2545 , "Corrective maintenance (yearly)" : 0  },
+{  "TYPE OF EQUIPMENT" : "LINE" , "Vnom(kV)" : 0.4 , "Snom(kVA)" : 461 , "Number" : 5 , "Length(km)" : 0.20 , "Investment cost" : 2726 , "Preventive maintenance (yearly)" : 28 , "Corrective maintenance (yearly)" : 0  }
+]
+,
+"Switching devices" :
+[
+{  "TYPE OF EQUIPMENT" : "Switch" , "Vnom(kV)" : 12.5 , "Number" : 18 , "Investment cost" : 540000 , "Preventive maintenance (yearly)" : 54000 , "Corrective maintenance (yearly)" : 0  },
+{  "TYPE OF EQUIPMENT" : "Breaker" , "Vnom(kV)" : 12.5 , "Number" : 2 , "Investment cost" : 120000 , "Preventive maintenance (yearly)" : 12000 , "Corrective maintenance (yearly)" : 0  }
+]
+,
+"Feeders" :
+[
+{  "Substation" : "sub_5840ecc6-7f2b-400c-a683-528d02f140f6_12.47" , "Feeder" : "sub_5840ecc6-7f2b-400c-a683-528d02f140f6_12.47 -> DT0" , "Num. Cons. LV" : 1 , "Num. Cons. MV" : 5 , "Num. Dist. Transf." : 1 , "Size Dist. Transf. (kVA)" : 1000.00 , "Num. Capac." : 0 , "Num. Volt. Reg." : 0 , "Num. Reclosers" : 0 , "Num. Switches" : 6 , "Len LV" : 0.03 , "Len MV" : 1.52 , "Len MV 1P" : 0.00 , "Len MV 2P" : 0.00 , "Len MV 3P" : 1.52 , "Len MV 1P OH" : 0.00 , "Len MV 2P OH" : 0.00 , "Len MV 3P OH" : 0.54 , "Avg Year" : 1999 , "Avg Land value (USD/km2)" : 0 , "Rural (%)" : "NaN" , "Urban (%)" : "NaN" , "Residential (%)" : "NaN" , "Commercial (%)" : "NaN" , "Industrial (%)" : "NaN" , "County" : "" , "Config subest" : "delta-wye"  },
+{  "Substation" : "sub_5840ecc6-7f2b-400c-a683-528d02f140f6_12.47" , "Feeder" : "sub_5840ecc6-7f2b-400c-a683-528d02f140f6_12.47 -> 8_10" , "Num. Cons. LV" : 4 , "Num. Cons. MV" : 3 , "Num. Dist. Transf." : 3 , "Size Dist. Transf. (kVA)" : 2300.00 , "Num. Capac." : 3 , "Num. Volt. Reg." : 0 , "Num. Reclosers" : 0 , "Num. Switches" : 10 , "Len LV" : 0.17 , "Len MV" : 1.09 , "Len MV 1P" : 0.00 , "Len MV 2P" : 0.00 , "Len MV 3P" : 1.09 , "Len MV 1P OH" : 0.00 , "Len MV 2P OH" : 0.00 , "Len MV 3P OH" : 0.47 , "Avg Year" : 1999 , "Avg Land value (USD/km2)" : 0 , "Rural (%)" : "NaN" , "Urban (%)" : "NaN" , "Residential (%)" : "NaN" , "Commercial (%)" : "NaN" , "Industrial (%)" : "NaN" , "County" : "" , "Config subest" : "delta-wye"  }
+]
+}

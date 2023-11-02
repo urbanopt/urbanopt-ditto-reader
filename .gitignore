@@ -112,6 +112,7 @@ venv.bak/
 
 # IDE settings
 .vscode/
+.ruff_cache
 
 # Spyder project settings
 .spyderproject
@@ -133,9 +134,6 @@ dmypy.json
 
 # DS_Store
 .DS_Store
-
-# opendss files
-./example/run/baseline_scenario/opendss/
 
 # ditto local checkout
 ditto/

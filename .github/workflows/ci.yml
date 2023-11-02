@@ -1,0 +1,32 @@
+# https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions
+name: ci
+on:
+  push:
+  # schedule:
+    # https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#schedule
+    # 5:20 am UTC (11:20pm MDT the day before) every weekday night in MDT
+  #   - cron: '20 5 * * 2-6'
+  # pull_request:
+  #   types: [review_requested]
+
+jobs:
+  test:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        python-version: ["3.8", "3.12"]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install ditto-reader
+        run: pip install .[dev]
+      - name: Run pre-commit to confirm linting and formatting
+        # https://github.com/pre-commit/action
+        uses: pre-commit/action@v3.0.0
+        with:
+          extra_args: --all-files
+      - name: Run unit tests
+        run: python -Wonce::DeprecationWarning -Im pytest -vv
