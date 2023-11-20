@@ -413,8 +413,9 @@ class Reader(AbstractReader):
                 # under properties. This is normally an optional field.
                 if "phases" not in element["properties"]:
                     raise ValueError(
-                        "Transformer {} does not have phases included in geojson "
-                        "file".format(element["properties"]["id"])
+                        "Transformer {} does not have phases included in geojson " "file".format(
+                            element["properties"]["id"]
+                        )
                     )
                 phases = element["properties"]["phases"]
                 if len(phases) != int(trans_props["Nphases"]):
