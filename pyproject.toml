@@ -67,7 +67,7 @@ testpaths = "tests"
 fix = true # automatically fix problems if possible
 select = ["RUF", "E", "F", "I", "UP", "N", "S", "BLE", "A", "C4", "T10", "ISC", "ICN", "PT",
 "Q", "SIM", "TID", "ARG", "DTZ", "PD", "PGH", "PLC", "PLE", "PLR", "PLW", "PIE", "COM"] # Enable these rules
-ignore = ["PLR0913", "PLR2004", "PLR0402", "COM812", "COM819", "SIM108", "ARG002"] # except for these specific errors
+ignore = ["PLR0913", "PLR2004", "PLR0402", "COM812", "COM819", "SIM108", "ARG002", "ISC001"] # except for these specific errors
 line-length = 120
 
 # https://docs.astral.sh/ruff/settings/#format
