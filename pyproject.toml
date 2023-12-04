@@ -35,14 +35,14 @@ classifiers = [
 dependencies = [
     "ditto.py[opendss]~=0.2",
     "opendssdirect.py ~= 0.8",
+    "traitlets >5, <5.10",
     ]
 
 [project.optional-dependencies]
 dev = [
     "pytest ~= 7.4",
     "pre-commit ~= 3.3",
-    "black ~= 23.7",
-    "ruff ~= 0.1.1",
+    "ruff ~= 0.1.6",
 ]
 
 # https://setuptools.pypa.io/en/latest/userguide/package_discovery.html
