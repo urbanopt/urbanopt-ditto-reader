@@ -72,11 +72,4 @@ If either start_time and end_time are invalid or set to None, the simulation wil
     - Settings and documentation links for pre-commit and ruff are in .pre-commit-config.yaml and pyproject.toml
 
 # Releasing
-Follow the [PyPA guidance](https://packaging.python.org/en/latest/tutorials/packaging-projects/#generating-distribution-archives) as of April 2, 2022
-
-Roughly:
-- update version in pyproject.toml
-- make a release on GitHub
-- make the package: `python -m build`
-- install twine `pip install twine`
-- upload to pypi: `twine upload dist/*`
+Increment the version in pyproject.toml. Use [semantic versioning](https://semver.org/). When a new release is made in GitHub, a [workflow](https://github.com/marketplace/actions/pypi-publish) automatically publishes to PyPI.
