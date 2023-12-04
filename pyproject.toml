@@ -33,7 +33,7 @@ classifiers = [
         "Programming Language :: Python :: 3.12"
     ]
 dependencies = [
-    "ditto.py[opendss] @ git+https://github.com/NREL/ditto.git@master",
+    "ditto.py[opendss] @ git+https://github.com/vtnate/ditto.git@master",
     "opendssdirect.py ~= 0.8",
     ]
 
