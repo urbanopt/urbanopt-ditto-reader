@@ -1,0 +1,18 @@
+Clear
+New Circuit.URBANopt_RNM-US_ bus1 = ST_MAT pu = 1.00 R1 = 0.0000001 X1 = 0.00000001   basekV = 69
+
+Redirect LoadsShapes
+Redirect Loads
+Redirect GeneratorsShapes
+Redirect Generators
+Redirect LineCodes
+Redirect Lines
+Redirect Dummy
+Redirect Transformers
+Redirect SwitchingDevices
+Redirect Capacitors
+
+Set voltagebases = [69.000000,12.470000, 0.48, 0.20784]
+Calcvoltagebases
+
+Buscoords  BusCoord.dss

@@ -43,4 +43,3 @@ New Line.68c17aed-1c16-4a75-b0a7-7cf2db5d605d Units=km Length=0.1798320000000000
 New Line.db1a87fb-d770-4939-b747-7cadf1f304f8 Units=km Length=0.039014400000000005 bus1=7bba9925-4f7c-4f0d-9b94-d0b8298962ea.1.2.3 bus2=194f2b59-5877-4485-85b9-bd0ac6f75e25.1.2.3 switch=n enabled=y phases=3 geometry=Geometry_1
 
 New Line.bfdf4e28-5baf-4d54-9d0a-5a7dc3fbd4f3 Units=km Length=0.0697992 bus1=258aad84-ed22-48ee-995a-4c5869ae9274.1.2.3 bus2=b9ac3056-629d-40cc-b520-cfe15eb7296c.1.2.3 switch=n enabled=y phases=3 geometry=Geometry_1
-
