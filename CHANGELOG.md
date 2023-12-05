@@ -4,6 +4,7 @@
 Date Range 12/15/2022 - 12/05/2023
 ### Future changes will be published using Github automated formatting at the release itself. Those changes are copied here.
 - Upgrade opendssdirect to ~0.8
+- Upgrade ditto.py to ~0..2.4
 - Use modern TOML packaging format
 - Add tests & CI
 - Set up pre-commit with linting and formatting
