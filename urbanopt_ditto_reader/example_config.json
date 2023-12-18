@@ -2,7 +2,7 @@
     "urbanopt_scenario_file": "example/baseline_scenario.csv",
     "equipment_file": "urbanopt_ditto_reader/extended_catalog.json",
     "opendss_folder": "example/run/baseline_scenario/opendss",
-    "urbanopt_geojson_file": "example/urbanopt_example.json",
+    "urbanopt_geojson_file": "example/example_project_with_electric_network.json",
     "use_reopt": false,
     "start_time": "2019/01/15 01:00:00",
     "end_time": "2019/01/16 01:00:00",
