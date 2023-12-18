@@ -447,7 +447,7 @@ class UrbanoptDittoReader:
             if i == start_index:
                 for element in voltages:
                     with suppress(KeyError):  # element is not a building
-                        voltage_df_dic[building_map[element]] = [bldg_columns]
+                        voltage_df_dic[building_map[element.replace("_", "-")]] = [bldg_columns]
                 for element in line_overloads:
                     line_df_dic[element] = [line_columns]
                 for element in overloaded_xfmrs:
@@ -456,7 +456,7 @@ class UrbanoptDittoReader:
             # record the OpenDSS results in dictionaries
             for element, volt_val in voltages.items():
                 with suppress(KeyError):  # element is not a building
-                    voltage_df_dic[building_map[element]].append(
+                    voltage_df_dic[building_map[element.replace("_", "-")]].append(
                         [time, round(volt_val, 5), volt_val > 1.05, volt_val < 0.95]
                     )
             for element, line_load_val in line_overloads.items():
@@ -466,7 +466,7 @@ class UrbanoptDittoReader:
 
         # write the collected results into CSV files
         for element, result_values in voltage_df_dic.items():
-            res_path = os.path.join(features_path, "%s.csv" % element.replace(":", ""))
+            res_path = os.path.join(features_path, "%s.csv" % element.replace("_", "-"))
             self._write_csv(result_values, res_path)
         for element, result_values in line_df_dic.items():
             res_path = os.path.join(lines_path, "%s.csv" % element.replace(":", ""))
