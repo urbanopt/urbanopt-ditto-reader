@@ -518,9 +518,9 @@ class Reader(AbstractReader):
                 if self.use_reopt:
                     rep_csv = load_path / "feature_optimization.csv"
                     if not rep_csv.is_file():
-                        raise FileNotFoundError(
-                            "feature_optimization.csv not found. Please run REopt post-processing first."
-                        )
+                        print("feature_optimization.csv not found. Please run REopt post-processing first.")
+                        # TODO: Get the test to read this text appropriately from inside the SystemExit()
+                        raise SystemExit()
                     report_mtx = self._read_csv(rep_csv)
                     header_row = report_mtx.pop(0)
                     load_col_i = header_row.index("REopt:Electricity:Load:Total(kw)")
