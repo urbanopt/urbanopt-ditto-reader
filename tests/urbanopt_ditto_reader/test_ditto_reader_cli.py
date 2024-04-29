@@ -48,6 +48,34 @@ def test_upgrade_transformers(capfd):
     # This text is printed by ditto.consistency.fix_undersized_transformers
 
 
+def test_graceful_error_if_no_reopt(capfd):
+    reopt_optimization_file = (
+        Path(__file__).parent.parent.parent
+        / "example"
+        / "run"
+        / "baseline_scenario"
+        / "1"
+        / "feature_reports"
+        / "feature_optimization.csv"
+    )
+    assert reopt_optimization_file.exists() is False
+    subprocess.run(
+        [
+            "ditto_reader_cli",
+            "run-opendss",
+            "--config",
+            "example_config.json",
+            "--upgrade",
+            "--reopt",
+        ],
+        cwd=examples_dir,
+        check=True,
+    )
+    captured = capfd.readouterr()
+    assert "not found" in captured.out
+    # This text is printed by ditto.consistency.fix_undersized_transformers
+
+
 # REopt data for testing not present in this repo as of 2023-04-05
 # def test_use_reopt(capfd):
 #     subprocess.run(
