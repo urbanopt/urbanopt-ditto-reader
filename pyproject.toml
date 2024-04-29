@@ -61,19 +61,22 @@ readme = {file = "README.md", content-type = "text/markdown"}
 minversion = "6.0"
 testpaths = "tests"
 
-# https://github.com/charliermarsh/ruff
+# https://docs.astral.sh/ruff/tutorial/#configuration
 [tool.ruff]
 fix = true # automatically fix problems if possible
-select = ["RUF", "E", "F", "I", "UP", "N", "S", "BLE", "A", "C4", "T10", "ISC", "ICN", "PT",
+line-length = 120
+
+# https://docs.astral.sh/ruff/linter/#rule-selection
+[tool.ruff.lint]
+extend-select = ["RUF", "E", "F", "I", "UP", "N", "S", "BLE", "A", "C4", "T10", "ISC", "ICN", "PT",
 "Q", "SIM", "TID", "ARG", "DTZ", "PD", "PGH", "PLC", "PLE", "PLR", "PLW", "PIE", "COM"] # Enable these rules
 ignore = ["PLR0913", "PLR2004", "PLR0402", "COM812", "COM819", "SIM108", "ARG002", "ISC001"] # except for these specific errors
-line-length = 120
 
 # https://docs.astral.sh/ruff/settings/#format
 [tool.ruff.format]
 # quote-style = "double"
 
-[tool.ruff.per-file-ignores]
+[tool.ruff.lint.per-file-ignores]
 "tests/*" = ["S101", "S607", "S603"] # assert statements are allowed in tests, and paths are safe
 "update_licenses.py" = ["SIM115", "A002", "ARG001"]
 "urbanopt_ditto_reader/reader/read.py" = ["PLR0912", "PLR0915"] # ignore complexity warnings in this file
