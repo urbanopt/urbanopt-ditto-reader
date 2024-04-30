@@ -18,14 +18,14 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-python@v4
+      - uses: actions/setup-python@v5
         with:
           python-version: ${{ matrix.python-version }}
       - name: Install ditto-reader
         run: pip install .[dev]
       - name: Run pre-commit to confirm linting and formatting
         # https://github.com/pre-commit/action
-        uses: pre-commit/action@v3.0.0
+        uses: pre-commit/action@v3.0.1
         with:
           extra_args: --all-files
       - name: Run unit tests
