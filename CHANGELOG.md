@@ -1,5 +1,13 @@
 # URBANopt DiTTo Reader CHANGELOG
 
+# Version 0.6.4
+
+### Exciting New Features 🎉
+* Improve error handling for REopt by @vtnate in https://github.com/urbanopt/urbanopt-ditto-reader/pull/63
+
+
+**Full Changelog**: https://github.com/urbanopt/urbanopt-ditto-reader/compare/v0.6.3...v0.6.4
+
 # Version 0.6.0
 Date Range 12/15/2022 - 12/05/2023
 ### Future changes will be published using Github automated formatting at the release itself. Those changes are copied here.
