@@ -466,13 +466,13 @@ class UrbanoptDittoReader:
 
         # write the collected results into CSV files
         for element, result_values in voltage_df_dic.items():
-            res_path = os.path.join(features_path, "%s.csv" % element.replace("_", "-"))
+            res_path = Path(features_path) / f"{element.replace('_', '-')}.csv"
             self._write_csv(result_values, res_path)
         for element, result_values in line_df_dic.items():
-            res_path = os.path.join(lines_path, "%s.csv" % element.replace(":", ""))
+            res_path = Path(lines_path) / f"{element.replace(':', '')}.csv"
             self._write_csv(result_values, res_path)
         for element, result_values in transformer_df_dic.items():
-            res_path = os.path.join(trans_path, "%s.csv" % element.replace(":", ""))
+            res_path = Path(trans_path) / f"{element.replace(':', '')}.csv"
             self._write_csv(result_values, res_path)
 
     @staticmethod

@@ -39,9 +39,11 @@ OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISE
 OF THE POSSIBILITY OF SUCH DAMAGE.
 *****************************************************************************************
 """
+
 import json
 import os
 from datetime import datetime
+from pathlib import Path
 
 from ditto.models.base import Unicode
 from ditto.models.feeder_metadata import Feeder_metadata
@@ -510,11 +512,15 @@ class Reader(AbstractReader):
                 load.nominal_voltage = model["urbanopt-feeder"].nominal_voltage
 
             # load the power draw of the buildings from the energy sim results
-            load_path = os.path.join(self.load_folder, id_value, "feature_reports")
+            load_path = Path(self.load_folder) / id_value / "feature_reports"
             load_multiplier = 1000
-            if os.path.exists(load_path):  # We've found the load data
+            if load_path.is_dir():  # We've found the load data
                 if self.use_reopt:
-                    rep_csv = os.path.join(load_path, "feature_optimization.csv")
+                    rep_csv = load_path / "feature_optimization.csv"
+                    if not rep_csv.is_file():
+                        print("feature_optimization.csv not found. Please run REopt post-processing first.")
+                        # TODO: Get the test to read this text appropriately from inside the SystemExit()
+                        raise SystemExit()
                     report_mtx = self._read_csv(rep_csv)
                     header_row = report_mtx.pop(0)
                     load_col_i = header_row.index("REopt:Electricity:Load:Total(kw)")
