@@ -13,9 +13,9 @@ dynamic = [
     ]
 version = "0.6.4"
 authors = [
-  { name="Tarek Elgindy", email="tarek.elgindy@nrel.gov" },
-  { name="Nathan Moore", email="nathan.moore@nrel.gov" },
-  { name="Katherine Fleming", email="katherine.fleming@nrel.gov" },
+  { name="Tarek Elgindy", email="tarek.elgindy@nlr.gov" },
+  { name="Nathan Moore", email="nathan.moore@nlr.gov" },
+  { name="Katherine Fleming", email="katherine.fleming@nlr.gov" },
 ]
 description = "Enhancement of URBANopt GeoJSON that can be consumed by DiTTo reader"
 requires-python = "~=3.8"
@@ -33,7 +33,7 @@ classifiers = [
         "Programming Language :: Python :: 3.12"
     ]
 dependencies = [
-    "ditto.py[opendss] ~= 0.2.4",
+    "ditto.py[opendss] @ git+https://github.com/urbanopt/ditto.git@update-numpy",
     "opendssdirect.py ~= 0.8.0",
     ]
 
